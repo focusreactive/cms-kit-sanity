@@ -1,0 +1,25 @@
+{
+  "_key": "27de10591272",
+  "_type": "ft.stats",
+  "stats": [
+    {
+      "_key": "2b8369a87d22",
+      "_type": "ft.stats.points",
+      "title": "Transactions every 24 hours",
+      "value": "44 million"
+    },
+    {
+      "_key": "b7ab72152d70",
+      "_type": "ft.stats.points",
+      "title": "Assets under holding",
+      "value": "$119 trillion"
+    },
+    {
+      "_key": "e1a823892a88",
+      "_type": "ft.stats.points",
+      "title": "New users annually",
+      "value": "46,000"
+    }
+  ],
+  "title": "Stats block"
+}

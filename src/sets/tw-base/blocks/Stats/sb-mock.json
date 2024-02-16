@@ -1,0 +1,29 @@
+{
+  "_uid": "c88ae91a-f7f8-4b26-bb4b-48a3be91126e",
+  "Title": "Stats block",
+  "stats": [
+    {
+      "_uid": "1ec64354-89c8-466e-a1d4-75a6a2a34541",
+      "title": "Transactions every 24 hours",
+      "value": "44 million",
+      "component": "statsPoints",
+      "_editable": "<!--#storyblok#{\"name\": \"statsPoints\", \"space\": \"255337\", \"uid\": \"1ec64354-89c8-466e-a1d4-75a6a2a34541\", \"id\": \"384365048\"}-->"
+    },
+    {
+      "_uid": "fb28b9f1-7aff-441c-8ed9-bed42edc60bb",
+      "title": "Assets under holding",
+      "value": "$119 trillion",
+      "component": "statsPoints",
+      "_editable": "<!--#storyblok#{\"name\": \"statsPoints\", \"space\": \"255337\", \"uid\": \"fb28b9f1-7aff-441c-8ed9-bed42edc60bb\", \"id\": \"384365048\"}-->"
+    },
+    {
+      "_uid": "1494cce1-870c-4d53-a9b3-e0eeb0b813c7",
+      "title": "New users annually",
+      "value": "46,000",
+      "component": "statsPoints",
+      "_editable": "<!--#storyblok#{\"name\": \"statsPoints\", \"space\": \"255337\", \"uid\": \"1494cce1-870c-4d53-a9b3-e0eeb0b813c7\", \"id\": \"384365048\"}-->"
+    }
+  ],
+  "component": "stats",
+  "_editable": "<!--#storyblok#{\"name\": \"stats\", \"space\": \"255337\", \"uid\": \"c88ae91a-f7f8-4b26-bb4b-48a3be91126e\", \"id\": \"384365048\"}-->"
+}

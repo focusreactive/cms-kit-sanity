@@ -1,0 +1,21 @@
+import { test } from 'external-namespaces';
+import { renderSanityComponent } from '@focus-reactive/cms-kit/sanity-next';
+
+export default function SingleTemplatePage({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined };
+}) {
+  const template = searchParams?.t
+    ? JSON.parse(decodeURIComponent(searchParams.t as string))
+    : null;
+
+  return (
+    <div style={{ borderRadius: 4, border: '2px solid black' }}>
+      {renderSanityComponent({
+        namespaces: ['base', 'land'],
+        customNamespaces: [test],
+      })(template)}
+    </div>
+  );
+}
