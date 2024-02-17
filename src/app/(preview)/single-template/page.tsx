@@ -1,5 +1,5 @@
-import { test } from 'external-namespaces';
-import { renderSanityComponent } from '@focus-reactive/cms-kit/sanity-next';
+import { twBase } from '@/sets/tw-base/sa-set';
+import { renderSanityComponent } from '@focus-reactive/cms-kit-sanity/sanity-next';
 
 export default function SingleTemplatePage({
   searchParams,
@@ -14,7 +14,7 @@ export default function SingleTemplatePage({
     <div style={{ borderRadius: 4, border: '2px solid black' }}>
       {renderSanityComponent({
         namespaces: ['base', 'land'],
-        customNamespaces: [test],
+        customNamespaces: [twBase],
       })(template)}
     </div>
   );

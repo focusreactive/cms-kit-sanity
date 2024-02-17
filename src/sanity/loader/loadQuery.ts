@@ -5,7 +5,7 @@ import { draftMode } from 'next/headers';
 import { client } from '@/sanity/lib/client';
 import { pagesBySlugQuery } from '@/sanity/lib/queries';
 import { token } from '@/sanity/lib/token';
-import { PagePayload } from '@/types';
+import { PagePayload } from '@/components/pages/page/types';
 
 import { queryStore } from './createQueryStore';
 
@@ -28,9 +28,11 @@ queryStore.setServerClient(serverClient);
 const usingCdn = serverClient.config().useCdn;
 // Automatically handle draft mode
 export const loadQuery = ((query, params = {}, options = {}) => {
-  const {
-    perspective = draftMode().isEnabled ? 'previewDrafts' : 'published',
-  } = options;
+  const {} = options;
+  const perspective = draftMode().isEnabled
+    ? 'previewDrafts'
+    : options.perspective;
+  console.log('🚀 ~ loadQuery ~ perspective:', perspective);
   // Don't cache by default
   let cache: RequestCache = 'no-store';
   // If `next.tags` is set, and we're not using the CDN, then it's safe to cache
@@ -52,6 +54,9 @@ export function loadPage(slug: string) {
   return loadQuery<PagePayload | null>(
     pagesBySlugQuery,
     { slug },
-    { next: { tags: [`page:${slug}`] } },
+    {
+      next: { tags: [`page:${slug}`], revalidate: 10 },
+      perspective: 'previewDrafts',
+    },
   );
 }

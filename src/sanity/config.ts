@@ -7,12 +7,14 @@ import { schemaTypes } from './schemas';
 import post from './schemas/post';
 import { locate } from './plugins/locate';
 import { dataset, previewUrl, projectId } from './lib/env';
-import { test } from 'external-namespaces';
+import { twBase } from '@/sets/tw-base/sa-set';
+
+console.log("🚀 ~ previewUrl:", previewUrl)
 
 export default defineConfig({
   name: 'default',
-  title: 'cms-kit-playground',
-
+  title: 'cms-kit-sanity',
+  basePath: '/admin',
   projectId,
   dataset,
 
@@ -20,11 +22,11 @@ export default defineConfig({
     deskTool({ previewUrl }),
     visionTool(),
     cmsKitPlugin({
-      namespaces: ['base'],
-      customNamespaces: [test],
+      namespaces: [],
+      customNamespaces: [twBase],
       pageSchema: post,
-      projectId: 'k0c6krxi',
-      dataset: 'production',
+      projectId,
+      dataset,
     }),
     presentationTool({
       locate,
