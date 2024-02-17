@@ -7,7 +7,8 @@ import {
 import { resolveHref } from '../lib/utils';
 
 export const locate: DocumentLocationResolver = (params, context) => {
-  if (params.type === 'post') {
+  // TODO: get type here from config
+  if (params.type === 'landing') {
     const doc$ = context.documentStore.listenQuery(
       `*[_id == $id || references($id)] { _type, slug, title }`,
       params,
@@ -24,7 +25,8 @@ export const locate: DocumentLocationResolver = (params, context) => {
     return doc$.pipe(
       map(docs => {
         switch (params.type) {
-          case 'post': {
+          // TODO: get type here from config
+          case 'landing': {
             return {
               locations: docs
                 ?.map(doc => {

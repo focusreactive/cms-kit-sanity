@@ -1,7 +1,7 @@
 import { groq } from 'next-sanity';
 
 export const pagesBySlugQuery = groq`
-    * [_type == 'post' && slug.current == $slug] {
+    * [_type == 'landing' && slug.current == $slug] {
       title,
       content[]{
       ...,
@@ -14,8 +14,8 @@ export const pagesBySlugQuery = groq`
             secondaryComponent[]{
               ...,
               'image': asset->{
-                  'src': url, 
-                  'width': metadata.dimensions.width, 
+                  'src': url,
+                  'width': metadata.dimensions.width,
                   'height': metadata.dimensions.height,
                   'alt': altText,
                 }
@@ -26,8 +26,8 @@ export const pagesBySlugQuery = groq`
             imageSelector{
               ...,
               'image': asset->{
-                  'src': url, 
-                  'width': metadata.dimensions.width, 
+                  'src': url,
+                  'width': metadata.dimensions.width,
                   'height': metadata.dimensions.height,
                   'alt': altText,
                 }
@@ -42,8 +42,8 @@ export const pagesBySlugQuery = groq`
               ...,
               imageWithMetadata{
                 'image': asset->{
-                  'src': url, 
-                  'width': metadata.dimensions.width, 
+                  'src': url,
+                  'width': metadata.dimensions.width,
                   'height': metadata.dimensions.height,
                   'alt': altText,
                 }
@@ -56,8 +56,8 @@ export const pagesBySlugQuery = groq`
               ...,
               imageWithMetadata{
                 'image': asset->{
-                  'src': url, 
-                  'width': metadata.dimensions.width, 
+                  'src': url,
+                  'width': metadata.dimensions.width,
                   'height': metadata.dimensions.height,
                   'alt': altText,
                 }
@@ -70,8 +70,8 @@ export const pagesBySlugQuery = groq`
               ...,
               icon{
                 'icon': icon.asset->{
-                  'src': url, 
-                  'width': metadata.dimensions.width, 
+                  'src': url,
+                  'width': metadata.dimensions.width,
                   'height': metadata.dimensions.height,
                   'alt': altText,
                 }
@@ -84,8 +84,8 @@ export const pagesBySlugQuery = groq`
               ...,
               image{
                 'image': asset->{
-                  'src': url, 
-                  'width': metadata.dimensions.width, 
+                  'src': url,
+                  'width': metadata.dimensions.width,
                   'height': metadata.dimensions.height,
                   'alt': altText,
                 }
@@ -94,8 +94,8 @@ export const pagesBySlugQuery = groq`
                ...,
               avatar{
                 'image': asset->{
-                  'src': url, 
-                  'width': metadata.dimensions.width, 
+                  'src': url,
+                  'width': metadata.dimensions.width,
                   'height': metadata.dimensions.height,
                   'alt': altText,
                 }
@@ -107,13 +107,13 @@ export const pagesBySlugQuery = groq`
             ...,
               imageWithMetadata{
                 'image': asset->{
-                  'src': url, 
-                  'width': metadata.dimensions.width, 
+                  'src': url,
+                  'width': metadata.dimensions.width,
                   'height': metadata.dimensions.height,
                   'alt': altText,
               },
             }
-          }          
+          }
         }
       }
     }}[0]

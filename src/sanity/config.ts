@@ -4,12 +4,10 @@ import { cmsKitPlugin, deskTool } from '@focus-reactive/cms-kit-sanity/sanity';
 import { presentationTool } from 'sanity/presentation';
 
 import { schemaTypes } from './schemas';
-import post from './schemas/post';
+import { landing } from './schemas/landing';
 import { locate } from './plugins/locate';
 import { dataset, previewUrl, projectId } from './lib/env';
 import { twBase } from '@/sets/tw-base/sa-set';
-
-console.log("🚀 ~ previewUrl:", previewUrl)
 
 export default defineConfig({
   name: 'default',
@@ -24,7 +22,7 @@ export default defineConfig({
     cmsKitPlugin({
       namespaces: [],
       customNamespaces: [twBase],
-      pageSchema: post,
+      pageSchema: landing,
       projectId,
       dataset,
     }),
@@ -38,7 +36,6 @@ export default defineConfig({
       },
     }),
   ],
-
   schema: {
     types: schemaTypes,
   },

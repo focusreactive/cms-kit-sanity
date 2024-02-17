@@ -8,6 +8,6 @@ export const sanityClient = createClient({
   useCdn, // if you're using ISR or only static generation at build time, then you can set this to `false` to guarantee no stale content: ;
   stega: {
     enabled: stegaEnabled,
-    studioUrl: '/admin', // Or: 'https://my-cool-project.sanity.studio'
+    studioUrl: 'http://localhost:3000/admin', // Or: 'https://my-cool-project.sanity.studio'
   },
 });
