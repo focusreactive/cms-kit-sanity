@@ -2,14 +2,14 @@ import 'server-only';
 
 import { draftMode } from 'next/headers';
 
-import { client } from '@/sanity/lib/client';
 import { pagesBySlugQuery } from '@/sanity/lib/queries';
 import { token } from '@/sanity/lib/token';
 import { PagePayload } from '@/components/pages/page/types';
 
 import { queryStore } from './createQueryStore';
+import { sanityClient } from '../client';
 
-const serverClient = client.withConfig({
+const serverClient = sanityClient.withConfig({
   token,
   stega: {
     // Enable stega if it's a Vercel preview deployment, as the Vercel Toolbar has controls that shows overlays
@@ -32,7 +32,6 @@ export const loadQuery = ((query, params = {}, options = {}) => {
   const perspective = draftMode().isEnabled
     ? 'previewDrafts'
     : options.perspective;
-  console.log('🚀 ~ loadQuery ~ perspective:', perspective);
   // Don't cache by default
   let cache: RequestCache = 'no-store';
   // If `next.tags` is set, and we're not using the CDN, then it's safe to cache

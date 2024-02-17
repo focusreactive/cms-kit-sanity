@@ -4,16 +4,11 @@ import { enableOverlays, HistoryAdapterNavigate } from '@sanity/overlays'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 
-import { client } from '@/sanity/lib/client'
-import {studioUrl} from "@/sanity/lib/api";
-
 import { useLiveMode } from './useQuery'
+import { sanityClient } from '../client'
 
 // Always enable stega in Live Mode
-const stegaClient = client.withConfig({ stega: true })
-
-// Only allow same-origin Studios to connect
-const allowStudioOrigin = studioUrl
+const stegaClient = sanityClient.withConfig({ stega: true })
 
 export default function VisualEditing() {
   const router = useRouter()
@@ -25,7 +20,6 @@ export default function VisualEditing() {
   }, [router])
   useEffect(() => {
     const disable = enableOverlays({
-      allowStudioOrigin,
       history: {
         subscribe: (navigate) => {
           setNavigate(() => navigate)
@@ -59,7 +53,7 @@ export default function VisualEditing() {
     }
   }, [navigate, pathname, searchParams])
 
-  useLiveMode({ allowStudioOrigin, client: stegaClient })
+  useLiveMode({ client: stegaClient })
   useEffect(() => {
     // If not an iframe or a Vercel Preview deployment, turn off Draft Mode
     if (process.env.NEXT_PUBLIC_VERCEL_ENV !== 'preview' && window === parent) {
