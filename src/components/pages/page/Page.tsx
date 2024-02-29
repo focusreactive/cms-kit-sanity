@@ -1,6 +1,6 @@
 import type { PagePayload } from './types';
 import { renderSanityComponent } from '@focus-reactive/cms-kit-sanity/sanity-next';
-import { twBase } from '@/sets/tw-base/sa-set';
+import { twExt } from '@/sets/tw-ext/sa-set';
 
 export interface PageProps {
   data: PagePayload | null;
@@ -16,7 +16,7 @@ export function Page({ data }: PageProps) {
       {content?.map(
         renderSanityComponent({
           namespaces: ['base', 'land'],
-          customNamespaces: [twBase],
+          customNamespaces: [twExt],
         }),
       )}
     </div>

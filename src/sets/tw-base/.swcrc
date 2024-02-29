@@ -7,7 +7,11 @@
     },
     "baseUrl": "../../../",
     "paths": {
-      "@ns/*": ["/src/sets/tw-base/*"]
+      "@/*": ["src/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@ui/*": ["/src/namespaces/base/ui/*"],
+      "@ns/*": ["/src/namespaces/base/*"]
+
     }
   }
 }

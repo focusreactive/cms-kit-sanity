@@ -1,0 +1,30 @@
+{
+  "_type": "tw-base.styledRichText",
+  "componentAlignment": "left",
+  "customRichText": [
+    {
+      "_type": "block",
+      "children": [
+        {
+          "_type": "span",
+          "marks": [],
+          "text": "Stay on top of customer support"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    },
+    {
+      "_type": "block",
+      "children": [
+        {
+          "_type": "span",
+          "marks": [],
+          "text": "Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
+        }
+      ],
+      "markDefs": [],
+      "style": "normal"
+    }
+  ]
+}

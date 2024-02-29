@@ -1,5 +1,6 @@
-import { twBase } from '@/sets/tw-base/sa-set';
 import { renderSanityComponent } from '@focus-reactive/cms-kit-sanity/sanity-next';
+import { twExt } from '@/sets/tw-ext/sa-set';
+import { twBase } from '@/sets/tw-base/sa-set';
 
 export default function SingleTemplatePage({
   searchParams,
@@ -14,7 +15,7 @@ export default function SingleTemplatePage({
     <div style={{ borderRadius: 4, border: '2px solid black' }}>
       {renderSanityComponent({
         namespaces: ['base', 'land'],
-        customNamespaces: [twBase],
+        customNamespaces: [twExt, twBase],
       })(template)}
     </div>
   );

@@ -9,8 +9,14 @@ const PagePreview = dynamic(
   () => import('@/components/pages/page/PagePreview'),
 );
 
-export default async function RootRoute() {
-  const params = { slug: '/' };
+type Props = {
+  params: { slug: string };
+};
+
+export default async function PageSlugRoute() {
+  const params = {
+    slug: 'home',
+  };
   const initial = await loadPage(params.slug);
 
   if (draftMode().isEnabled) {

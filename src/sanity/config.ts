@@ -7,6 +7,7 @@ import { schemaTypes } from './schemas';
 import { landing } from './schemas/landing';
 import { locate } from './plugins/locate';
 import { dataset, previewUrl, projectId } from './lib/env';
+import { twExt } from '@/sets/tw-ext/sa-set';
 import { twBase } from '@/sets/tw-base/sa-set';
 
 export default defineConfig({
@@ -21,7 +22,7 @@ export default defineConfig({
     visionTool(),
     cmsKitPlugin({
       namespaces: [],
-      customNamespaces: [twBase],
+      customNamespaces: [twBase, twExt],
       pageSchema: landing,
       projectId,
       dataset,
