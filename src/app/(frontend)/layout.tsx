@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import { draftMode } from 'next/headers';
 
-const VisualEditing = dynamic(() => import('@/sanity/loader/VisualEditing'));
+// const VisualEditing = dynamic(() => import('@/sanity/loader/VisualEditing'));
 
 export default async function IndexRoute({
   children,
@@ -11,7 +11,7 @@ export default async function IndexRoute({
   return (
     <>
       {children}
-      {draftMode().isEnabled && <VisualEditing />}
+      {/*{draftMode().isEnabled && <VisualEditing />}*/}
     </>
   );
 }

@@ -8,12 +8,12 @@ import { PagePayload } from '@/components/pages/page/types';
 
 import { queryStore } from './createQueryStore';
 import { sanityClient } from '../client';
+import {isPreview} from "@/sanity/lib/env";
 
 const serverClient = sanityClient.withConfig({
   token,
   stega: {
-    // Enable stega if it's a Vercel preview deployment, as the Vercel Toolbar has controls that shows overlays
-    enabled: process.env.VERCEL_ENV !== 'production',
+    enabled: isPreview,
   },
 });
 

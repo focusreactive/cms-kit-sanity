@@ -5,5 +5,5 @@ export const previewUrl =
 export const apiVersion =
   process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2023-06-21';
 
-export const stegaEnabled = process.env.NEXT_PUBLIC_VERCEL_ENV === 'preview';
+export const isPreview = process.env.NODE_ENV === 'development' || process.env.NEXT_PUBLIC_VERCEL_ENV === 'preview';
 export const useCdn = process.env.NEXT_PUBLIC_VERCEL_ENV === 'preview';
