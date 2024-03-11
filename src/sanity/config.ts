@@ -20,8 +20,8 @@ export default defineConfig({
     deskTool({ previewUrl }),
     visionTool(),
     cmsKitPlugin({
-      namespaces: [],
-      customNamespaces: [twBase],
+      namespaces: ['base'],
+      // customNamespaces: [twBase],
       pageSchema: landing,
       projectId,
       dataset,
