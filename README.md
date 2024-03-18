@@ -39,3 +39,22 @@ Meet our first implementation of the CMS-KIT: CMS-KIT-SANITY - the powerful mix 
 - Initial content example.
 - Typescript
 
+
+## Credits
+
+This project was created at **FocusReactive**, the expert consultancy for the modern web. We specialize in helping clients beat the competition and accelerate business growth. With deep expertise in headless CMS, NextJS, and eCommerce, we deliver cutting-edge solutions that prioritize your business goals.
+
+### Our Expertise
+
+- **Content-Centric Websites**: We have deep experience in building extendable, SEO-optimized content and marketing websites with advanced CMS integrations and analytics.
+- **Headless eCommerce**: Our next-generation, content-rich, and performant online eCommerce websites come with end-to-end integrations to power your digital business.
+- **Headless CMS Consulting**: We offer multi-channel CMS development, modeling, customization, and support to help you manage your content seamlessly across various platforms.
+- **Web Performance**: Our experts can audit, transform the architecture, and optimize your website to meet the 100 SCORE Core Web Vitals for exceptional web performance.
+
+If you're looking for expertise in headless CMS, NextJS, or eCommerce, get in touch with **FocusReactive** today. Visit our website at [focusreactive.com](https://focusreactive.com/) to learn more about how we can help you accelerate your business growth.
+
+<image src="https://github.com/focusreactive/MVP-NextJS13-New-Features/assets/14885189/7c67e385-3f79-43e3-ba27-bada1ebddf03" width="500px"/>
+
+## License
+
+_This project is licensed under the MIT License. © 2024 FocusReactive._
