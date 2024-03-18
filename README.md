@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![image](https://github.com/focusreactive/cms-kit-sanity/assets/14885189/906e606d-b8f3-4d90-b562-4a2bf014bc26)
 
-## Getting Started
+# CMS-KIT-SANITY
 
-First, run the development server:
+An endeavor accumulating the experience and best practices collected at Focus Reactive. The project service the idea of making Headless CMS-based development accessible, comfortable, and fast. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## What is CMS-KIT?
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+CMS is the collection of ideas and their tech implementations in order to change the way of how we develop modern marketing and eCommerce websites. What it includes:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Boilerplate**. Contains all necessary customizations and integrations for seamless interaction with Headless CMS.
+- **Auto Deployment**. Automatically set up accounts in Headless CMS and hosting on Vercel. Connects everything to each other and to the repository on Github. Set env variables, connect webhooks and upload initial demo content.
+- **CMS Setup**. Contains the necessary plugins and settings for CMS. Generates content model based on available components. Deeply integrates Components Set with CMS for the best editorial experience.
+- **Starter components kit**. Adds a starter components kit (one or more) with everything you need for integration with CMS and for further development of your project.
+- Project **Structure** and development **guidelines**. The project is aimed at long-term development and provides everything necessary for scaling and adding new features. It does not restrict developers in their intentions but gently encourages developers on how to quickly develop and model new components
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![image](https://github.com/focusreactive/cms-kit-sanity/assets/14885189/63f13dd0-c8a0-4c54-9881-b657870d6dd8)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## For who?
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Developers**. Can quickly start the project in minutes and go fast in component development
+- **Content Editors**. Intuitive navigation and visual preview of what they're creating
+- **Project managers**. Can test the system without developers (see one-click rollout).
+- **Teams**.  Develop content and new features in parallel. Fast time to market
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
