@@ -5,14 +5,14 @@ import { getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
 
 import type { Props } from './types';
 
-const saConvertProps = (cmsProps: object) => {
+const saConvertProps = cmsProps => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,
   };
 };
 
-const sbConvertProps = (cmsProps: object) => {
+const sbConvertProps = cmsProps => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,
@@ -52,14 +52,14 @@ function Stats(props: Props) {
   );
 }
 
-const sa = (cmsProps: object) => {
+const sa = cmsProps => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,
   };
 };
 
-const sb = (cmsProps: object) => {
+const sb = cmsProps => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,

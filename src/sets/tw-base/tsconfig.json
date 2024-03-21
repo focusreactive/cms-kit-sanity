@@ -2,6 +2,8 @@
   "extends": "../../../tsconfig.json",
   "compilerOptions": {
     "paths": {
+      "@/*": ["../../../src/*"],
+      "@ui/*": ["./ui/*"],
       "@ns/*": ["./*"]
     }
   }

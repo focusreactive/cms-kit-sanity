@@ -7,7 +7,6 @@
           "@ns": "./src/namespaces/base/"
         }
       }
-    ],
-    "import/no-anonymous-default-export": "off"
+    ]
   }
 }

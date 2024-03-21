@@ -1,12 +1,11 @@
-import { defineBlockType, defineUtilityType } from '../../sa-config';
+import {
+  defineBlockType,
+  defineUtilityType,
+} from '../../sa-config';
 
 import saMock from './sa-mock.json';
 
-type DUArgs = {
-  df: (props: object) => object;
-};
-
-const statsPoints = defineUtilityType(({ df }: DUArgs) => ({
+const statsPoints = defineUtilityType(({ df }) => ({
   name: 'stats.points',
   type: 'object',
   title: 'Stats Point',
@@ -22,7 +21,7 @@ const statsPoints = defineUtilityType(({ df }: DUArgs) => ({
   ],
 }));
 
-export const stats = defineBlockType(({ df }: DUArgs) => ({
+export const stats = defineBlockType(({ df }) => ({
   name: 'stats',
   type: 'object',
   title: 'Stats',

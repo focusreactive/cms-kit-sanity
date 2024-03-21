@@ -1,10 +1,17 @@
+'use client'
+
 import type { BlocksMap } from '@focus-reactive/cms-kit-sanity/sanity';
 import { findBlockRoot } from '@focus-reactive/cms-kit-sanity/sanity-schema-type-utils';
 
-import stats from './Stats/sa-schema';
-import { Stats } from './Stats';
+import { PageBlock } from './PageBlock';
+import pageBlock from './PageBlock/sa-schema';
+import { pageBlockComponentsMap } from './PageBlock/sa-components';
 
-// @ts-ignore
+// Declare server component prop for nested renderSanityComponent function
+PageBlock.isServerComponent = true;
+
 export const blocksMap: BlocksMap = {
-  [findBlockRoot(stats)]: Stats,
+  [findBlockRoot(pageBlock)]: PageBlock,
+
+  ...pageBlockComponentsMap,
 };

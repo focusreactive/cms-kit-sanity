@@ -10,7 +10,7 @@ const templateStats: SanityTemplate = {
   type: stats.name,
   namespace: namespace.name,
   title: 'Stats',
-  description: '[twBase] STATS EXTERNAL',
+  description: '[twExt] STATS EXTERNAL',
   category: TemplateCategory.stats,
   area: TemplateArea.marketing,
   template: statsJson,
