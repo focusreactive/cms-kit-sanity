@@ -3,12 +3,12 @@ const nextConfig = {
   images: {
     remotePatterns: [{ hostname: 'cdn.sanity.io' }],
   },
-  logging: {
-    fetches: {
-      // Note: enable to debug fetching
-      // fullUrl: true,
-    },
-  },
+  // logging: {
+  //   fetches: {
+  //     // Note: enable to debug fetching
+  //     // fullUrl: true,
+  //   },
+  // },
 };
 
 export default nextConfig;

@@ -30,4 +30,4 @@ export const revalidateSecret = process.env.SANITY_REVALIDATE_SECRET
 // /**
 //  * Used to configure edit intent links, for Presentation Mode, as well as to configure where the Studio is mounted in the router.
 //  */
-// export const studioUrl = process.env.SANITY_STUDIO_URL || 'http://localhost:3333'
+export const studioUrl = process.env.SANITY_STUDIO_URL || 'http://localhost:3333'
