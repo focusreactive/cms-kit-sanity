@@ -4,6 +4,7 @@ import { findBlockRoot } from '@focus-reactive/cms-kit-sanity/sanity-schema-type
 import stats from './Stats/sa-schema';
 import { Stats } from './Stats';
 
+// @ts-ignore
 export const blocksMap: BlocksMap = {
   [findBlockRoot(stats)]: Stats,
 };
