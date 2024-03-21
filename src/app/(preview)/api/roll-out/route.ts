@@ -4,8 +4,8 @@ import {
   triggerGithubWorkflow,
   getVercelProjects,
   createSanityReadToken,
-} from '@/lib/services';
-import { isValidEmail } from '@/lib/email';
+} from '@/rollout-tools/lib/services';
+import { isValidEmail } from '@/rollout-tools/lib/email';
 
 export async function POST(request: Request) {
   const { email } = await request.json();
