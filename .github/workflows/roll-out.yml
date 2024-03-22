@@ -83,13 +83,12 @@ jobs:
           -H "Authorization: Bearer ${{ secrets.SANITY_AUTH_TOKEN }}"
 
       - name: Install dependencies
-        # todo: use pnpm
-        run: yarn install
+        run: npm run install
       - name: Export dataset
         run: |
           SANITY_AUTH_TOKEN="${{ secrets.SANITY_AUTH_TOKEN }}" \
           npx sanity dataset import \
-          boilerplate/prod-copy.tar.gz production
+          initial-data.tar.gz production
       # curls commands should be run after dataset is uploaded
       # to make sure initial production deployment has correct data
       - name: Curl command to add vercel deploy hook to sanity
