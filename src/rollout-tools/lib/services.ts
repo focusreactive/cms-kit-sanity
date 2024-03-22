@@ -1,12 +1,12 @@
 export async function createSanityProject(projectName: string) {
   try {
-    console.log('Start creating sanity💲 project...⏳');
+    console.log("Start creating sanity💲 project...⏳");
 
-    const response = await fetch('https://api.sanity.io/v2021-06-07/projects', {
-      method: 'POST',
+    const response = await fetch("https://api.sanity.io/v2021-06-07/projects", {
+      method: "POST",
       headers: {
         Authorization: `Bearer ${process.env.SANITY_PERSONAL_AUTH_TOKEN}`,
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         displayName: projectName,
@@ -14,13 +14,13 @@ export async function createSanityProject(projectName: string) {
       }),
     });
 
-    if (response.status === 401) {
-      throw new Error('Invalid sanity token');
+    if (response.status.toString().startsWith("4")) {
+      throw new Error("Error createSanityProject");
     }
 
     const data = await response.json();
 
-    console.log('Sanity💲 project created...✅');
+    console.log("Sanity💲 project created...✅");
 
     return data.id as string;
   } catch (error) {
@@ -30,30 +30,30 @@ export async function createSanityProject(projectName: string) {
 
 export async function createSanityReadToken(projectId: string) {
   try {
-    console.log('Creating read token 🔑 for sanity project...⏳');
+    console.log("Creating read token 🔑 for sanity project...⏳");
 
     const response = await fetch(
       `https://api.sanity.io/v2021-06-07/projects/${projectId}/tokens`,
       {
-        method: 'POST',
+        method: "POST",
         headers: {
           Authorization: `Bearer ${process.env.SANITY_PERSONAL_AUTH_TOKEN}`,
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          label: 'sanity preview read token',
-          roleName: 'viewer',
+          label: "sanity preview read token",
+          roleName: "viewer",
         }),
-      },
+      }
     );
 
-    if (response.status === 401) {
-      throw new Error('Invalid sanity token');
+    if (response.status.toString().startsWith("4")) {
+      throw new Error("Error createSanityReadToken");
     }
 
     const data = await response.json();
 
-    console.log('Sanity read token 🔑 created...✅');
+    console.log("Sanity read token 🔑 created...✅");
 
     return data.key as string;
   } catch (error) {
@@ -73,81 +73,76 @@ export async function createVercelProject({
   sanityReadToken: string;
 }) {
   try {
-    console.log('Start creating vercel🔺 project...⏳');
+    console.log("Start creating vercel🔺 project...⏳");
 
     const response = await fetch(
-      `https://api.vercel.com/v9/projects?teamId=${process.env.VERCEL_FR_TEAM_ID}`,
+      `https://api.vercel.com/v10/projects?teamId=${process.env.VERCEL_FR_TEAM_ID}`,
       {
         headers: {
           Authorization: `Bearer ${process.env.VERCEL_PERSONAL_AUTH_TOKEN}`,
         },
-        method: 'POST',
+        method: "POST",
         body: JSON.stringify({
           name: projectName,
           environmentVariables: [
             {
-              key: 'NEXT_PUBLIC_SANITY_PROJECT_ID',
+              key: "NEXT_PUBLIC_SANITY_PROJECT_ID",
               value: sanityProjectId,
             },
             {
-              key: 'NEXT_PUBLIC_SANITY_DATASET',
+              key: "NEXT_PUBLIC_SANITY_DATASET",
               value: sanityDatasetName,
             },
             {
-              key: 'SANITY_API_READ_TOKEN',
+              key: "SANITY_API_READ_TOKEN",
               value: sanityReadToken,
             },
             {
-              key: 'REPO_ID',
+              key: "REPO_ID",
               value: process.env.REPO_ID,
             },
             {
-              key: 'REPO_PROD_BRANCH',
+              key: "REPO_PROD_BRANCH",
               value: process.env.REPO_PROD_BRANCH,
             },
             {
-              key: 'REPO_TYPE',
+              key: "REPO_TYPE",
               value: process.env.REPO_TYPE,
             },
             {
-              key: 'VERCEL_PERSONAL_AUTH_TOKEN',
+              key: "VERCEL_PERSONAL_AUTH_TOKEN",
               value: process.env.VERCEL_PERSONAL_AUTH_TOKEN,
             },
             {
-              key: 'VERCEL_FR_TEAM_ID',
+              key: "VERCEL_FR_TEAM_ID",
               value: process.env.VERCEL_FR_TEAM_ID,
             },
             {
-              key: 'ROLL_OUT_API_TOKEN',
+              key: "ROLL_OUT_API_TOKEN",
               value: process.env.ROLL_OUT_API_TOKEN,
             },
-          ].map(v => ({
+          ].map((v) => ({
             ...v,
-            target: ['production', 'preview', 'development'],
-            type: 'encrypted',
+            target: ["production", "preview", "development"],
+            type: "encrypted",
           })),
-          framework: 'nextjs',
+          framework: "nextjs",
           gitRepository: {
-            repo: 'focusreactive/mvp-nextjs-sanity',
-            type: 'github',
+            repo: process.env.REPO_NAME,
+            type: process.env.REPO_TYPE,
           },
           publicSource: false,
-
-          // todo: remove when repo become independent
-          // custom params for monorepo setup
-          buildCommand: '', // fix to make roll out work
-          rootDirectory: 'boilerplate',
         }),
-      },
+      }
     );
 
-    if (response.status === 401) {
-      throw new Error('Invalid vercel token');
+    if (response.status.toString().startsWith("4")) {
+      throw new Error("Error createVercelProject");
     }
 
     const data = await response.json();
 
-    console.log('Vercel🔺 project created...✅');
+    console.log("Vercel🔺 project created...✅");
 
     return {
       projectId: data.id as string,
@@ -161,7 +156,7 @@ export async function createVercelProject({
 
 export async function getVercelProjects() {
   try {
-    console.log('Fetching vercel🔺 projects...⏳');
+    console.log("Fetching vercel🔺 projects...⏳");
 
     const response = await fetch(
       `https://api.vercel.com/v9/projects?repoId=${process.env.REPO_ID}&teamId=${process.env.VERCEL_FR_TEAM_ID}&search=${process.env.PROJECT_NAME}`,
@@ -169,16 +164,16 @@ export async function getVercelProjects() {
         headers: {
           Authorization: `Bearer ${process.env.VERCEL_PERSONAL_AUTH_TOKEN}`,
         },
-      },
+      }
     );
 
-    if (response.status === 401) {
-      throw new Error('Invalid vercel token');
+    if (response.status.toString().startsWith("4")) {
+      throw new Error("Error getVercelProjects");
     }
 
     const data = await response.json();
 
-    console.log('Vercel🔺 projects fetched...✅');
+    console.log("Vercel🔺 projects fetched...✅");
 
     return data.projects as any[];
   } catch (error) {
@@ -210,35 +205,35 @@ export async function triggerGithubWorkflow({
   email: string;
 }) {
   try {
-    console.log('Triggering github workflow...⏳');
+    console.log("Triggering github workflow...⏳");
 
     const response = await fetch(
       `https://api.github.com/repos/${process.env.REPO_NAME}/actions/workflows/${process.env.REPO_WORKFLOW_ID}/dispatches`,
       {
-        method: 'POST',
+        method: "POST",
         headers: {
           Authorization: `Bearer ${process.env.GITHUB_PERSONAL_ACCESS_TOKEN}`,
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           ref: process.env.REPO_PROD_BRANCH,
           inputs: {
             email: email,
-            'sanity-project-id': sanityProjectId,
-            'sanity-dataset-name': sanityDatasetName,
-            'vercel-project-id': vercelProjectId,
-            'vercel-project-name': vercelProjectName,
-            'vercel-deployment-url': vercelDeploymentUrl,
+            "sanity-project-id": sanityProjectId,
+            "sanity-dataset-name": sanityDatasetName,
+            "vercel-project-id": vercelProjectId,
+            "vercel-project-name": vercelProjectName,
+            "vercel-deployment-url": vercelDeploymentUrl,
           },
         }),
-      },
+      }
     );
 
-    if (response.status === 401) {
-      throw new Error('Invalid github token');
+    if (response.status.toString().startsWith("4")) {
+      throw new Error("Error ...");
     }
 
-    console.log('Github workflow triggered...✅');
+    console.log("Github workflow triggered...✅");
 
     return true;
   } catch (e) {

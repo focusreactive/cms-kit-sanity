@@ -1,11 +1,11 @@
-import { headers } from 'next/headers';
+import { headers } from "next/headers";
 
 export async function POST() {
   if (
-    headers().get('authorization') !==
+    headers().get("authorization") !==
     `Bearer ${process.env.ROLL_OUT_API_TOKEN}`
   ) {
-    return new Response('Invalid roll-out token', { status: 401 });
+    return new Response("Invalid roll-out token", { status: 401 });
   }
 
   try {
@@ -15,7 +15,7 @@ export async function POST() {
         headers: {
           Authorization: `Bearer ${process.env.VERCEL_PERSONAL_AUTH_TOKEN}`,
         },
-        method: 'POST',
+        method: "POST",
         body: JSON.stringify({
           name: process.env.VERCEL_PROJECT_ID,
           project: process.env.VERCEL_PROJECT_NAME,
@@ -24,18 +24,19 @@ export async function POST() {
             ref: process.env.REPO_PROD_BRANCH,
             type: process.env.REPO_TYPE,
           },
-          target: 'production',
+          target: "production",
         }),
-      },
+      }
     );
 
-    if (response.status === 401) {
-      throw new Error('Invalid vercel token');
+    if (response.status.toString().startsWith("4")) {
+      throw new Error("Error /api/roll-out/deploy");
     }
 
-    return new Response('Deployment triggered 📤', { status: 200 });
+    return new Response("Deployment triggered 📤", { status: 200 });
   } catch (error) {
     console.warn(error);
   }
-  return new Response('Failed to trigger deployment 😿', { status: 503 });
+
+  return new Response("Failed to trigger deployment 😿", { status: 503 });
 }

@@ -4,42 +4,42 @@ import {
   triggerGithubWorkflow,
   getVercelProjects,
   createSanityReadToken,
-} from '@/rollout-tools/lib/services';
-import { isValidEmail } from '@/rollout-tools/lib/email';
+} from "@/rollout-tools/lib/services";
+import { isValidEmail } from "@/rollout-tools/lib/email";
 
 export async function POST(request: Request) {
   const { email } = await request.json();
 
   if (email && isValidEmail(email)) {
     const username = email
-      .split('@')[0]
+      .split("@")[0]
       .toLowerCase()
-      .replace(/[^a-z0-9]/g, '') // prevent forbidden symbols
+      .replace(/[^a-z0-9]/g, "") // prevent forbidden symbols
       .slice(0, 90); // prevent project name from being too long
-    const projectName = `${process.env.PROJECT_NAME}-${username}`;
+    const projectName = `${username}-${process.env.PROJECT_NAME}`;
 
     const existingProjects = await getVercelProjects();
 
     const allowToCreateProject =
       existingProjects &&
       existingProjects.length <
-        parseInt(process.env.MAX_NUMBER_OF_PROJECTS || '2');
+        parseInt(process.env.MAX_NUMBER_OF_PROJECTS || "5");
     const existingProject = existingProjects?.find(
-      project => project.name === projectName,
+      (project) => project.name === projectName
     );
 
     if (allowToCreateProject && !existingProject) {
       const sanityProjectId = await createSanityProject(projectName);
       const sanityDatasetName =
-        process.env.NEXT_PUBLIC_SANITY_DATASET || 'production';
+        process.env.NEXT_PUBLIC_SANITY_DATASET || "production";
 
       if (sanityProjectId) {
         const sanityReadToken = await createSanityReadToken(sanityProjectId);
 
         const projectData = await createVercelProject({
-          sanityReadToken: sanityReadToken || '',
+          sanityReadToken: sanityReadToken || "",
           projectName: projectName,
-          sanityProjectId: sanityProjectId,
+          sanityProjectId,
           sanityDatasetName,
         });
 
@@ -54,23 +54,23 @@ export async function POST(request: Request) {
           });
 
           if (result === true) {
-            return new Response('All steps were successful 🎉', {
+            return new Response("All steps were successful 🎉", {
               status: 200,
             });
           }
         }
       }
 
-      return new Response('One of the steps was not successful😿', {
+      return new Response("One of the steps was not successful😿", {
         status: 503,
       });
     }
 
     return new Response(
-      'Limit of the projects reached or project with this email is already exists',
-      { status: 400 },
+      "Limit of the projects reached or project with this email is already exists",
+      { status: 400 }
     );
   }
 
-  return new Response('Email is not valid', { status: 400 });
+  return new Response("Email is not valid", { status: 400 });
 }
