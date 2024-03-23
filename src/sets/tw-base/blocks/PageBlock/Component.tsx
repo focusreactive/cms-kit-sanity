@@ -2,7 +2,7 @@ import React from 'react';
 import type { ReactNode } from 'react';
 import { vercelStegaSplit } from '@vercel/stega';
 
-import { getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
+import { getCmsKey, withCMS, AdapterFn } from '@focus-reactive/cms-kit-sanity';
 import {
   backgroundPatterns,
   layoutSecondarySize,
@@ -84,9 +84,12 @@ const BackgroundSelector = ({
 
     return (
       <div className="absolute inset-0 -z-10 h-full w-full max-w-full">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           className={classnames('object-cover w-full h-full')}
+          // @ts-ignore
           src={image.src}
+          // @ts-ignore
           alt={image.alt}
         />
       </div>
@@ -162,7 +165,7 @@ const MainContainerSelector = ({
       <div className="overflow-hidden bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div
-            className={classNames(
+            className={classnames(
               'mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2',
               {
                 'lg:grid-cols-[1fr,2fr]': layoutOptions.secondarySize === '33%',
@@ -171,7 +174,7 @@ const MainContainerSelector = ({
           >
             <div className="lg:ml-auto lg:pl-8 lg:pt-4">{children}</div>
             <div className="order-[-1] flex items-start justify-end">
-              {secondary._type === 'secondaryImage' ? (
+              {secondary?._type === 'secondaryImage' ? (
                 <Image
                   imageWithMetadata={secondary}
                   className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
@@ -195,7 +198,7 @@ const MainContainerSelector = ({
       <div className="overflow-hidden bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div
-            className={classNames(
+            className={classnames(
               'mx-auto grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2',
               {
                 'lg:grid-cols-[1fr,2fr]': layoutOptions.secondarySize === '33%',
@@ -203,7 +206,7 @@ const MainContainerSelector = ({
             )}
           >
             <div className="lg:pr-8 lg:pt-4">{children}</div>
-            {secondary._type === 'secondaryImage' ? (
+            {secondary?._type === 'secondaryImage' ? (
               <Image
                 imageWithMetadata={secondary}
                 className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
@@ -248,14 +251,14 @@ function PageBlock({ components, blockOptions, renderSanityComponent }: Props) {
   );
 }
 
-const sa = (cmsProps) => {
+const sa: AdapterFn = (cmsProps) => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,
   };
 };
 
-const sb = (cmsProps) => {
+const sb: AdapterFn = (cmsProps) => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,

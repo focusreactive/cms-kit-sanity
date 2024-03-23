@@ -1,10 +1,13 @@
 import { defineBlockType, defineUtilityType } from '@ns/sa-config';
 
-import {TemplateSelector, BlockPreview} from '@focus-reactive/cms-kit-sanity/sanity';
+import {
+  TemplateSelector,
+  BlockPreview,
+  imageWithMetadata,
+} from '@focus-reactive/cms-kit-sanity/sanity';
 import {
   backgroundColors,
   backgroundPatterns,
-  imageWithMetadata,
   layoutSecondaryOptions,
   layoutSecondarySize,
 } from '../../common/common-schema';
