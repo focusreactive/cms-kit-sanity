@@ -1,7 +1,7 @@
-import { namespace } from '@ns/namespace.config';
+import { namespace } from '../../../../namespace.config';
 
-import { TemplateArea, TemplateCategory } from '@/types';
-import type { SanityTemplate } from '@/sanity/types';
+import { TemplateArea, TemplateCategory } from '@focus-reactive/cms-kit-sanity';
+import type { SanityTemplate } from '@focus-reactive/cms-kit-sanity/sanity';
 
 import { badges } from './sa-schema';
 import simpleBadgeJSON from './templates/sa-mock-simple-badge.json';

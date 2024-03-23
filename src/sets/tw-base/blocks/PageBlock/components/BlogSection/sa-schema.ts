@@ -4,8 +4,12 @@ import {
   defineUtilityType,
 } from '../../../../sa-config';
 
-import { customRichText, imageWithMetadata,smartLink, ComponentPreview } from '@focus-reactive/cms-kit-sanity/sanity';
-
+import {
+  customRichText,
+  imageWithMetadata,
+  smartLink,
+  ComponentPreview,
+} from '@focus-reactive/cms-kit-sanity/sanity';
 
 const blogTag = defineUtilityType(({ df }) => ({
   name: 'blogSection.post.tag',
@@ -123,7 +127,7 @@ export const blogSection = defineComponentType(({ df }) => ({
   ],
   components: { preview: ComponentPreview },
   preview: {
-    prepare({ customTitle }) {
+    prepare({ customTitle }: { customTitle: string }) {
       return {
         title: customTitle || 'Blog',
         type: 'tw-base.blogSection',

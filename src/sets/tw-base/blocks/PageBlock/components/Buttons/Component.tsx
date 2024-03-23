@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
+import { AdapterFn, getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
 import type { SmartLinkProps } from '@focus-reactive/cms-kit-sanity/sanity';
 import { classnames } from '@focus-reactive/cms-kit-sanity/common';
 
@@ -36,14 +36,14 @@ function Buttons(props: Props) {
   );
 }
 
-const sa = cmsProps => {
+const sa: AdapterFn  = cmsProps => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,
   };
 };
 
-const sb = cmsProps => {
+const sb: AdapterFn  = cmsProps => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,

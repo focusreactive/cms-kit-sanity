@@ -1,7 +1,7 @@
 import { namespace } from '@ns/namespace.config';
 
-import { TemplateArea, TemplateCategory } from '@/types';
-import type { SanityTemplate } from '@/sanity/types';
+import { TemplateArea, TemplateCategory } from '@focus-reactive/cms-kit-sanity';
+import type { SanityTemplate } from '@focus-reactive/cms-kit-sanity/sanity';
 
 import { buttons } from './sa-schema';
 import twoButtons from './templates/sa-mock-two-buttons.json';

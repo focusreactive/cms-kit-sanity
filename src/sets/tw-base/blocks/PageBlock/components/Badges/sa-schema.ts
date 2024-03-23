@@ -31,11 +31,13 @@ export const badges = defineComponentType(({ df }) => ({
     df({
       name: 'secondaryLink',
       type: smartLink.name,
+      // @ts-ignore
       hidden: ({ parent }) => parent?.secondary === 'without-secondary',
     }),
   ],
   components: { preview: ComponentPreview },
   preview: {
+    // @ts-ignore
     prepare({ customTitle }) {
       return {
         title: customTitle || 'Badge',

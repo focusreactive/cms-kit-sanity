@@ -2,8 +2,13 @@
 import React from 'react';
 import { Image } from '../Image';
 
-import { getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
-import { SmartLink, SmartLinkProps, ContentBlockGeneric, ContentTypeName } from '@focus-reactive/cms-kit-sanity/sanity';
+import { AdapterFn, getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
+import {
+  SmartLink,
+  SmartLinkProps,
+  ContentBlockGeneric,
+  ContentTypeName,
+} from '@focus-reactive/cms-kit-sanity/sanity';
 
 import { GenericRichText } from '@focus-reactive/cms-kit-sanity/common';
 
@@ -62,12 +67,12 @@ function BlogSection(props: Props) {
             value={text}
             components={{
               block: {
-                h2: ({ children }) => (
+                h2: ({ children }: { children: React.ReactElement }) => (
                   <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                     {children}
                   </h2>
                 ),
-                normal: ({ children }) => (
+                normal: ({ children }: { children: React.ReactElement }) => (
                   <p className="mt-2 text-lg leading-8 text-gray-600">
                     {children}
                   </p>
@@ -113,12 +118,20 @@ function BlogSection(props: Props) {
                     value={post.text}
                     components={{
                       block: {
-                        h3: ({ children }) => (
+                        h3: ({
+                          children,
+                        }: {
+                          children: React.ReactElement;
+                        }) => (
                           <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
                             {children}
                           </h3>
                         ),
-                        normal: ({ children }) => (
+                        normal: ({
+                          children,
+                        }: {
+                          children: React.ReactElement;
+                        }) => (
                           <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
                             {children}
                           </p>
@@ -160,14 +173,14 @@ function BlogSection(props: Props) {
   );
 }
 
-const sa = (cmsProps) => {
+const sa: AdapterFn = (cmsProps) => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,
   };
 };
 
-const sb = (cmsProps) => {
+const sb: AdapterFn = (cmsProps) => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,
