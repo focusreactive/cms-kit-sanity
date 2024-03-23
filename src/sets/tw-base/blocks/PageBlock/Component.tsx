@@ -10,7 +10,7 @@ import {
   backgroundColors,
   ContentBlockGeneric,
 } from '@focus-reactive/cms-kit-sanity/sanity';
-import {classnames} from '@focus-reactive/cms-kit-sanity/common';
+import { classnames } from '@focus-reactive/cms-kit-sanity/common';
 
 import { Image } from './components/Image';
 import type { grid } from './components/Grid/sa-schema';
@@ -20,7 +20,10 @@ import { StyledRichText } from './components/StyledRichText';
 const colors = backgroundColors.map((color) => color.value);
 const secondary = layoutSecondaryOptions.map((option) => option.value);
 
-const isDarkColor = (backgroundColors, selectedColor) => {
+const isDarkColor = (
+  backgroundColors: { title: string; value: string }[],
+  selectedColor: string,
+) => {
   const index = backgroundColors.findIndex((color) => color.title === 'dark');
 
   return selectedColor === backgroundColors[index].value;
@@ -51,7 +54,7 @@ type LayoutOptions = {
   secondarySize: (typeof layoutSecondarySize)[number];
   secondaryComponent?:
     | {
-        image: Image;
+        image: typeof Image;
         _type: 'secondaryImage';
       }[]
     | { _type: 'secondaryRichText'; customRichText: [] }[];
