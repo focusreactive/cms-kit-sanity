@@ -51,6 +51,7 @@ export const backgroundOptions = defineUtilityType(({ df }) => ({
         list: backgroundColors,
         layout: 'dropdown',
       },
+      // @ts-ignore
       hidden: ({ parent }) => parent?.type !== 'color',
     }),
     df({
@@ -60,11 +61,13 @@ export const backgroundOptions = defineUtilityType(({ df }) => ({
         list: backgroundPatterns,
         layout: 'dropdown',
       },
+      // @ts-ignore
       hidden: ({ parent }) => parent?.type !== 'pattern',
     }),
     df({
       name: 'imageSelector',
       type: imageWithMetadata.name,
+      // @ts-ignore
       hidden: ({ parent }) => parent?.secondary === 'image',
     }),
   ],
@@ -112,6 +115,7 @@ export const layoutOptions = defineUtilityType(({ df }) => ({
     df({
       name: 'secondaryComponent',
       type: secondaryComponent.name,
+      // @ts-ignore
       hidden: ({ parent }) => parent?.secondary === 'without-secondary',
     }),
   ],
@@ -172,6 +176,7 @@ export const pageBlock = defineBlockType(({ df }) => ({
       components: 'components',
       blockOptions: 'blockOptions',
     },
+    // @ts-ignore
     prepare({ components, blockOptions, customTitle }) {
       return {
         title: customTitle || 'Page block',

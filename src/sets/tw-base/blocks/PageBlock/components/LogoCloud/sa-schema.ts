@@ -39,6 +39,7 @@ export const logoCloudGrid = defineComponentType(({ df }) => ({
   ],
   components: { preview: ComponentPreview },
   preview: {
+    // @ts-ignore
     prepare({ customTitle }) {
       return {
         title: customTitle || 'Logo cloud',

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { featurePointStyles } from '../../../../common/common-schema';
-import { getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
+import { AdapterFn, getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
 import type { SmartLinkProps } from '@focus-reactive/cms-kit-sanity/sanity';
 import { classnames } from '@focus-reactive/cms-kit-sanity/common';
 
@@ -271,14 +271,14 @@ function FeaturePoints(props: Props) {
   );
 }
 
-const sa = cmsProps => {
+const sa: AdapterFn = cmsProps => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,
   };
 };
 
-const sb = cmsProps => {
+const sb: AdapterFn = cmsProps => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,

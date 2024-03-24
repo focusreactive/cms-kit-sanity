@@ -70,6 +70,7 @@ export const featurePoints = defineComponentType(({ df }) => ({
   ],
   components: { preview: ComponentPreview },
   preview: {
+    // @ts-ignore
     prepare({ customTitle }) {
       return {
         title: customTitle || 'Feature points',

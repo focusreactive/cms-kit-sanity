@@ -1,7 +1,8 @@
 import React from 'react';
-import { contentPoint } from '@ns/blocks/Content/sa-schema';
 
-import { GenericRichText } from '@/sanity/common-components';
+import { GenericRichText } from '@focus-reactive/cms-kit-sanity/common';
+import { contentPoint } from '@ns/blocks/ContentBlock/sa-schema';
+// import { contentPoint } from '@ns/blocks/ContentBlock/sa-schema';
 
 
 type ContentPointProps = {
@@ -9,7 +10,7 @@ type ContentPointProps = {
     description: string;
     name: string;
     icon: {
-      src;
+      src: string;
     } | null;
   };
 };

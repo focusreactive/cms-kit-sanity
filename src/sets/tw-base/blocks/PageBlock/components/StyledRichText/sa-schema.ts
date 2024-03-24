@@ -26,6 +26,7 @@ export const styledRichText = defineComponentType(({ df }) => ({
   ],
   components: { preview: ComponentPreview },
   preview: {
+    // @ts-ignore
     prepare({ customTitle }) {
       return {
         title: customTitle || 'Rich text',

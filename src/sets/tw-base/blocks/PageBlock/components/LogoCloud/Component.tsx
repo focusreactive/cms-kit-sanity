@@ -2,7 +2,7 @@
 import React from 'react';
 import { Image } from '@ns/blocks/PageBlock/components/Image';
 
-import { getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
+import { AdapterFn, getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
 import { SmartLink, SmartLinkProps, ContentBlockGeneric, ContentTypeName } from '@focus-reactive/cms-kit-sanity/sanity';
 
 import type { logoItem } from './sa-schema';
@@ -57,14 +57,14 @@ function LogoGrid(props: Props) {
   );
 }
 
-const sa = cmsProps => {
+const sa: AdapterFn = cmsProps => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,
   };
 };
 
-const sb = cmsProps => {
+const sb: AdapterFn = cmsProps => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,

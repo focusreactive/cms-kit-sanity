@@ -41,6 +41,7 @@ export const grid = defineComponentType(({ df }) => ({
   ],
   components: { preview: ComponentPreview },
   preview: {
+    // @ts-ignore
     prepare({ customTitle }) {
       return {
         title: customTitle || 'Grid',

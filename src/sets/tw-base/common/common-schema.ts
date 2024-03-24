@@ -116,6 +116,7 @@ export const componentAlignment = ['left', 'center'];
 
 export const findBlock = (key: string, document: any) => {
   const index = document?.content?.findIndex(
+    // @ts-ignore
     block => block?.components?.some(component => component._key === key),
   );
 

@@ -17,6 +17,7 @@ export const styledImage = defineComponentType(({ df }) => ({
     }),
   ],
   preview: {
+    // @ts-ignore
     prepare({ customTitle }) {
       return {
         title: customTitle || 'Image',

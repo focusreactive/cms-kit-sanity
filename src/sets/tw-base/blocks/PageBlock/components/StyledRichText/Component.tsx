@@ -4,7 +4,7 @@ import type { componentAlignment } from '../../../../common/common-schema';
 
 import { classnames } from '@focus-reactive/cms-kit-sanity/common';
 
-import { getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
+import { AdapterFn, getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
 import { SmartLink, SmartLinkProps, ContentBlockGeneric, ContentTypeName } from '@focus-reactive/cms-kit-sanity/sanity';
 
 import { GenericRichText } from '@focus-reactive/cms-kit-sanity/common';
@@ -37,7 +37,7 @@ function StyledRichText({
         value={customRichText}
         components={{
           block: {
-            h1: ({ children }) => (
+            h1: ({ children }: { children: React.ReactElement }) => (
               <h1
                 className={classnames(
                   'text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl',
@@ -49,7 +49,7 @@ function StyledRichText({
                 {children}
               </h1>
             ),
-            h2: ({ children }) => (
+            h2: ({ children }: { children: React.ReactElement }) => (
               <h2
                 className={classnames(
                   'mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl',
@@ -61,7 +61,7 @@ function StyledRichText({
                 {children}
               </h2>
             ),
-            h3: ({ children }) => (
+            h3: ({ children }: { children: React.ReactElement }) => (
               <h3
                 className={classnames(
                   'mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-2xl',
@@ -73,7 +73,7 @@ function StyledRichText({
                 {children}
               </h3>
             ),
-            normal: ({ children }) => (
+            normal: ({ children }: { children: React.ReactElement }) => (
               <p
                 className={classnames('mt-6 text-lg leading-8 text-gray-600', {
                   'text-gray-400': isDarkTheme,
@@ -84,7 +84,7 @@ function StyledRichText({
             ),
           },
           marks: {
-            strong: ({ children }) => (
+            strong: ({ children }: { children: React.ReactElement }) => (
               <strong
                 className={classnames(
                   'text-base font-semibold leading-7 text-indigo-600',
@@ -101,14 +101,14 @@ function StyledRichText({
   );
 }
 
-const sa = cmsProps => {
+const sa: AdapterFn = cmsProps => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,
   };
 };
 
-const sb = cmsProps => {
+const sb: AdapterFn = cmsProps => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,
