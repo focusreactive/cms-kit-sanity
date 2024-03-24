@@ -1,4 +1,4 @@
-import { namespace } from '../../namespace.config';
+import { namespace } from '@ns/namespace.config';
 import type { SanityTemplate } from '@focus-reactive/cms-kit-sanity/sanity';
 import { TemplateArea, TemplateCategory } from '@focus-reactive/cms-kit-sanity';
 

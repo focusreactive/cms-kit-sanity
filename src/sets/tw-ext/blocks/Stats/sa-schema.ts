@@ -1,7 +1,7 @@
 import {
   defineBlockType,
   defineUtilityType,
-} from '../../sa-config';
+} from '@ns/sa-config';
 
 import saMock from './sa-mock.json';
 

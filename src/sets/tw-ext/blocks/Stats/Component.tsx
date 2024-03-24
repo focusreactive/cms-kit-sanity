@@ -1,18 +1,18 @@
 'use client';
 
 import React from 'react';
-import { getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
+import { getCmsKey, withCMS, AdapterFn } from '@focus-reactive/cms-kit-sanity';
 
 import type { Props } from './types';
 
-const saConvertProps = cmsProps => {
+const saConvertProps: AdapterFn = cmsProps => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,
   };
 };
 
-const sbConvertProps = cmsProps => {
+const sbConvertProps: AdapterFn = cmsProps => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,
@@ -52,14 +52,14 @@ function Stats(props: Props) {
   );
 }
 
-const sa = cmsProps => {
+const sa: AdapterFn = cmsProps => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,
   };
 };
 
-const sb = cmsProps => {
+const sb: AdapterFn = cmsProps => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,

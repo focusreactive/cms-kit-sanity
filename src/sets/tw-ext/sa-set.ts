@@ -1,4 +1,4 @@
-import type { Kit } from '@focus-reactive/cms-kit/sanity';
+import { Kit } from '@focus-reactive/cms-kit-sanity/sanity';
 
 import { types } from './blocks/sa-schemas';
 import { namespace } from './namespace.config';
