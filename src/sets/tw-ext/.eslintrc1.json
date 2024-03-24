@@ -4,7 +4,7 @@
       "error",
       {
         "alias": {
-          "@ns": "./src/namespaces/base/"
+          "@ns": "./src/sets/tw-ext"
         }
       }
     ]
