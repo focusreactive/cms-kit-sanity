@@ -12,10 +12,10 @@ export default function SingleTemplatePage({
 
   return (
     <div style={{ borderRadius: 4, border: '2px solid black' }}>
-      {renderSanityComponent({
+      {/* {renderSanityComponent({
         namespaces: ['base', 'land'],
         customNamespaces: [twBase],
-      })(template)}
+      })(template)} */}
     </div>
   );
 }

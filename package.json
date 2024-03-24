@@ -23,7 +23,9 @@
     "react-dom": "^18",
     "sanity": "^3.35.1",
     "sanity-plugin-media": "^2.2.5",
-    "server-only": "^0.0.1"
+    "server-only": "^0.0.1",
+    "styled-components": "^6.1.8",
+    "styled-container-query": "^1.3.5"
   },
   "devDependencies": {
     "@asbjorn/eslint-plugin-groq": "^2.0.0",

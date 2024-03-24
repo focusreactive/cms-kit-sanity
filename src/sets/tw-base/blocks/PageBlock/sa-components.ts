@@ -1,4 +1,4 @@
-import { findBlockRoot } from '@focus-reactive/cms-kit-sanity/sanity-schema-type-utils';
+import { findComponentRoot } from '@focus-reactive/cms-kit-sanity/sanity';
 import type { BlocksMap } from '@focus-reactive/cms-kit-sanity/sanity';
 
 import blogSection from './components/BlogSection/sa-schema';
@@ -19,12 +19,12 @@ import { Badges } from './components/Badges';
 import badges from './components/Badges/sa-schema';
 
 export const pageBlockComponentsMap: BlocksMap = {
-  [findBlockRoot(grid)]: Grid,
-  [findBlockRoot(styledImage)]: StyledImage,
-  [findBlockRoot(styledRichText)]: StyledRichText,
-  [findBlockRoot(featurePoints)]: FeaturePoints,
-  [findBlockRoot(logoCloudGrid)]: LogoCloudGrid,
-  [findBlockRoot(blogSection)]: BlogSection,
-  [findBlockRoot(buttons)]: Buttons,
-  [findBlockRoot(badges)]: Badges,
+  [findComponentRoot(grid)]: Grid,
+  [findComponentRoot(styledImage)]: StyledImage,
+  [findComponentRoot(styledRichText)]: StyledRichText,
+  [findComponentRoot(featurePoints)]: FeaturePoints,
+  [findComponentRoot(logoCloudGrid)]: LogoCloudGrid,
+  [findComponentRoot(blogSection)]: BlogSection,
+  [findComponentRoot(buttons)]: Buttons,
+  [findComponentRoot(badges)]: Badges,
 };
