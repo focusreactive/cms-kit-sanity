@@ -241,6 +241,7 @@ function PageBlock({ components, blockOptions, renderSanityComponent }: Props) {
       <BackgroundSelector backgroundOptions={blockOptions?.backgroundOptions} />
       <MainContainerSelector layoutOptions={blockOptions?.layoutOptions}>
         {components.map(
+          // FIXME: switch to sets
           renderSanityComponent({
             namespaces: ['base', 'land'],
             customProps: { isDarkTheme: isDarkTheme },
