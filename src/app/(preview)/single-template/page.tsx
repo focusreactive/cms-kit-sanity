@@ -1,6 +1,6 @@
 'use client';
 
-import { twBase } from '@/sets/tw-base/sa-set';
+import { sets } from '@/sets/config';
 import { renderSanityComponent } from '@focus-reactive/cms-kit-sanity/sanity-next';
 
 export default function SingleTemplatePage({
@@ -14,10 +14,7 @@ export default function SingleTemplatePage({
 
   return (
     <div style={{ borderRadius: 4, border: '2px solid black' }}>
-      {renderSanityComponent({
-        // namespaces: ['base', 'land'],
-        customNamespaces: [twBase],
-      })(template)}
+      {renderSanityComponent({ sets })(template)}
     </div>
   );
 }

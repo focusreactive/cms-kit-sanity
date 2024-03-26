@@ -7,7 +7,7 @@ import { schemaTypes } from './schemas';
 import { landing } from './schemas/landing';
 import { locate } from './plugins/locate';
 import { dataset, previewUrl, projectId } from './lib/env';
-import { twBase } from '@/sets/tw-base/sa-set';
+import { sets } from '@/sets/config';
 
 export default defineConfig({
   name: 'default',
@@ -20,8 +20,9 @@ export default defineConfig({
     deskTool({ previewUrl }),
     visionTool(),
     cmsKitPlugin({
+      sets,
       namespaces: [],
-      customNamespaces: [twBase],
+      customNamespaces: [],
       pageSchema: landing,
       projectId,
       dataset,
