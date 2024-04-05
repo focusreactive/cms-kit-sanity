@@ -69,7 +69,7 @@
                         "icon": {
                             "_type": "glob.imageWithMetadata",
                             "asset": {
-                                "_ref": "image-a4ce442d7780df6a6625450584c0078716afabd6-24x24-svg",
+                                "_ref": "image-db8a35491bb5b57a9d72ca31b8fb28a31af5c745-200x200-svg",
                                 "_type": "reference"
                             },
                             "src": "https://cdn.sanity.io/images/k0c6krxi/production/a4ce442d7780df6a6625450584c0078716afabd6-24x24.svg",
@@ -88,7 +88,7 @@
                         "icon": {
                             "_type": "glob.imageWithMetadata",
                             "asset": {
-                                "_ref": "image-a4ce442d7780df6a6625450584c0078716afabd6-24x24-svg",
+                                "_ref": "image-db8a35491bb5b57a9d72ca31b8fb28a31af5c745-200x200-svg",
                                 "_type": "reference"
                             },
                             "src": "https://cdn.sanity.io/images/k0c6krxi/production/a4ce442d7780df6a6625450584c0078716afabd6-24x24.svg",
@@ -107,7 +107,7 @@
                         "icon": {
                             "_type": "glob.imageWithMetadata",
                             "asset": {
-                                "_ref": "image-a4ce442d7780df6a6625450584c0078716afabd6-24x24-svg",
+                                "_ref": "image-db8a35491bb5b57a9d72ca31b8fb28a31af5c745-200x200-svg",
                                 "_type": "reference"
                             },
                             "src": "https://cdn.sanity.io/images/k0c6krxi/production/a4ce442d7780df6a6625450584c0078716afabd6-24x24.svg",
@@ -126,7 +126,7 @@
                         "icon": {
                             "_type": "glob.imageWithMetadata",
                             "asset": {
-                                "_ref": "image-a4ce442d7780df6a6625450584c0078716afabd6-24x24-svg",
+                                "_ref": "image-db8a35491bb5b57a9d72ca31b8fb28a31af5c745-200x200-svg",
                                 "_type": "reference"
                             },
                             "src": "https://cdn.sanity.io/images/k0c6krxi/production/a4ce442d7780df6a6625450584c0078716afabd6-24x24.svg",

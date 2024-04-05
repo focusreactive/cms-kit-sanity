@@ -79,7 +79,7 @@ const BackgroundSelector = ({
 }: {
   backgroundOptions: BackgroundOptions;
 }) => {
-  if (backgroundOptions.type === 'image') {
+  if (backgroundOptions?.type === 'image') {
     const image = backgroundOptions.imageSelector.image;
 
     return (
