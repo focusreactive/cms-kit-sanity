@@ -4,10 +4,9 @@
       "error",
       {
         "alias": {
-          "@ns": "./src/namespaces/base/"
+          "@ns": "./src/sets/tw-base"
         }
       }
-    ],
-    "import/no-anonymous-default-export": "off"
+    ]
   }
 }

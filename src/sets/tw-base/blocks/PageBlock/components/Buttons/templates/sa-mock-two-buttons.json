@@ -1,0 +1,16 @@
+{
+  "_type": "tw-base.buttons",
+  "primaryLink": {
+    "_type": "glob.SmartLink",
+    "href": "https://focusreactive.com/",
+    "text": "Get started",
+    "type": "url"
+  },
+  "secondary": "has-secondary-link",
+  "secondaryLink": {
+    "_type": "glob.SmartLink",
+    "href": "https://focusreactive.com/",
+    "text": "Learn more",
+    "type": "url"
+  }
+}

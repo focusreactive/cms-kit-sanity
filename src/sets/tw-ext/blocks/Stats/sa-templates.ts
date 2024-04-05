@@ -1,4 +1,4 @@
-import { namespace } from '../../namespace.config';
+import { namespace } from '@ns/namespace.config';
 import type { SanityTemplate } from '@focus-reactive/cms-kit-sanity/sanity';
 import { TemplateArea, TemplateCategory } from '@focus-reactive/cms-kit-sanity';
 
@@ -10,7 +10,7 @@ const templateStats: SanityTemplate = {
   type: stats.name,
   namespace: namespace.name,
   title: 'Stats',
-  description: '[twBase] STATS EXTERNAL',
+  description: '[twExt] STATS EXTERNAL',
   category: TemplateCategory.stats,
   area: TemplateArea.marketing,
   template: statsJson,

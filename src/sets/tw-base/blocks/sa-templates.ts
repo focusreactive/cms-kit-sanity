@@ -1,3 +1,3 @@
-import stats from './Stats/sa-templates';
+import pageBlock from './PageBlock/sa-templates';
 
-export default [...stats];
+export default [...pageBlock];
