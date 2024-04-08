@@ -132,6 +132,7 @@ export async function createVercelProject({
             type: process.env.REPO_TYPE,
           },
           publicSource: false,
+          buildCommand: "npm i --legacy-peer-deps",
         }),
       }
     );

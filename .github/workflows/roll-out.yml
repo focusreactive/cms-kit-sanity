@@ -83,7 +83,7 @@ jobs:
           -H "Authorization: Bearer ${{ secrets.SANITY_AUTH_TOKEN }}"
 
       - name: Install dependencies
-        run: npm install
+        run: npm i --legacy-peer-deps
       - name: Export dataset
         run: |
           SANITY_AUTH_TOKEN="${{ secrets.SANITY_AUTH_TOKEN }}" \
