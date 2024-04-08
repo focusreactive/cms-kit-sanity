@@ -1,4 +1,6 @@
 import type { PagePayload } from './types';
+'use client';
+
 import { renderSanityComponent } from '@focus-reactive/cms-kit-sanity/sanity-next';
 import { twBase } from '@/sets/tw-base/sa-set';
 

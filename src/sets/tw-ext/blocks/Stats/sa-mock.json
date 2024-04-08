@@ -1,0 +1,21 @@
+{
+  "_type": "tw-ext.stats",
+  "stats": [
+    {
+      "_type": "tw-ext.stats.points",
+      "title": "Transactions every 24 hours",
+      "value": "44 million"
+    },
+    {
+      "_type": "tw-ext.stats.points",
+      "title": "Assets under holding",
+      "value": "$119 trillion"
+    },
+    {
+      "_type": "tw-ext.stats.points",
+      "title": "New users annually",
+      "value": "46,000"
+    }
+  ],
+  "title": "Stats block"
+}

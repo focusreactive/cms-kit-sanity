@@ -1,3 +1,17 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:@dword-design/import-alias/recommended"]
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@dword-design/import-alias/recommended"
+  ],
+  "rules": {
+    "@dword-design/import-alias/prefer-alias": [
+      "error",
+      {
+        "alias": {
+          "@/*": "./src/*",
+          "@ns/*": "./src/sets/tw-base/*"
+        }
+      }
+    ]
+  }
 }

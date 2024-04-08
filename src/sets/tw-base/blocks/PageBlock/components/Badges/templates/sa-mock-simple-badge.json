@@ -1,0 +1,15 @@
+{
+  "_type": "tw-base.badges",
+  "primaryLink": {
+    "_type": "glob.SmartLink",
+    "href": "https://focusreactive.com/",
+    "text": "Read more",
+    "type": "url"
+  },
+  "primaryText": "Announcing our next round of funding. ",
+  "secondary": "without-secondary",
+  "secondaryLink": {
+    "_type": "glob.SmartLink",
+    "type": "internal"
+  }
+}

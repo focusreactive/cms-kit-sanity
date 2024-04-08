@@ -10,6 +10,6 @@ export const twBase: Kit = {
   [namespace.name]: {
     types,
     blocksMap,
-    templates,
+    templates
   },
 };
