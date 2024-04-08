@@ -2,7 +2,7 @@
 
 # CMS-KIT-SANITY
 
-An endeavor accumulating the experience and best practices collected at Focus Reactive. The project serves the idea of making Headless CMS-based development accessible, comfortable, and fast. 
+An endeavor accumulating the experience and best practices collected at Focus Reactive. The project serves the idea of making Headless CMS-based development accessible, comfortable, and fast.
 
 ## What is CMS-KIT?
 
@@ -38,6 +38,24 @@ Meet our first implementation of the CMS-KIT: CMS-KIT-SANITY - the powerful mix 
 - Templates selector plugin for Sanity Studio.
 - Initial content example.
 - Typescript
+
+## Get started
+
+1 [Create](https://github.com/new?template_name=cms-kit-sanity&template_owner=focusreactive) an own repo from this template
+
+
+### Local development
+
+`git clone` your repo
+
+`npm i --legacy-peer-deps` to install dependencies
+
+`npm run dev` to run local dev server
+
+open http://localhost:3000/ to preview pages
+
+open http://localhost:3000/admin to enter Sanity Studio
+
 
 
 ## Credits
