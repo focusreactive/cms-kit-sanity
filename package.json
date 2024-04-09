@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export-dataset": "sanity dataset export production initial-data.tar.gz"
   },
   "dependencies": {
     "@focus-reactive/cms-kit-sanity": "0.1.17",
