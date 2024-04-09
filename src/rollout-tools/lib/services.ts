@@ -94,7 +94,7 @@ export async function createVercelProject({
               value: sanityDatasetName,
             },
             {
-              key: "SANITY_API_READ_TOKEN",
+              key: "NEXT_PUBLIC_READ_TOKEN",
               value: sanityReadToken,
             },
             {
@@ -120,6 +120,14 @@ export async function createVercelProject({
             {
               key: "ROLL_OUT_API_TOKEN",
               value: process.env.ROLL_OUT_API_TOKEN,
+            },
+            {
+              key: "SANITY_STUDIO_URL",
+              value: `https://${projectName}.vercel.app/admin`,
+            },
+            {
+              key: "NEXT_PUBLIC_PREVIEW_URL",
+              value: `https://${projectName}.vercel.app`,
             },
           ].map((v) => ({
             ...v,
