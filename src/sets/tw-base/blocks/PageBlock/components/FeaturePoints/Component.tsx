@@ -40,10 +40,10 @@ const Card = ({
             <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
               <img
                 // TODO: fix this nesting
-                src={feature.icon.icon.src}
+                src={feature?.icon?.icon?.src}
                 className="h-5 w-5 text-indigo-600 invert"
                 aria-hidden="true"
-                alt={feature.icon.icon.alt}
+                alt={feature?.icon?.icon?.alt}
               />
             </div>
             {feature.title}
@@ -74,12 +74,12 @@ const Card = ({
             )}
           >
             <img
-              src={feature.icon.icon.src}
+              src={feature?.icon?.icon?.src}
               className={classnames('h-5 w-5', {
                 invert: isDarkTheme,
               })}
               aria-hidden="true"
-              alt={feature.icon.icon.alt}
+              alt={feature?.icon?.icon?.alt}
             />
             {feature.title}
           </dt>
@@ -115,10 +115,10 @@ const Card = ({
           >
             <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
               <img
-                src={feature.icon.icon.src}
+                src={feature?.icon?.icon?.src}
                 className="h-5 w-5 text-indigo-600 invert"
                 aria-hidden="true"
-                alt={feature.icon.icon.alt}
+                alt={feature?.icon?.icon?.alt}
               />
             </div>
             {feature.title}
@@ -159,10 +159,10 @@ const Card = ({
           >
             <div className="absolute left-0 top-1 flex h-5 w-5 items-center justify-center">
               <img
-                src={feature.icon.icon.src}
+                src={feature?.icon?.icon?.src}
                 className="text-indigo-600"
                 aria-hidden="true"
-                alt={feature.icon.icon.alt}
+                alt={feature?.icon?.icon?.alt}
               />
             </div>
             {feature.title}
@@ -182,7 +182,7 @@ const Card = ({
             })}
           >
             <img
-              src={feature.icon.icon.src}
+              src={feature?.icon?.icon?.src}
               className={classnames(
                 'absolute left-1 top-1 h-5 w-5 text-indigo-600',
                 {
@@ -190,7 +190,7 @@ const Card = ({
                 },
               )}
               aria-hidden="true"
-              alt={feature.icon.icon.alt}
+              alt={feature?.icon?.icon?.alt}
             />
             {feature.title}{' '}
           </dt>
