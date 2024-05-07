@@ -66,13 +66,7 @@ type Props = ContentBlockGeneric & {
     backgroundOptions: BackgroundOptions;
     layoutOptions: LayoutOptions;
   };
-  renderSanityComponent: ({
-    namespaces,
-    customProps,
-  }: {
-    namespaces: string[];
-    customProps: any;
-  }) => any;
+  renderSanityComponent: (options: object) => any;
 };
 const BackgroundSelector = ({
   backgroundOptions,
@@ -243,7 +237,6 @@ function PageBlock({ components, blockOptions, renderSanityComponent }: Props) {
         {components.map(
           // FIXME: switch to sets
           renderSanityComponent({
-            namespaces: ['base', 'land'],
             customProps: { isDarkTheme: isDarkTheme },
           }),
         )}

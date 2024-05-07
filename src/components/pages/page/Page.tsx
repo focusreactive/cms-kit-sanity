@@ -17,7 +17,6 @@ export function Page({ data }: PageProps) {
       <h1 className={'text-5xl bold text-center'}>{title}</h1>
       {content?.map(
         renderSanityComponent({
-          namespaces: ['base', 'land'],
           customNamespaces: [twBase],
         }),
       )}
