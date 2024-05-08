@@ -3,6 +3,8 @@ import type { PagePayload } from './types';
 
 import { renderSanityComponent } from '@focus-reactive/cms-kit-sanity/sanity-next';
 import { twBase } from '@/sets/tw-base/sa-set';
+import { sets } from '@/sets/config';
+import { twExt } from '@/sets/tw-ext/sa-set';
 
 export interface PageProps {
   data: PagePayload | null;
@@ -17,7 +19,7 @@ export function Page({ data }: PageProps) {
       <h1 className={'text-5xl bold text-center'}>{title}</h1>
       {content?.map(
         renderSanityComponent({
-          customNamespaces: [twBase],
+          customNamespaces: sets,
         }),
       )}
     </div>
