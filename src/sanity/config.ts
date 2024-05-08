@@ -26,7 +26,7 @@ export default defineConfig({
       pageSchema: landing,
       projectId,
       dataset,
-      previewUrl,
+      // previewUrl,
     }),
     presentationTool({
       locate,
