@@ -11,7 +11,6 @@ import {
   layoutSecondaryOptions,
   layoutSecondarySize,
 } from '../../common/common-schema';
-// import { BlockPreview } from '@/sanity/model/components';
 
 import { blogSection } from './components/BlogSection/sa-schema';
 import blogSectionSchema from './components/BlogSection/sa-schema';

@@ -20,6 +20,11 @@ export const author = defineType({
       },
     }),
     defineField({
+      name: 'position',
+      title: 'Position',
+      type: 'string',
+    }),
+    defineField({
       name: 'image',
       title: 'Image',
       type: 'image',
@@ -30,15 +35,7 @@ export const author = defineType({
     defineField({
       name: 'bio',
       title: 'Bio',
-      type: 'array',
-      of: [
-        {
-          title: 'Block',
-          type: 'block',
-          styles: [{ title: 'Normal', value: 'normal' }],
-          lists: [],
-        },
-      ],
+      type: 'string',
     }),
   ],
   preview: {

@@ -1,0 +1,28 @@
+{
+  "_key": "3d2cfbb317cf39273a5fe554e38cde4a",
+  "_type": "fb-test.landingBlock",
+  "description": "The team of steering managers",
+  "teamMembers": [
+    {
+      "_key": "37db4532cf24",
+      "_ref": "3184dc13-1e3a-411f-98e9-e426372fa4e3",
+      "_type": "reference"
+    },
+    {
+      "_key": "38d75a0c51c3",
+      "_ref": "5fb46556-6521-47f9-90b3-3dc715002e68",
+      "_type": "reference"
+    },
+    {
+      "_key": "e886781cf722",
+      "_ref": "92916bfd-fec8-42dc-99a1-90d0e5706413",
+      "_type": "reference"
+    },
+    {
+      "_key": "1f2832e97275",
+      "_ref": "cde951eb-276a-40e6-a257-516ad808d60e",
+      "_type": "reference"
+    }
+  ],
+  "title": "Our managers"
+}
