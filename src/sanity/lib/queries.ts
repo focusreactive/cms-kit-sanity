@@ -3,8 +3,17 @@ import { groq } from 'next-sanity';
 export const pagesBySlugQuery = groq`
     * [_type == 'landing' && slug.current == $slug] {
       title,
+      description,
+      badgeText,
       content[]{
       ...,
+      _type == 'fb-test.landingBlock' => {
+          ...,
+          teamMembers[]->{
+            ...,
+            'avatar': image.asset->
+          }
+        },
       _type == 'base.pageBlock' => { // TODO: move it to cms-kit
         ...,
         blockOptions{
