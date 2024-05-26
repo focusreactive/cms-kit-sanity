@@ -48,9 +48,9 @@ Meet our first implementation of the CMS-KIT: CMS-KIT-SANITY - the powerful mix 
 
 `git clone` your repo
 
-`npm i --legacy-peer-deps` to install dependencies
+use `pnpm i` or `npm i --legacy-peer-deps` to install dependencies
 
-`npm run dev` to run local dev server
+`pnpm run dev` to run local dev server
 
 open http://localhost:3000/ to preview pages
 
