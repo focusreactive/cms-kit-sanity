@@ -1,0 +1,8 @@
+
+###
+POST https://cms-kit-sanity.vercel.app/api/roll-out
+Content-Type: application/json
+
+{
+  "email": "regx@usul.su"
+}
