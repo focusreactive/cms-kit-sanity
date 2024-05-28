@@ -7,6 +7,20 @@ import {
 } from "@/rollout-tools/lib/services";
 import { isValidEmail } from "@/rollout-tools/lib/email";
 
+const allowedMethods = ["POST", "OPTIONS"];
+
+function handleCors(response: Response) {
+  response.headers.set("Access-Control-Allow-Origin", "*");
+  response.headers.set("Access-Control-Allow-Methods", allowedMethods.join(", "));
+  response.headers.set("Access-Control-Allow-Headers", "Content-Type");
+  return response;
+}
+
+export async function OPTIONS() {
+  const response = new Response(null, { status: 204 });
+  return handleCors(response);
+}
+
 export async function POST(request: Request) {
   const { email } = await request.json();
 
@@ -54,23 +68,25 @@ export async function POST(request: Request) {
           });
 
           if (result === true) {
-            return new Response("All steps were successful 🎉", {
-              status: 200,
-            });
+            return handleCors(
+              new Response("All steps were successful 🎉", { status: 200 })
+            );
           }
         }
       }
 
-      return new Response("One of the steps was not successful😿", {
-        status: 503,
-      });
+      return handleCors(
+        new Response("One of the steps was not successful😿", { status: 503 })
+      );
     }
 
-    return new Response(
-      "Limit of the projects reached or project with this email is already exists",
-      { status: 400 }
+    return handleCors(
+      new Response(
+        "Limit of the projects reached or project with this email is already exists",
+        { status: 400 }
+      )
     );
   }
 
-  return new Response("Email is not valid", { status: 400 });
+  return handleCors(new Response("Email is not valid", { status: 400 }));
 }
