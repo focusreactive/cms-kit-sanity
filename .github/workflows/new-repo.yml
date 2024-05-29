@@ -1,4 +1,4 @@
-name: Save Repository ID to .env
+name: Save Repository ID to .env.initial
 
 on:
   workflow_dispatch:
@@ -43,14 +43,14 @@ jobs:
       - name: Print and Save Repository ID
         run: |
           echo "Repository ID: ${{ github.event.repository.id }}"
-          echo "REPO_ID=${{ github.event.repository.id }}" > .env
+          echo "REPO_ID=${{ github.event.repository.id }}" > .env.initial
 
-      - name: Commit and Push .env
+      - name: Commit and Push .env.initial
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
-          git add .env
-          git commit -m "Add repository ID to .env"
+          git add .env.initial
+          git commit -m "Add repository ID to .env.initial"
           git push origin main
