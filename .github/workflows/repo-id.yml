@@ -10,8 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Print Repository ID
-      run: echo "Repository ID: ${{ github.event.repository.id }}"
+      - name: Print Repository ID
+        run: |
+          echo "Repository ID: ${{ github.event.repository.id }}"
