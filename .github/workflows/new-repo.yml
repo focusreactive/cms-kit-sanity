@@ -1,0 +1,30 @@
+name: Save Repository ID to .env
+
+on:
+  repository_dispatch:
+    types: [repository_template_created]
+
+jobs:
+  save_repo_id:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          ref: main
+
+      - name: Print and Save Repository ID
+        run: |
+          echo "Repository ID: ${{ github.event.repository.id }}"
+          echo "REPO_ID=${{ github.event.repository.id }}" > .env
+
+      - name: Commit and Push .env
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add .env
+          git commit -m "Add repository ID to .env"
+          git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}" main
