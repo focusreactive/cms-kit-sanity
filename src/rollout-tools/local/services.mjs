@@ -174,6 +174,7 @@ export async function getVercelProjects() {
     );
 
     if (response.status.toString().startsWith('4')) {
+      console.error(response.status);
       throw new Error('Error getVercelProjects');
     }
 
