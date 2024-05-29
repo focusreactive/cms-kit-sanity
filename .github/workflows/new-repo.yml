@@ -1,16 +1,38 @@
 name: Save Repository ID to .env
 
 on:
-  repository_dispatch:
-    types: [repository_template_created]
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
-  save_repo_id:
+  get_current_step:
+    name: Check current step number
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - id: get_step
+        run: |
+          echo "current_step=$(cat ./.github/script/STEP)" >> $GITHUB_OUTPUT
+    outputs:
+      current_step: ${{ steps.get_step.outputs.current_step }}
 
+  save_repo_id:
+    name: Save Repository ID
+    needs: get_current_step
+    if: >-
+      ${{ !github.event.repository.is_template
+          && needs.get_current_step.outputs.current_step == 0 }}
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: main
 
@@ -27,4 +49,4 @@ jobs:
           git config --global user.email 'github-actions@github.com'
           git add .env
           git commit -m "Add repository ID to .env"
-          git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}" main
+          git push origin main
