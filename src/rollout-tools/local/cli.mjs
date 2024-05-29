@@ -1,33 +1,31 @@
 #!/usr/bin/env node
 
 import { localRollout, checkEnvVariables } from './localRollout.mjs';
-
+import { loadEnvVariables } from './loadEnvVariables.mjs';
+import { fetchSanityOrganizations } from './fetchSanityOrganizations.mjs';
+import { fetchVercelTeams } from './fetchVercelTeams.mjs';
 import inquirer from 'inquirer';
 import fs from 'fs';
 import crypto from 'crypto';
-// import fetch from 'node-fetch';
-// import { stdout as output } from 'node:process';
-// import { createRequire } from 'module';
-// import readline from 'readline';
 
-// Helper function to append to .env file
-const appendToEnv = (key, value) => {
-  fs.appendFileSync('.env', `${key}=${value}\n`);
-};
+// Helper function to append or update to .env file
+const appendOrUpdateEnv = (key, value) => {
+  const envFilePath = '.env';
+  const envContent = fs.existsSync(envFilePath)
+    ? fs.readFileSync(envFilePath, 'utf8')
+    : '';
+  const envLines = envContent.split('\n');
 
-// Helper function to read .env file
-const readEnv = () => {
-  const env = {};
-  if (fs.existsSync('.env')) {
-    const lines = fs.readFileSync('.env', 'utf-8').split('\n');
-    for (const line of lines) {
-      const [key, value] = line.split('=');
-      if (key && value) {
-        env[key] = value;
-      }
-    }
+  const existingIndex = envLines.findIndex((line) =>
+    line.startsWith(`${key}=`),
+  );
+  if (existingIndex >= 0) {
+    envLines[existingIndex] = `${key}=${value}`;
+  } else {
+    envLines.push(`${key}=${value}`);
   }
-  return env;
+
+  fs.writeFileSync(envFilePath, envLines.join('\n') + '\n');
 };
 
 // Helper function for coloring text
@@ -44,7 +42,7 @@ const colorText = (text, color) => {
 };
 
 const promptForToken = async (tokenName, promptMessage) => {
-  const env = readEnv();
+  const env = loadEnvVariables();
   if (env[tokenName]) {
     const { useCurrent } = await inquirer.prompt({
       type: 'confirm',
@@ -103,7 +101,20 @@ const main = async () => {
     'VERCEL_PERSONAL_AUTH_TOKEN',
     'Enter your Vercel API access token:',
   );
-  appendToEnv('VERCEL_PERSONAL_AUTH_TOKEN', vercelToken);
+  appendOrUpdateEnv('VERCEL_PERSONAL_AUTH_TOKEN', vercelToken);
+
+  // Step 1.1: Fetch Vercel teams and prompt user to select one
+  const vercelTeams = await fetchVercelTeams(vercelToken);
+  const { selectedTeam } = await inquirer.prompt({
+    type: 'list',
+    name: 'selectedTeam',
+    message: 'Select your Vercel team:',
+    choices: vercelTeams.map((team) => ({
+      name: `${team.name} (${team.slug})`,
+      value: team.id,
+    })),
+  });
+  appendOrUpdateEnv('VERCEL_FR_TEAM_ID', selectedTeam);
 
   // Step 2: Sanity login
   console.log(
@@ -120,16 +131,29 @@ const main = async () => {
     'SANITY_PERSONAL_AUTH_TOKEN',
     'Enter your Sanity API token:',
   );
-  appendToEnv('SANITY_PERSONAL_AUTH_TOKEN', sanityToken);
+  appendOrUpdateEnv('SANITY_PERSONAL_AUTH_TOKEN', sanityToken);
+
+  // Step 2.1: Fetch Sanity organizations and prompt user to select one
+  const sanityOrganizations = await fetchSanityOrganizations(sanityToken);
+  const { selectedOrg } = await inquirer.prompt({
+    type: 'list',
+    name: 'selectedOrg',
+    message: 'Select your Sanity organization:',
+    choices: sanityOrganizations.map((org) => ({
+      name: `${org.name} (${org.slug})`,
+      value: org.id,
+    })),
+  });
+  appendOrUpdateEnv('SANITY_ORGANIZATION_ID', selectedOrg);
 
   // Step 3: Generate ROLL_OUT_API_TOKEN
-  const env = readEnv();
+  const env = loadEnvVariables();
   let rollOutApiToken;
   if (env['ROLL_OUT_API_TOKEN']) {
     rollOutApiToken = env['ROLL_OUT_API_TOKEN'];
   } else {
     rollOutApiToken = crypto.randomBytes(20).toString('hex');
-    appendToEnv('ROLL_OUT_API_TOKEN', rollOutApiToken);
+    appendOrUpdateEnv('ROLL_OUT_API_TOKEN', rollOutApiToken);
   }
 
   // Step 4: Ask for user email

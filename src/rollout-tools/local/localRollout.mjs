@@ -6,7 +6,7 @@ import {
   createSanityReadToken,
 } from './services.mjs';
 import { isValidEmail } from './email.mjs';
-import { loadEnvVariables } from './loadEnv.mjs';
+import { loadEnvVariables } from './loadEnvVariables.mjs';
 
 export function checkEnvVariables(envVars) {
   loadEnvVariables();
@@ -18,16 +18,6 @@ export function checkEnvVariables(envVars) {
   });
 }
 
-// List of required environment variables
-const requiredEnvVars = [
-  'SANITY_PERSONAL_AUTH_TOKEN',
-  'SANITY_ORGANIZATION_ID',
-  'VERCEL_PERSONAL_AUTH_TOKEN',
-  'VERCEL_FR_TEAM_ID',
-  'PROJECT_NAME',
-  'MAX_NUMBER_OF_PROJECTS',
-  'NEXT_PUBLIC_SANITY_DATASET',
-];
 
 export async function localRollout({ inputs, secrets }) {
   const { email } = inputs;

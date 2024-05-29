@@ -6,9 +6,10 @@ export function loadEnvVariables(envFilePath = '.env') {
     process.exit(1);
   }
 
-  const envVars = fs.readFileSync(envFilePath, 'utf-8')
+  const envVars = fs
+    .readFileSync(envFilePath, 'utf-8')
     .split('\n')
-    .filter(line => line.trim() && !line.startsWith('#'))
+    .filter((line) => line.trim() && !line.startsWith('#'))
     .reduce((env, line) => {
       const [key, value] = line.split('=');
       env[key.trim()] = value.trim();
@@ -17,4 +18,6 @@ export function loadEnvVariables(envFilePath = '.env') {
 
   // Set the loaded environment variables to process.env
   Object.assign(process.env, envVars);
+
+  return envVars;
 }
