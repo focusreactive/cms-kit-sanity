@@ -1,6 +1,6 @@
-import { rollOutCmsKitSanity } from './rollOutCmsKitSanity';
+import fetch from 'node-fetch';
 
-export async function createSanityProject(projectName: string) {
+export async function createSanityProject(projectName) {
   try {
     console.log('Start creating sanity💲 project...⏳');
 
@@ -24,13 +24,13 @@ export async function createSanityProject(projectName: string) {
 
     console.log('Sanity💲 project created...✅');
 
-    return data.id as string;
+    return data.id;
   } catch (error) {
     console.warn(error);
   }
 }
 
-export async function createSanityReadToken(projectId: string) {
+export async function createSanityReadToken(projectId) {
   try {
     console.log('Creating read token 🔑 for sanity project...⏳');
 
@@ -57,7 +57,7 @@ export async function createSanityReadToken(projectId: string) {
 
     console.log('Sanity read token 🔑 created...✅');
 
-    return data.key as string;
+    return data.key;
   } catch (error) {
     console.warn(error);
   }
@@ -68,11 +68,6 @@ export async function createVercelProject({
   sanityProjectId,
   sanityDatasetName,
   sanityReadToken,
-}: {
-  projectName: string;
-  sanityProjectId: string;
-  sanityDatasetName: string;
-  sanityReadToken: string;
 }) {
   try {
     console.log('Start creating vercel🔺 project...⏳');
@@ -156,8 +151,8 @@ export async function createVercelProject({
     console.log('Vercel🔺 project created...✅');
 
     return {
-      projectId: data.id as string,
-      projectName: data.name as string,
+      projectId: data.id,
+      projectName: data.name,
       deploymentUrl: `https://${data.name}.vercel.app`,
     };
   } catch (error) {
@@ -186,7 +181,7 @@ export async function getVercelProjects() {
 
     console.log('Vercel🔺 projects fetched...✅');
 
-    return data.projects as any[];
+    return data.projects;
   } catch (error) {
     console.warn(error);
   }
@@ -207,13 +202,6 @@ export async function triggerGithubWorkflow({
   vercelProjectName,
   vercelDeploymentUrl,
   email,
-}: {
-  sanityProjectId: string;
-  sanityDatasetName: string;
-  vercelProjectId: string;
-  vercelProjectName: string;
-  vercelDeploymentUrl: string;
-  email: string;
 }) {
   try {
     console.log('Triggering github workflow...⏳');
@@ -249,51 +237,5 @@ export async function triggerGithubWorkflow({
     return true;
   } catch (e) {
     console.log(e);
-  }
-}
-
-type Inputs = {
-  sanityProjectId: string; // ID of the Sanity project
-  sanityDatasetName: string; // Name of the Sanity dataset
-  vercelProjectName: string; // Name of the Vercel project
-  vercelProjectId: string; // ID of the Vercel project
-  vercelDeploymentUrl: string; // URL of the Vercel deployment
-  email: string; // User email
-};
-
-type Secrets = {
-  VERCEL_FR_TEAM_ID: string; // ID of the Vercel team
-  VERCEL_PERSONAL_AUTH_TOKEN: string; // Personal authorization token for Vercel
-  SANITY_AUTH_TOKEN: string; // Authorization token for Sanity
-  ROLL_OUT_API_TOKEN: string; // API token for the roll-out process
-  REPO_ID: string; // ID of the repository
-  REPO_PROD_BRANCH: string; // Production branch of the repository
-  REPO_TYPE: string; // Type of the repository (e.g., GitHub)
-  REPO_NAME: string; // Name of the repository
-  REPO_WORKFLOW_ID: string; // ID of the GitHub workflow
-  GITHUB_PERSONAL_ACCESS_TOKEN: string; // Personal access token for GitHub
-};
-
-type DeployParams = {
-  inputs: Inputs;
-  secrets: Secrets;
-};
-
-// Local version of the function that calls rollOutCmsKitSanity
-export async function localWorkflow({
-  inputs,
-  secrets,
-}: DeployParams): Promise<void> {
-  try {
-    console.log('Triggering local roll-out process...⏳');
-
-    await rollOutCmsKitSanity({ inputs, secrets });
-
-    console.log('Local roll-out process completed successfully...✅');
-
-    return;
-  } catch (e) {
-    console.log(e);
-    throw new Error('Error in local roll-out process');
   }
 }
