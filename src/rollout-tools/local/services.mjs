@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 export async function createSanityProject(projectName) {
   try {
-    console.log('Start creating sanity💲 project...⏳');
+    console.log('Start creating Sanity project...⏳');
 
     const response = await fetch('https://api.sanity.io/v2021-06-07/projects', {
       method: 'POST',
@@ -22,7 +22,7 @@ export async function createSanityProject(projectName) {
 
     const data = await response.json();
 
-    console.log('Sanity💲 project created...✅');
+    console.log('Sanity project created...✅');
 
     return data.id;
   } catch (error) {
@@ -32,7 +32,7 @@ export async function createSanityProject(projectName) {
 
 export async function createSanityReadToken(projectId) {
   try {
-    console.log('Creating read token 🔑 for sanity project...⏳');
+    console.log('Creating read token 🔑 for Sanity project...⏳');
 
     const response = await fetch(
       `https://api.sanity.io/v2021-06-07/projects/${projectId}/tokens`,
@@ -70,7 +70,7 @@ export async function createVercelProject({
   sanityReadToken,
 }) {
   try {
-    console.log('Start creating vercel🔺 project...⏳');
+    console.log('Start creating Vercel project...⏳');
 
     const response = await fetch(
       `https://api.vercel.com/v10/projects?teamId=${process.env.VERCEL_FR_TEAM_ID}`,
@@ -148,7 +148,7 @@ export async function createVercelProject({
 
     const data = await response.json();
 
-    console.log('Vercel🔺 project created...✅');
+    console.log('Vercel project created...✅');
 
     return {
       projectId: data.id,
@@ -162,7 +162,7 @@ export async function createVercelProject({
 
 export async function getVercelProjects() {
   try {
-    console.log('Fetching vercel🔺 projects...⏳');
+    console.log('Fetching Vercel projects...⏳');
 
     const response = await fetch(
       `https://api.vercel.com/v9/projects?repoId=${process.env.REPO_ID}&teamId=${process.env.VERCEL_FR_TEAM_ID}&search=${process.env.PROJECT_NAME}`,
@@ -179,7 +179,7 @@ export async function getVercelProjects() {
 
     const data = await response.json();
 
-    console.log('Vercel🔺 projects fetched...✅');
+    console.log('Vercel projects fetched...✅');
 
     return data.projects;
   } catch (error) {
@@ -204,7 +204,7 @@ export async function triggerGithubWorkflow({
   email,
 }) {
   try {
-    console.log('Triggering github workflow...⏳');
+    console.log('Triggering GitHub workflow...⏳');
 
     const response = await fetch(
       `https://api.github.com/repos/${process.env.REPO_NAME}/actions/workflows/${process.env.REPO_WORKFLOW_ID}/dispatches`,
@@ -229,10 +229,10 @@ export async function triggerGithubWorkflow({
     );
 
     if (response.status.toString().startsWith('4')) {
-      throw new Error('Error ...');
+      throw new Error('Error triggering GitHub workflow');
     }
 
-    console.log('Github workflow triggered...✅');
+    console.log('GitHub workflow triggered...✅');
 
     return true;
   } catch (e) {

@@ -18,10 +18,9 @@ export function checkEnvVariables(envVars) {
   });
 }
 
-
 export async function localRollout({ inputs, secrets }) {
   loadEnvVariables();
-  const { email } = inputs;
+  const { email, projectName, datasetName } = inputs;
 
   if (email && isValidEmail(email)) {
     const username = email
@@ -29,7 +28,7 @@ export async function localRollout({ inputs, secrets }) {
       .toLowerCase()
       .replace(/[^a-z0-9]/g, '') // prevent forbidden symbols
       .slice(0, 90); // prevent project name from being too long
-    const projectName = `${username}-${secrets.PROJECT_NAME}`;
+    const finalProjectName = `${username}-${projectName}`;
 
     const existingProjects = await getVercelProjects();
 
@@ -37,28 +36,26 @@ export async function localRollout({ inputs, secrets }) {
       existingProjects &&
       existingProjects.length < parseInt(secrets.MAX_NUMBER_OF_PROJECTS || '5');
     const existingProject = existingProjects?.find(
-      (project) => project.name === projectName,
+      (project) => project.name === finalProjectName,
     );
 
     if (allowToCreateProject && !existingProject) {
-      const sanityProjectId = await createSanityProject(projectName);
-      const sanityDatasetName =
-        secrets.NEXT_PUBLIC_SANITY_DATASET || 'production';
+      const sanityProjectId = await createSanityProject(finalProjectName);
 
       if (sanityProjectId) {
         const sanityReadToken = await createSanityReadToken(sanityProjectId);
 
         const projectData = await createVercelProject({
           sanityReadToken: sanityReadToken || '',
-          projectName: projectName,
+          projectName: finalProjectName,
           sanityProjectId,
-          sanityDatasetName,
+          sanityDatasetName: datasetName,
         });
 
         if (projectData) {
           const result = await triggerGithubWorkflow({
             sanityProjectId,
-            sanityDatasetName,
+            sanityDatasetName: datasetName,
             vercelProjectId: projectData.projectId,
             vercelProjectName: projectData.projectName,
             vercelDeploymentUrl: projectData.deploymentUrl,
