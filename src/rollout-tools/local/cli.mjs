@@ -65,6 +65,50 @@ const promptForToken = async (tokenName, promptMessage) => {
   return token;
 };
 
+const promptForProjectName = async () => {
+  const env = loadEnvVariables();
+  if (env['PROJECT_NAME']) {
+    const { useCurrent } = await inquirer.prompt({
+      type: 'confirm',
+      name: 'useCurrent',
+      message: `PROJECT_NAME is already set to ${env['PROJECT_NAME']}. Do you want to keep the current value?`,
+      default: true,
+    });
+    if (useCurrent) {
+      return env['PROJECT_NAME'];
+    }
+  }
+  const { projectName } = await inquirer.prompt({
+    type: 'input',
+    name: 'projectName',
+    message: 'Enter the project name prefix:',
+    default: 'cms-kit-sanity-mvp',
+  });
+  return projectName;
+};
+
+const promptForDatasetName = async () => {
+  const env = loadEnvVariables();
+  if (env['NEXT_PUBLIC_SANITY_DATASET']) {
+    const { useCurrent } = await inquirer.prompt({
+      type: 'confirm',
+      name: 'useCurrent',
+      message: `NEXT_PUBLIC_SANITY_DATASET is already set to ${env['NEXT_PUBLIC_SANITY_DATASET']}. Do you want to keep the current value?`,
+      default: true,
+    });
+    if (useCurrent) {
+      return env['NEXT_PUBLIC_SANITY_DATASET'];
+    }
+  }
+  const { datasetName } = await inquirer.prompt({
+    type: 'input',
+    name: 'datasetName',
+    message: 'Enter the Sanity dataset name:',
+    default: 'production',
+  });
+  return datasetName;
+};
+
 const main = async () => {
   console.log(
     colorText('\nWelcome to the CMS-KIT Auto Rollout CLI Tool\n', 'cyan'),
@@ -201,7 +245,15 @@ const main = async () => {
 
   appendOrUpdateEnv('EMAIL', email);
 
-  // Step 5: Send data to the API
+  // Step 5: Ask for project name prefix
+  const projectName = await promptForProjectName();
+  appendOrUpdateEnv('PROJECT_NAME', projectName);
+
+  // Step 6: Ask for dataset name
+  const datasetName = await promptForDatasetName();
+  appendOrUpdateEnv('NEXT_PUBLIC_SANITY_DATASET', datasetName);
+
+  // Step 7: Send data to the API
   try {
     // Ensure all required environment variables are set
     const requiredEnvVars = [
@@ -210,20 +262,20 @@ const main = async () => {
       'SANITY_ORGANIZATION_ID',
       'VERCEL_FR_TEAM_ID',
       'PROJECT_NAME',
-      'MAX_NUMBER_OF_PROJECTS',
       'NEXT_PUBLIC_SANITY_DATASET',
+      'MAX_NUMBER_OF_PROJECTS',
     ];
     checkEnvVariables(requiredEnvVars);
 
-    const inputs = { email };
+    const inputs = { email, projectName, datasetName };
     const secrets = {
       SANITY_PERSONAL_AUTH_TOKEN: process.env.SANITY_PERSONAL_AUTH_TOKEN,
       SANITY_ORGANIZATION_ID: process.env.SANITY_ORGANIZATION_ID,
       VERCEL_PERSONAL_AUTH_TOKEN: process.env.VERCEL_PERSONAL_AUTH_TOKEN,
       VERCEL_FR_TEAM_ID: process.env.VERCEL_FR_TEAM_ID,
       PROJECT_NAME: process.env.PROJECT_NAME,
-      MAX_NUMBER_OF_PROJECTS: process.env.MAX_NUMBER_OF_PROJECTS,
       NEXT_PUBLIC_SANITY_DATASET: process.env.NEXT_PUBLIC_SANITY_DATASET,
+      MAX_NUMBER_OF_PROJECTS: process.env.MAX_NUMBER_OF_PROJECTS,
     };
 
     await localRollout({ inputs, secrets });

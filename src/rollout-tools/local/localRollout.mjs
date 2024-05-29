@@ -20,6 +20,7 @@ export function checkEnvVariables(envVars) {
 
 
 export async function localRollout({ inputs, secrets }) {
+  loadEnvVariables();
   const { email } = inputs;
 
   if (email && isValidEmail(email)) {
