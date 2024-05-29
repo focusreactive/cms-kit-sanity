@@ -2,19 +2,22 @@
 
 import { localRollout, checkEnvVariables } from './localRollout.mjs';
 import { loadEnvVariables } from './loadEnvVariables.mjs';
-import { fetchSanityOrganizations } from './fetchSanityOrganizations.mjs';
-import { fetchVercelTeams } from './fetchVercelTeams.mjs';
+import {
+  fetchSanityOrganizations,
+  fetchSanityUserInfo,
+} from './fetchSanityOrganizations.mjs';
+import { fetchVercelTeams, fetchVercelUserInfo } from './fetchVercelTeams.mjs';
 import inquirer from 'inquirer';
 import fs from 'fs';
 import crypto from 'crypto';
 
-// Helper function to append or update to .env file
+/// Helper function to append or update to .env file
 const appendOrUpdateEnv = (key, value) => {
   const envFilePath = '.env';
   const envContent = fs.existsSync(envFilePath)
     ? fs.readFileSync(envFilePath, 'utf8')
     : '';
-  const envLines = envContent.split('\n');
+  const envLines = envContent.split('\n').filter((line) => line.trim() !== ''); // Remove empty lines
 
   const existingIndex = envLines.findIndex((line) =>
     line.startsWith(`${key}=`),
@@ -103,6 +106,9 @@ const main = async () => {
   );
   appendOrUpdateEnv('VERCEL_PERSONAL_AUTH_TOKEN', vercelToken);
 
+  // Fetch Vercel user info
+  const vercelUserInfo = await fetchVercelUserInfo(vercelToken);
+
   // Step 1.1: Fetch Vercel teams and prompt user to select one
   const vercelTeams = await fetchVercelTeams(vercelToken);
   const { selectedTeam } = await inquirer.prompt({
@@ -133,6 +139,9 @@ const main = async () => {
   );
   appendOrUpdateEnv('SANITY_PERSONAL_AUTH_TOKEN', sanityToken);
 
+  // Fetch Sanity user info
+  const sanityUserInfo = await fetchSanityUserInfo(sanityToken);
+
   // Step 2.1: Fetch Sanity organizations and prompt user to select one
   const sanityOrganizations = await fetchSanityOrganizations(sanityToken);
   const { selectedOrg } = await inquirer.prompt({
@@ -157,11 +166,40 @@ const main = async () => {
   }
 
   // Step 4: Ask for user email
-  const { email } = await inquirer.prompt({
-    type: 'input',
-    name: 'email',
-    message: colorText('Enter your email:', 'cyan'),
+  const emails = new Set();
+  emails.add(sanityUserInfo.email);
+  emails.add(vercelUserInfo.email);
+
+  const emailChoices = [
+    ...Array.from(emails).map((email) => ({ name: email, value: email })),
+    { name: 'Enter a different email', value: 'other' },
+  ];
+
+  if (env['EMAIL'] && !emails.has(env['EMAIL'])) {
+    emailChoices.unshift({
+      name: `Existing: ${env['EMAIL']}`,
+      value: env['EMAIL'],
+    });
+  }
+
+  const { emailChoice } = await inquirer.prompt({
+    type: 'list',
+    name: 'emailChoice',
+    message: 'Select your email:',
+    choices: emailChoices,
   });
+
+  let email = emailChoice;
+  if (emailChoice === 'other') {
+    const { userEmail } = await inquirer.prompt({
+      type: 'input',
+      name: 'userEmail',
+      message: colorText('Enter your email:', 'cyan'),
+    });
+    email = userEmail;
+  }
+
+  appendOrUpdateEnv('EMAIL', email);
 
   // Step 5: Send data to the API
   try {

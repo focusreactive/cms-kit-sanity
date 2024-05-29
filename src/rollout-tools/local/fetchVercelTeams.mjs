@@ -32,3 +32,34 @@ export async function fetchVercelTeams(token) {
     return [];
   }
 }
+
+export async function fetchVercelUserInfo(token) {
+  const url = 'https://api.vercel.com/v2/user';
+
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    const userInfo = {
+      name: data.user.name,
+      email: data.user.email,
+      profileImage: data.user.profileImage,
+    };
+
+    return userInfo;
+  } catch (error) {
+    console.error('Error fetching user info:', error.message);
+    return {};
+  }
+}
