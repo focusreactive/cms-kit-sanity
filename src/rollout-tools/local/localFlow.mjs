@@ -215,7 +215,7 @@ export async function localFlow({ inputs, secrets }) {
       gitSource: {
         repoId: secrets.REPO_ID,
         ref: secrets.REPO_PROD_BRANCH,
-        type: secrets.REPO_TYPE,
+        type: 'github',
       },
     };
     const response = await fetch(
