@@ -1,4 +1,5 @@
 import ora from 'ora';
+import inquirer from 'inquirer';
 import {
   createSanityProject,
   createVercelProject,
@@ -6,14 +7,14 @@ import {
   createSanityReadToken,
 } from './services.mjs';
 import { isValidEmail } from './email.mjs';
-import { loadEnvVariables } from './loadEnvVariables.mjs';
+import { loadEnvVariables, appendOrUpdateEnv } from './loadEnvVariables.mjs';
 import { localFlow } from './localFlow.mjs';
 
 export function checkEnvVariables(envVars) {
   loadEnvVariables();
   envVars.forEach((envVar) => {
     if (!process.env[envVar]) {
-      const spinner = ora(`Missing environment variable: ${envVar}`).fail();
+      ora(`Missing environment variable: ${envVar}`).fail();
       process.exit(1);
     }
   });
@@ -31,6 +32,22 @@ export async function localRollout({ inputs, secrets }) {
       .slice(0, 90); // prevent project name from being too long
     const finalProjectName = `${username}-${projectName}`;
 
+    // Check if NEXT_PUBLIC_SANITY_PROJECT_ID is already set
+    const existingSanityProjectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+    if (existingSanityProjectId) {
+      const { createNewProject } = await inquirer.prompt({
+        type: 'confirm',
+        name: 'createNewProject',
+        message:
+          'A Sanity project is already created. Do you want to create a new project?',
+        default: false,
+      });
+      if (!createNewProject) {
+        ora('Using existing Sanity project ID.').info();
+        return;
+      }
+    }
+
     const existingProjectsSpinner = ora(
       'Fetching existing Vercel projects...',
     ).start();
@@ -47,9 +64,12 @@ export async function localRollout({ inputs, secrets }) {
     if (allowToCreateProject && !existingProject) {
       const sanityProjectSpinner = ora('Creating Sanity project...').start();
       const sanityProjectId = await createSanityProject(finalProjectName);
-      sanityProjectSpinner.succeed('Sanity project created.');
-
       if (sanityProjectId) {
+        // Save new Sanity project ID to .env and update environment
+        appendOrUpdateEnv('NEXT_PUBLIC_SANITY_PROJECT_ID', sanityProjectId);
+        process.env.NEXT_PUBLIC_SANITY_PROJECT_ID = sanityProjectId;
+        sanityProjectSpinner.succeed('Sanity project created.');
+
         const sanityReadTokenSpinner = ora(
           'Creating Sanity read token...',
         ).start();
@@ -66,7 +86,6 @@ export async function localRollout({ inputs, secrets }) {
         vercelProjectSpinner.succeed('Vercel project created.');
 
         if (projectData) {
-          console.log('🚀 ~ localRollout ~ projectData:\n', projectData);
           const localFlowSpinner = ora('Starting local flow...').start();
           const result = await localFlow({
             inputs: {

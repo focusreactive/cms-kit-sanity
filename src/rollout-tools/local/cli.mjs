@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { localRollout, checkEnvVariables } from './localRollout.mjs';
-import { loadEnvVariables } from './loadEnvVariables.mjs';
+import { appendOrUpdateEnv, loadEnvVariables } from './loadEnvVariables.mjs';
 import {
   fetchSanityOrganizations,
   fetchSanityUserInfo,
@@ -10,26 +10,6 @@ import { fetchVercelTeams, fetchVercelUserInfo } from './fetchVercelTeams.mjs';
 import inquirer from 'inquirer';
 import fs from 'fs';
 import crypto from 'crypto';
-
-/// Helper function to append or update to .env file
-const appendOrUpdateEnv = (key, value) => {
-  const envFilePath = '.env';
-  const envContent = fs.existsSync(envFilePath)
-    ? fs.readFileSync(envFilePath, 'utf8')
-    : '';
-  const envLines = envContent.split('\n').filter((line) => line.trim() !== ''); // Remove empty lines
-
-  const existingIndex = envLines.findIndex((line) =>
-    line.startsWith(`${key}=`),
-  );
-  if (existingIndex >= 0) {
-    envLines[existingIndex] = `${key}=${value}`;
-  } else {
-    envLines.push(`${key}=${value}`);
-  }
-
-  fs.writeFileSync(envFilePath, envLines.join('\n') + '\n');
-};
 
 // Helper function to copy variables from .env.initial to .env
 const copyInitialEnvVariables = () => {

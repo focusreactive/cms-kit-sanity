@@ -21,3 +21,23 @@ export function loadEnvVariables(envFilePath = '.env') {
 
   return envVars;
 }
+
+/// Helper function to append or update to .env file
+export const appendOrUpdateEnv = (key, value) => {
+  const envFilePath = '.env';
+  const envContent = fs.existsSync(envFilePath)
+    ? fs.readFileSync(envFilePath, 'utf8')
+    : '';
+  const envLines = envContent.split('\n').filter((line) => line.trim() !== ''); // Remove empty lines
+
+  const existingIndex = envLines.findIndex((line) =>
+    line.startsWith(`${key}=`),
+  );
+  if (existingIndex >= 0) {
+    envLines[existingIndex] = `${key}=${value}`;
+  } else {
+    envLines.push(`${key}=${value}`);
+  }
+
+  fs.writeFileSync(envFilePath, envLines.join('\n') + '\n');
+};

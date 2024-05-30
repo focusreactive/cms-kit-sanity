@@ -46,6 +46,8 @@ jobs:
           echo "REPO_ID=${{ github.event.repository.id }}" > .env.initial
           echo "Repository Name: ${{ github.repository }}"
           echo "REPO_NAME=${{ github.repository }}" >> .env.initial
+          echo "MAX_NUMBER_OF_PROJECTS=7" >> .env.initial
+          echo "REPO_PROD_BRANCH=main" >> .env.initial
 
       - name: Commit and Push .env.initial
         env:
