@@ -16,18 +16,16 @@ CMS is the collection of ideas and their tech implementations to change how we d
 
 ![image](https://github.com/focusreactive/cms-kit-sanity/assets/14885189/63f13dd0-c8a0-4c54-9881-b657870d6dd8)
 
-
 ## For who?
 
 - **Developers**. Can quickly start the project in minutes and go fast in component development.
 - **Content Editors**. Intuitive navigation and visual preview of what they're creating.
 - **Project managers**. Can test the system without developers (see one-click rollout).
-- **Teams**.  Develop content and new features in parallel. Fast time to market.
+- **Teams**. Develop content and new features in parallel. Fast time to market.
 
 ## What is inside?
 
 ![image](https://github.com/focusreactive/cms-kit-sanity/assets/14885189/d963844b-b378-4925-82fa-28ed6a4d9b07)
-
 
 Meet our first implementation of the CMS-KIT: CMS-KIT-SANITY - the powerful mix of the most flexible CMS and top-notch frontend boilerplate.
 
@@ -41,8 +39,9 @@ Meet our first implementation of the CMS-KIT: CMS-KIT-SANITY - the powerful mix 
 
 ## Get started
 
-1 [Create](https://github.com/new?template_name=cms-kit-sanity&template_owner=focusreactive) an own repo from this template
-
+1. [Create](https://github.com/new?template_name=cms-kit-sanity&template_owner=focusreactive) an own repo from this template
+2. Wait 30 seconds while the initial action is processed and the update is committed to your repo. As a result you will have a `.env.initial` file with your personal settings
+3. After that feel free to continue working locally (see the next section)
 
 ### Local development
 
@@ -50,13 +49,13 @@ Meet our first implementation of the CMS-KIT: CMS-KIT-SANITY - the powerful mix 
 
 use `pnpm i` or `npm i --legacy-peer-deps` to install dependencies
 
+Do `pnpm run rollout` - this tool will pass you through some simple steps where you create or login to required accounts and fill .env with required variables. Then this tool will automatically setup and connect Vercel, Sanity and Github repo so as a result you will have a properly set up system including Headless CMS, Modern Hosting and Github repository.
+
 `pnpm run dev` to run local dev server
 
 open http://localhost:3000/ to preview pages
 
 open http://localhost:3000/admin to enter Sanity Studio
-
-
 
 ## Credits
 
