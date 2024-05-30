@@ -1,8 +1,7 @@
 import React from 'react';
 import type { ReactNode } from 'react';
-import { vercelStegaSplit } from '@vercel/stega';
 
-import { getCmsKey, withCMS, AdapterFn } from '@focus-reactive/cms-kit-sanity';
+import { withCMS } from '@focus-reactive/cms-kit-sanity';
 import {
   backgroundPatterns,
   layoutSecondarySize,
@@ -16,6 +15,8 @@ import { Image } from './components/Image';
 import type { grid } from './components/Grid/sa-schema';
 import type { GridElement } from './components/Grid/Component';
 import { StyledRichText } from './components/StyledRichText';
+import { sa } from './sa-adapters';
+import { sb } from './sb-adapters';
 
 const colors = backgroundColors.map((color) => color.value);
 const secondary = layoutSecondaryOptions.map((option) => option.value);
@@ -149,12 +150,7 @@ const MainContainerSelector = ({
     ? layoutOptions.secondaryComponent[0]
     : null;
 
-  if (
-    // TODO: fix watermarks in such places
-    layoutOptions?.secondary &&
-    vercelStegaSplit(layoutOptions?.secondary).cleaned ===
-      'has-secondary-on-the-left'
-  ) {
+  if (layoutOptions?.secondary === 'has-secondary-on-the-left') {
     return (
       <div className="overflow-hidden bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -183,11 +179,7 @@ const MainContainerSelector = ({
     );
   }
 
-  if (
-    layoutOptions?.secondary &&
-    vercelStegaSplit(layoutOptions?.secondary).cleaned ===
-      'has-secondary-on-the-right'
-  ) {
+  if (layoutOptions?.secondary === 'has-secondary-on-the-right') {
     return (
       <div className="overflow-hidden bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -245,18 +237,5 @@ function PageBlock({ components, blockOptions, renderSanityComponent }: Props) {
   );
 }
 
-const sa: AdapterFn = (cmsProps) => {
-  return {
-    key: getCmsKey(cmsProps),
-    ...cmsProps,
-  };
-};
-
-const sb: AdapterFn = (cmsProps) => {
-  return {
-    key: getCmsKey(cmsProps),
-    ...cmsProps,
-  };
-};
-
+// @ts-ignore
 export default withCMS({ sa, sb })(PageBlock);
