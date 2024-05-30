@@ -39,7 +39,9 @@ export async function localFlow({ inputs, secrets }) {
   const email = inputs['email'];
 
   // Step 1: Add envs to Vercel project
-  const step1Spinner = ora('Adding environment variables to Vercel project...').start();
+  const step1Spinner = ora(
+    'Adding environment variables to Vercel project...',
+  ).start();
   try {
     await fetch(
       `https://api.vercel.com/v10/projects/${vercelProjectId}/env?teamId=${secrets.VERCEL_FR_TEAM_ID}`,
@@ -145,7 +147,9 @@ export async function localFlow({ inputs, secrets }) {
   }
 
   // Step 5: Fill the dataset with data from prod-copy.tar.gz
-  const step5Spinner = ora('Filling the dataset with data from prod-copy.tar.gz...').start();
+  const step5Spinner = ora(
+    'Filling the dataset with data from prod-copy.tar.gz...',
+  ).start();
   try {
     await new Promise((resolve, reject) => {
       exec(
@@ -204,7 +208,17 @@ export async function localFlow({ inputs, secrets }) {
   // Step 7: Create a new Vercel deployment
   const step7Spinner = ora('Creating a new Vercel deployment...').start();
   try {
-    await fetch(
+    const body = {
+      name: vercelProjectName,
+      project: vercelProjectId,
+      target: 'production',
+      gitSource: {
+        repoId: secrets.REPO_ID,
+        ref: secrets.REPO_PROD_BRANCH,
+        type: secrets.REPO_TYPE,
+      },
+    };
+    const response = await fetch(
       `https://api.vercel.com/v13/deployments?teamId=${secrets.VERCEL_FR_TEAM_ID}`,
       {
         method: 'POST',
@@ -212,18 +226,11 @@ export async function localFlow({ inputs, secrets }) {
           Authorization: `Bearer ${secrets.VERCEL_PERSONAL_AUTH_TOKEN}`,
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          name: vercelProjectName,
-          project: vercelProjectId,
-          target: 'production',
-          gitSource: {
-            repoId: secrets.REPO_ID,
-            ref: secrets.REPO_PROD_BRANCH,
-            type: secrets.REPO_TYPE,
-          },
-        }),
+        body: JSON.stringify(body),
       },
     );
+    const data = await response.json();
+    console.log('Deployment:', data);
     step7Spinner.succeed('New Vercel deployment created.');
   } catch (error) {
     step7Spinner.fail('Failed to create a new Vercel deployment.');
