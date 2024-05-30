@@ -15,6 +15,7 @@
     "components": [
         {
             "_type": "tw-base.styledRichText",
+            "_key": "comp1",
             "componentAlignment": "left",
             "customRichText": [
                 {
@@ -45,10 +46,12 @@
         },
         {
             "_type": "tw-base.featurePoints",
+            "_key": "comp2",
             "columns": 3,
             "features": [
                 {
                     "_type": "tw-base.keyPoint",
+                    "_key": "comp1",
                     "description": "Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.",
                     "link": {
                         "_type": "glob.SmartLink",
@@ -58,6 +61,7 @@
                 },
                 {
                     "_type": "tw-base.keyPoint",
+                    "_key": "comp2",
                     "description": "Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.",
                     "link": {
                         "_type": "glob.SmartLink",
@@ -67,6 +71,7 @@
                 },
                 {
                     "_type": "tw-base.keyPoint",
+                    "_key": "comp3",
                     "description": "Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.",
                     "link": {
                         "_type": "glob.SmartLink",
@@ -76,6 +81,7 @@
                 },
                 {
                     "_type": "tw-base.keyPoint",
+                    "_key": "comp4",
                     "description": "Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.",
                     "link": {
                         "_type": "glob.SmartLink",
@@ -85,6 +91,7 @@
                 },
                 {
                     "_type": "tw-base.keyPoint",
+                    "_key": "comp5",
                     "description": "Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.",
                     "link": {
                         "_type": "glob.SmartLink",
@@ -94,6 +101,7 @@
                 },
                 {
                     "_type": "tw-base.keyPoint",
+                    "_key": "comp6",
                     "description": "Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.",
                     "link": {
                         "_type": "glob.SmartLink",
