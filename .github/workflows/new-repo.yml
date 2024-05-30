@@ -1,4 +1,4 @@
-name: Save Repository ID to .env.initial
+name: Save Repository Info to .env.initial
 
 on:
   workflow_dispatch:
@@ -27,8 +27,8 @@ jobs:
     outputs:
       current_step: ${{ steps.get_step.outputs.current_step }}
 
-  save_repo_id:
-    name: Save Repository ID
+  save_repo_info:
+    name: Save Repository Info
     needs: get_current_step
     if: >-
       ${{ !github.event.repository.is_template
@@ -40,10 +40,12 @@ jobs:
         with:
           ref: main
 
-      - name: Print and Save Repository ID
+      - name: Print and Save Repository Info
         run: |
           echo "Repository ID: ${{ github.event.repository.id }}"
           echo "REPO_ID=${{ github.event.repository.id }}" > .env.initial
+          echo "Repository Name: ${{ github.repository }}"
+          echo "REPO_NAME=${{ github.repository }}" >> .env.initial
 
       - name: Commit and Push .env.initial
         env:
@@ -52,5 +54,5 @@ jobs:
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
           git add .env.initial
-          git commit -m "Add repository ID to .env.initial"
+          git commit -m "Add repository info to .env.initial"
           git push origin main
