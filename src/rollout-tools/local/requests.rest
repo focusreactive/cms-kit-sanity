@@ -1,0 +1,13 @@
+
+### Get projects
+GET https://api.vercel.com/v9/projects?repoId=807741852&teamId=team_t8jfJ8GiVWvLTfhQmI19MApZ&search=cms-kit-sanity-mvp
+Content-Type: application/json
+Authorization: Bearer 1PaMPA60lqRUfFebYQyU8thy
+
+### Create project
+POST https://api.vercel.com/v10/projects?teamId=team_cL4aOUKlSIchRRY9zAbH7cMT
+Content-Type: application/json
+Authorization: Bearer f7ZEdZOedeGZyAQJBU25vwrJ
+
+{"name":"regx-cms-kit-sanity-mvp","environmentVariables":[{"key":"NEXT_PUBLIC_SANITY_PROJECT_ID","value":"6e0ber80","target":["production","preview","development"],"type":"encrypted"},{"key":"NEXT_PUBLIC_SANITY_DATASET","value":"production","target":["production","preview","development"],"type":"encrypted"},{"key":"NEXT_PUBLIC_READ_TOKEN","value":"skGPutIQnZssq6g38rLU6pN2VkrjIMeuTu5QmrjKjjlBUgFeNtOyCYQTaUM4lkcgl7vGaQmIz4DhLNXIH7NU6cnVOVZrsYYamujN7dH4fUSucokQxPJZEUwk28bhbjPYTXZQouqR3lTalO0t0RoCVuAeO9ppyDKccUBQsfhY1tkT9clwLyIB","target":["production","preview","development"],"type":"encrypted"},{"key":"REPO_ID","value":"807949953","target":["production","preview","development"],"type":"encrypted"},{"key":"REPO_PROD_BRANCH","value":"main","target":["production","preview","development"],"type":"encrypted"},{"key":"REPO_TYPE","value":"github","target":["production","preview","development"],"type":"encrypted"},{"key":"VERCEL_PERSONAL_AUTH_TOKEN","value":"f7ZEdZOedeGZyAQJBU25vwrJ","target":["production","preview","development"],"type":"encrypted"},{"key":"VERCEL_FR_TEAM_ID","value":"team_cL4aOUKlSIchRRY9zAbH7cMT","target":["production","preview","development"],"type":"encrypted"},{"key":"ROLL_OUT_API_TOKEN","value":"dcdadfd029e4f1adbcdda14cec00063df4e100e9","target":["production","preview","development"],"type":"encrypted"},{"key":"SANITY_STUDIO_URL","value":"https://regx-cms-kit-sanity-mvp.vercel.app/admin","target":["production","preview","development"],"type":"encrypted"},{"key":"NEXT_PUBLIC_PREVIEW_URL","value":"https://regx-cms-kit-sanity-mvp.vercel.app","target":["production","preview","development"],"type":"encrypted"}],"framework":"nextjs","gitRepository":{"repo":"usulpro/test6","type":"github"},"publicSource":false,"installCommand":"pnpm i"}
+

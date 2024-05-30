@@ -53,6 +53,7 @@ export async function localRollout({ inputs, secrets }) {
         });
 
         if (projectData) {
+          console.log("🚀 ~ localRollout ~ projectData:\n", projectData)
           const result = await triggerGithubWorkflow({
             sanityProjectId,
             sanityDatasetName: datasetName,
@@ -81,3 +82,5 @@ export async function localRollout({ inputs, secrets }) {
 
   console.log('Email is not valid');
 }
+
+

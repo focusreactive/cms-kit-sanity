@@ -1,5 +1,3 @@
-import fetch from 'node-fetch';
-
 export async function createSanityProject(projectName) {
   try {
     console.log('Start creating Sanity project...⏳');
@@ -69,6 +67,67 @@ export async function createVercelProject({
   sanityDatasetName,
   sanityReadToken,
 }) {
+  const body = JSON.stringify({
+    name: projectName,
+    environmentVariables: [
+      {
+        key: 'NEXT_PUBLIC_SANITY_PROJECT_ID',
+        value: sanityProjectId,
+      },
+      {
+        key: 'NEXT_PUBLIC_SANITY_DATASET',
+        value: sanityDatasetName,
+      },
+      {
+        key: 'NEXT_PUBLIC_READ_TOKEN',
+        value: sanityReadToken,
+      },
+      {
+        key: 'REPO_ID',
+        value: process.env.REPO_ID,
+      },
+      {
+        key: 'REPO_PROD_BRANCH',
+        value: process.env.REPO_PROD_BRANCH,
+      },
+      {
+        key: 'REPO_TYPE',
+        value: 'github',
+      },
+      {
+        key: 'VERCEL_PERSONAL_AUTH_TOKEN',
+        value: process.env.VERCEL_PERSONAL_AUTH_TOKEN,
+      },
+      {
+        key: 'VERCEL_FR_TEAM_ID',
+        value: process.env.VERCEL_FR_TEAM_ID,
+      },
+      {
+        key: 'ROLL_OUT_API_TOKEN',
+        value: process.env.ROLL_OUT_API_TOKEN,
+      },
+      {
+        key: 'SANITY_STUDIO_URL',
+        value: `https://${projectName}.vercel.app/admin`,
+      },
+      {
+        key: 'NEXT_PUBLIC_PREVIEW_URL',
+        value: `https://${projectName}.vercel.app`,
+      },
+    ].map((v) => ({
+      ...v,
+      target: ['production', 'preview', 'development'],
+      type: 'encrypted',
+    })),
+    framework: 'nextjs',
+    gitRepository: {
+      repo: process.env.REPO_NAME,
+      type: 'github',
+    },
+    publicSource: false,
+    installCommand: 'pnpm i',
+  });
+
   try {
     console.log('Start creating Vercel project...⏳');
 
@@ -79,70 +138,17 @@ export async function createVercelProject({
           Authorization: `Bearer ${process.env.VERCEL_PERSONAL_AUTH_TOKEN}`,
         },
         method: 'POST',
-        body: JSON.stringify({
-          name: projectName,
-          environmentVariables: [
-            {
-              key: 'NEXT_PUBLIC_SANITY_PROJECT_ID',
-              value: sanityProjectId,
-            },
-            {
-              key: 'NEXT_PUBLIC_SANITY_DATASET',
-              value: sanityDatasetName,
-            },
-            {
-              key: 'NEXT_PUBLIC_READ_TOKEN',
-              value: sanityReadToken,
-            },
-            {
-              key: 'REPO_ID',
-              value: process.env.REPO_ID,
-            },
-            {
-              key: 'REPO_PROD_BRANCH',
-              value: process.env.REPO_PROD_BRANCH,
-            },
-            {
-              key: 'REPO_TYPE',
-              value: process.env.REPO_TYPE,
-            },
-            {
-              key: 'VERCEL_PERSONAL_AUTH_TOKEN',
-              value: process.env.VERCEL_PERSONAL_AUTH_TOKEN,
-            },
-            {
-              key: 'VERCEL_FR_TEAM_ID',
-              value: process.env.VERCEL_FR_TEAM_ID,
-            },
-            {
-              key: 'ROLL_OUT_API_TOKEN',
-              value: process.env.ROLL_OUT_API_TOKEN,
-            },
-            {
-              key: 'SANITY_STUDIO_URL',
-              value: `https://${projectName}.vercel.app/admin`,
-            },
-            {
-              key: 'NEXT_PUBLIC_PREVIEW_URL',
-              value: `https://${projectName}.vercel.app`,
-            },
-          ].map((v) => ({
-            ...v,
-            target: ['production', 'preview', 'development'],
-            type: 'encrypted',
-          })),
-          framework: 'nextjs',
-          gitRepository: {
-            repo: process.env.REPO_NAME,
-            type: process.env.REPO_TYPE,
-          },
-          publicSource: false,
-          installCommand: 'npm i --legacy-peer-deps',
-        }),
+        body,
       },
     );
 
     if (response.status.toString().startsWith('4')) {
+      console.log('Body:');
+      console.log(body);
+      console.log('---');
+      const message = await response.json();
+      console.error(message);
+
       throw new Error('Error createVercelProject');
     }
 
@@ -206,6 +212,17 @@ export async function triggerGithubWorkflow({
 }) {
   try {
     console.log('Triggering GitHub workflow...⏳');
+    const bodyData = {
+      ref: process.env.REPO_PROD_BRANCH,
+      inputs: {
+        email: email,
+        'sanity-project-id': sanityProjectId,
+        'sanity-dataset-name': sanityDatasetName,
+        'vercel-project-id': vercelProjectId,
+        'vercel-project-name': vercelProjectName,
+        'vercel-deployment-url': vercelDeploymentUrl,
+      },
+    };
 
     const response = await fetch(
       `https://api.github.com/repos/${process.env.REPO_NAME}/actions/workflows/${process.env.REPO_WORKFLOW_ID}/dispatches`,
@@ -215,17 +232,7 @@ export async function triggerGithubWorkflow({
           Authorization: `Bearer ${process.env.GITHUB_PERSONAL_ACCESS_TOKEN}`,
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          ref: process.env.REPO_PROD_BRANCH,
-          inputs: {
-            email: email,
-            'sanity-project-id': sanityProjectId,
-            'sanity-dataset-name': sanityDatasetName,
-            'vercel-project-id': vercelProjectId,
-            'vercel-project-name': vercelProjectName,
-            'vercel-deployment-url': vercelDeploymentUrl,
-          },
-        }),
+        body: JSON.stringify(bodyData),
       },
     );
 
