@@ -1,5 +1,6 @@
 {
     "_type": "tw-base.pageBlock",
+    "_key": "tw-base.pageBlock1",
     "blockOptions": {
         "_type": "tw-base.blockOptions",
         "backgroundOptions": {
@@ -30,6 +31,7 @@
     "components": [
         {
             "_type": "tw-base.styledRichText",
+            "_key": "comp1",
             "customRichText": [
                 {
                     "_type": "block",
@@ -73,10 +75,12 @@
         },
         {
             "_type": "tw-base.featurePoints",
+            "_key": "comp2",
             "columns": 1,
             "features": [
                 {
                     "_type": "tw-base.keyPoint",
+                    "_key": "feat1",
                     "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
                     "icon": {
                         "_type": "tw-base.featureIcon",
@@ -100,6 +104,7 @@
                 },
                 {
                     "_type": "tw-base.keyPoint",
+                    "_key": "feat2",
                     "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
                     "icon": {
                         "_type": "tw-base.featureIcon",
@@ -123,6 +128,7 @@
                 },
                 {
                     "_type": "tw-base.keyPoint",
+                    "_key": "feat3",
                     "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
                     "icon": {
                         "_type": "tw-base.featureIcon",

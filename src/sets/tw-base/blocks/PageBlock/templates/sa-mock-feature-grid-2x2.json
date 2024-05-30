@@ -15,6 +15,7 @@
     "components": [
         {
             "_type": "tw-base.styledRichText",
+            "_key": "comp1",
             "customRichText": [
                 {
                     "_type": "block",
@@ -59,10 +60,12 @@
         },
         {
             "_type": "tw-base.featurePoints",
+            "_key": "comp2",
             "columns": 2,
             "features": [
                 {
                     "_type": "tw-base.keyPoint",
+                    "_key": "comp1",
                     "description": "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
                     "icon": {
                         "_type": "tw-base.featureIcon",
@@ -82,6 +85,7 @@
                 },
                 {
                     "_type": "tw-base.keyPoint",
+                    "_key": "comp2",
                     "description": "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
                     "icon": {
                         "_type": "tw-base.featureIcon",
@@ -101,6 +105,7 @@
                 },
                 {
                     "_type": "tw-base.keyPoint",
+                    "_key": "comp3",
                     "description": "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
                     "icon": {
                         "_type": "tw-base.featureIcon",
@@ -120,6 +125,7 @@
                 },
                 {
                     "_type": "tw-base.keyPoint",
+                    "_key": "comp4",
                     "description": "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
                     "icon": {
                         "_type": "tw-base.featureIcon",

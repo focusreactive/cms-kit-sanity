@@ -11,9 +11,11 @@
     "components": [
         {
             "_type": "tw-base.grid",
+            "_key": "comp1",
             "items": [
                 {
                     "_type": "gridCard",
+                    "_key": "comp1",
                     "imageWithMetadata": {
                         "_type": "glob.imageWithMetadata",
                         "asset": {
@@ -64,6 +66,7 @@
                 },
                 {
                     "_type": "gridCard",
+                    "_key": "comp2",
                     "imageWithMetadata": {
                         "_type": "glob.imageWithMetadata",
                         "asset": {
@@ -114,6 +117,7 @@
                 },
                 {
                     "_type": "gridCard",
+                    "_key": "comp3",
                     "imageWithMetadata": {
                         "_type": "glob.imageWithMetadata",
                         "asset": {
