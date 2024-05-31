@@ -1,4 +1,7 @@
 import pageBlock from './PageBlock/sa-templates';
-import blockTemplate from './BlockTemplate/sa-templates';
+// import blockTemplate from './BlockTemplate/sa-templates';
 
-export default [...pageBlock, ...blockTemplate];
+export default [
+  ...pageBlock,
+  // ...blockTemplate
+];
