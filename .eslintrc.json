@@ -4,6 +4,7 @@
     "plugin:@dword-design/import-alias/recommended"
   ],
   "rules": {
+    "import/no-anonymous-default-export": "off",
     "@dword-design/import-alias/prefer-alias": [
       "error",
       {

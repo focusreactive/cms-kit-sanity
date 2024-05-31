@@ -14,6 +14,18 @@ export const pagesBySlugQuery = groq`
             'avatar': image.asset->
           }
         },
+      _type == 'tw-base.blockTemplate' => {
+          ...,
+          image{
+            ...,
+            'image': asset->{
+              'src': url,
+              'width': metadata.dimensions.width,
+              'height': metadata.dimensions.height,
+              'alt': altText,
+            }
+          }
+        },
       _type == 'base.pageBlock' => { // TODO: move it to cms-kit
         ...,
         blockOptions{
