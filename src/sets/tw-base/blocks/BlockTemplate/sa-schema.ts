@@ -23,6 +23,10 @@ export const blockTemplate = defineBlockType(({ df }) => ({
       name: 'image',
       type: imageWithMetadata.name,
     }),
+    df({
+      name: 'backgroundColor',
+      type: 'string',
+    }),
   ],
   components: { preview: BlockPreview },
   preview: {
