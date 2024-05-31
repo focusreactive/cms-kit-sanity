@@ -1,2 +1,2 @@
 export * from './PageBlock';
-export * from './BlockTemplate';
+// export * from './BlockTemplate';
