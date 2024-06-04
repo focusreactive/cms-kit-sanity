@@ -230,10 +230,11 @@ export async function localFlow({ inputs, secrets }) {
       },
     );
     const data = await response.json();
-    console.log('Deployment:', data);
     step7Spinner.succeed('New Vercel deployment created.');
   } catch (error) {
     step7Spinner.fail('Failed to create a new Vercel deployment.');
     throw error;
   }
+
+  return true;
 }
