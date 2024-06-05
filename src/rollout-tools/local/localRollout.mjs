@@ -82,7 +82,8 @@ export async function localRollout({ inputs, secrets }) {
         ora().info('Using existing Sanity project ID.');
         sanityProjectId = existingSanityProjectId;
         summary.sanityProjectId = existingSanityProjectId;
-        console.table(summary);
+        ora().info('Summary:');
+        ora().info(JSON.stringify(summary, null, 2));
       }
     }
 
@@ -120,12 +121,16 @@ export async function localRollout({ inputs, secrets }) {
         summary.projectName = projectData.projectName;
         summary.projectId = projectData.projectId;
         summary.deploymentUrl = projectData.deploymentUrl;
+        summary.studioUrl = `${projectData.deploymentUrl}/admin`;
+        summary.vercelUrl = `https://vercel.com/${projectData.projectId}`;
+        summary.sanityUrl = `https://sanity.io/manage/project/${sanityProjectId}`;
         summary.datasetName = datasetName;
         summary.REPO_NAME = process.env.REPO_NAME;
 
         ora().succeed('Vercel Project Name: ' + projectData.projectName);
         ora().succeed('Vercel Project ID: ' + projectData.projectId);
         ora().succeed('Deployment URL: ' + projectData.deploymentUrl);
+        ora().succeed('Sanity Studio: ' + summary.studioUrl);
         ora().succeed('Sanity Dataset Name: ' + datasetName);
         ora().succeed('Repo Name: ' + process.env.REPO_NAME);
 
@@ -152,19 +157,39 @@ export async function localRollout({ inputs, secrets }) {
 
         if (result === true) {
           localFlowSpinner.succeed('All steps were successful 🎉');
-          console.table(summary);
+          ora().info(JSON.stringify(summary, null, 2));
+          ora().succeed(`
+All projects have been successfully set up and configured. Here are the details:
+
+- Environment variables are set up in the Vercel project.
+- The Vercel project is connected with your GitHub repo to rebuild the hosted project on commits to the main branch.
+- A web hook is set up in Sanity to trigger rebuilds on the Vercel project on public content changes.
+- The Vercel deploy URL is added to the Sanity CORS settings.
+- A preview token is created in the Sanity project.
+- Initial content matching the project's content model is uploaded to the production dataset on Sanity.
+- Other minor settings are completed.
+- The final step starts a deploy on your Vercel project. In a few minutes, you will be able to open the initial pages of your website and enter the Sanity studio.
+
+You now have a configured local development mode on your machine. When the Sanity project is created, you will receive an email with an invitation to your project.
+
+You can open the following links in your browser:
+- Deployed website: ${summary.deploymentUrl}
+- Sanity Studio: ${summary.studioUrl}
+- Vercel Project: ${summary.vercelUrl}
+- Sanity Project: ${summary.sanityUrl}
+`);
           return;
         } else {
           localFlowSpinner.fail('One of the steps was not successful 😿');
-          console.table(summary);
+          ora().info(JSON.stringify(summary, null, 2));
         }
       }
     } else {
-      sanityProjectSpinner.fail('Failed to create Sanity project.');
+      ora().fail('Failed to create Sanity project.');
     }
   } catch (error) {
     ora().fail('An error occurred');
     console.error(error);
-    console.table(summary);
+    ora().info(JSON.stringify(summary, null, 2));
   }
 }

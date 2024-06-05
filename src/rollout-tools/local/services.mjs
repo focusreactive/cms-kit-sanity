@@ -21,6 +21,7 @@ export async function createSanityProject(projectName) {
     }
 
     const data = await response.json();
+    console.log('🚀 ~ Sanity Project', JSON.stringify(data));
     spinner.succeed('Sanity project created successfully! ✅');
     return data.id;
   } catch (error) {
@@ -149,6 +150,7 @@ export async function createVercelProject({
     }
 
     const data = await response.json();
+    console.log('🚀 Vercel Project:', JSON.stringify(data, null, 2));
     spinner.succeed('Vercel project created successfully! ✅');
     return {
       projectId: data.id,
