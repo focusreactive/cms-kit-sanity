@@ -104,6 +104,7 @@ export async function localRollout({ inputs, secrets }) {
         'Creating Sanity read token...',
       ).start();
       const sanityReadToken = await createSanityReadToken(sanityProjectId);
+      appendOrUpdateEnv('NEXT_PUBLIC_READ_TOKEN', sanityReadToken);
       sanityReadTokenSpinner.succeed('Sanity read token created.');
 
       const vercelProjectSpinner = ora('Creating Vercel project...').start();

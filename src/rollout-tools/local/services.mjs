@@ -1,7 +1,9 @@
-export async function createSanityProject(projectName) {
-  try {
-    console.log('Start creating Sanity project...⏳');
+import ora from 'ora';
+import inquirer from 'inquirer';
 
+export async function createSanityProject(projectName) {
+  const spinner = ora('Start creating Sanity project...⏳').start();
+  try {
     const response = await fetch('https://api.sanity.io/v2021-06-07/projects', {
       method: 'POST',
       headers: {
@@ -19,19 +21,17 @@ export async function createSanityProject(projectName) {
     }
 
     const data = await response.json();
-
-    console.log('Sanity project created...✅');
-
+    spinner.succeed('Sanity project created successfully! ✅');
     return data.id;
   } catch (error) {
+    spinner.fail('Failed to create Sanity project.');
     console.warn(error);
   }
 }
 
 export async function createSanityReadToken(projectId) {
+  const spinner = ora('Creating read token 🔑 for Sanity project...⏳').start();
   try {
-    console.log('Creating read token 🔑 for Sanity project...⏳');
-
     const response = await fetch(
       `https://api.sanity.io/v2021-06-07/projects/${projectId}/tokens`,
       {
@@ -52,11 +52,10 @@ export async function createSanityReadToken(projectId) {
     }
 
     const data = await response.json();
-
-    console.log('Sanity read token 🔑 created...✅');
-
+    spinner.succeed('Sanity read token created successfully! ✅');
     return data.key;
   } catch (error) {
+    spinner.fail('Failed to create Sanity read token.');
     console.warn(error);
   }
 }
@@ -128,9 +127,8 @@ export async function createVercelProject({
     installCommand: 'pnpm i',
   });
 
+  const spinner = ora('Start creating Vercel project...⏳').start();
   try {
-    console.log('Start creating Vercel project...⏳');
-
     const response = await fetch(
       `https://api.vercel.com/v10/projects?teamId=${process.env.VERCEL_FR_TEAM_ID}`,
       {
@@ -143,33 +141,29 @@ export async function createVercelProject({
     );
 
     if (response.status.toString().startsWith('4')) {
-      console.log('Body:');
-      console.log(body);
-      console.log('---');
+      spinner.fail('Failed to create Vercel project.');
+      console.log('Body:', body);
       const message = await response.json();
       console.error(message);
-
       throw new Error('Error createVercelProject');
     }
 
     const data = await response.json();
-
-    console.log('Vercel project created...✅');
-
+    spinner.succeed('Vercel project created successfully! ✅');
     return {
       projectId: data.id,
       projectName: data.name,
       deploymentUrl: `https://${data.name}.vercel.app`,
     };
   } catch (error) {
+    spinner.fail('Failed to create Vercel project.');
     console.warn(error);
   }
 }
 
 export async function getVercelProjects() {
+  const spinner = ora('Fetching Vercel projects...⏳').start();
   try {
-    console.log('Fetching Vercel projects...⏳');
-
     const response = await fetch(
       `https://api.vercel.com/v9/projects?repoId=${process.env.REPO_ID}&teamId=${process.env.VERCEL_FR_TEAM_ID}&search=${process.env.PROJECT_NAME}`,
       {
@@ -180,28 +174,20 @@ export async function getVercelProjects() {
     );
 
     if (response.status.toString().startsWith('4')) {
+      spinner.fail('Failed to fetch Vercel projects.');
       console.error(response.status);
       throw new Error('Error getVercelProjects');
     }
 
     const data = await response.json();
-
-    console.log('Vercel projects fetched...✅');
-
+    spinner.succeed('Vercel projects fetched successfully! ✅');
     return data.projects;
   } catch (error) {
+    spinner.fail('Failed to fetch Vercel projects.');
     console.warn(error);
   }
 }
 
-// Github workflow executes commands in following order:
-// 1. Add envs to vercel project
-// 2. Add sanity CORS entry
-// 3. Invite user to sanity project
-// 4. Create a new sanity dataset
-// 5. Fill the dataset with data from prod-copy.tar.gz
-// 6. Add deploy hook(/api/roll-out/deploy) to sanity project
-// 7. Create a new vercel deployment
 export async function triggerGithubWorkflow({
   sanityProjectId,
   sanityDatasetName,
@@ -210,8 +196,8 @@ export async function triggerGithubWorkflow({
   vercelDeploymentUrl,
   email,
 }) {
+  const spinner = ora('Triggering GitHub workflow...⏳').start();
   try {
-    console.log('Triggering GitHub workflow...⏳');
     const bodyData = {
       ref: process.env.REPO_PROD_BRANCH,
       inputs: {
@@ -237,13 +223,14 @@ export async function triggerGithubWorkflow({
     );
 
     if (response.status.toString().startsWith('4')) {
+      spinner.fail('Failed to trigger GitHub workflow.');
       throw new Error('Error triggering GitHub workflow');
     }
 
-    console.log('GitHub workflow triggered...✅');
-
+    spinner.succeed('GitHub workflow triggered successfully! ✅');
     return true;
   } catch (e) {
-    console.log(e);
+    spinner.fail('Failed to trigger GitHub workflow.');
+    console.warn(e);
   }
 }

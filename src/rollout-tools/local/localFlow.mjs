@@ -99,6 +99,21 @@ export async function localFlow({ inputs, secrets }) {
         }),
       },
     );
+
+    await fetch(
+      `https://api.sanity.io/v2021-06-07/projects/${sanityProjectId}/cors`,
+      {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${secrets.SANITY_AUTH_TOKEN}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          origin: 'http://localhost:3000/',
+          allowCredentials: true,
+        }),
+      },
+    );
     step2Spinner.succeed('Sanity CORS entry added.');
   } catch (error) {
     step2Spinner.fail('Failed to add Sanity CORS entry.');
