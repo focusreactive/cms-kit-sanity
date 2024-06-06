@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from '../Image';
+import { SmartImage } from '../SmartImage';
 
 import { AdapterFn, getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
 import { GenericRichText } from '@focus-reactive/cms-kit-sanity/common';
@@ -33,7 +33,7 @@ const Card = ({ item }: { item: GridElement }) => {
     <>
       {item.imageWithMetadata && (
         <div className="sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:h-64">
-          <Image
+          <SmartImage
             imageWithMetadata={item.imageWithMetadata}
             className="h-full w-full object-cover object-center"
           />

@@ -3,6 +3,7 @@ import type { Image } from '@ns/types/common';
 
 import { AdapterFn, getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
 import { classnames } from '@focus-reactive/cms-kit-sanity/common';
+import { SmartImage } from '../SmartImage';
 
 type Props = {
   isDarkTheme: boolean;
@@ -14,9 +15,8 @@ type Props = {
 function StyledImage({ imageWithMetadata, isDarkTheme }: Props) {
   return (
     <div className="relative overflow-hidden px-6 pt-16 lg:px-8 ">
-      <img
-        src={imageWithMetadata.image.src}
-        alt={imageWithMetadata.image.alt}
+      <SmartImage
+        imageWithMetadata={imageWithMetadata}
         className="ring-grey-100 mx-auto max-w-full rounded-xl shadow-xl ring-1 ring-gray-900/[.1]"
       />
       <div className="relative" aria-hidden="true">
@@ -33,14 +33,14 @@ function StyledImage({ imageWithMetadata, isDarkTheme }: Props) {
   );
 }
 
-const sa: AdapterFn = cmsProps => {
+const sa: AdapterFn = (cmsProps) => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,
   };
 };
 
-const sb: AdapterFn = cmsProps => {
+const sb: AdapterFn = (cmsProps) => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,

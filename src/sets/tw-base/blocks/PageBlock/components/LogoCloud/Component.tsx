@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
-import { Image } from '@ns/blocks/PageBlock/components/Image';
+
+import { SmartImage } from '../SmartImage';
 
 import { AdapterFn, getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
 import { SmartLink, SmartLinkProps, ContentBlockGeneric, ContentTypeName } from '@focus-reactive/cms-kit-sanity/sanity';
@@ -31,7 +32,7 @@ const LogoItem = (item: LogoItem) => {
     <div className={'col-span-2 max-h-12 w-full object-contain lg:col-span-1'}>
       <SmartLink {...item.link}>
         {item.imageWithMetadata && (
-          <Image
+          <SmartImage
             imageWithMetadata={item.imageWithMetadata}
             isDarkTheme={false}
           />

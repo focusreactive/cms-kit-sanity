@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Image } from '../Image';
+import { SmartImage } from '../SmartImage';
 
 import { AdapterFn, getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
 import {
@@ -91,7 +91,7 @@ function BlogSection(props: Props) {
               >
                 {style === Style.threeColumnWithImages ? (
                   <div className={'w-full pb-5'}>
-                    <Image
+                    <SmartImage
                       imageWithMetadata={post}
                       className="h-40 w-full rounded-md bg-cover bg-center"
                     />
@@ -148,7 +148,7 @@ function BlogSection(props: Props) {
                       className="relative mt-8 flex items-center gap-x-4"
                       key={index}
                     >
-                      <Image
+                      <SmartImage
                         imageWithMetadata={author.avatar}
                         className="h-10 w-10 rounded-full bg-gray-50"
                       />

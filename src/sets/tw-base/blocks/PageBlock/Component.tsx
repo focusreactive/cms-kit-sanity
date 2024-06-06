@@ -11,7 +11,7 @@ import {
 } from '@focus-reactive/cms-kit-sanity/sanity';
 import { classnames } from '@focus-reactive/cms-kit-sanity/common';
 
-import { Image } from './components/Image';
+import { SmartImage } from './components/SmartImage';
 import type { grid } from './components/Grid/sa-schema';
 import type { GridElement } from './components/Grid/Component';
 import { StyledRichText } from './components/StyledRichText';
@@ -165,7 +165,7 @@ const MainContainerSelector = ({
             <div className="lg:ml-auto lg:pl-8 lg:pt-4">{children}</div>
             <div className="order-[-1] flex items-start justify-end">
               {secondary?._type === 'secondaryImage' ? (
-                <Image
+                <SmartImage
                   imageWithMetadata={secondary}
                   className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
                 />
@@ -193,7 +193,7 @@ const MainContainerSelector = ({
           >
             <div className="lg:pr-8 lg:pt-4">{children}</div>
             {secondary?._type === 'secondaryImage' ? (
-              <Image
+              <SmartImage
                 imageWithMetadata={secondary}
                 className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
               />

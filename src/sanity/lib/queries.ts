@@ -14,11 +14,11 @@ export const pagesBySlugQuery = groq`
             'avatar': image.asset->
           }
         },
-      _type == 'tw-base.blockTemplate' => {
+      _type == 'tw-tw-base.blockTemplate' => {
           ...,
           image{
             ...,
-            'image': asset->{
+            'imageAsset': asset->{
               'src': url,
               'width': metadata.dimensions.width,
               'height': metadata.dimensions.height,
@@ -26,15 +26,16 @@ export const pagesBySlugQuery = groq`
             }
           }
         },
-      _type == 'base.pageBlock' => { // TODO: move it to cms-kit
+      _type == 'tw-base.pageBlock' => { // TODO: move it to cms-kit
         ...,
         blockOptions{
           ...,
           layoutOptions{
             ...,
             secondaryComponent[]{
-              ...,
-              'image': asset->{
+              'ver': '2.0',
+              _type,
+              'imageAsset': asset->{
                   'src': url,
                   'width': metadata.dimensions.width,
                   'height': metadata.dimensions.height,
@@ -46,7 +47,7 @@ export const pagesBySlugQuery = groq`
             ...,
             imageSelector{
               ...,
-              'image': asset->{
+              'imageAsset': asset->{
                   'src': url,
                   'width': metadata.dimensions.width,
                   'height': metadata.dimensions.height,
@@ -57,12 +58,12 @@ export const pagesBySlugQuery = groq`
         },
         components[]{
           ...,
-          _type == 'base.grid' => {
+          _type == 'tw-base.grid' => {
             ...,
             items[]{
               ...,
               imageWithMetadata{
-                'image': asset->{
+                'imageAsset': asset->{
                   'src': url,
                   'width': metadata.dimensions.width,
                   'height': metadata.dimensions.height,
@@ -71,12 +72,12 @@ export const pagesBySlugQuery = groq`
               },
             }
           },
-          _type == 'base.logoCloudGrid' => {
+          _type == 'tw-base.logoCloudGrid' => {
             ...,
             items[]{
               ...,
               imageWithMetadata{
-                'image': asset->{
+                'imageAsset': asset->{
                   'src': url,
                   'width': metadata.dimensions.width,
                   'height': metadata.dimensions.height,
@@ -85,7 +86,7 @@ export const pagesBySlugQuery = groq`
               },
             }
           },
-          _type == 'base.featurePoints' => {
+          _type == 'tw-base.featurePoints' => {
             ...,
             features[]{
               ...,
@@ -99,12 +100,12 @@ export const pagesBySlugQuery = groq`
               },
             }
           },
-          _type == 'base.blogSection' => {
+          _type == 'tw-base.blogSection' => {
             ...,
             posts[]{
               ...,
               image{
-                'image': asset->{
+                'imageAsset': asset->{
                   'src': url,
                   'width': metadata.dimensions.width,
                   'height': metadata.dimensions.height,
@@ -124,15 +125,15 @@ export const pagesBySlugQuery = groq`
               }
             }
           },
-          _type == 'base.styledImage' => {
+          _type == 'tw-base.styledImage' => {
             ...,
               imageWithMetadata{
-                'image': asset->{
+                'imageAsset': asset->{
                   'src': url,
                   'width': metadata.dimensions.width,
                   'height': metadata.dimensions.height,
                   'alt': altText,
-              },
+                },
             }
           }
         }
