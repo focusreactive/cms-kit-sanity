@@ -13,10 +13,6 @@ permissions:
 jobs:
   save_repo_info:
     name: Save Repository Info
-    needs: get_current_step
-    if: >-
-      ${{ !github.event.repository.is_template
-          && needs.get_current_step.outputs.current_step == 0 }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
