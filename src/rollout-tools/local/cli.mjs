@@ -8,6 +8,7 @@ import {
 } from './fetchSanityOrganizations.mjs';
 import { fetchVercelTeams, fetchVercelUserInfo } from './fetchVercelTeams.mjs';
 import inquirer from 'inquirer';
+import ora from 'ora';
 import fs from 'fs';
 import crypto from 'crypto';
 
