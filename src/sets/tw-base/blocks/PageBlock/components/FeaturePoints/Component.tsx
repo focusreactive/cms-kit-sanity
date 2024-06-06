@@ -4,13 +4,14 @@ import { featurePointStyles } from '../../../../common/common-schema';
 import { AdapterFn, getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
 import type { SmartLinkProps } from '@focus-reactive/cms-kit-sanity/sanity';
 import { classnames } from '@focus-reactive/cms-kit-sanity/common';
+import { SmartImage } from '../SmartImage';
 
-const iconStyle = featurePointStyles.map(style => style.value);
+const iconStyle = featurePointStyles.map((style) => style.value);
 
 type Feature = {
   title: string;
   description: string;
-  icon: { icon: any };
+  icon: { imageAsset: object };
   link?: SmartLinkProps;
 };
 
@@ -38,12 +39,10 @@ const Card = ({
         <div className="relative flex flex-col">
           <dt className="text-base font-semibold leading-7 text-gray-900">
             <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-              <img
-                // TODO: fix this nesting
-                src={feature?.icon?.icon?.src}
+              <SmartImage
                 className="h-5 w-5 text-indigo-600 invert"
+                imageWithMetadata={feature.icon}
                 aria-hidden="true"
-                alt={feature?.icon?.icon?.alt}
               />
             </div>
             {feature.title}
@@ -73,13 +72,12 @@ const Card = ({
               },
             )}
           >
-            <img
-              src={feature?.icon?.icon?.src}
+            <SmartImage
               className={classnames('h-5 w-5', {
                 invert: isDarkTheme,
               })}
               aria-hidden="true"
-              alt={feature?.icon?.icon?.alt}
+              imageWithMetadata={feature.icon}
             />
             {feature.title}
           </dt>
@@ -114,11 +112,10 @@ const Card = ({
             )}
           >
             <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-              <img
-                src={feature?.icon?.icon?.src}
+              <SmartImage
                 className="h-5 w-5 text-indigo-600 invert"
                 aria-hidden="true"
-                alt={feature?.icon?.icon?.alt}
+                imageWithMetadata={feature.icon}
               />
             </div>
             {feature.title}
@@ -158,11 +155,10 @@ const Card = ({
             )}
           >
             <div className="absolute left-0 top-1 flex h-5 w-5 items-center justify-center">
-              <img
-                src={feature?.icon?.icon?.src}
+              <SmartImage
                 className="text-indigo-600"
                 aria-hidden="true"
-                alt={feature?.icon?.icon?.alt}
+                imageWithMetadata={feature.icon}
               />
             </div>
             {feature.title}
@@ -181,8 +177,7 @@ const Card = ({
               'text-white': isDarkTheme,
             })}
           >
-            <img
-              src={feature?.icon?.icon?.src}
+            <SmartImage
               className={classnames(
                 'absolute left-1 top-1 h-5 w-5 text-indigo-600',
                 {
@@ -190,7 +185,7 @@ const Card = ({
                 },
               )}
               aria-hidden="true"
-              alt={feature?.icon?.icon?.alt}
+              imageWithMetadata={feature.icon}
             />
             {feature.title}{' '}
           </dt>
@@ -219,7 +214,7 @@ function FeaturePoints(props: Props) {
           { '!mt-0': isFirst },
         )}
       >
-        {features.map(feature => (
+        {features.map((feature) => (
           <Card
             key={getCmsKey(feature)}
             feature={feature}
@@ -239,7 +234,7 @@ function FeaturePoints(props: Props) {
         })}
       >
         <dl className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-2 lg:gap-y-16">
-          {features.map(feature => (
+          {features.map((feature) => (
             <Card
               key={getCmsKey(feature)}
               feature={feature}
@@ -259,7 +254,7 @@ function FeaturePoints(props: Props) {
         { '!mt-0': isFirst },
       )}
     >
-      {features.map(feature => (
+      {features.map((feature) => (
         <Card
           key={getCmsKey(feature)}
           feature={feature}
@@ -271,14 +266,14 @@ function FeaturePoints(props: Props) {
   );
 }
 
-const sa: AdapterFn = cmsProps => {
+const sa: AdapterFn = (cmsProps) => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,
   };
 };
 
-const sb: AdapterFn = cmsProps => {
+const sb: AdapterFn = (cmsProps) => {
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,

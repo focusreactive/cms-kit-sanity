@@ -92,7 +92,7 @@ function BlogSection(props: Props) {
                 {style === Style.threeColumnWithImages ? (
                   <div className={'w-full pb-5'}>
                     <SmartImage
-                      imageWithMetadata={post}
+                      imageWithMetadata={post?.image}
                       className="h-40 w-full rounded-md bg-cover bg-center"
                     />
                   </div>

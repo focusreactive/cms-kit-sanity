@@ -91,7 +91,7 @@ export const pagesBySlugQuery = groq`
             features[]{
               ...,
               icon{
-                'icon': icon.asset->{
+                'imageAsset': icon.asset->{
                   'src': url,
                   'width': metadata.dimensions.width,
                   'height': metadata.dimensions.height,
