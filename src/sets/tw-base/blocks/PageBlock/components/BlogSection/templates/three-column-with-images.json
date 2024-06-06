@@ -23,11 +23,7 @@
               "_type": "tw-base.blogSection.post.author",
               "avatar": {
                 "_type": "glob.imageWithMetadata",
-                "asset": {
-                  "_ref": "image-b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256-jpg",
-                  "_type": "reference"
-                },
-                "image": {
+                "imageAsset": {
                   "alt": null,
                   "height": 256,
                   "src": "https://cdn.sanity.io/images/k0c6krxi/production/b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256.jpg",
@@ -104,14 +100,12 @@
           ],
           "image": {
             "_type": "glob.imageWithMetadata",
-            "asset": {
-              "_type": "reference",
-              "_ref": "image-5fcea6177e0c504842f198f1c9a1443204294396-3270x2180-jpg"
-            },
-            "alt": null,
-            "height": 3270,
-            "src": "https://cdn.sanity.io/images/k0c6krxi/production/5fcea6177e0c504842f198f1c9a1443204294396-3270x2180.jpg",
-            "width": 2180
+            "imageAsset": {
+              "alt": null,
+              "height": 3270,
+              "src": "https://cdn.sanity.io/images/k0c6krxi/production/5fcea6177e0c504842f198f1c9a1443204294396-3270x2180.jpg",
+              "width": 2180
+            }
           }
         },
         {
@@ -123,11 +117,7 @@
               "_type": "tw-base.blogSection.post.author",
               "avatar": {
                 "_type": "glob.imageWithMetadata",
-                "asset": {
-                  "_ref": "image-b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256-jpg",
-                  "_type": "reference"
-                },
-                "image": {
+                "imageAsset": {
                   "alt": null,
                   "height": 256,
                   "src": "https://cdn.sanity.io/images/k0c6krxi/production/b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256.jpg",
@@ -204,14 +194,12 @@
           ],
           "image": {
             "_type": "glob.imageWithMetadata",
-            "asset": {
-              "_type": "reference",
-              "_ref": "image-0fed2527ad58ed496d5df6ba863ceda9b14728cd-3270x2180-jpg"
-            },
-            "alt": null,
-            "height": 3270,
-            "src": "https://cdn.sanity.io/images/k0c6krxi/production/0fed2527ad58ed496d5df6ba863ceda9b14728cd-3270x2180.jpg",
-            "width": 2180
+            "imageAsset": {
+              "alt": null,
+              "height": 3270,
+              "src": "https://cdn.sanity.io/images/k0c6krxi/production/0fed2527ad58ed496d5df6ba863ceda9b14728cd-3270x2180.jpg",
+              "width": 2180
+            }
           }
         },
         {
@@ -223,11 +211,7 @@
               "_type": "tw-base.blogSection.post.author",
               "avatar": {
                 "_type": "glob.imageWithMetadata",
-                "asset": {
-                  "_ref": "image-b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256-jpg",
-                  "_type": "reference"
-                },
-                "image": {
+                "imageAsset": {
                   "alt": null,
                   "height": 256,
                   "src": "https://cdn.sanity.io/images/k0c6krxi/production/b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256.jpg",
@@ -304,14 +288,12 @@
           ],
           "image": {
             "_type": "glob.imageWithMetadata",
-            "asset": {
-              "_type": "reference",
-              "_ref": "image-a749e5c4fdb9cb0a70754f385412ecdfcbe18bf0-3603x2315-jpg"
-            },
-            "alt": null,
-            "height": 3270,
-            "src": "https://cdn.sanity.io/images/k0c6krxi/production/a749e5c4fdb9cb0a70754f385412ecdfcbe18bf0-3603x2315.jpg",
-            "width": 2180
+            "imageAsset": {
+              "alt": null,
+              "height": 3270,
+              "src": "https://cdn.sanity.io/images/k0c6krxi/production/a749e5c4fdb9cb0a70754f385412ecdfcbe18bf0-3603x2315.jpg",
+              "width": 2180
+            }
           }
         }
       ],

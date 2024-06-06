@@ -61,11 +61,7 @@
             "_type": "tw-base.styledImage",
             "imageWithMetadata": {
                 "_type": "glob.imageWithMetadata",
-                "asset": {
-                    "_ref": "image-6701d4b826e15621aeecbf718d003ba9f67beb9c-2432x1442-png",
-                    "_type": "reference"
-                },
-                "image": {
+                "imageAsset": {
                     "src": "https://cdn.sanity.io/images/k0c6krxi/production/6701d4b826e15621aeecbf718d003ba9f67beb9c-2432x1442.png",
                     "width": 2432,
                     "height": 1442,

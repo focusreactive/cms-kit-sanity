@@ -18,11 +18,7 @@
                     "_key": "comp1",
                     "imageWithMetadata": {
                         "_type": "glob.imageWithMetadata",
-                        "asset": {
-                            "_ref": "image-a3ff0abd3156492cb723702653a2ed8e8c966c8c-1280x1280-jpg",
-                            "_type": "reference"
-                        },
-                        "image": {
+                        "imageAsset": {
                             "src": "https://cdn.sanity.io/images/k0c6krxi/production/a3ff0abd3156492cb723702653a2ed8e8c966c8c-1280x1280.jpg",
                             "width": 1280,
                             "height": 1280,
@@ -69,11 +65,7 @@
                     "_key": "comp2",
                     "imageWithMetadata": {
                         "_type": "glob.imageWithMetadata",
-                        "asset": {
-                            "_ref": "image-c9473a23f03727e963f61c38921416effe71c537-1280x1280-jpg",
-                            "_type": "reference"
-                        },
-                        "image": {
+                        "imageAsset": {
                             "src": "https://cdn.sanity.io/images/k0c6krxi/production/c9473a23f03727e963f61c38921416effe71c537-1280x1280.jpg",
                             "width": 1280,
                             "height": 1280,
@@ -120,11 +112,7 @@
                     "_key": "comp3",
                     "imageWithMetadata": {
                         "_type": "glob.imageWithMetadata",
-                        "asset": {
-                            "_ref": "image-9492f86670bbfd630e184ce496adfaa1eeabbf63-1280x1280-jpg",
-                            "_type": "reference"
-                        },
-                        "image": {
+                        "imageAsset": {
                             "src": "https://cdn.sanity.io/images/k0c6krxi/production/9492f86670bbfd630e184ce496adfaa1eeabbf63-1280x1280.jpg",
                             "width": 1280,
                             "height": 1280,
