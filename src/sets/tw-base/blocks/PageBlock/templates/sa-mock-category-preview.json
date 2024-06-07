@@ -19,11 +19,15 @@
                     "imageWithMetadata": {
                         "_type": "glob.imageWithMetadata",
                         "imageAsset": {
-                            "src": "https://cdn.sanity.io/images/k0c6krxi/production/a3ff0abd3156492cb723702653a2ed8e8c966c8c-1280x1280.jpg",
+                            "src": "https://cdn.sanity.io/images/euty36ag/production/a3ff0abd3156492cb723702653a2ed8e8c966c8c-1280x1280.jpg",
                             "width": 1280,
                             "height": 1280,
                             "alt": "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
-                        }
+                        },
+                        "asset": {
+                            "_type": "reference",
+                            "_ref": "image-a3ff0abd3156492cb723702653a2ed8e8c966c8c-1280x1280-jpg"
+                          }
                     },
                     "smartLink": "https://tailwindui.com/components/ecommerce/components/category-previews",
                     "sanityRichText": [
@@ -66,11 +70,15 @@
                     "imageWithMetadata": {
                         "_type": "glob.imageWithMetadata",
                         "imageAsset": {
-                            "src": "https://cdn.sanity.io/images/k0c6krxi/production/c9473a23f03727e963f61c38921416effe71c537-1280x1280.jpg",
+                            "src": "https://cdn.sanity.io/images/euty36ag/production/c9473a23f03727e963f61c38921416effe71c537-1280x1280.jpg",
                             "width": 1280,
                             "height": 1280,
                             "alt": "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
-                        }
+                        },
+                        "asset": {
+                            "_type": "reference",
+                            "_ref": "image-c9473a23f03727e963f61c38921416effe71c537-1280x1280-jpg"
+                          }
                     },
                     "smartLink": "https://tailwindui.com/components/ecommerce/components/category-previews",
                     "sanityRichText": [
@@ -113,11 +121,15 @@
                     "imageWithMetadata": {
                         "_type": "glob.imageWithMetadata",
                         "imageAsset": {
-                            "src": "https://cdn.sanity.io/images/k0c6krxi/production/9492f86670bbfd630e184ce496adfaa1eeabbf63-1280x1280.jpg",
+                            "src": "https://cdn.sanity.io/images/euty36ag/production/9492f86670bbfd630e184ce496adfaa1eeabbf63-1280x1280.jpg",
                             "width": 1280,
                             "height": 1280,
                             "alt": "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
-                        }
+                        },
+                        "asset": {
+                            "_type": "reference",
+                            "_ref": "image-9492f86670bbfd630e184ce496adfaa1eeabbf63-1280x1280-jpg"
+                          }
                     },
                     "smartLink": "https://tailwindui.com/components/ecommerce/components/category-previews",
                     "sanityRichText": [

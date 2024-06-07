@@ -78,8 +78,12 @@
               "alt": "cloud arrow",
               "imageAsset": {
                 "height": 24,
-                "src": "https://cdn.sanity.io/images/k0c6krxi/production/e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24.svg",
+                "src": "https://cdn.sanity.io/images/9l4wnbt3/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
                 "width": 24
+              },
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-jpg"
               }
             }
           },
@@ -100,8 +104,12 @@
               "alt": "cloud arrow",
               "imageAsset": {
                 "height": 24,
-                "src": "https://cdn.sanity.io/images/k0c6krxi/production/e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24.svg",
+                "src": "https://cdn.sanity.io/images/9l4wnbt3/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
                 "width": 24
+              },
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-jpg"
               }
             }
           },
@@ -122,8 +130,12 @@
               "alt": "cloud arrow",
               "imageAsset": {
                 "height": 24,
-                "src": "https://cdn.sanity.io/images/k0c6krxi/production/e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24.svg",
+                "src": "https://cdn.sanity.io/images/9l4wnbt3/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
                 "width": 24
+              },
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-jpg"
               }
             }
           },
@@ -144,8 +156,12 @@
               "alt": "cloud arrow",
               "imageAsset": {
                 "height": 24,
-                "src": "https://cdn.sanity.io/images/k0c6krxi/production/e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24.svg",
+                "src": "https://cdn.sanity.io/images/9l4wnbt3/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
                 "width": 24
+              },
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-jpg"
               }
             }
           },
@@ -166,8 +182,12 @@
               "alt": "cloud arrow",
               "imageAsset": {
                 "height": 24,
-                "src": "https://cdn.sanity.io/images/k0c6krxi/production/e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24.svg",
+                "src": "https://cdn.sanity.io/images/9l4wnbt3/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
                 "width": 24
+              },
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-jpg"
               }
             }
           },
@@ -188,8 +208,12 @@
               "alt": "cloud arrow",
               "imageAsset": {
                 "height": 24,
-                "src": "https://cdn.sanity.io/images/k0c6krxi/production/e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24.svg",
+                "src": "https://cdn.sanity.io/images/9l4wnbt3/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
                 "width": 24
+              },
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-jpg"
               }
             }
           },
@@ -210,8 +234,12 @@
               "alt": "cloud arrow",
               "imageAsset": {
                 "height": 24,
-                "src": "https://cdn.sanity.io/images/k0c6krxi/production/e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24.svg",
+                "src": "https://cdn.sanity.io/images/9l4wnbt3/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
                 "width": 24
+              },
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-jpg"
               }
             }
           },
@@ -232,8 +260,12 @@
               "alt": "cloud arrow",
               "imageAsset": {
                 "height": 24,
-                "src": "https://cdn.sanity.io/images/k0c6krxi/production/e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24.svg",
+                "src": "https://cdn.sanity.io/images/9l4wnbt3/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
                 "width": 24
+              },
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-jpg"
               }
             }
           },

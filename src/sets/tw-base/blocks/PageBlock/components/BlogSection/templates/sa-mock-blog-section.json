@@ -26,8 +26,12 @@
                                 "imageAsset": {
                                     "alt": null,
                                     "height": 256,
-                                    "src": "https://cdn.sanity.io/images/k0c6krxi/production/b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256.jpg",
+                                    "src": "https://cdn.sanity.io/images/euty36ag/production/b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256.jpg",
                                     "width": 256
+                                },
+                                "asset": {
+                                  "_type": "reference",
+                                  "_ref": "image-b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256-jpg"
                                 }
                             },
                             "link": {
@@ -111,8 +115,12 @@
                                 "imageAsset": {
                                     "alt": null,
                                     "height": 256,
-                                    "src": "https://cdn.sanity.io/images/k0c6krxi/production/b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256.jpg",
+                                    "src": "https://cdn.sanity.io/images/euty36ag/production/b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256.jpg",
                                     "width": 256
+                                },
+                                "asset": {
+                                  "_type": "reference",
+                                  "_ref": "image-b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256-jpg"
                                 }
                             },
                             "link": {
@@ -196,8 +204,12 @@
                                 "imageAsset": {
                                     "alt": null,
                                     "height": 256,
-                                    "src": "https://cdn.sanity.io/images/k0c6krxi/production/b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256.jpg",
+                                    "src": "https://cdn.sanity.io/images/euty36ag/production/b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256.jpg",
                                     "width": 256
+                                },
+                                "asset": {
+                                  "_type": "reference",
+                                  "_ref": "image-b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256-jpg"
                                 }
                             },
                             "link": {

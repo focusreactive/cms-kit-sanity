@@ -46,7 +46,7 @@ const templateFeatureGrid2x2: SanityTemplate = {
   area: TemplateArea.marketing,
   template: featureGrid2x2,
   screenshot:
-    'https://cdn.sanity.io/images/k0c6krxi/production/5475468e66dbeb73d8b56ccb5256620418b4c5f2-3390x1606.png',
+    'https://cdn.sanity.io/images/euty36ag/production/5475468e66dbeb73d8b56ccb5256620418b4c5f2-3390x1606.png',
   height: 848 + 4, // 4 is iframe border
 };
 
@@ -60,7 +60,7 @@ const templateFeatureWithImageLeft: SanityTemplate = {
   area: TemplateArea.marketing,
   template: featureWithImageLeft,
   screenshot:
-    'https://cdn.sanity.io/images/k0c6krxi/production/ec29eb7ea88c3e2ea9e0102eb204708880e764d4-3390x1606.png',
+    'https://cdn.sanity.io/images/euty36ag/production/ec29eb7ea88c3e2ea9e0102eb204708880e764d4-3390x1606.png',
   height: 936 + 4, // 4 is iframe border
 };
 
@@ -74,7 +74,7 @@ const templateFeatureWithImageRight: SanityTemplate = {
   area: TemplateArea.marketing,
   template: featureWithImageRight,
   screenshot:
-    'https://cdn.sanity.io/images/k0c6krxi/production/0559c32e571a37898faf9c96a15cf0ad1a3b6e7c-3382x1412.png',
+    'https://cdn.sanity.io/images/euty36ag/production/0559c32e571a37898faf9c96a15cf0ad1a3b6e7c-3382x1412.png',
   height: 936 + 4, // 4 is iframe border
 };
 
@@ -88,7 +88,7 @@ const templateFeatureWithLargeScreenshotLight: SanityTemplate = {
   area: TemplateArea.marketing,
   template: featureWithLargeImageLight,
   screenshot:
-    'https://cdn.sanity.io/images/k0c6krxi/production/1c5862b7cd8b308e7c7a06f5d12f225c57b901c4-2432x1694.png',
+    'https://cdn.sanity.io/images/euty36ag/production/1c5862b7cd8b308e7c7a06f5d12f225c57b901c4-2432x1694.png',
   height: 1345 + 4, // 4 is iframe border
 };
 
@@ -102,7 +102,7 @@ const templateFeatureWithLargeScreenshotDark: SanityTemplate = {
   area: TemplateArea.marketing,
   template: featureWithLargeImageDark,
   screenshot:
-    'https://cdn.sanity.io/images/k0c6krxi/production/09088793adc2e8b57fce3a099eb3fcf8ad8cb744-2432x1722.png',
+    'https://cdn.sanity.io/images/euty36ag/production/09088793adc2e8b57fce3a099eb3fcf8ad8cb744-2432x1722.png',
   height: 1345 + 4, // 4 is iframe border
 };
 
@@ -117,7 +117,7 @@ const templateFeatureWithSimpleThreeColumnWithSmallIconsLight: SanityTemplate =
     area: TemplateArea.marketing,
     template: featureWithSimpleThreeColumnWithSmallIconsLight,
     screenshot:
-      'https://cdn.sanity.io/images/k0c6krxi/production/8421ec0f12bde66b30940fa2385e327addff001b-3392x1446.png',
+      'https://cdn.sanity.io/images/euty36ag/production/8421ec0f12bde66b30940fa2385e327addff001b-3392x1446.png',
     height: 724 + 4, // 4 is iframe border
   };
 
@@ -131,7 +131,7 @@ const templateFeatureWithSimpleThreeColumnWithLargeIcons: SanityTemplate = {
   area: TemplateArea.marketing,
   template: featureWithSimpleThreeColumnWithLargeIcons,
   screenshot:
-    'https://cdn.sanity.io/images/k0c6krxi/production/0e1ec692afdc9e643a65e2db11d8fde5e2caaf65-3392x1446.png',
+    'https://cdn.sanity.io/images/euty36ag/production/0e1ec692afdc9e643a65e2db11d8fde5e2caaf65-3392x1446.png',
   height: 760 + 4, // 4 is iframe border
 };
 
@@ -145,7 +145,7 @@ const templateFeatureOffsetWithList: SanityTemplate = {
   area: TemplateArea.marketing,
   template: featureWithOffsetList,
   screenshot:
-    'https://cdn.sanity.io/images/k0c6krxi/production/aa173f6b8b80df4dbb473068e52e5c28d0c0d819-3392x1602.png',
+    'https://cdn.sanity.io/images/euty36ag/production/aa173f6b8b80df4dbb473068e52e5c28d0c0d819-3392x1602.png',
   height: 1152 + 4, // 4 is iframe border
 };
 
@@ -159,7 +159,7 @@ const templateFeatureSimple: SanityTemplate = {
   area: TemplateArea.marketing,
   template: featureSimple,
   screenshot:
-    'https://cdn.sanity.io/images/k0c6krxi/production/aab75586e6aa1f3f558b9424b4ad9242067a7a97-3392x1688.png',
+    'https://cdn.sanity.io/images/euty36ag/production/aab75586e6aa1f3f558b9424b4ad9242067a7a97-3392x1688.png',
   height: 896 + 4, // 4 is iframe border
 };
 
@@ -173,7 +173,7 @@ const templateFeatureWithSimpleThreeColumnWithSmallIconsDark: SanityTemplate = {
   area: TemplateArea.marketing,
   template: featureWithSimpleThreeColumnWithSmallIconsDark,
   screenshot:
-    'https://cdn.sanity.io/images/k0c6krxi/production/40e814d97169052b4c114dcc43d369f400a9f71e-3392x1446.png',
+    'https://cdn.sanity.io/images/euty36ag/production/40e814d97169052b4c114dcc43d369f400a9f71e-3392x1446.png',
   height: 724 + 4, // 4 is iframe border
 };
 
@@ -187,7 +187,7 @@ const templateLogoCloud: SanityTemplate = {
   area: TemplateArea.marketing,
   template: logoCloud,
   screenshot:
-    'https://cdn.sanity.io/images/k0c6krxi/production/40e814d97169052b4c114dcc43d369f400a9f71e-3392x1446.png',
+    'https://cdn.sanity.io/images/euty36ag/production/40e814d97169052b4c114dcc43d369f400a9f71e-3392x1446.png',
   height: 381 + 4, // 4 is iframe border
 };
 
