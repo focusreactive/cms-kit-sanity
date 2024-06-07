@@ -77,66 +77,81 @@
       "features": [
         {
           "_type": "tw-base.keyPoint",
-          "_key": "comp1",
-          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+          "_key": "745c1cc8f53c1",
+          "link": {
+            "type": "internal",
+            "_type": "glob.SmartLink"
+          },
+          "title": "Feature example",
+          "description": "Given the task of adding specific import statements to existing files, both Plop and Hygen can handle this requirement effectively. Let's look at how each solution can address this need.",
           "icon": {
             "_type": "tw-base.featureIcon",
             "icon": {
-              "_sanityAsset": "image@file://./images/db8a35491bb5b57a9d72ca31b8fb28a31af5c745-200x200.svg",
               "_type": "glob.imageWithMetadata",
-              "alt": "cloud arrow",
-              "height": 24,
-              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
-              "width": 24
+              "imageAsset": {
+                "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+                "width": 24,
+                "height": 24,
+                "alt": null
+              },
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
+              }
             }
-          },
-          "link": {
-            "_type": "glob.SmartLink",
-            "type": "internal"
-          },
-          "title": "Push to deploy."
+          }
         },
         {
           "_type": "tw-base.keyPoint",
-          "_key": "comp2",
-          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+          "_key": "745c1cc8f53c2",
+          "link": {
+            "type": "internal",
+            "_type": "glob.SmartLink"
+          },
+          "title": "Feature example",
+          "description": "Given the task of adding specific import statements to existing files, both Plop and Hygen can handle this requirement effectively. Let's look at how each solution can address this need.",
           "icon": {
             "_type": "tw-base.featureIcon",
             "icon": {
-              "_sanityAsset": "image@file://./images/db8a35491bb5b57a9d72ca31b8fb28a31af5c745-200x200.svg",
               "_type": "glob.imageWithMetadata",
-              "alt": "cloud arrow",
-              "height": 24,
-              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
-              "width": 24
+              "imageAsset": {
+                "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+                "width": 24,
+                "height": 24,
+                "alt": null
+              },
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
+              }
             }
-          },
-          "link": {
-            "_type": "glob.SmartLink",
-            "type": "internal"
-          },
-          "title": "Push to deploy."
+          }
         },
         {
           "_type": "tw-base.keyPoint",
-          "_key": "comp3",
-          "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+          "_key": "745c1cc8f533c",
+          "link": {
+            "type": "internal",
+            "_type": "glob.SmartLink"
+          },
+          "title": "Feature example",
+          "description": "Given the task of adding specific import statements to existing files, both Plop and Hygen can handle this requirement effectively. Let's look at how each solution can address this need.",
           "icon": {
             "_type": "tw-base.featureIcon",
             "icon": {
-              "_sanityAsset": "image@file://./images/db8a35491bb5b57a9d72ca31b8fb28a31af5c745-200x200.svg",
               "_type": "glob.imageWithMetadata",
-              "alt": "cloud arrow",
-              "height": 24,
-              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
-              "width": 24
+              "imageAsset": {
+                "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+                "width": 24,
+                "height": 24,
+                "alt": null
+              },
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
+              }
             }
-          },
-          "link": {
-            "_type": "glob.SmartLink",
-            "type": "internal"
-          },
-          "title": "Push to deploy."
+          }
         }
       ],
       "style": "icon-left"

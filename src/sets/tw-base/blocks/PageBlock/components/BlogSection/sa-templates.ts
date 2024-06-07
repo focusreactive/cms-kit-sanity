@@ -19,7 +19,7 @@ const templateBlogSection: SanityTemplate = {
 };
 
 const templateBlogSectionThree: SanityTemplate = {
-  name: 'blogSection',
+  name: 'blogSectionWithImages',
   type: pageBlock.name,
   namespace: namespace.name,
   title: 'Blog section with images',
