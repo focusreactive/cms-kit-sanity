@@ -12,7 +12,7 @@
  * 6. Repeat these steps to create additional components.
  */
 
-export { default as BlockTemplate } from './Component';
+export { default as {{componentName}} } from './Component';
 
 /**
  * The Content Block consists of the
@@ -28,7 +28,7 @@ export { default as BlockTemplate } from './Component';
  * component into multiple files. Treat
  * it as a regular React component. The
  * component should be wrapped in a HOC:
- * `export default withCMS({ sa })(BlockTemplate);`,
+ * `export default withCMS({ sa })({{componentName}});`,
  * where you need to pass the adapter
  * function to convert CMS content into
  * component props.

@@ -3,19 +3,19 @@ import { namespace } from '@ns/namespace.config';
 import { TemplateArea, TemplateCategory } from '@focus-reactive/cms-kit-sanity';
 import type { SanityTemplate } from '@focus-reactive/cms-kit-sanity/sanity';
 
-import { blockTemplate } from './sa-schema';
-import blockTemplateDefaultJSON from './templates/sa-mock-default.json';
+import { {{schemaName}} } from './sa-schema';
+import {{schemaName}}DefaultJSON from './templates/sa-mock-default.json';
 
-const blockTemplateDefault: SanityTemplate = {
-  name: 'blockTemplate',
-  type: blockTemplate.name,
+const {{schemaName}}Default: SanityTemplate = {
+  name: '{{schemaName}}',
+  type: {{schemaName}}.name,
   namespace: namespace.name,
-  title: 'Block Template',
+  title: '{{schemaTitle}}',
   description: 'Dummy block for development',
   category: TemplateCategory.pageBlock,
   area: TemplateArea.marketing,
-  template: blockTemplateDefaultJSON,
+  template: {{schemaName}}DefaultJSON,
   height: 600 + 4, // 4 is iframe border
 };
 
-export default [blockTemplateDefault];
+export default [{{schemaName}}Default];

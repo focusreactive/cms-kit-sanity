@@ -6,10 +6,10 @@ import {
   imageWithMetadata,
 } from '@focus-reactive/cms-kit-sanity/sanity';
 
-export const blockTemplate = defineBlockType(({ df }) => ({
-  name: 'blockTemplate',
+export const {{schemaName}} = defineBlockType(({ df }) => ({
+  name: '{{schemaName}}',
   type: 'object',
-  title: 'Block Template',
+  title: '{{schemaTitle}}',
   fields: [
     df({
       name: 'title',
@@ -38,7 +38,7 @@ export const blockTemplate = defineBlockType(({ df }) => ({
     // @ts-ignore
     prepare({ components, blockOptions, customTitle }) {
       return {
-        title: customTitle || 'Block Template',
+        title: customTitle || '{{schemaTitle}}',
         customTitle,
         components,
         blockOptions,
@@ -47,4 +47,4 @@ export const blockTemplate = defineBlockType(({ df }) => ({
   },
 }));
 
-export default [blockTemplate];
+export default [{{schemaName}}];

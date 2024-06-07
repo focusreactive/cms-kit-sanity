@@ -27,11 +27,11 @@ type Props = ContentBlockGeneric & {
   backgroundColor: string; // #111827
 };
 
-function BlockTemplate(props: Props) {
+function {{componentName}}(props: Props) {
   const { title, description, image, backgroundColor } = props;
   return (
     <div className={`relative`}>
-      <h3 className={`text-3xl pb-6 text-gray-600 bg-[${backgroundColor}]`}>{`BlockTemplate: ${title}`}</h3>
+      <h3 className={`text-3xl pb-6 text-gray-600 bg-[${backgroundColor}]`}>{`{{componentName}}: ${title}`}</h3>
       <GenericRichText value={description} components={RichTextComponents} />
       {image && (
         <div className="h-80 w-full overflow-hidden my-5">
@@ -48,4 +48,4 @@ function BlockTemplate(props: Props) {
   );
 }
 
-export default withCMS({ sa })(BlockTemplate);
+export default withCMS({ sa })({{componentName}});
