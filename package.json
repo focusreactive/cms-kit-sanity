@@ -51,6 +51,8 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-tailwindcss": "^3.13.0",
     "eslint-plugin-workspaces": "^0.9.0",
+    "hygen": "^6.2.11",
+    "hygen-add": "^1.0.5",
     "ora": "^8.0.1",
     "postcss": "^8",
     "sanity-plugin-media": "^2.2.5",

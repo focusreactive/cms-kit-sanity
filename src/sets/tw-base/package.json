@@ -1,0 +1,7 @@
+{
+  "name": "tw-base",
+  "version": "0.1.0",
+  "scripts": {
+    "add:block": "./scripts/addContentBlock.mjs"
+  }
+}

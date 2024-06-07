@@ -1,0 +1,22 @@
+{
+    "_type": "tw-base.blockTemplate",
+    "description": [
+      {
+        "_key": "c1a9ea8e3f75",
+        "markDefs": [],
+        "children": [
+          {
+            "_type": "span",
+            "marks": [],
+            "text": "Lorem ipsum‌",
+            "_key": "22db4bc00dac"
+          }
+        ],
+        "_type": "block",
+        "style": "normal"
+      }
+    ],
+    "_key": "856b01adcc18",
+    "title": "Demo Block‌",
+    "cms": "sa"
+  }
