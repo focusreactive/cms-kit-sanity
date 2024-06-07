@@ -8,7 +8,7 @@
       "imageWithMetadata": {
         "_type": "glob.imageWithMetadata",
         "asset": {
-          "_ref": "image-06f237a943bb46d21f3f2d7ce04c19b1baa8ba3b-158x48-svg",
+          "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png",
           "_type": "reference"
         },
         "image": {
@@ -30,7 +30,7 @@
       "imageWithMetadata": {
         "_type": "glob.imageWithMetadata",
         "asset": {
-          "_ref": "image-726026788a74314e3ac84dd2944b4fd343d24ee4-158x48-svg",
+          "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png",
           "_type": "reference"
         },
         "image": {
@@ -53,7 +53,7 @@
       "imageWithMetadata": {
         "_type": "glob.imageWithMetadata",
         "asset": {
-          "_ref": "image-82fce8c5411e02a2e6a4506d130113ce5ae59c95-158x48-svg",
+          "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png",
           "_type": "reference"
         },
           "image": {
@@ -75,7 +75,7 @@
       "imageWithMetadata": {
         "_type": "glob.imageWithMetadata",
         "asset": {
-          "_ref": "image-900cb43012fe99e1b5fc1210d2265998a5abbcfb-158x48-svg",
+          "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png",
           "_type": "reference"
         },
         "image": {
@@ -98,7 +98,7 @@
       "imageWithMetadata": {
         "_type": "glob.imageWithMetadata",
         "asset": {
-          "_ref": "image-970cbc0293a46e37a914f3f109660582f4a72fc2-158x48-svg",
+          "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png",
           "_type": "reference"
         },
         "image": {

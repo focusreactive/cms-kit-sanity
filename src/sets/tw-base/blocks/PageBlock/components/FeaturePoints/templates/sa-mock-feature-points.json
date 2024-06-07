@@ -10,10 +10,10 @@
         "icon": {
           "_type": "glob.imageWithMetadata",
           "asset": {
-            "_ref": "image-711344906d1db194bb26ce279da97373955b1177-24x24-svg",
+            "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png",
             "_type": "reference"
           },
-          "src": "https://cdn.sanity.io/images/euty36ag/production/a4ce442d7780df6a6625450584c0078716afabd6-24x24.svg",
+          "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
           "width": 24,
           "height": 24,
           "alt": "cloud arrow"
@@ -34,10 +34,10 @@
         "icon": {
           "_type": "glob.imageWithMetadata",
           "asset": {
-            "_ref": "image-711344906d1db194bb26ce279da97373955b1177-24x24-svg",
+            "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png",
             "_type": "reference"
           },
-          "src": "https://cdn.sanity.io/images/euty36ag/production/a4ce442d7780df6a6625450584c0078716afabd6-24x24.svg",
+          "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
           "width": 24,
           "height": 24,
           "alt": "cloud arrow"
@@ -58,10 +58,10 @@
         "icon": {
           "_type": "glob.imageWithMetadata",
           "asset": {
-            "_ref": "image-711344906d1db194bb26ce279da97373955b1177-24x24-svg",
+            "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png",
             "_type": "reference"
           },
-          "src": "https://cdn.sanity.io/images/euty36ag/production/a4ce442d7780df6a6625450584c0078716afabd6-24x24.svg",
+          "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
           "width": 24,
           "height": 24,
           "alt": "cloud arrow"
