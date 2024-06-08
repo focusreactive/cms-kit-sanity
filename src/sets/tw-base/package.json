@@ -3,5 +3,9 @@
   "version": "0.1.0",
   "scripts": {
     "add:block": "./scripts/addContentBlock.mjs"
+  },
+  "devDependencies": {
+    "hygen": "^6.2.11",
+    "hygen-create": "^0.2.1"
   }
 }
