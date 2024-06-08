@@ -1,5 +1,5 @@
 ---
-to: <%= name %>/blocks/<%= h.inflection.camelize(name, false) %>/sa-adapters.ts
+to: blocks/<%= h.inflection.camelize(name, false) %>/sa-adapters.ts
 ---
 import { getCmsKey, AdapterFn } from '@focus-reactive/cms-kit-sanity';
 import { vercelStegaSplit } from '@vercel/stega';

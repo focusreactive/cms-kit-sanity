@@ -1,5 +1,5 @@
 ---
-to: <%= name %>/blocks/<%= h.inflection.camelize(name, false) %>/sa-templates.ts
+to: blocks/<%= h.inflection.camelize(name, false) %>/sa-templates.ts
 ---
 import { namespace } from '@ns/namespace.config';
 

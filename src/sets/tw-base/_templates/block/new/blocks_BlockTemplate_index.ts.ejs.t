@@ -1,5 +1,5 @@
 ---
-to: <%= name %>/blocks/<%= h.inflection.camelize(name, false) %>/index.ts
+to: blocks/<%= h.inflection.camelize(name, false) %>/index.ts
 ---
 /**
  * This is a template content block intended to serve as a sample for creating new blocks. It contains the minimal required structure and functional components.

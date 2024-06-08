@@ -1,5 +1,5 @@
 ---
-to: <%= name %>/blocks/<%= h.inflection.camelize(name, false) %>/Component.tsx
+to: blocks/<%= h.inflection.camelize(name, false) %>/Component.tsx
 ---
 import React from 'react';
 

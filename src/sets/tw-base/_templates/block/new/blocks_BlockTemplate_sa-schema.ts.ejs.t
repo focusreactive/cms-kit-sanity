@@ -1,5 +1,5 @@
 ---
-to: <%= name %>/blocks/<%= h.inflection.camelize(name, false) %>/sa-schema.ts
+to: blocks/<%= h.inflection.camelize(name, false) %>/sa-schema.ts
 ---
 import { defineBlockType } from '@ns/sa-config';
 

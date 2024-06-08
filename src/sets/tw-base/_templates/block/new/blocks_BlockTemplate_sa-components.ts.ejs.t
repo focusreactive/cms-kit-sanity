@@ -1,5 +1,5 @@
 ---
-to: <%= name %>/blocks/<%= h.inflection.camelize(name, false) %>/sa-components.ts
+to: blocks/<%= h.inflection.camelize(name, false) %>/sa-components.ts
 ---
 import { findComponentRoot } from '@focus-reactive/cms-kit-sanity/sanity';
 import type { BlocksMap } from '@focus-reactive/cms-kit-sanity/sanity';
