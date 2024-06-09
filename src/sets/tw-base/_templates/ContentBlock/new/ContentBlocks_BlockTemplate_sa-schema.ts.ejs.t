@@ -12,7 +12,7 @@ import { blockOptions } from '../../ContentComponents/Section';
 export const <%= h.inflection.camelize(name, true) %> = defineBlockType(({ df }) => ({
   name: '<%= h.inflection.camelize(name, true) %>',
   type: 'object',
-  title: 'Block Template',
+  title: '<%= h.inflection.titleize(name) %>',
   fields: [
     df({
       name: 'title',
@@ -45,7 +45,7 @@ export const <%= h.inflection.camelize(name, true) %> = defineBlockType(({ df })
     // @ts-ignore
     prepare({ components, blockOptions, customTitle }) {
       return {
-        title: customTitle || 'Block Template',
+        title: customTitle || '<%= h.inflection.titleize(name) %>',
         customTitle,
         components,
         blockOptions,

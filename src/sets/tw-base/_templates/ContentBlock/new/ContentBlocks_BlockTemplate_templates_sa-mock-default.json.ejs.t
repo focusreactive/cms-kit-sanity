@@ -16,7 +16,6 @@ to: ContentBlocks/<%= h.inflection.camelize(name, false) %>/templates/sa-mock-de
       "secondary": "without-secondary"
     }
   },
-  "customTitle": "Block Template",
   "description": [
     {
       "_key": "85cfa481e587",
@@ -352,5 +351,5 @@ to: ContentBlocks/<%= h.inflection.camelize(name, false) %>/templates/sa-mock-de
       "width": 511
     }
   },
-  "title": "New Block"
+  "title": "<%= h.inflection.titleize(name) %>"
 }
