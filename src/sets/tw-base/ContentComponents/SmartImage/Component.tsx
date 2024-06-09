@@ -1,22 +1,16 @@
 import React from 'react';
 
-import { AdapterFn, getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
+import { withCMS } from '@focus-reactive/cms-kit-sanity';
 import Image from 'next/image';
-
-type Props = {
-  className: string;
-  imageWithMetadata: {
-    imageAsset: { src: string; alt: string; width: string; height: string };
-  };
-  priority: boolean;
-};
+import { sa } from './sa-adapter';
+import { SmartImageProps } from './types';
 
 function SmartImage({
   imageWithMetadata,
   className,
   priority,
   ...rest
-}: Props) {
+}: SmartImageProps) {
   const { src, alt, width, height } = imageWithMetadata?.imageAsset || {
     width: '100',
     height: '100',
@@ -37,18 +31,4 @@ function SmartImage({
   );
 }
 
-const sa: AdapterFn = (cmsProps) => {
-  return {
-    key: getCmsKey(cmsProps),
-    ...cmsProps,
-  };
-};
-
-const sb: AdapterFn = (cmsProps) => {
-  return {
-    key: getCmsKey(cmsProps),
-    ...cmsProps,
-  };
-};
-
-export default withCMS({ sa, sb })(SmartImage);
+export default withCMS({ sa })(SmartImage);

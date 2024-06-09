@@ -11,7 +11,7 @@ import {
 } from '@focus-reactive/cms-kit-sanity/sanity';
 import { classnames } from '@focus-reactive/cms-kit-sanity/common';
 
-import { SmartImage } from '../../Components/SmartImage';
+import { SmartImage } from '../../ContentComponents/SmartImage';
 import type { grid } from '../../SubBlocks/Grid/sa-schema';
 import type { GridElement } from '../../SubBlocks/Grid/Component';
 import { StyledRichText } from '../../SubBlocks/StyledRichText';
