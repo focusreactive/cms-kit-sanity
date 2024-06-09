@@ -1,7 +1,7 @@
 import pageBlock from './PageBlock/sa-templates';
-// import blockTemplate from './BlockTemplate/sa-templates';
+// HYGEN-IMPORTS-END
 
 export const contentBlockTemplates = [
   ...pageBlock,
-  // ...blockTemplate
+  // HYGEN-ARRAY-END
 ];
