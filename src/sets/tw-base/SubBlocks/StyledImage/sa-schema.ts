@@ -1,4 +1,4 @@
-import { defineComponentType } from '../../../../sa-config';
+import { defineComponentType } from '../../sa-config';
 
 import { imageWithMetadata } from '@focus-reactive/cms-kit-sanity/sanity';
 

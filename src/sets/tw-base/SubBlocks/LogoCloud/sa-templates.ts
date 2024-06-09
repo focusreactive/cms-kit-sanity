@@ -1,7 +1,7 @@
 import { TemplateArea, TemplateCategory } from '@focus-reactive/cms-kit-sanity';
 import type { SanityTemplate } from '@focus-reactive/cms-kit-sanity/sanity';
 
-import { namespace } from '../../../../namespace.config';
+import { namespace } from '../../namespace.config';
 import { logoCloudGrid } from './sa-schema';
 import logoCloudGridJSON from './templates/sa-mock-logo-cloud.json';
 

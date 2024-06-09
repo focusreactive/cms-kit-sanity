@@ -10,22 +10,22 @@ import {
   layoutSecondarySize,
 } from '../../common/common-schema';
 
-import { blogSection } from './components/BlogSection/sa-schema';
-import blogSectionSchema from './components/BlogSection/sa-schema';
-import { logoCloudGrid } from './components/LogoCloud/sa-schema';
-import { grid } from './components/Grid/sa-schema';
-import { styledImage } from './components/StyledImage/sa-schema';
-import { featurePoints } from './components/FeaturePoints/sa-schema';
-import { styledRichText } from './components/StyledRichText/sa-schema';
-import { buttons } from './components/Buttons/sa-schema';
-import { badges } from './components/Badges/sa-schema';
-import logoCloudGridSchema from './components/LogoCloud/sa-schema';
-import gridSchema from './components/Grid/sa-schema';
-import styledImageSchema from './components/StyledImage/sa-schema';
-import featurePointsSchema from './components/FeaturePoints/sa-schema';
-import styledRichTextSchema from './components/StyledRichText/sa-schema';
-import buttonsSchema from './components/Buttons/sa-schema';
-import badgesSchema from './components/Badges/sa-schema';
+import { blogSection } from '../../SubBlocks/BlogSection/sa-schema';
+import blogSectionSchema from '../../SubBlocks/BlogSection/sa-schema';
+import { logoCloudGrid } from '../../SubBlocks/LogoCloud/sa-schema';
+import { grid } from '../../SubBlocks/Grid/sa-schema';
+import { styledImage } from '../../SubBlocks/StyledImage/sa-schema';
+import { featurePoints } from '../../SubBlocks/FeaturePoints/sa-schema';
+import { styledRichText } from '../../SubBlocks/StyledRichText/sa-schema';
+import { buttons } from '../../SubBlocks/Buttons/sa-schema';
+import { badges } from '../../SubBlocks/Badges/sa-schema';
+import logoCloudGridSchema from '../../SubBlocks/LogoCloud/sa-schema';
+import gridSchema from '../../SubBlocks/Grid/sa-schema';
+import styledImageSchema from '../../SubBlocks/StyledImage/sa-schema';
+import featurePointsSchema from '../../SubBlocks/FeaturePoints/sa-schema';
+import styledRichTextSchema from '../../SubBlocks/StyledRichText/sa-schema';
+import buttonsSchema from '../../SubBlocks/Buttons/sa-schema';
+import badgesSchema from '../../SubBlocks/Badges/sa-schema';
 import { defineBlockType, defineUtilityType } from '../../sa-config';
 
 export const backgroundOptions = defineUtilityType(({ df }) => ({

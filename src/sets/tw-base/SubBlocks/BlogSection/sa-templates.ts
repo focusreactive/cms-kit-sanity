@@ -3,8 +3,8 @@ import type { SanityTemplate } from '@focus-reactive/cms-kit-sanity/sanity';
 
 import blogJSON from './templates/sa-mock-blog-section.json';
 import threeColumnWithImages from './templates/three-column-with-images.json';
-import { pageBlock } from '../../sa-schema';
-import { namespace } from '../../../../namespace.config';
+import { pageBlock } from '../../ContentBlocks/PageBlock/sa-schema';
+import { namespace } from '../../namespace.config';
 
 const templateBlogSection: SanityTemplate = {
   name: 'blogSection',

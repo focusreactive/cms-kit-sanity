@@ -1,7 +1,7 @@
-import { defineComponentType, defineUtilityType } from '../../../../sa-config';
+import { defineComponentType, defineUtilityType } from '../../sa-config';
 import {
   featurePointStyles,
-} from '../../../../common/common-schema';
+} from '../../common/common-schema';
 import {
   ComponentPreview,
   smartLink,

@@ -1,8 +1,8 @@
-import { defineComponentType } from '../../../../sa-config';
+import { defineComponentType } from '../../sa-config';
 
 import { customRichText, ComponentPreview } from '@focus-reactive/cms-kit-sanity/sanity';
 
-import { componentAlignment } from '../../../../common/common-schema';
+import { componentAlignment } from '../../common/common-schema';
 
 
 export const styledRichText = defineComponentType(({ df }) => ({

@@ -1,29 +1,32 @@
-import { defineComponentType } from '../../../../sa-config';
-import { buttonsSecondaryOptions } from '../../../../common/common-schema';
+import { defineComponentType } from '../../sa-config';
+
+import { badgesSecondaryOptions } from '../../common/common-schema';
 import {
   ComponentPreview,
   smartLink,
 } from '@focus-reactive/cms-kit-sanity/sanity';
 
-export const buttons = defineComponentType(({ df }) => ({
-  name: 'buttons',
+
+export const badges = defineComponentType(({ df }) => ({
+  name: 'badges',
   type: 'object',
-  title: 'Buttons',
+  title: 'Badges',
   fields: [
     df({
       name: 'customTitle',
       type: 'string',
     }),
+    df({ name: 'primaryText', type: 'string' }),
     df({ name: 'primaryLink', type: smartLink.name }),
     df({
       name: 'secondary',
       type: 'string',
       options: {
-        list: buttonsSecondaryOptions,
+        list: badgesSecondaryOptions,
         layout: 'radio',
         direction: 'vertical',
       },
-      invitialValue: 'has-secondary-link', //TODO: fix initial value
+      initialValue: 'has-secondary-link', //TODO: fix initial value
     }),
     df({
       name: 'secondaryLink',
@@ -37,11 +40,11 @@ export const buttons = defineComponentType(({ df }) => ({
     // @ts-ignore
     prepare({ customTitle }) {
       return {
-        title: customTitle || 'Buttons',
-        type: 'tw-base.buttons',
+        title: customTitle || 'Badge',
+        type: 'tw-base.badges',
       };
     },
   },
 }));
 
-export default [buttons];
+export default [badges];

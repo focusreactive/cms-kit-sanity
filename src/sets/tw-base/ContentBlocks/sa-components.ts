@@ -5,7 +5,7 @@ import { findBlockRoot } from '@focus-reactive/cms-kit-sanity/sanity-schema-type
 
 import { PageBlock } from './PageBlock';
 import pageBlock from './PageBlock/sa-schema';
-import { pageBlockComponentsMap } from './PageBlock/sa-components';
+import { pageBlockComponentsMap } from '../SubBlocks/sa-components';
 
 // import { BlockTemplate } from './BlockTemplate';
 // import blockTemplate from './BlockTemplate/sa-schema';

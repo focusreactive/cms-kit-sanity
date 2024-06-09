@@ -11,10 +11,10 @@ import {
 } from '@focus-reactive/cms-kit-sanity/sanity';
 import { classnames } from '@focus-reactive/cms-kit-sanity/common';
 
-import { SmartImage } from './components/SmartImage';
-import type { grid } from './components/Grid/sa-schema';
-import type { GridElement } from './components/Grid/Component';
-import { StyledRichText } from './components/StyledRichText';
+import { SmartImage } from '../../SubBlocks/SmartImage';
+import type { grid } from '../../SubBlocks/Grid/sa-schema';
+import type { GridElement } from '../../SubBlocks/Grid/Component';
+import { StyledRichText } from '../../SubBlocks/StyledRichText';
 import { sa } from './sa-adapters';
 import { sb } from './sb-adapters';
 
