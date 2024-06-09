@@ -2,7 +2,7 @@ import React from 'react';
 
 import { AdapterFn, getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
 import { classnames } from '@focus-reactive/cms-kit-sanity/common';
-import { SmartImage } from '../SmartImage';
+import { SmartImage } from '../../Components/SmartImage';
 
 type Props = {
   isDarkTheme: boolean;

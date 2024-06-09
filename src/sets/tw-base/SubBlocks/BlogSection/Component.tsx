@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { SmartImage } from '../SmartImage';
+import { SmartImage } from '../../Components/SmartImage';
 
 import { AdapterFn, getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
 import {

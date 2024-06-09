@@ -4,7 +4,7 @@ import { featurePointStyles } from '../../common/common-schema';
 import { AdapterFn, getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
 import type { SmartLinkProps } from '@focus-reactive/cms-kit-sanity/sanity';
 import { classnames } from '@focus-reactive/cms-kit-sanity/common';
-import { SmartImage } from '../SmartImage';
+import { SmartImage } from '../../Components/SmartImage';
 
 const iconStyle = featurePointStyles.map((style) => style.value);
 
