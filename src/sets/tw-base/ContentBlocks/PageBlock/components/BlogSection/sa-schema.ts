@@ -1,5 +1,4 @@
 import {
-  defineBlockType,
   defineComponentType,
   defineUtilityType,
 } from '../../../../sa-config';

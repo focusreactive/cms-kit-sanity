@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { GenericRichText } from '@focus-reactive/cms-kit-sanity/common';
-import { contentPoint } from '@ns/blocks/ContentBlock/sa-schema';
-// import { contentPoint } from '@ns/blocks/ContentBlock/sa-schema';
+import { contentPoint } from '../../ContentBlocks/ContentBlock/sa-schema';
 
 
 type ContentPointProps = {

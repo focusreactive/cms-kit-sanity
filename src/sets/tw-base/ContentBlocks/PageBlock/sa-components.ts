@@ -3,8 +3,8 @@ import type { BlocksMap } from '@focus-reactive/cms-kit-sanity/sanity';
 
 import blogSection from './components/BlogSection/sa-schema';
 import { BlogSection } from './components/BlogSection';
-import { Grid } from './components/Grid';
 import grid from './components/Grid/sa-schema';
+import { Grid } from './components/Grid';
 import { StyledImage } from './components/StyledImage';
 import styledImage from './components/StyledImage/sa-schema';
 import { StyledRichText } from './components/StyledRichText';
