@@ -1,0 +1,15 @@
+{
+  "about": "This is a hygen-create definitions file. The hygen-create utility creates generators that can be executed using hygen.",
+  "hygen_create_version": "0.2.0",
+  "name": "ContentBlock",
+  "files_and_dirs": {
+    "ContentBlocks/BlockTemplate/Component.tsx": true,
+    "ContentBlocks/BlockTemplate/index.ts": true,
+    "ContentBlocks/BlockTemplate/sa-adapters.ts": true,
+    "ContentBlocks/BlockTemplate/sa-schema.ts": true,
+    "ContentBlocks/BlockTemplate/sa-templates.ts": true,
+    "ContentBlocks/BlockTemplate/templates/sa-mock-default.json": true
+  },
+  "templatize_using_name": "BlockTemplate",
+  "gen_parent_dir": false
+}
