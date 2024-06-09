@@ -3,7 +3,7 @@ import { getCmsKey, withCMS, AdapterFn } from '@focus-reactive/cms-kit-sanity';
 import { imageConverter } from '@focus-reactive/cms-kit-sanity/sanity';
 import { CMSProps } from './sa-types';
 import { Image, KeyPoint } from '../../types/common';
-import { RichText } from '../../ui/RichText/RichText';
+import { RichText } from '../../Components/RichText/RichText';
 
 type Props = {
   title: string;
