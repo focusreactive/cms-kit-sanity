@@ -1,88 +1,5 @@
 import { ImageIcon } from '@sanity/icons';
 
-// import smartLink from './common/SmartLink/sa-schema';
-// import smartImage from './common/SmartImage/sa-schema';
-// import { ImageInput } from './model/components';
-// import { defineGlobalType } from './model/defineGlobalType';
-
-// export const imageWithAlt = defineGlobalType(({ df }) => ({
-//   name: 'imageWithAlt',
-//   title: 'Image',
-//   type: 'image',
-//   fields: [
-//     df({
-//       title: 'Alternative Text',
-//       name: 'alt',
-//       type: 'string',
-//     }),
-//   ],
-// }));
-
-// export const keyPoint = defineGlobalType(({ df }) => ({
-//   name: 'keyPoint',
-//   type: 'object',
-//   title: 'Key Point',
-//   fields: [
-//     df({
-//       name: 'name',
-//       type: 'string',
-//     }),
-//     df({
-//       name: 'description',
-//       type: 'string',
-//     }),
-//     df({
-//       name: 'icon',
-//       type: imageWithAlt.name,
-//     }),
-//   ],
-// }));
-
-// export const templateView = defineGlobalType(() => ({
-//   name: 'templateView',
-//   type: 'string',
-//   components: {
-//     // Note: the following component will be attached in the ./plugin/index.ts
-//     // field: TemplateView,
-//   },
-//   options: {},
-// }));
-
-// export const imageWithMetadata = defineGlobalType(({ df }) => ({
-//   name: 'imageWithMetadata',
-//   type: 'image',
-//   title: 'Image',
-//   description: `Please add the metadata you want to use in the frontend.`,
-//   icon: ImageIcon,
-//   options: {
-//     hotspot: true,
-//     metadata: ['blurhash', 'lqip', 'palette'],
-//     requiredFields: [],
-//   },
-//   components: {
-//     input: ImageInput,
-//   },
-//   preview: {
-//     prepare() {
-//       return {
-//         title: 'Image',
-//         type: 'base.imageWithMetadata',
-//       };
-//     },
-//   },
-// }));
-
-// export const customRichText = defineGlobalType(({ df }) => ({
-//   name: 'customRichText',
-//   title: 'Custom Rich Text',
-//   type: 'array',
-//   of: [
-//     df({
-//       type: 'block',
-//     }),
-//   ],
-// }));
-
 export const backgroundColors = [
   { title: 'light', value: 'bg-white' },
   { title: 'light-grey', value: 'bg-gray-100' },
@@ -133,13 +50,4 @@ export const buttonsSecondaryOptions = [
 export const badgesSecondaryOptions = [
   'has-secondary-link',
   'without-secondary',
-];
-
-export default [
-  // imageWithAlt,
-  // keyPoint,
-  // imageWithMetadata,
-  // customRichText,
-  // smartImage,
-  // smartLink,
 ];
