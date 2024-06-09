@@ -16,3 +16,5 @@ export const templateTwoButtons: SanityTemplate = {
   template: twoButtons,
   height: 80 + 4, // 4 is iframe border
 };
+
+export default [templateTwoButtons];

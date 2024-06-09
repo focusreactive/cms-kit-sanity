@@ -11,7 +11,6 @@ import {
 } from '../../common/common-schema';
 
 import { blogSection } from '../../SubBlocks/BlogSection/sa-schema';
-import blogSectionSchema from '../../SubBlocks/BlogSection/sa-schema';
 import { logoCloudGrid } from '../../SubBlocks/LogoCloud/sa-schema';
 import { grid } from '../../SubBlocks/Grid/sa-schema';
 import { styledImage } from '../../SubBlocks/StyledImage/sa-schema';
@@ -19,13 +18,6 @@ import { featurePoints } from '../../SubBlocks/FeaturePoints/sa-schema';
 import { styledRichText } from '../../SubBlocks/StyledRichText/sa-schema';
 import { buttons } from '../../SubBlocks/Buttons/sa-schema';
 import { badges } from '../../SubBlocks/Badges/sa-schema';
-import logoCloudGridSchema from '../../SubBlocks/LogoCloud/sa-schema';
-import gridSchema from '../../SubBlocks/Grid/sa-schema';
-import styledImageSchema from '../../SubBlocks/StyledImage/sa-schema';
-import featurePointsSchema from '../../SubBlocks/FeaturePoints/sa-schema';
-import styledRichTextSchema from '../../SubBlocks/StyledRichText/sa-schema';
-import buttonsSchema from '../../SubBlocks/Buttons/sa-schema';
-import badgesSchema from '../../SubBlocks/Badges/sa-schema';
 import { defineBlockType, defineUtilityType } from '../../sa-config';
 
 export const backgroundOptions = defineUtilityType(({ df }) => ({
@@ -144,14 +136,14 @@ export const pageBlock = defineBlockType(({ df }) => ({
       name: 'components',
       type: 'array',
       of: [
-        df({ type: grid.name, name: grid.name }),
-        df({ type: styledImage.name, name: styledImage.name }),
-        df({ type: featurePoints.name, name: featurePoints.name }),
-        df({ type: styledRichText.name, name: styledRichText.name }),
-        df({ type: logoCloudGrid.name, name: logoCloudGrid.name }),
-        df({ type: blogSection.name, name: blogSection.name }),
-        df({ type: buttons.name, name: buttons.name }),
-        df({ type: badges.name, name: badges.name }),
+        { type: grid.name },
+        { type: styledImage.name },
+        { type: featurePoints.name },
+        { type: styledRichText.name },
+        { type: logoCloudGrid.name },
+        { type: blogSection.name },
+        { type: buttons.name },
+        { type: badges.name },
       ],
 
       components: {
@@ -192,12 +184,4 @@ export default [
   backgroundOptions,
   layoutOptions,
   secondaryComponent,
-  ...logoCloudGridSchema,
-  ...gridSchema,
-  ...styledImageSchema,
-  ...featurePointsSchema,
-  ...styledRichTextSchema,
-  ...buttonsSchema,
-  ...badgesSchema,
-  ...blogSectionSchema,
 ];

@@ -17,3 +17,5 @@ export const templateSimpleBadge: SanityTemplate = {
   template: simpleBadgeJSON,
   height: 64 + 4, // 4 is iframe border
 };
+
+export default [templateSimpleBadge];

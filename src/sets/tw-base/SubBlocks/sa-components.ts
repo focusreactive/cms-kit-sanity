@@ -18,7 +18,7 @@ import buttons from './Buttons/sa-schema';
 import { Badges } from './Badges';
 import badges from './Badges/sa-schema';
 
-export const pageBlockComponentsMap: BlocksMap = {
+export const subBlocksMap: BlocksMap = {
   [findComponentRoot(grid)]: Grid,
   [findComponentRoot(styledImage)]: StyledImage,
   [findComponentRoot(styledRichText)]: StyledRichText,

@@ -1,11 +1,6 @@
 import { TemplateArea, TemplateCategory } from '@focus-reactive/cms-kit-sanity';
 import type { SanityTemplate } from '@focus-reactive/cms-kit-sanity/sanity';
 
-import templateBlogSection from '../../SubBlocks/BlogSection/sa-templates';
-import gridSaTemplates from '../../SubBlocks/Grid/sa-templates';
-import logoCloudSaTemplates from '../../SubBlocks/LogoCloud/sa-templates';
-import featurePointsTemplates from '../../SubBlocks/FeaturePoints/sa-templates';
-import styledRichTextTemplates from '../../SubBlocks/StyledRichText/sa-templates';
 import { pageBlock } from './sa-schema';
 import categoryPreviewJSON from './templates/sa-mock-category-preview.json';
 import featureGrid2x2 from './templates/sa-mock-feature-grid-2x2.json';
@@ -19,8 +14,6 @@ import featureWithSimpleThreeColumnWithLargeIcons from './templates/sa-mock-feat
 import featureWithOffsetList from './templates/sa-mock-feature-with-offset-list.json';
 import logoCloud from './templates/sa-mock-logo-cloud.json';
 import featureSimple from './templates/sa-mock-feature-simple.json';
-import { templateSimpleBadge } from '../../SubBlocks/Badges/sa-templates';
-import { templateTwoButtons } from '../../SubBlocks/Buttons/sa-templates';
 import { namespace } from '../../namespace.config';
 
 const templateCategoryPreview: SanityTemplate = {
@@ -202,12 +195,5 @@ export default [
   templateFeatureOffsetWithList,
   templateFeatureSimple,
   templateFeatureWithSimpleThreeColumnWithSmallIconsDark,
-  ...templateBlogSection,
-  ...gridSaTemplates,
-  ...logoCloudSaTemplates,
-  ...featurePointsTemplates,
-  ...styledRichTextTemplates,
-  templateSimpleBadge,
-  templateTwoButtons,
   templateLogoCloud,
 ];

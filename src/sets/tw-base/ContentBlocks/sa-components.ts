@@ -5,7 +5,6 @@ import { findBlockRoot } from '@focus-reactive/cms-kit-sanity/sanity-schema-type
 
 import { PageBlock } from './PageBlock';
 import pageBlock from './PageBlock/sa-schema';
-import { pageBlockComponentsMap } from '../SubBlocks/sa-components';
 
 // import { BlockTemplate } from './BlockTemplate';
 // import blockTemplate from './BlockTemplate/sa-schema';
@@ -14,9 +13,8 @@ import { pageBlockComponentsMap } from '../SubBlocks/sa-components';
 // @ts-ignore
 PageBlock.isServerComponent = true;
 
-export const blocksMap: BlocksMap = {
+export const contentBlocksMap: BlocksMap = {
   [findBlockRoot(pageBlock)]: PageBlock,
   // [findBlockRoot(blockTemplate)]: BlockTemplate,
 
-  ...pageBlockComponentsMap,
 };
