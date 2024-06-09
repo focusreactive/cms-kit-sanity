@@ -1,6 +1,4 @@
 import React from 'react';
-// import { Image } from '@ns/types/common';
-
 import { AdapterFn, getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
 
 type Props = {

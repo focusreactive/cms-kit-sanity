@@ -1,5 +1,4 @@
-import { defineComponentType } from '@ns/sa-config';
-
+import { defineComponentType } from '../../../../sa-config';
 import { buttonsSecondaryOptions } from '../../../../common/common-schema';
 import {
   ComponentPreview,

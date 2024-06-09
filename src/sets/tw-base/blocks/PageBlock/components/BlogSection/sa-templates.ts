@@ -1,11 +1,11 @@
-import { namespace } from '@ns/namespace.config';
-import { pageBlock } from '@ns/blocks/PageBlock/sa-schema';
-
 import { TemplateArea, TemplateCategory } from '@focus-reactive/cms-kit-sanity';
 import type { SanityTemplate } from '@focus-reactive/cms-kit-sanity/sanity';
 
 import blogJSON from './templates/sa-mock-blog-section.json';
 import threeColumnWithImages from './templates/three-column-with-images.json';
+import { pageBlock } from '../../sa-schema';
+import { namespace } from '../../../../namespace.config';
+
 const templateBlogSection: SanityTemplate = {
   name: 'blogSection',
   type: pageBlock.name,

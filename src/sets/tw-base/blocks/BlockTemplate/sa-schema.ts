@@ -1,10 +1,9 @@
-import { defineBlockType } from '@ns/sa-config';
-
 import {
   BlockPreview,
   customRichText,
   imageWithMetadata,
 } from '@focus-reactive/cms-kit-sanity/sanity';
+import { defineBlockType } from '../../sa-config';
 
 export const blockTemplate = defineBlockType(({ df }) => ({
   name: 'blockTemplate',

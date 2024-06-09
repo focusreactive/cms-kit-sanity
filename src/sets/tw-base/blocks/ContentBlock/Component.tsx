@@ -1,10 +1,9 @@
 import React from 'react';
-
-import type { Image, KeyPoint } from '@ns/types/common';
 import { getCmsKey, withCMS, AdapterFn } from '@focus-reactive/cms-kit-sanity';
-import { RichText } from '@ns/ui/RichText/RichText';
 import { imageConverter } from '@focus-reactive/cms-kit-sanity/sanity';
 import { CMSProps } from './sa-types';
+import { Image, KeyPoint } from '../../types/common';
+import { RichText } from '../../ui/RichText/RichText';
 
 type Props = {
   title: string;

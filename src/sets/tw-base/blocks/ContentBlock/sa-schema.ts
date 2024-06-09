@@ -1,4 +1,4 @@
-import { defineBlockType, defineUtilityType } from "@ns/sa-config";
+import { defineBlockType, defineUtilityType } from "../../sa-config";
 
 //TODO: make generic type for images
 const imageWithAlt1 = defineUtilityType(({ df }) => ({

@@ -1,5 +1,3 @@
-import { namespace } from '@ns/namespace.config';
-
 import { TemplateArea, TemplateCategory } from '@focus-reactive/cms-kit-sanity';
 import type { SanityTemplate } from '@focus-reactive/cms-kit-sanity/sanity';
 
@@ -23,6 +21,7 @@ import logoCloud from './templates/sa-mock-logo-cloud.json';
 import featureSimple from './templates/sa-mock-feature-simple.json';
 import { templateSimpleBadge } from './components/Badges/sa-templates';
 import { templateTwoButtons } from './components/Buttons/sa-templates';
+import { namespace } from '../../namespace.config';
 
 const templateCategoryPreview: SanityTemplate = {
   name: 'pageBlock',

@@ -1,5 +1,4 @@
-import { defineComponentType, defineUtilityType } from '@ns/sa-config';
-
+import { defineComponentType, defineUtilityType } from '../../../../sa-config';
 import {
   featurePointStyles,
 } from '../../../../common/common-schema';

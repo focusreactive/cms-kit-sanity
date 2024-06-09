@@ -1,10 +1,9 @@
-import { namespace } from '@ns/namespace.config';
-
 import { TemplateArea, TemplateCategory } from '@focus-reactive/cms-kit-sanity';
 import type { SanityTemplate } from '@focus-reactive/cms-kit-sanity/sanity';
 
 import { blockTemplate } from './sa-schema';
 import blockTemplateDefaultJSON from './templates/sa-mock-default.json';
+import { namespace } from '../../namespace.config';
 
 const blockTemplateDefault: SanityTemplate = {
   name: 'blockTemplate',

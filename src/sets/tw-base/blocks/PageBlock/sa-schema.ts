@@ -1,5 +1,3 @@
-import { defineBlockType, defineUtilityType } from '@ns/sa-config';
-
 import {
   TemplateSelector,
   BlockPreview,
@@ -28,6 +26,7 @@ import featurePointsSchema from './components/FeaturePoints/sa-schema';
 import styledRichTextSchema from './components/StyledRichText/sa-schema';
 import buttonsSchema from './components/Buttons/sa-schema';
 import badgesSchema from './components/Badges/sa-schema';
+import { defineBlockType, defineUtilityType } from '../../sa-config';
 
 export const backgroundOptions = defineUtilityType(({ df }) => ({
   name: 'backgroundOptions',

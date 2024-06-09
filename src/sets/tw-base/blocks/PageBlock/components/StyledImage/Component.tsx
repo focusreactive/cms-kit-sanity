@@ -1,5 +1,4 @@
 import React from 'react';
-import type { Image } from '@ns/types/common';
 
 import { AdapterFn, getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
 import { classnames } from '@focus-reactive/cms-kit-sanity/common';
@@ -8,7 +7,7 @@ import { SmartImage } from '../SmartImage';
 type Props = {
   isDarkTheme: boolean;
   imageWithMetadata: {
-    image: Image;
+    imageAsset: { src: string; alt: string; width: string; height: string };
   };
 };
 
