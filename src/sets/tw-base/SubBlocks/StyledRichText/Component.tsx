@@ -1,6 +1,6 @@
 import React from 'react';
 
-import type { componentAlignment } from '../../common/common-schema';
+import type { componentAlignment } from '../../ContentComponents/Section/common-schemas';
 
 import { classnames } from '@focus-reactive/cms-kit-sanity/common';
 

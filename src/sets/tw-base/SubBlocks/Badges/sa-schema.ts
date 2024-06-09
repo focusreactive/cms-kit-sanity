@@ -1,6 +1,6 @@
 import { defineComponentType } from '../../sa-config';
 
-import { badgesSecondaryOptions } from '../../common/common-schema';
+import { badgesSecondaryOptions } from '../../ContentComponents/Section/common-schemas';
 import {
   ComponentPreview,
   smartLink,

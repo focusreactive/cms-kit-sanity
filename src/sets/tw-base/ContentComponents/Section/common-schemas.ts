@@ -1,5 +1,3 @@
-import { ImageIcon } from '@sanity/icons';
-
 export const backgroundColors = [
   { title: 'light', value: 'bg-white' },
   { title: 'light-grey', value: 'bg-gray-100' },

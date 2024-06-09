@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { featurePointStyles } from '../../common/common-schema';
+import { featurePointStyles } from '../../ContentComponents/Section/common-schemas';
 import { AdapterFn, getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
 import type { SmartLinkProps } from '@focus-reactive/cms-kit-sanity/sanity';
 import { classnames } from '@focus-reactive/cms-kit-sanity/common';

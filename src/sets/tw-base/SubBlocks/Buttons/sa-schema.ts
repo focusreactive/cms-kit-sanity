@@ -1,5 +1,5 @@
 import { defineComponentType } from '../../sa-config';
-import { buttonsSecondaryOptions } from '../../common/common-schema';
+import { buttonsSecondaryOptions } from '../../ContentComponents/Section/common-schemas';
 import {
   ComponentPreview,
   smartLink,
