@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { draftMode } from 'next/headers';
 import VisualEditing from '@/sanity/loader/VisualEditing';
-import SimpleHero from '@/components/heroes/SimpleHero';
 
 const inter = Inter({ subsets: ['latin'] });
 
