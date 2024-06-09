@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { SimpleHeroProps } from './types';
-import Image from 'next/image';
 
 const navigation = [
   { name: 'Product', href: '#' },
@@ -26,11 +25,6 @@ export default function SimpleHero({
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <Image
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              />
             </a>
           </div>
           <div className="flex lg:hidden">

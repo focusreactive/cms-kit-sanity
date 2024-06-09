@@ -8,13 +8,13 @@ type SaProps = {
 
 // @ts-ignore
 export const sa: AdapterFn = (cmsProps: SaProps) => {
-  const backgroundColor = vercelStegaSplit(
-    // @ts-ignore
-    cmsProps?.backgroundColor || 'white',
-  ).cleaned;
+  // const backgroundColor = vercelStegaSplit(
+  //   // @ts-ignore
+  //   cmsProps?.backgroundColor || 'white',
+  // ).cleaned;
   return {
     key: getCmsKey(cmsProps),
     ...cmsProps,
-    backgroundColor,
+    // cmsProps.backgroundColor,
   };
 };

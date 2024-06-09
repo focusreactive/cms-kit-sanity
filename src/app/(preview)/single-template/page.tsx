@@ -15,9 +15,7 @@ export default function SingleTemplatePage({
 
   return (
     <div style={{ borderRadius: 4, border: '2px solid black' }}>
-      {/* {renderSanityComponent({ customNamespaces: sets })(template)} */}
       {renderSanityComponent({ sets })(template)}
-      {/* {renderSanityComponent({ sets: [twBase] })(template)} */}
     </div>
   );
 }

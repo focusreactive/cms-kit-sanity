@@ -14,7 +14,7 @@ export const pagesBySlugQuery = groq`
             'avatar': image.asset->
           }
         },
-      _type == 'tw-tw-base.blockTemplate' => {
+      _type == 'tw-base.blockTemplate' => {
           ...,
           image{
             ...,
