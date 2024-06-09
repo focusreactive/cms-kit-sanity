@@ -4,6 +4,7 @@ import {
   imageWithMetadata,
 } from '@focus-reactive/cms-kit-sanity/sanity';
 import { defineBlockType } from '../../sa-config';
+import { blockOptions } from '../../ContentComponents/Section';
 
 export const blockTemplate = defineBlockType(({ df }) => ({
   name: 'blockTemplate',
@@ -25,6 +26,10 @@ export const blockTemplate = defineBlockType(({ df }) => ({
     df({
       name: 'backgroundColor',
       type: 'string',
+    }),
+    df({
+      name: 'blockOptions',
+      type: blockOptions.name,
     }),
   ],
   components: { preview: BlockPreview },

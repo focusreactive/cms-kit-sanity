@@ -4,8 +4,9 @@ import { withCMS } from '@focus-reactive/cms-kit-sanity';
 import { ContentBlockGeneric } from '@focus-reactive/cms-kit-sanity/sanity';
 import { GenericRichText } from '@focus-reactive/cms-kit-sanity/common';
 
-import { CMSImage } from './components/CMSImage';
 import { sa } from './sa-adapters';
+import { SmartImage } from '../../ContentComponents/SmartImage';
+import { Section, SectionProps } from '../../ContentComponents/Section';
 
 const RichTextComponents = {
   block: {
@@ -24,18 +25,24 @@ type Props = ContentBlockGeneric & {
   title: string;
   description: object;
   image: object;
-  backgroundColor: string; // #111827
+  backgroundColor: string;
+  blockOptions: SectionProps;
 };
 
 function BlockTemplate(props: Props) {
-  const { title, description, image, backgroundColor } = props;
+  const { title, description, image, backgroundColor, blockOptions } = props;
   return (
-    <div className={`relative`}>
-      <h3 className={`text-3xl pb-6 text-gray-600 bg-[${backgroundColor}]`}>{`BlockTemplate: ${title}`}</h3>
+    <Section
+      backgroundOptions={blockOptions.backgroundOptions}
+      layoutOptions={blockOptions.layoutOptions}
+    >
+      <h3
+        className={`text-3xl pb-6 bg-[${backgroundColor}]`}
+      >{`BlockTemplate: ${title}`}</h3>
       <GenericRichText value={description} components={RichTextComponents} />
       {image && (
         <div className="h-80 w-full overflow-hidden my-5">
-          <CMSImage imageWithMetadata={image} />
+          <SmartImage imageWithMetadata={image} />
         </div>
       )}
       <details className="my-10">
@@ -44,7 +51,7 @@ function BlockTemplate(props: Props) {
           <code>{JSON.stringify(props, null, 2)}</code>
         </pre>
       </details>
-    </div>
+    </Section>
   );
 }
 
