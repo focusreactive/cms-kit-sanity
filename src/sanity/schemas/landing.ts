@@ -1,6 +1,7 @@
 import { defineField, defineType } from 'sanity';
 import { author } from './author';
 import { seo } from './seo';
+import { heroFields } from '@/sets/tw-base/ContentComponents/SimpleHero/sa-schemas';
 
 export const landing = defineType({
   name: 'landing',
@@ -20,21 +21,7 @@ export const landing = defineType({
     },
   ],
   fields: [
-    defineField({
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-    }),
-    defineField({
-      name: 'description',
-      title: 'Description',
-      type: 'string',
-    }),
-    defineField({
-      name: 'badgeText',
-      title: 'Badge Text',
-      type: 'string',
-    }),
+    ...heroFields,
     defineField({
       name: 'slug',
       title: 'Slug',

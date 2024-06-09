@@ -3,10 +3,8 @@
 import type { PagePayload } from './types';
 
 import { renderSanityComponent } from '@focus-reactive/cms-kit-sanity/sanity-next';
-import { twBase } from '@/sets/tw-base/sa-set';
 import { sets } from '@/sets/config';
-import { twExt } from '@/sets/tw-ext/sa-set';
-import SimpleHero from '@/components/heroes/SimpleHero';
+import { SimpleHero } from '@/sets/tw-base/ContentComponents/SimpleHero';
 import SimpleFooter from '@/components/footers/SimpleFooter';
 
 export interface PageProps {
@@ -20,8 +18,7 @@ export function Page({ data }: PageProps) {
   return (
     <div>
       <SimpleHero
-        // @ts-ignore
-        title={title}
+        title={title || 'CMS-KIT-Sanity'}
         badgeText={badgeText}
         description={description}
       />
