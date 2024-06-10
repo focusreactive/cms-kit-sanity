@@ -4,7 +4,7 @@ import { draftMode } from 'next/headers';
 
 import { pagesBySlugQuery } from '@/sanity/lib/queries';
 import { token } from '@/sanity/lib/token';
-import { PagePayload } from '@/components/pages/page/types';
+import { PagePayload } from '@/sets/tw-base/pages/landing/types';
 
 import { queryStore } from './createQueryStore';
 import { sanityClient } from '../client';

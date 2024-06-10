@@ -5,7 +5,7 @@ import { presentationTool } from 'sanity/presentation';
 import { media } from 'sanity-plugin-media';
 
 import { schemaTypes } from './schemas';
-import { landing } from './schemas/landing';
+import { landing } from '../sets/tw-base/pages/landing/sa/landing';
 import { locate } from './plugins/locate';
 import { dataset, previewUrl, projectId } from './lib/env';
 import { sets } from '@/sets/config';

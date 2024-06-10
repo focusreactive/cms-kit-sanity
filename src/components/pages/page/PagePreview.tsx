@@ -4,9 +4,9 @@ import { type QueryResponseInitial } from '@sanity/react-loader/rsc'
 
 import { pagesBySlugQuery } from '@/sanity/lib/queries'
 import { useQuery } from '@/sanity/loader/useQuery'
-import { PagePayload } from './types'
+import { PagePayload } from '../../../sets/tw-base/pages/landing/types'
 
-import Page from './Page'
+import Page from '../../../sets/tw-base/pages/landing/Page'
 
 type Props = {
   params: { slug: string }

@@ -1,5 +1,5 @@
 import { defineField, defineType } from 'sanity';
-import { author } from './author';
+import { author } from '@/sanity/schemas/author';
 import { seo } from './seo';
 import { heroFields } from '@/sets/tw-base/ContentComponents/SimpleHero/sa-schemas';
 
