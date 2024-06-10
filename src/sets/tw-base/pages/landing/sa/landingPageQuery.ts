@@ -7,13 +7,6 @@ export const landingPageQuery = groq`
   badgeText,
   content[]{
   ...,
-  _type == 'fb-test.landingBlock' => {
-      ...,
-      teamMembers[]->{
-        ...,
-        'avatar': image.asset->
-      }
-    },
   _type == 'tw-base.blockTemplate' => {
       ...,
       image{
