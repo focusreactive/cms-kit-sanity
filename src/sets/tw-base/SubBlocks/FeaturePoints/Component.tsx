@@ -41,7 +41,7 @@ const Card = ({
             <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
               <SmartImage
                 className="h-5 w-5 text-indigo-600 invert"
-                imageWithMetadata={feature.icon.icon}
+                imageWithMetadata={feature.icon}
                 aria-hidden="true"
               />
             </div>
@@ -77,7 +77,7 @@ const Card = ({
                 invert: isDarkTheme,
               })}
               aria-hidden="true"
-              imageWithMetadata={feature.icon.icon}
+              imageWithMetadata={feature.icon}
             />
             {feature.title}
           </dt>
@@ -115,7 +115,7 @@ const Card = ({
               <SmartImage
                 className="h-5 w-5 text-indigo-600 invert"
                 aria-hidden="true"
-                imageWithMetadata={feature.icon.icon}
+                imageWithMetadata={feature.icon}
               />
             </div>
             {feature.title}
@@ -158,7 +158,7 @@ const Card = ({
               <SmartImage
                 className="text-indigo-600"
                 aria-hidden="true"
-                imageWithMetadata={feature.icon.icon}
+                imageWithMetadata={feature.icon}
               />
             </div>
             {feature.title}
@@ -185,7 +185,7 @@ const Card = ({
                 },
               )}
               aria-hidden="true"
-              imageWithMetadata={feature.icon.icon}
+              imageWithMetadata={feature.icon}
             />
             {feature.title}{' '}
           </dt>

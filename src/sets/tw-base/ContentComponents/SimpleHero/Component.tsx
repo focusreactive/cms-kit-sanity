@@ -2,10 +2,11 @@ import { useState } from 'react';
 import { SimpleHeroProps } from './types';
 
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'Home', href: '/' },
+  { name: 'Demo Page', href: '/demo' },
+  { name: 'Docs', href: 'https://github.com/focusreactive/cms-kit-sanity/wiki/init_system' },
+  { name: 'Github', href: 'https://github.com/focusreactive/cms-kit-sanity' },
+  { name: 'About', href: 'https://focusreactive.com/cms-kit-focusreactive/' },
 ];
 
 export default function SimpleHero({
