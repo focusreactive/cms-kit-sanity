@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "rollout": "./src/rollout-tools/local/cli.mjs",
-    "export-dataset": "sanity dataset export production initial-data.tar.gz"
+    "export-dataset": "sanity dataset export production initial-data.tar.gz",
+    "test:content-upload": "sanity dataset create testing; sanity dataset import initial-data.tar.gz testing && sanity dataset delete testing --force"
   },
   "dependencies": {
     "@focus-reactive/cms-kit-sanity": "0.1.20",
