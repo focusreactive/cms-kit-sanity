@@ -5,15 +5,15 @@
       "_type": "gridCard",
       "imageWithMetadata": {
         "_type": "glob.imageWithMetadata",
-        "asset": {
-          "_ref": "image-a3ff0abd3156492cb723702653a2ed8e8c966c8c-1280x1280-jpg",
-          "_type": "reference"
-        },
-        "image": {
-          "src": "https://cdn.sanity.io/images/euty36ag/production/a3ff0abd3156492cb723702653a2ed8e8c966c8c-1280x1280.jpg",
-          "width": 1280,
-          "height": 1280,
+        "imageAsset": {
+          "src": "https://cdn.sanity.io/images/euty36ag/production/b18b8648a16e4ac7295a9182f41e8be52f05e81d-300x208.png",
+          "width": 300,
+          "height": 208,
           "alt": "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
+        },
+        "asset": {
+          "_ref": "image-b18b8648a16e4ac7295a9182f41e8be52f05e81d-300x208-png",
+          "_type": "reference"
         }
       },
       "smartLink": "https://tailwindui.com/components/ecommerce/components/category-previews",

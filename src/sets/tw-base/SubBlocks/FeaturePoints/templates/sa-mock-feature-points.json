@@ -7,6 +7,12 @@
       "description": "Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.",
       "icon": {
         "_type": "tw-base.featureIcon",
+        "imageAsset": {
+          "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+          "width": 24,
+          "height": 24,
+          "alt": null
+        },
         "icon": {
           "_type": "glob.imageWithMetadata",
           "asset": {
@@ -31,6 +37,12 @@
       "description": "Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.",
       "icon": {
         "_type": "tw-base.featureIcon",
+        "imageAsset": {
+          "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+          "width": 24,
+          "height": 24,
+          "alt": null
+        },
         "icon": {
           "_type": "glob.imageWithMetadata",
           "asset": {
@@ -55,6 +67,12 @@
       "description": "Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.",
       "icon": {
         "_type": "tw-base.featureIcon",
+        "imageAsset": {
+          "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+          "width": 24,
+          "height": 24,
+          "alt": null
+        },
         "icon": {
           "_type": "glob.imageWithMetadata",
           "asset": {

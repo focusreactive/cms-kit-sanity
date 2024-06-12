@@ -70,211 +70,159 @@
       "features": [
         {
           "_type": "tw-base.keyPoint",
-          "description": "Quos inventore harum enim nesciunt. Aut repellat rerum omnis adipisci.",
+          "_key": "745c1cc8f53c1",
+          "link": {
+            "type": "internal",
+            "_type": "glob.SmartLink"
+          },
+          "title": "Feature example",
+          "description": "Given the task of adding specific import statements to existing files, both Plop and Hygen can handle this requirement effectively. Let's look at how each solution can address this need.",
           "icon": {
             "_type": "tw-base.featureIcon",
+            "imageAsset": {
+              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+              "width": 24,
+              "height": 24,
+              "alt": null
+            },
             "icon": {
               "_type": "glob.imageWithMetadata",
-              "alt": "cloud arrow",
-              "imageAsset": {
-                "height": 24,
-                "src": "https://cdn.sanity.io/images/9l4wnbt3/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
-                "width": 24
-              },
               "asset": {
                 "_type": "reference",
-                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-jpg"
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
               }
             }
-          },
-          "link": {
-            "_type": "glob.SmartLink",
-            "type": "internal"
-          },
-          "title": "Notifications",
-          "_key": "qYdn4QjknlssWRGxP0t51W"
+          }
         },
         {
           "_type": "tw-base.keyPoint",
-          "description": "Quos inventore harum enim nesciunt. Aut repellat rerum omnis adipisci.",
+          "_key": "745c1cc8f53c2",
+          "link": {
+            "type": "internal",
+            "_type": "glob.SmartLink"
+          },
+          "title": "Feature example",
+          "description": "Given the task of adding specific import statements to existing files, both Plop and Hygen can handle this requirement effectively. Let's look at how each solution can address this need.",
           "icon": {
             "_type": "tw-base.featureIcon",
+            "imageAsset": {
+              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+              "width": 24,
+              "height": 24,
+              "alt": null
+            },
             "icon": {
               "_type": "glob.imageWithMetadata",
-              "alt": "cloud arrow",
-              "imageAsset": {
-                "height": 24,
-                "src": "https://cdn.sanity.io/images/9l4wnbt3/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
-                "width": 24
-              },
               "asset": {
                 "_type": "reference",
-                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-jpg"
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
               }
             }
-          },
-          "link": {
-            "_type": "glob.SmartLink",
-            "type": "internal"
-          },
-          "title": "Notifications",
-          "_key": "qYdn4QjknlssWRGxP0t54k"
+          }
         },
         {
           "_type": "tw-base.keyPoint",
-          "description": "Quos inventore harum enim nesciunt. Aut repellat rerum omnis adipisci.",
+          "_key": "745c1cc8f533c",
+          "link": {
+            "type": "internal",
+            "_type": "glob.SmartLink"
+          },
+          "title": "Feature example",
+          "description": "Given the task of adding specific import statements to existing files, both Plop and Hygen can handle this requirement effectively. Let's look at how each solution can address this need.",
           "icon": {
             "_type": "tw-base.featureIcon",
+            "imageAsset": {
+              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+              "width": 24,
+              "height": 24,
+              "alt": null
+            },
             "icon": {
               "_type": "glob.imageWithMetadata",
-              "alt": "cloud arrow",
-              "imageAsset": {
-                "height": 24,
-                "src": "https://cdn.sanity.io/images/9l4wnbt3/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
-                "width": 24
-              },
               "asset": {
                 "_type": "reference",
-                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-jpg"
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
               }
             }
-          },
-          "link": {
-            "_type": "glob.SmartLink",
-            "type": "internal"
-          },
-          "title": "Notifications",
-          "_key": "qYdn4QjknlssWRGxP0t57y"
+          }
         },
         {
           "_type": "tw-base.keyPoint",
-          "description": "Quos inventore harum enim nesciunt. Aut repellat rerum omnis adipisci.",
+          "_key": "745c1cc8f53c1",
+          "link": {
+            "type": "internal",
+            "_type": "glob.SmartLink"
+          },
+          "title": "Feature example",
+          "description": "Given the task of adding specific import statements to existing files, both Plop and Hygen can handle this requirement effectively. Let's look at how each solution can address this need.",
           "icon": {
             "_type": "tw-base.featureIcon",
+            "imageAsset": {
+              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+              "width": 24,
+              "height": 24,
+              "alt": null
+            },
             "icon": {
               "_type": "glob.imageWithMetadata",
-              "alt": "cloud arrow",
-              "imageAsset": {
-                "height": 24,
-                "src": "https://cdn.sanity.io/images/9l4wnbt3/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
-                "width": 24
-              },
               "asset": {
                 "_type": "reference",
-                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-jpg"
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
               }
             }
-          },
-          "link": {
-            "_type": "glob.SmartLink",
-            "type": "internal"
-          },
-          "title": "Notifications",
-          "_key": "qYdn4QjknlssWRGxP0t5BC"
+          }
         },
         {
           "_type": "tw-base.keyPoint",
-          "description": "Quos inventore harum enim nesciunt. Aut repellat rerum omnis adipisci.",
+          "_key": "745c1cc8f53c2",
+          "link": {
+            "type": "internal",
+            "_type": "glob.SmartLink"
+          },
+          "title": "Feature example",
+          "description": "Given the task of adding specific import statements to existing files, both Plop and Hygen can handle this requirement effectively. Let's look at how each solution can address this need.",
           "icon": {
             "_type": "tw-base.featureIcon",
+            "imageAsset": {
+              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+              "width": 24,
+              "height": 24,
+              "alt": null
+            },
             "icon": {
               "_type": "glob.imageWithMetadata",
-              "alt": "cloud arrow",
-              "imageAsset": {
-                "height": 24,
-                "src": "https://cdn.sanity.io/images/9l4wnbt3/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
-                "width": 24
-              },
               "asset": {
                 "_type": "reference",
-                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-jpg"
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
               }
             }
-          },
-          "link": {
-            "_type": "glob.SmartLink",
-            "type": "internal"
-          },
-          "title": "Notifications",
-          "_key": "qYdn4QjknlssWRGxP0t5EQ"
+          }
         },
         {
           "_type": "tw-base.keyPoint",
-          "description": "Quos inventore harum enim nesciunt. Aut repellat rerum omnis adipisci.",
+          "_key": "745c1cc8f533c",
+          "link": {
+            "type": "internal",
+            "_type": "glob.SmartLink"
+          },
+          "title": "Feature example",
+          "description": "Given the task of adding specific import statements to existing files, both Plop and Hygen can handle this requirement effectively. Let's look at how each solution can address this need.",
           "icon": {
             "_type": "tw-base.featureIcon",
+            "imageAsset": {
+              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+              "width": 24,
+              "height": 24,
+              "alt": null
+            },
             "icon": {
               "_type": "glob.imageWithMetadata",
-              "alt": "cloud arrow",
-              "imageAsset": {
-                "height": 24,
-                "src": "https://cdn.sanity.io/images/9l4wnbt3/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
-                "width": 24
-              },
               "asset": {
                 "_type": "reference",
-                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-jpg"
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
               }
             }
-          },
-          "link": {
-            "_type": "glob.SmartLink",
-            "type": "internal"
-          },
-          "title": "Notifications",
-          "_key": "qYdn4QjknlssWRGxP0t5He"
-        },
-        {
-          "_type": "tw-base.keyPoint",
-          "description": "Quos inventore harum enim nesciunt. Aut repellat rerum omnis adipisci.",
-          "icon": {
-            "_type": "tw-base.featureIcon",
-            "icon": {
-              "_type": "glob.imageWithMetadata",
-              "alt": "cloud arrow",
-              "imageAsset": {
-                "height": 24,
-                "src": "https://cdn.sanity.io/images/9l4wnbt3/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
-                "width": 24
-              },
-              "asset": {
-                "_type": "reference",
-                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-jpg"
-              }
-            }
-          },
-          "link": {
-            "_type": "glob.SmartLink",
-            "type": "internal"
-          },
-          "title": "Notifications",
-          "_key": "qYdn4QjknlssWRGxP0t5Ks"
-        },
-        {
-          "_type": "tw-base.keyPoint",
-          "description": "Quos inventore harum enim nesciunt. Aut repellat rerum omnis adipisci.",
-          "icon": {
-            "_type": "tw-base.featureIcon",
-            "icon": {
-              "_type": "glob.imageWithMetadata",
-              "alt": "cloud arrow",
-              "imageAsset": {
-                "height": 24,
-                "src": "https://cdn.sanity.io/images/9l4wnbt3/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
-                "width": 24
-              },
-              "asset": {
-                "_type": "reference",
-                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-jpg"
-              }
-            }
-          },
-          "link": {
-            "_type": "glob.SmartLink",
-            "type": "internal"
-          },
-          "title": "Notifications",
-          "_key": "qYdn4QjknlssWRGxP0t5O6"
+          }
         }
       ],
       "style": "icon-left-separate-title",

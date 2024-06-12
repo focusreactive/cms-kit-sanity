@@ -63,70 +63,82 @@
             "features": [
                 {
                     "_type": "tw-base.keyPoint",
-                    "description": "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
-                    "icon": {
-                        "_type": "tw-base.featureIcon",
-                        "icon": {
-                          "_sanityAsset": "image@file://./images/db8a35491bb5b57a9d72ca31b8fb28a31af5c745-200x200.svg",
-                          "_type": "glob.imageWithMetadata",
-                          "alt": "cloud arrow",
-                          "height": 24,
-                          "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
-                          "width": 24
-                        }
-                      },
+                    "_key": "745c1cc8f53c1",
                     "link": {
-                        "_type": "glob.SmartLink",
-                        "href": "https://focusreactive.com/",
-                        "text": "Learn more",
-                        "type": "url"
+                      "type": "internal",
+                      "_type": "glob.SmartLink"
                     },
-                    "title": "Push to deploy"
-                },
-                {
+                    "title": "Feature example",
+                    "description": "Given the task of adding specific import statements to existing files, both Plop and Hygen can handle this requirement effectively. Let's look at how each solution can address this need.",
+                    "icon": {
+                      "_type": "tw-base.featureIcon",
+                      "imageAsset": {
+                        "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+                        "width": 24,
+                        "height": 24,
+                        "alt": null
+                      },
+                      "icon": {
+                        "_type": "glob.imageWithMetadata",
+                        "asset": {
+                          "_type": "reference",
+                          "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
+                        }
+                      }
+                    }
+                  },
+                  {
                     "_type": "tw-base.keyPoint",
-                    "description": "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
-                    "icon": {
-                        "_type": "tw-base.featureIcon",
-                        "icon": {
-                          "_sanityAsset": "image@file://./images/db8a35491bb5b57a9d72ca31b8fb28a31af5c745-200x200.svg",
-                          "_type": "glob.imageWithMetadata",
-                          "alt": "cloud arrow",
-                          "height": 24,
-                          "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
-                          "width": 24
-                        }
-                      },
+                    "_key": "745c1cc8f53c2",
                     "link": {
-                        "_type": "glob.SmartLink",
-                        "href": "https://focusreactive.com/",
-                        "text": "Learn more",
-                        "type": "url"
+                      "type": "internal",
+                      "_type": "glob.SmartLink"
                     },
-                    "title": "Push to deploy"
-                },
-                {
+                    "title": "Feature example",
+                    "description": "Given the task of adding specific import statements to existing files, both Plop and Hygen can handle this requirement effectively. Let's look at how each solution can address this need.",
+                    "icon": {
+                      "_type": "tw-base.featureIcon",
+                      "imageAsset": {
+                        "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+                        "width": 24,
+                        "height": 24,
+                        "alt": null
+                      },
+                      "icon": {
+                        "_type": "glob.imageWithMetadata",
+                        "asset": {
+                          "_type": "reference",
+                          "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
+                        }
+                      }
+                    }
+                  },
+                  {
                     "_type": "tw-base.keyPoint",
-                    "description": "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
-                    "icon": {
-                        "_type": "tw-base.featureIcon",
-                        "icon": {
-                          "_sanityAsset": "image@file://./images/db8a35491bb5b57a9d72ca31b8fb28a31af5c745-200x200.svg",
-                          "_type": "glob.imageWithMetadata",
-                          "alt": "cloud arrow",
-                          "height": 24,
-                          "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
-                          "width": 24
-                        }
-                      },
+                    "_key": "745c1cc8f533c",
                     "link": {
-                        "_type": "glob.SmartLink",
-                        "href": "https://focusreactive.com/",
-                        "text": "Learn more",
-                        "type": "url"
+                      "type": "internal",
+                      "_type": "glob.SmartLink"
                     },
-                    "title": "Push to deploy"
-                }
+                    "title": "Feature example",
+                    "description": "Given the task of adding specific import statements to existing files, both Plop and Hygen can handle this requirement effectively. Let's look at how each solution can address this need.",
+                    "icon": {
+                      "_type": "tw-base.featureIcon",
+                      "imageAsset": {
+                        "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+                        "width": 24,
+                        "height": 24,
+                        "alt": null
+                      },
+                      "icon": {
+                        "_type": "glob.imageWithMetadata",
+                        "asset": {
+                          "_type": "reference",
+                          "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
+                        }
+                      }
+                    }
+                  }
             ],
             "style": "icon-title-inline"
         }

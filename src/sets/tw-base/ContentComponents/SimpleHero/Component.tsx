@@ -4,6 +4,7 @@ import { SimpleHeroProps } from './types';
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Demo Page', href: '/demo' },
+  { name: 'Sanity Studio', href: '/admin' },
   { name: 'Docs', href: 'https://github.com/focusreactive/cms-kit-sanity/wiki/init_system' },
   { name: 'Github', href: 'https://github.com/focusreactive/cms-kit-sanity' },
   { name: 'About', href: 'https://focusreactive.com/cms-kit-focusreactive/' },

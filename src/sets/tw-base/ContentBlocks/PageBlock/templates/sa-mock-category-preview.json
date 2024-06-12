@@ -1,173 +1,340 @@
 {
-    "_type": "tw-base.pageBlock",
-    "blockOptions": {
-        "_type": "tw-base.blockOptions",
-        "backgroundOptions": {
-            "_type": "tw-base.backgroundOptions",
-            "colorSelector": "bg-gray-100",
-            "type": "color"
-        }
-    },
-    "components": [
+  "_type": "tw-base.pageBlock",
+  "blockOptions": {
+    "_type": "tw-base.blockOptions",
+    "backgroundOptions": {
+      "_type": "tw-base.backgroundOptions",
+      "colorSelector": "bg-gray-100",
+      "type": "color"
+    }
+  },
+  "components": [
+    {
+      "_key": "comp1",
+      "_type": "tw-base.grid",
+      "items": [
         {
-            "_type": "tw-base.grid",
-            "_key": "comp1",
-            "items": [
+          "_key": "comp1",
+          "_type": "gridCard",
+          "imageWithMetadata": {
+            "_type": "glob.imageWithMetadata",
+            "asset": {
+              "_type": "reference",
+              "_ref": "image-d3747736ec8c64e158241ff730185e2046dec776-1616x1115-png"
+            },
+            "imageAsset": {
+              "alt": "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.",
+              "height": 208,
+              "src": "https://cdn.sanity.io/images/euty36ag/production/b18b8648a16e4ac7295a9182f41e8be52f05e81d-300x208.png",
+              "width": 300
+            }
+          },
+          "smartLink": "https://tailwindui.com/components/ecommerce/components/category-previews",
+          "customRichText": [
+            {
+              "_key": "83438a472d71",
+              "children": [
                 {
-                    "_type": "gridCard",
-                    "_key": "comp1",
-                    "imageWithMetadata": {
-                        "_type": "glob.imageWithMetadata",
-                        "imageAsset": {
-                            "src": "https://cdn.sanity.io/images/euty36ag/production/a3ff0abd3156492cb723702653a2ed8e8c966c8c-1280x1280.jpg",
-                            "width": 1280,
-                            "height": 1280,
-                            "alt": "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
-                        },
-                        "asset": {
-                            "_type": "reference",
-                            "_ref": "image-a3ff0abd3156492cb723702653a2ed8e8c966c8c-1280x1280-jpg"
-                          }
-                    },
-                    "smartLink": "https://tailwindui.com/components/ecommerce/components/category-previews",
-                    "sanityRichText": [
-                        {
-                            "children": [
-                                {
-                                    "_type": "span",
-                                    "marks": [
-                                        "a85139016a6a"
-                                    ],
-                                    "text": "Desk and Office"
-                                }
-                            ],
-                            "markDefs": [
-                                {
-                                    "_type": "link",
-                                    "href": "https://tailwindui.com/components/ecommerce/components/category-previews#"
-                                }
-                            ],
-                            "_type": "block",
-                            "style": "h3"
-                        },
-                        {
-                            "children": [
-                                {
-                                    "_type": "span",
-                                    "marks": [],
-                                    "text": "Work from home accessories"
-                                }
-                            ],
-                            "markDefs": [],
-                            "_type": "block",
-                            "style": "normal"
-                        }
-                    ]
-                },
-                {
-                    "_type": "gridCard",
-                    "_key": "comp2",
-                    "imageWithMetadata": {
-                        "_type": "glob.imageWithMetadata",
-                        "imageAsset": {
-                            "src": "https://cdn.sanity.io/images/euty36ag/production/c9473a23f03727e963f61c38921416effe71c537-1280x1280.jpg",
-                            "width": 1280,
-                            "height": 1280,
-                            "alt": "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
-                        },
-                        "asset": {
-                            "_type": "reference",
-                            "_ref": "image-c9473a23f03727e963f61c38921416effe71c537-1280x1280-jpg"
-                          }
-                    },
-                    "smartLink": "https://tailwindui.com/components/ecommerce/components/category-previews",
-                    "sanityRichText": [
-                        {
-                            "children": [
-                                {
-                                    "_type": "span",
-                                    "marks": [
-                                        "a105c74f2230"
-                                    ],
-                                    "text": "Self-Improvement"
-                                }
-                            ],
-                            "markDefs": [
-                                {
-                                    "_type": "link",
-                                    "href": "https://tailwindui.com/components/ecommerce/components/category-previews#"
-                                }
-                            ],
-                            "_type": "block",
-                            "style": "h3"
-                        },
-                        {
-                            "children": [
-                                {
-                                    "_type": "span",
-                                    "marks": [],
-                                    "text": "Journals and note-taking"
-                                }
-                            ],
-                            "markDefs": [],
-                            "_type": "block",
-                            "style": "normal"
-                        }
-                    ]
-                },
-                {
-                    "_type": "gridCard",
-                    "_key": "comp3",
-                    "imageWithMetadata": {
-                        "_type": "glob.imageWithMetadata",
-                        "imageAsset": {
-                            "src": "https://cdn.sanity.io/images/euty36ag/production/9492f86670bbfd630e184ce496adfaa1eeabbf63-1280x1280.jpg",
-                            "width": 1280,
-                            "height": 1280,
-                            "alt": "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
-                        },
-                        "asset": {
-                            "_type": "reference",
-                            "_ref": "image-9492f86670bbfd630e184ce496adfaa1eeabbf63-1280x1280-jpg"
-                          }
-                    },
-                    "smartLink": "https://tailwindui.com/components/ecommerce/components/category-previews",
-                    "sanityRichText": [
-                        {
-                            "children": [
-                                {
-                                    "_type": "span",
-                                    "marks": [
-                                        "d0fcb0ca1c46"
-                                    ],
-                                    "text": "Travel"
-                                }
-                            ],
-                            "markDefs": [
-                                {
-                                    "_type": "link",
-                                    "href": "https://tailwindui.com/components/ecommerce/components/category-previews#"
-                                }
-                            ],
-                            "_type": "block",
-                            "style": "h3"
-                        },
-                        {
-                            "children": [
-                                {
-                                    "_type": "span",
-                                    "marks": [],
-                                    "text": "Daily commute essentials"
-                                }
-                            ],
-                            "markDefs": [],
-                            "_type": "block",
-                            "style": "normal"
-                        }
-                    ]
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Outstanding and Quick Results",
+                  "_key": "467afb91e46a0"
                 }
-            ],
-            "title": ""
+              ],
+              "markDefs": [],
+              "_type": "block",
+              "style": "h3"
+            },
+            {
+              "_key": "1b9bab559470",
+              "children": [
+                {
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Achieve ",
+                  "_key": "01454a3e0d1d0"
+                },
+                {
+                  "_type": "span",
+                  "marks": ["strong"],
+                  "text": "outstanding and quick results",
+                  "_key": "01454a3e0d1d1"
+                },
+                {
+                  "_type": "span",
+                  "marks": [],
+                  "text": " with CMS-KIT-Sanity. Our platform is designed to deliver high performance and efficiency, ensuring that your projects are completed in record time. Whether you're a developer or a content creator, you'll appreciate the seamless workflow that allows you to produce exceptional outcomes swiftly.",
+                  "_key": "01454a3e0d1d2"
+                }
+              ],
+              "markDefs": [],
+              "_type": "block",
+              "style": "normal"
+            },
+            {
+              "_key": "375420027873",
+              "children": [
+                {
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Enjoy ",
+                  "_key": "9a8301477f1f0"
+                },
+                {
+                  "_type": "span",
+                  "marks": ["strong"],
+                  "text": "great design out of the box",
+                  "_key": "9a8301477f1f1"
+                },
+                {
+                  "_type": "span",
+                  "marks": [],
+                  "text": " with our pre-configured templates and themes. CMS-KIT-Sanity provides a professional and polished appearance for your projects without the need for extensive customization. This means you can launch stunning, user-friendly sites with minimal effort, giving you more time to focus on creating amazing content and functionalities.",
+                  "_key": "9a8301477f1f2"
+                }
+              ],
+              "markDefs": [],
+              "_type": "block",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "_key": "comp2",
+          "_type": "gridCard",
+          "imageWithMetadata": {
+            "_type": "glob.imageWithMetadata",
+            "asset": {
+              "_type": "reference",
+              "_ref": "image-c9af323699262b81afc12e678862f6bed83df1be-1527x999-png"
+            },
+            "imageAsset": {
+              "alt": "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.",
+              "height": 208,
+              "src": "https://cdn.sanity.io/images/euty36ag/production/b18b8648a16e4ac7295a9182f41e8be52f05e81d-300x208.png",
+              "width": 300
+            }
+          },
+          "sanityRichText": [
+            {
+              "_type": "block",
+              "children": [
+                {
+                  "_type": "span",
+                  "marks": ["a105c74f2230"],
+                  "text": "Self-Improvement",
+                  "_key": "GkG3cCeg0Ygk3UAeuaXFS8"
+                }
+              ],
+              "markDefs": [
+                {
+                  "_type": "link",
+                  "href": "https://tailwindui.com/components/ecommerce/components/category-previews#",
+                  "_key": "GkG3cCeg0Ygk3UAeuaXFWB"
+                }
+              ],
+              "style": "h3",
+              "_key": "GkG3cCeg0Ygk3UAeuaXFO5"
+            },
+            {
+              "_type": "block",
+              "children": [
+                {
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Journals and note-taking",
+                  "_key": "GkG3cCeg0Ygk3UAeuaXFeH"
+                }
+              ],
+              "markDefs": [],
+              "style": "normal",
+              "_key": "GkG3cCeg0Ygk3UAeuaXFaE"
+            }
+          ],
+          "smartLink": "https://tailwindui.com/components/ecommerce/components/category-previews",
+          "customRichText": [
+            {
+              "_key": "4854bb8d2a56",
+              "children": [
+                {
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Intuitive Development and Scalable Structure",
+                  "_key": "ef935def53210"
+                }
+              ],
+              "markDefs": [],
+              "_type": "block",
+              "style": "h3"
+            },
+            {
+              "_key": "e1bd8a6d7afa",
+              "children": [
+                {
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Embrace ",
+                  "_key": "22c13ac5c5f80"
+                },
+                {
+                  "_type": "span",
+                  "marks": ["strong"],
+                  "text": "intuitive development",
+                  "_key": "22c13ac5c5f81"
+                },
+                {
+                  "_type": "span",
+                  "marks": [],
+                  "text": " with our streamlined interface, designed to make your coding experience as smooth as possible. The clean and organized layout allows you to navigate through your project effortlessly, ensuring that you can focus on what truly matters—writing great code. Our tools simplify the process, reducing the learning curve and increasing your productivity.",
+                  "_key": "22c13ac5c5f82"
+                }
+              ],
+              "markDefs": [],
+              "_type": "block",
+              "style": "normal"
+            },
+            {
+              "_key": "77331c409354",
+              "children": [
+                {
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Enjoy the benefits of ",
+                  "_key": "b9926fe507f40"
+                },
+                {
+                  "_type": "span",
+                  "marks": ["strong"],
+                  "text": "quick generation of new blocks",
+                  "_key": "b9926fe507f41"
+                },
+                {
+                  "_type": "span",
+                  "marks": [],
+                  "text": " with our scalable structure of components. Easily add and customize new sections to your project without worrying about breaking existing functionalities. This modular approach not only saves time but also ensures that your application can grow seamlessly as your needs evolve. Whether you're working on a small project or a large-scale application, our system adapts to support your development goals.",
+                  "_key": "b9926fe507f42"
+                }
+              ],
+              "markDefs": [],
+              "_type": "block",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "_key": "comp3",
+          "_type": "gridCard",
+          "imageWithMetadata": {
+            "_type": "glob.imageWithMetadata",
+            "asset": {
+              "_type": "reference",
+              "_ref": "image-19a805c020185f42b2c3b866143d2992a898e4af-1556x1022-png"
+            },
+            "imageAsset": {
+              "alt": "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.",
+              "height": 208,
+              "src": "https://cdn.sanity.io/images/euty36ag/production/b18b8648a16e4ac7295a9182f41e8be52f05e81d-300x208.png",
+              "width": 300
+            }
+          },
+          "smartLink": "https://tailwindui.com/components/ecommerce/components/category-previews",
+          "customRichText": [
+            {
+              "_key": "58fdd798d4de",
+              "children": [
+                {
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Visual Editing and Live Preview",
+                  "_key": "f010fb1c29030"
+                }
+              ],
+              "markDefs": [],
+              "_type": "block",
+              "style": "h3"
+            },
+            {
+              "_key": "617c054e8de3",
+              "children": [
+                {
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Experience the power of ",
+                  "_key": "14ae7f0c0e490"
+                },
+                {
+                  "_type": "span",
+                  "marks": ["strong"],
+                  "text": "Visual Editing",
+                  "_key": "14ae7f0c0e491"
+                },
+                {
+                  "_type": "span",
+                  "marks": [],
+                  "text": " with our intuitive interface. The Sanity Studio allows you to make real-time changes and see them instantly reflected on your site. No more guessing how your content will look—",
+                  "_key": "14ae7f0c0e492"
+                },
+                {
+                  "_type": "span",
+                  "marks": ["em"],
+                  "text": "what you see is what you get",
+                  "_key": "14ae7f0c0e493"
+                },
+                {
+                  "_type": "span",
+                  "marks": [],
+                  "text": ". This seamless integration ensures that your editing process is both efficient and enjoyable.",
+                  "_key": "14ae7f0c0e494"
+                }
+              ],
+              "markDefs": [],
+              "_type": "block",
+              "style": "normal"
+            },
+            {
+              "_key": "cfbb58d10538",
+              "children": [
+                {
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Take advantage of the ",
+                  "_key": "9c3d9ef8eb060"
+                },
+                {
+                  "_type": "span",
+                  "marks": ["strong"],
+                  "text": "Live Preview",
+                  "_key": "9c3d9ef8eb061"
+                },
+                {
+                  "_type": "span",
+                  "marks": [],
+                  "text": " feature to enhance your workflow. As you edit in the Sanity Studio, watch your updates come to life immediately. This not only saves time but also ensures that your final product is exactly what you envisioned. With these tools, you can focus on creating high-quality content without the hassle of constant back-and-forth adjustments.",
+                  "_key": "9c3d9ef8eb062"
+                }
+              ],
+              "markDefs": [],
+              "_type": "block",
+              "style": "normal"
+            },
+            {
+              "_key": "397f1cba2799",
+              "markDefs": [],
+              "_type": "block",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "marks": [],
+                  "_key": "8c08e0086ef1",
+                  "text": ""
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "title": "Category Preview"
+    }
+  ]
 }
