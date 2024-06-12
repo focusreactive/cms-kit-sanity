@@ -15,210 +15,6 @@
       "_type": "tw-base.blogSection",
       "posts": [
         {
-          "_key": "QSuZW0QffIX9aJgqqlOpFu",
-          "_type": "tw-base.blogSection.post",
-          "authors": [
-            {
-              "_key": "QSuZW0QffIX9aJgqqlOpT3",
-              "_type": "tw-base.blogSection.post.author",
-              "avatar": {
-                "_type": "glob.imageWithMetadata",
-                "imageAsset": {
-                  "alt": null,
-                  "height": 256,
-                  "src": "https://cdn.sanity.io/images/euty36ag/production/b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256.jpg",
-                  "width": 256
-                },
-                "asset": {
-                  "_type": "reference",
-                  "_ref": "image-b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256-jpg"
-                }
-              },
-              "link": {
-                "_type": "glob.SmartLink",
-                "href": "https://focusreactive.com/",
-                "target": "_blank",
-                "type": "url"
-              },
-              "name": "Michael Foster",
-              "role": "Co-founder"
-            }
-          ],
-          "date": "2023-12-13",
-          "link": {
-            "_type": "glob.SmartLink",
-            "href": "https://focusreactive.com/",
-            "slug": {
-              "_ref": "a3db4251-c1de-4521-8b81-71e209940856",
-              "_type": "reference"
-            },
-            "target": "_blank",
-            "type": "url"
-          },
-          "tags": [
-            {
-              "_key": "QSuZW0QffIX9aJgqqlOpVg",
-              "_type": "tw-base.blogSection.post.tag",
-              "href": {
-                "_type": "glob.SmartLink",
-                "href": "https://focusreactive.com/",
-                "slug": {
-                  "_ref": "a3db4251-c1de-4521-8b81-71e209940856",
-                  "_type": "reference"
-                },
-                "target": "_blank",
-                "text": "Marketing",
-                "type": "url"
-              }
-            }
-          ],
-          "text": [
-            {
-              "_key": "QSuZW0QffIX9aJgqqlOpIX",
-              "_type": "block",
-              "children": [
-                {
-                  "_key": "QSuZW0QffIX9aJgqqlOpLA",
-                  "_type": "span",
-                  "marks": [],
-                  "text": "Boost your conversion rate"
-                }
-              ],
-              "markDefs": [],
-              "style": "h3"
-            },
-            {
-              "_key": "QSuZW0QffIX9aJgqqlOpNn",
-              "_type": "block",
-              "children": [
-                {
-                  "_key": "QSuZW0QffIX9aJgqqlOpQQ",
-                  "_type": "span",
-                  "marks": [],
-                  "text": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta."
-                }
-              ],
-              "markDefs": [],
-              "style": "normal"
-            }
-          ],
-          "image": {
-            "_type": "glob.imageWithMetadata",
-            "imageAsset": {
-              "alt": null,
-              "height": 3270,
-              "src": "https://cdn.sanity.io/images/euty36ag/production/image-5fcea6177e0c504842f198f1c9a1443204294396-3270x2180.jpg",
-              "width": 2180
-            },
-            "asset": {
-              "_type": "reference",
-              "_ref": "image-5fcea6177e0c504842f198f1c9a1443204294396-3270x2180-jpg"
-            }
-          }
-        },
-        {
-          "_key": "2a1940e3d9ad0308e6b8ad6c1005a6ca",
-          "_type": "tw-base.blogSection.post",
-          "authors": [
-            {
-              "_key": "QSuZW0QffIX9aJgqqlOpT3",
-              "_type": "tw-base.blogSection.post.author",
-              "avatar": {
-                "_type": "glob.imageWithMetadata",
-                "imageAsset": {
-                  "alt": null,
-                  "height": 256,
-                  "src": "https://cdn.sanity.io/images/euty36ag/production/b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256.jpg",
-                  "width": 256
-                },
-                "asset": {
-                  "_type": "reference",
-                  "_ref": "image-b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256-jpg"
-                }
-              },
-              "link": {
-                "_type": "glob.SmartLink",
-                "href": "https://focusreactive.com/",
-                "target": "_blank",
-                "type": "url"
-              },
-              "name": "Michael Foster",
-              "role": "Co-founder"
-            }
-          ],
-          "date": "2023-12-13",
-          "link": {
-            "_type": "glob.SmartLink",
-            "href": "https://focusreactive.com/",
-            "slug": {
-              "_ref": "a3db4251-c1de-4521-8b81-71e209940856",
-              "_type": "reference"
-            },
-            "target": "_blank",
-            "type": "url"
-          },
-          "tags": [
-            {
-              "_key": "QSuZW0QffIX9aJgqqlOpVg",
-              "_type": "tw-base.blogSection.post.tag",
-              "href": {
-                "_type": "glob.SmartLink",
-                "href": "https://focusreactive.com/",
-                "slug": {
-                  "_ref": "a3db4251-c1de-4521-8b81-71e209940856",
-                  "_type": "reference"
-                },
-                "target": "_blank",
-                "text": "Marketing",
-                "type": "url"
-              }
-            }
-          ],
-          "text": [
-            {
-              "_key": "QSuZW0QffIX9aJgqqlOpIX",
-              "_type": "block",
-              "children": [
-                {
-                  "_key": "QSuZW0QffIX9aJgqqlOpLA",
-                  "_type": "span",
-                  "marks": [],
-                  "text": "Boost your conversion rate"
-                }
-              ],
-              "markDefs": [],
-              "style": "h3"
-            },
-            {
-              "_key": "QSuZW0QffIX9aJgqqlOpNn",
-              "_type": "block",
-              "children": [
-                {
-                  "_key": "QSuZW0QffIX9aJgqqlOpQQ",
-                  "_type": "span",
-                  "marks": [],
-                  "text": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta."
-                }
-              ],
-              "markDefs": [],
-              "style": "normal"
-            }
-          ],
-          "image": {
-            "_type": "glob.imageWithMetadata",
-            "imageAsset": {
-              "alt": null,
-              "height": 3270,
-              "src": "https://cdn.sanity.io/images/euty36ag/production/0fed2527ad58ed496d5df6ba863ceda9b14728cd-3270x2180.jpg",
-              "width": 2180
-            },
-            "asset": {
-              "_type": "reference",
-              "_ref": "image-0fed2527ad58ed496d5df6ba863ceda9b14728cd-3270x2180-jpg"
-            }
-          }
-        },
-        {
           "_key": "534f041b8fa7d1e5057bf0c8ff26f0bd",
           "_type": "tw-base.blogSection.post",
           "authors": [
@@ -227,15 +23,15 @@
               "_type": "tw-base.blogSection.post.author",
               "avatar": {
                 "_type": "glob.imageWithMetadata",
+                "asset": {
+                  "_type": "reference",
+                  "_ref": "image-df2a6c09aadc526cfb004d1db61ea2d4b8dbc573-512x512-jpg"
+                },
                 "imageAsset": {
                   "alt": null,
                   "height": 256,
-                  "src": "https://cdn.sanity.io/images/euty36ag/production/b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256.jpg",
+                  "src": "https://cdn.sanity.io/images/euty36ag/production/3c4a6bcef65d28a1fc339587e8b3948377cffe8d-1640x924.png",
                   "width": 256
-                },
-                "asset": {
-                  "_type": "reference",
-                  "_ref": "image-b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256-jpg"
                 }
               },
               "link": {
@@ -244,16 +40,29 @@
                 "target": "_blank",
                 "type": "url"
               },
-              "name": "Michael Foster",
-              "role": "Co-founder"
+              "name": "Oleg Proskurin",
+              "role": "Tech Lead"
             }
           ],
           "date": "2023-12-13",
+          "image": {
+            "_type": "glob.imageWithMetadata",
+            "asset": {
+              "_ref": "image-f3d3518fadf107c019806e78f9956f531ab8312b-1640x924-png",
+              "_type": "reference"
+            },
+            "imageAsset": {
+              "alt": null,
+              "src": "https://cdn.sanity.io/images/euty36ag/production/f3d3518fadf107c019806e78f9956f531ab8312b-1640x924.png",
+              "height": 924,
+              "width": 1640
+            }
+          },
           "link": {
             "_type": "glob.SmartLink",
             "href": "https://focusreactive.com/",
             "slug": {
-              "_ref": "a3db4251-c1de-4521-8b81-71e209940856",
+              "_ref": "36643ba6-5775-4cf5-b729-ccd85c8a3fcc",
               "_type": "reference"
             },
             "target": "_blank",
@@ -267,7 +76,7 @@
                 "_type": "glob.SmartLink",
                 "href": "https://focusreactive.com/",
                 "slug": {
-                  "_ref": "a3db4251-c1de-4521-8b81-71e209940856",
+                  "_ref": "36643ba6-5775-4cf5-b729-ccd85c8a3fcc",
                   "_type": "reference"
                 },
                 "target": "_blank",
@@ -285,7 +94,7 @@
                   "_key": "QSuZW0QffIX9aJgqqlOpLA",
                   "_type": "span",
                   "marks": [],
-                  "text": "Boost your conversion rate"
+                  "text": "How CMS-KIT Helps?"
                 }
               ],
               "markDefs": [],
@@ -305,20 +114,211 @@
               "markDefs": [],
               "style": "normal"
             }
+          ]
+        },
+        {
+          "_key": "c462f8f22f29e1c0d65df8d6ff17f6df",
+          "_type": "tw-base.blogSection.post",
+          "authors": [
+            {
+              "_key": "QSuZW0QffIX9aJgqqlOpT3",
+              "_type": "tw-base.blogSection.post.author",
+              "avatar": {
+                "_type": "glob.imageWithMetadata",
+                "asset": {
+                  "_type": "reference",
+                  "_ref": "image-e0aa604979382579c782816bb481cb0b7af7045b-1024x1024-jpg"
+                },
+                "imageAsset": {
+                  "alt": null,
+                  "height": 256,
+                  "src": "https://cdn.sanity.io/images/euty36ag/production/3c4a6bcef65d28a1fc339587e8b3948377cffe8d-1640x924.png",
+                  "width": 256
+                }
+              },
+              "link": {
+                "_type": "glob.SmartLink",
+                "href": "https://focusreactive.com/",
+                "target": "_blank",
+                "type": "url"
+              },
+              "name": "Code Crusher 3000",
+              "role": "Syntax Samurai"
+            }
           ],
+          "date": "2023-12-13",
           "image": {
             "_type": "glob.imageWithMetadata",
-            "imageAsset": {
-              "alt": null,
-              "height": 3270,
-              "src": "https://cdn.sanity.io/images/euty36ag/production/0fed2527ad58ed496d5df6ba863ceda9b14728cd-3270x2180.jpg",
-              "width": 2180
-            },
             "asset": {
               "_type": "reference",
-              "_ref": "image-0fed2527ad58ed496d5df6ba863ceda9b14728cd-3270x2180-jpg"
+              "_ref": "image-3c4a6bcef65d28a1fc339587e8b3948377cffe8d-1640x924-png"
+            },
+            "imageAsset": {
+              "alt": null,
+              "src": "https://cdn.sanity.io/images/euty36ag/production/3c4a6bcef65d28a1fc339587e8b3948377cffe8d-1640x924.png",
+              "height": 924,
+              "width": 1640
             }
-          }
+          },
+          "link": {
+            "_type": "glob.SmartLink",
+            "href": "https://focusreactive.com/",
+            "slug": {
+              "_ref": "36643ba6-5775-4cf5-b729-ccd85c8a3fcc",
+              "_type": "reference"
+            },
+            "target": "_blank",
+            "type": "url"
+          },
+          "tags": [
+            {
+              "_key": "QSuZW0QffIX9aJgqqlOpVg",
+              "_type": "tw-base.blogSection.post.tag",
+              "href": {
+                "_type": "glob.SmartLink",
+                "href": "https://focusreactive.com/",
+                "slug": {
+                  "_ref": "36643ba6-5775-4cf5-b729-ccd85c8a3fcc",
+                  "_type": "reference"
+                },
+                "target": "_blank",
+                "text": "Marketing",
+                "type": "url"
+              }
+            }
+          ],
+          "text": [
+            {
+              "_key": "QSuZW0QffIX9aJgqqlOpIX",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "QSuZW0QffIX9aJgqqlOpLA",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Content Blocks: Why you should understand the Core Building Unit of Headless Architecture?"
+                }
+              ],
+              "markDefs": [],
+              "style": "h3"
+            },
+            {
+              "_key": "QSuZW0QffIX9aJgqqlOpNn",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "QSuZW0QffIX9aJgqqlOpQQ",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "_key": "f03614fbd30e0064e98c534e91a0bda2",
+          "_type": "tw-base.blogSection.post",
+          "authors": [
+            {
+              "_key": "QSuZW0QffIX9aJgqqlOpT3",
+              "_type": "tw-base.blogSection.post.author",
+              "avatar": {
+                "_type": "glob.imageWithMetadata",
+                "asset": {
+                  "_type": "reference",
+                  "_ref": "image-6a61d1755dd1aad8ccbfa9e400c94f3fca6a09c3-1024x1024-jpg"
+                },
+                "imageAsset": {
+                  "alt": null,
+                  "height": 256,
+                  "src": "https://cdn.sanity.io/images/euty36ag/production/3c4a6bcef65d28a1fc339587e8b3948377cffe8d-1640x924.png",
+                  "width": 256
+                }
+              },
+              "link": {
+                "_type": "glob.SmartLink",
+                "href": "https://focusreactive.com/",
+                "target": "_blank",
+                "type": "url"
+              },
+              "name": "Roboticus Prime",
+              "role": "Chief Bug Exterminator"
+            }
+          ],
+          "date": "2023-12-13",
+          "image": {
+            "_type": "glob.imageWithMetadata",
+            "asset": {
+              "_type": "reference",
+              "_ref": "image-1adc4dc5eed3a2265e914af1fd8087ea793eaa2b-1640x924-png"
+            },
+            "imageAsset": {
+              "alt": null,
+              "src": "https://cdn.sanity.io/images/euty36ag/production/1adc4dc5eed3a2265e914af1fd8087ea793eaa2b-1640x924.png",
+              "height": 924,
+              "width": 1640
+            }
+          },
+          "link": {
+            "_type": "glob.SmartLink",
+            "href": "https://focusreactive.com/",
+            "slug": {
+              "_ref": "36643ba6-5775-4cf5-b729-ccd85c8a3fcc",
+              "_type": "reference"
+            },
+            "target": "_blank",
+            "type": "url"
+          },
+          "tags": [
+            {
+              "_key": "QSuZW0QffIX9aJgqqlOpVg",
+              "_type": "tw-base.blogSection.post.tag",
+              "href": {
+                "_type": "glob.SmartLink",
+                "href": "https://focusreactive.com/",
+                "slug": {
+                  "_ref": "36643ba6-5775-4cf5-b729-ccd85c8a3fcc",
+                  "_type": "reference"
+                },
+                "target": "_blank",
+                "text": "Marketing",
+                "type": "url"
+              }
+            }
+          ],
+          "text": [
+            {
+              "_key": "QSuZW0QffIX9aJgqqlOpIX",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "QSuZW0QffIX9aJgqqlOpLA",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "CMS-KIT: How does it look internally?"
+                }
+              ],
+              "markDefs": [],
+              "style": "h3"
+            },
+            {
+              "_key": "QSuZW0QffIX9aJgqqlOpNn",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "QSuZW0QffIX9aJgqqlOpQQ",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            }
+          ]
         }
       ],
       "style": "three-column-with-images",

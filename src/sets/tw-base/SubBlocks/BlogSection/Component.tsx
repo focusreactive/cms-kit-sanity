@@ -142,7 +142,7 @@ function BlogSection(props: Props) {
                 </div>
                 {/*</SmartLink>*/}
 
-                {post.authors.map((author, index) => {
+                {post?.authors?.map((author, index) => {
                   return (
                     <div
                       className="relative mt-8 flex items-center gap-x-4"

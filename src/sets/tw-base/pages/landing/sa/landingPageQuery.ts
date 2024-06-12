@@ -108,7 +108,7 @@ export const landingPageQuery = groq`
           authors[]{
            ...,
           avatar{
-            'image': asset->{
+            'imageAsset': asset->{
               'src': url,
               'width': metadata.dimensions.width,
               'height': metadata.dimensions.height,
