@@ -162,9 +162,7 @@ export async function localFlow({ inputs, secrets }) {
   }
 
   // Step 5: Fill the dataset with data from prod-copy.tar.gz
-  const step5Spinner = ora(
-    'Filling the dataset with data from prod-copy.tar.gz...',
-  ).start();
+  console.log('\nFilling the dataset with data from prod-copy.tar.gz...\n');
   try {
     await new Promise((resolve, reject) => {
       exec(
@@ -172,17 +170,15 @@ export async function localFlow({ inputs, secrets }) {
         (error, stdout, stderr) => {
           if (error) {
             console.error(`Error importing dataset: ${stderr}`);
-            step5Spinner.fail('Failed to fill the dataset with data.');
             return reject(error);
           }
-          console.log(`Dataset imported: ${stdout}`);
-          step5Spinner.succeed('Dataset filled with data.');
+          console.log(`\n\nDataset imported: ${stdout}`);
           resolve();
         },
       );
     });
   } catch (error) {
-    step5Spinner.fail('Failed to fill the dataset with data.');
+    console.error('Failed to fill the dataset with data.');
     throw error;
   }
 

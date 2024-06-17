@@ -96,6 +96,14 @@ const promptForToken = async (tokenName, promptMessage) => {
 
 const promptForProjectName = async () => {
   const env = loadEnvVariables();
+  if (!env['PROJECT_NAME'] && env['REPO_NAME']) {
+    try {
+      const name = env['REPO_NAME'].split('/').at(-1);
+      if (name) {
+        env['PROJECT_NAME'] = name;
+      }
+    } catch (e) {}
+  }
   if (env['PROJECT_NAME']) {
     const { useCurrent } = await inquirer.prompt({
       type: 'confirm',
@@ -174,6 +182,12 @@ const main = async () => {
   console.log('1. Go to https://vercel.com/login');
   console.log(
     '2. After logging in, create an API access token at: https://vercel.com/account/tokens',
+  );
+  console.log(
+    colorText(
+      '3. Note that you have to choose a team when generating a token. Select that team on the next step',
+      'red',
+    ),
   );
   console.log(colorText('The token will be saved in the .env file.', 'dim'));
   const vercelToken = await promptForToken(
