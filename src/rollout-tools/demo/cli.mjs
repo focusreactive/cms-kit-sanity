@@ -2,13 +2,14 @@
 
 import fetch from 'node-fetch';
 import { exec } from 'child_process';
+import crypto from 'crypto';
 
 import {
   createSanityProject,
   createSanityReadToken,
-  createVercelProject,
   getVercelProjects,
 } from '../local/services.mjs';
+import { createVercelProject } from './services.mjs';
 
 if (process.env.GITHUB_ACTIONS !== 'true') {
   console.warn(
@@ -21,7 +22,7 @@ const secrets = {
   VERCEL_PERSONAL_AUTH_TOKEN: process.env.VERCEL_PERSONAL_AUTH_TOKEN,
   SANITY_PERSONAL_AUTH_TOKEN: process.env.SANITY_PERSONAL_AUTH_TOKEN,
   SANITY_AUTH_TOKEN: process.env.SANITY_PERSONAL_AUTH_TOKEN,
-  ROLL_OUT_API_TOKEN: process.env.ROLL_OUT_API_TOKEN,
+  ROLL_OUT_API_TOKEN: crypto.randomBytes(20).toString('hex'),
 };
 
 const inputs = {
@@ -41,7 +42,7 @@ const inputs = {
 const requiredEnvVars = Object.keys({ ...secrets, ...inputs });
 
 requiredEnvVars.forEach((envVar) => {
-  if (!process.env[envVar]) {
+  if (!{ ...secrets, ...inputs }[envVar]) {
     console.error(`Missing environment variable: ${envVar}`);
     process.exit(1);
   }
@@ -369,17 +370,6 @@ async function localRollout({ inputs, secrets }) {
     return null;
   }
 }
-
-// async function localFlow({ inputs, secrets }) {
-//   const vercelProjectId = inputs['vercel-project-id'] || '';
-//   const vercelProjectName = inputs['vercel-project-name'];
-//   const sanityProjectId = inputs['sanity-project-id'];
-//   const sanityDatasetName = inputs['sanity-dataset-name'];
-//   const vercelDeploymentUrl = inputs['vercel-deployment-url'];
-//   const email = inputs['email'];
-
-//   return true;
-// }
 
 async function main() {
   try {

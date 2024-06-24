@@ -40,8 +40,8 @@ jobs:
           SANITY_ORGANIZATION_ID: ${{ secrets.SANITY_ORGANIZATION_ID }}
           VERCEL_FR_TEAM_ID: ${{ secrets.VERCEL_FR_TEAM_ID }}
           PROJECT_NAME: ${{ github.event.repository.name }}
-          NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }}
-          ROLL_OUT_API_TOKEN: ${{ secrets.ROLL_OUT_API_TOKEN }}
+          # NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }}
+          # ROLL_OUT_API_TOKEN: ${{ secrets.ROLL_OUT_API_TOKEN }}
           NEXT_PUBLIC_SANITY_DATASET: production
           MAX_NUMBER_OF_PROJECTS: 5
           REPO_TYPE: github
