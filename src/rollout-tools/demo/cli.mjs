@@ -30,11 +30,13 @@ const inputs = {
   EMAIL: process.env.EMAIL,
   SANITY_ORGANIZATION_ID: process.env.SANITY_ORGANIZATION_ID,
   VERCEL_FR_TEAM_ID: process.env.VERCEL_FR_TEAM_ID,
+  VERCEL_FR_TEAM_SLUG: process.env.VERCEL_FR_TEAM_SLUG,
   PROJECT_NAME: process.env.PROJECT_NAME,
   PROJECT_PREFIX: process.env.PROJECT_PREFIX,
   MAX_NUMBER_OF_PROJECTS: process.env.MAX_NUMBER_OF_PROJECTS,
   NEXT_PUBLIC_SANITY_DATASET: process.env.NEXT_PUBLIC_SANITY_DATASET,
   REPO_ID: process.env.REPO_ID,
+  REPO_NAME: process.env.REPO_NAME,
   REPO_PROD_BRANCH: process.env.REPO_PROD_BRANCH,
   REPO_TYPE: process.env.REPO_TYPE,
 };
@@ -54,8 +56,8 @@ async function localRollout({ inputs, secrets }) {
     PROJECT_NAME: projectName,
     PROJECT_PREFIX: projectPrefix,
     NEXT_PUBLIC_SANITY_DATASET: datasetName,
-    VERCEL_FR_TEAM_ID: selectedTeam,
-    SANITY_ORGANIZATION_ID: selectedOrg,
+    VERCEL_FR_TEAM_SLUG: selectedTeamSlug,
+    SANITY_ORGANIZATION_ID: selectedOrgID,
   } = inputs;
 
   const summary = {};
@@ -65,12 +67,13 @@ async function localRollout({ inputs, secrets }) {
     return;
   }
 
-  const username = email
-    .split('@')[0]
-    .toLowerCase()
-    .replace(/[^a-z0-9]/g, '') // prevent forbidden symbols
-    .replace(/\./g, '') // prevent forbidden symbols
-    .slice(0, 50); // prevent project name from being too long
+  const username =
+    email
+      .split('@')[0]
+      .toLowerCase()
+      .replace(/[^a-z0-9]/g, '') // prevent forbidden symbols
+      .replace(/\./g, '') // prevent forbidden symbols
+      .slice(0, 50) + `${Math.round(Math.random() * 899 + 100)}`; // prevent project name from being too long
   const finalProjectName = `${projectPrefix}-${username}-${projectName}`;
 
   summary.username = username;
@@ -99,6 +102,7 @@ async function localRollout({ inputs, secrets }) {
   }
   if (existingProject) {
     console.error('Project with this email already exists');
+    console.log('Existing Projects:', existingProjects);
     return;
   }
 
@@ -114,6 +118,8 @@ async function localRollout({ inputs, secrets }) {
   summary.sanityProjectId = sanityProjectId;
   console.log('Sanity Project ID: ' + sanityProjectId);
 
+  process.env.NEXT_PUBLIC_SANITY_PROJECT_ID = sanityProjectId;
+
   console.log('Creating Sanity read token...');
   const sanityReadToken = await createSanityReadToken(sanityProjectId);
   console.log('Sanity read token created.');
@@ -124,6 +130,9 @@ async function localRollout({ inputs, secrets }) {
     projectName: finalProjectName,
     sanityProjectId,
     sanityDatasetName: datasetName,
+    repoName: inputs.REPO_NAME,
+    vercelPersonalAuthToken: secrets.VERCEL_PERSONAL_AUTH_TOKEN,
+    vercelFrTeamId: inputs.VERCEL_FR_TEAM_ID,
   });
 
   if (!projectData?.projectId) {
@@ -136,8 +145,8 @@ async function localRollout({ inputs, secrets }) {
   summary.projectId = projectData.projectId;
   summary.deploymentUrl = projectData.deploymentUrl;
   summary.studioUrl = `${projectData.deploymentUrl}/admin`;
-  summary.vercelUrl = `https://vercel.com/${selectedTeam.slug}/${projectData.projectName}`;
-  summary.sanityUrl = `https://www.sanity.io/organizations/${selectedOrg.id}/project/${sanityProjectId}`;
+  summary.vercelUrl = `https://vercel.com/${selectedTeamSlug}/${projectData.projectName}`;
+  summary.sanityUrl = `https://www.sanity.io/organizations/${selectedOrgID}/project/${sanityProjectId}`;
   summary.datasetName = datasetName;
   summary.REPO_NAME = secrets.REPO_NAME;
 
@@ -303,13 +312,13 @@ async function localRollout({ inputs, secrets }) {
     project: projectData.projectId,
     target: 'production',
     gitSource: {
-      repoId: secrets.REPO_ID,
-      ref: secrets.REPO_PROD_BRANCH,
+      repoId: inputs.REPO_ID,
+      ref: inputs.REPO_PROD_BRANCH,
       type: 'github',
     },
   };
   const response = await fetch(
-    `https://api.vercel.com/v13/deployments?teamId=${secrets.VERCEL_FR_TEAM_ID}`,
+    `https://api.vercel.com/v13/deployments?teamId=${inputs.VERCEL_FR_TEAM_ID}`,
     {
       method: 'POST',
       headers: {
@@ -320,6 +329,7 @@ async function localRollout({ inputs, secrets }) {
     },
   );
   const data = await response.json();
+  summary.buildInspectorUrl = data.inspectorUrl;
   console.log('New Vercel deployment created.');
 
   console.log('All steps were successful 🎉\n\n');
@@ -339,6 +349,8 @@ async function main() {
       console.log(`- Sanity Studio: ${summary.studioUrl}`);
       console.log(`- Vercel Project: ${summary.vercelUrl}`);
       console.log(`- Sanity Project: ${summary.sanityUrl}\n`);
+      console.log(`\n- Sanity Visual Editing: ${summary.sanityUrl}/presentation/landing/36643ba6-5775-4cf5-b729-ccd85c8a3fcc?preview=/home\n`);
+      console.log(`- Vercel Build Inspect: ${summary.buildInspectorUrl}\n`);
 
       console.log('The next commands you should use:');
       console.log('> pnpm run build - to build the project locally');

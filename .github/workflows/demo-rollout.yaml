@@ -39,6 +39,7 @@ jobs:
           SANITY_AUTH_TOKEN: ${{ secrets.SANITY_PERSONAL_AUTH_TOKEN }}
           SANITY_ORGANIZATION_ID: ${{ secrets.SANITY_ORGANIZATION_ID }}
           VERCEL_FR_TEAM_ID: ${{ secrets.VERCEL_FR_TEAM_ID }}
+          VERCEL_FR_TEAM_SLUG: ${{ secrets.VERCEL_FR_TEAM_SLUG }}
           PROJECT_NAME: ${{ github.event.repository.name }}
           # NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }}
           # ROLL_OUT_API_TOKEN: ${{ secrets.ROLL_OUT_API_TOKEN }}
