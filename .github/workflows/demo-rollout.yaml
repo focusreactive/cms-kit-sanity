@@ -31,17 +31,17 @@ jobs:
         run: pnpm run rollout:action
         env:
           EMAIL: ${{ github.event.inputs.email }}
+          REPO_ID: ${{ github.event.repository.id }}
+          REPO_PROD_BRANCH: ${{ github.ref }}
           PROJECT_PREFIX: ${{ secrets.PROJECT_PREFIX }}
           VERCEL_PERSONAL_AUTH_TOKEN: ${{ secrets.VERCEL_PERSONAL_AUTH_TOKEN }}
           SANITY_PERSONAL_AUTH_TOKEN: ${{ secrets.SANITY_PERSONAL_AUTH_TOKEN }}
           SANITY_AUTH_TOKEN: ${{ secrets.SANITY_PERSONAL_AUTH_TOKEN }}
           SANITY_ORGANIZATION_ID: ${{ secrets.SANITY_ORGANIZATION_ID }}
           VERCEL_FR_TEAM_ID: ${{ secrets.VERCEL_FR_TEAM_ID }}
-          PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
-          NEXT_PUBLIC_SANITY_DATASET: ${{ secrets.NEXT_PUBLIC_SANITY_DATASET }}
-          MAX_NUMBER_OF_PROJECTS: ${{ secrets.MAX_NUMBER_OF_PROJECTS }}
+          PROJECT_NAME: ${{ github.event.repository.name }}
           NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }}
           ROLL_OUT_API_TOKEN: ${{ secrets.ROLL_OUT_API_TOKEN }}
-          REPO_ID: ${{ secrets.REPO_ID }}
-          REPO_PROD_BRANCH: ${{ secrets.REPO_PROD_BRANCH }}
-          REPO_TYPE: ${{ secrets.REPO_TYPE }}
+          NEXT_PUBLIC_SANITY_DATASET: production
+          MAX_NUMBER_OF_PROJECTS: 5
+          REPO_TYPE: github
