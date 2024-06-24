@@ -27,7 +27,6 @@ const secrets = {
 };
 
 const inputs = {
-  EMAIL: process.env.EMAIL,
   SANITY_ORGANIZATION_ID: process.env.SANITY_ORGANIZATION_ID,
   VERCEL_FR_TEAM_ID: process.env.VERCEL_FR_TEAM_ID,
   VERCEL_FR_TEAM_SLUG: process.env.VERCEL_FR_TEAM_SLUG,
@@ -41,6 +40,10 @@ const inputs = {
   REPO_TYPE: process.env.REPO_TYPE,
 };
 
+const optional = {
+  EMAIL: process.env.EMAIL,
+};
+
 const requiredEnvVars = Object.keys({ ...secrets, ...inputs });
 
 requiredEnvVars.forEach((envVar) => {
@@ -49,6 +52,8 @@ requiredEnvVars.forEach((envVar) => {
     process.exit(1);
   }
 });
+
+inputs.EMAIL = optional.EMAIL;
 
 async function localRollout({ inputs, secrets }) {
   const {
