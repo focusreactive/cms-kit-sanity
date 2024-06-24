@@ -100,7 +100,7 @@ async function localRollout({ inputs, secrets }) {
 
   const allowToCreateProject =
     existingProjects &&
-    existingProjects.length < parseInt(secrets.MAX_NUMBER_OF_PROJECTS || '5');
+    existingProjects.length < parseInt(inputs.MAX_NUMBER_OF_PROJECTS || '5');
 
   const existingProject = existingProjects?.find(
     (project) => project.name === finalProjectName,
