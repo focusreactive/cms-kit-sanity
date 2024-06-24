@@ -10,6 +10,7 @@ import {
   getVercelProjects,
 } from '../local/services.mjs';
 import { createVercelProject } from './services.mjs';
+import { isValidEmail } from '../local/email.mjs';
 
 if (process.env.GITHUB_ACTIONS !== 'true') {
   console.warn(
