@@ -1,4 +1,4 @@
-name: Demo Project
+name: Demo Project Rollout Script
 
 on:
   workflow_dispatch:
