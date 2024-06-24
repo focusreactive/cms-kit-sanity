@@ -7,4 +7,16 @@ if (process.env.GITHUB_ACTIONS !== 'true') {
   process.exit(1);
 }
 
-console.log('Script is running...');
+const email = process.env.EMAIL;
+const sanityProjectName = process.env.PROJECT_PREFIX;
+
+if (!email) {
+  console.error('Error: No email provided.');
+  process.exit(1);
+}
+
+console.log(`Script is running with email: ${email}`);
+console.log(`Sanity project name: ${sanityProjectName}`);
+
+// Main script code goes here
+

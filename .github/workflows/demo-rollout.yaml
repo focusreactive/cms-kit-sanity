@@ -29,4 +29,6 @@ jobs:
 
       - name: Rollout script
         run: pnpm run rollout:action
-
+        env:
+          EMAIL: ${{ github.event.inputs.email }}
+          PROJECT_PREFIX: ${{ secrets.PROJECT_PREFIX }}

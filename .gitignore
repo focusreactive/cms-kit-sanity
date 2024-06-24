@@ -40,3 +40,5 @@ next-env.d.ts
 yalc.lock
 
 .env.prod
+
+src/rollout-tools/demo/test_requests.rest
