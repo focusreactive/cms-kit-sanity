@@ -1,0 +1,32 @@
+name: Demo Project secrets.ROLL_OUT_API_TOKEN
+
+on:
+  workflow_dispatch:
+    inputs:
+      email:
+        required: true
+        type: string
+        description: user email
+
+jobs:
+  launch-cli-script:
+    runs-on: ubuntu-latest
+    name: Launch CLI script Automatically
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm i
+
+      - name: Rollout script
+        run: pnpm run rollout:action
+
