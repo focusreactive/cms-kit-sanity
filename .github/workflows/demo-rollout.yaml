@@ -44,4 +44,4 @@ jobs:
           VERCEL_FR_TEAM_SLUG: ${{ secrets.VERCEL_FR_TEAM_SLUG }}
           PROJECT_NAME: ${{ github.event.repository.name }}
           NEXT_PUBLIC_SANITY_DATASET: production
-          MAX_NUMBER_OF_PROJECTS: 5
+          MAX_NUMBER_OF_PROJECTS: 50
