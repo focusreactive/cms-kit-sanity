@@ -1,4 +1,4 @@
-name: Demo Project secrets.ROLL_OUT_API_TOKEN
+name: Demo Project
 
 on:
   workflow_dispatch:
