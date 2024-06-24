@@ -6,6 +6,7 @@ export async function createVercelProject({
   vercelPersonalAuthToken,
   vercelFrTeamId,
   repoName,
+  email,
 }) {
   const body = JSON.stringify({
     name: projectName,
@@ -30,11 +31,20 @@ export async function createVercelProject({
         key: 'NEXT_PUBLIC_PREVIEW_URL',
         value: `https://${projectName}.vercel.app`,
       },
-    ].map((v) => ({
-      ...v,
-      target: ['production', 'preview', 'development'],
-      type: 'encrypted',
-    })),
+      {
+        key: 'CLIENT_EMAIL',
+        value: email,
+      },
+    ]
+      .map(
+        (v) =>
+          v.value && {
+            ...v,
+            target: ['production', 'preview', 'development'],
+            type: 'encrypted',
+          },
+      )
+      .filter(Boolean),
     framework: 'nextjs',
     gitRepository: {
       repo: repoName,

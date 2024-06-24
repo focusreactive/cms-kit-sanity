@@ -62,19 +62,24 @@ async function localRollout({ inputs, secrets }) {
 
   const summary = {};
 
-  if (!(email && isValidEmail(email))) {
-    console.error('Email is not valid');
-    return;
-  }
+  let username = 'i';
 
-  const username =
-    email
+  if (email) {
+    if (!(email && isValidEmail(email))) {
+      console.error('Email is not valid');
+      return;
+    }
+
+    username = email
       .split('@')[0]
       .toLowerCase()
       .replace(/[^a-z0-9]/g, '') // prevent forbidden symbols
       .replace(/\./g, '') // prevent forbidden symbols
-      .slice(0, 50) + `${Math.round(Math.random() * 899 + 100)}`; // prevent project name from being too long
-  const finalProjectName = `${projectPrefix}-${username}-${projectName}`;
+      .slice(0, 50); // prevent project name from being too long
+  }
+
+  const nameId = `${Math.round(Math.random() * 899 + 100)}`;
+  const finalProjectName = `${projectPrefix}-${username}-${nameId}-${projectName}`;
 
   summary.username = username;
   summary.email = email;
@@ -133,6 +138,7 @@ async function localRollout({ inputs, secrets }) {
     repoName: inputs.REPO_NAME,
     vercelPersonalAuthToken: secrets.VERCEL_PERSONAL_AUTH_TOKEN,
     vercelFrTeamId: inputs.VERCEL_FR_TEAM_ID,
+    email,
   });
 
   if (!projectData?.projectId) {
@@ -231,21 +237,25 @@ async function localRollout({ inputs, secrets }) {
 
   // Step 3: Invite user to Sanity project
   console.log('Inviting user to Sanity project...');
-  await fetch(
-    `https://api.sanity.io/v2021-06-07/invitations/project/${sanityProjectId}`,
-    {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${secrets.SANITY_PERSONAL_AUTH_TOKEN}`,
-        'Content-Type': 'application/json',
+  if (email) {
+    await fetch(
+      `https://api.sanity.io/v2021-06-07/invitations/project/${sanityProjectId}`,
+      {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${secrets.SANITY_PERSONAL_AUTH_TOKEN}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email,
+          role: 'editor',
+        }),
       },
-      body: JSON.stringify({
-        email: email,
-        role: 'editor',
-      }),
-    },
-  );
-  console.log('User invited to Sanity project.');
+    );
+    console.log('User invited to Sanity project.');
+  } else {
+    console.log(`Email isn't provided. Skip adding user`);
+  }
 
   // Step 4: Create a new Sanity dataset
   console.log('Creating a new Sanity dataset...');
@@ -349,7 +359,9 @@ async function main() {
       console.log(`- Sanity Studio: ${summary.studioUrl}`);
       console.log(`- Vercel Project: ${summary.vercelUrl}`);
       console.log(`- Sanity Project: ${summary.sanityUrl}\n`);
-      console.log(`\n- Sanity Visual Editing: ${summary.sanityUrl}/presentation/landing/36643ba6-5775-4cf5-b729-ccd85c8a3fcc?preview=/home\n`);
+      console.log(
+        `\n- Sanity Visual Editing: ${summary.sanityUrl}/presentation/landing/36643ba6-5775-4cf5-b729-ccd85c8a3fcc?preview=/home\n`,
+      );
       console.log(`- Vercel Build Inspect: ${summary.buildInspectorUrl}\n`);
 
       console.log('The next commands you should use:');
