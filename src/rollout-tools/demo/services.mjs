@@ -49,6 +49,8 @@ export async function createVercelProject({
     )
     .filter(Boolean);
 
+  console.log('🚀 ~ environmentVariables:', environmentVariables);
+
   const body = JSON.stringify({
     name: projectName,
     environmentVariables: environmentVariables,
