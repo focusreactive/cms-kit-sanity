@@ -35,7 +35,7 @@ export async function createVercelProject({
       value: email || '',
     },
     {
-      key: 'CMS-KIT-INTEGRATION',
+      key: 'CMS_KIT_INTEGRATION',
       value: cmsKitIntegration,
     },
   ]
@@ -48,8 +48,6 @@ export async function createVercelProject({
         },
     )
     .filter(Boolean);
-
-  console.log('🚀 ~ environmentVariables:', environmentVariables);
 
   const body = JSON.stringify({
     name: projectName,

@@ -18,7 +18,7 @@ function findFreeProject(existingProjects) {
       (envVar) => envVar.key === 'CLIENT_EMAIL',
     );
     const cmsIntegration = project.env?.find(
-      (envVar) => envVar.key === 'CMS-KIT-INTEGRATION',
+      (envVar) => envVar.key === 'CMS_KIT_INTEGRATION',
     )?.value;
     if (
       (!clientEmail || !clientEmail.value) &&
