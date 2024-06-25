@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { getVercelProjects } from './services.mjs';
+import { getVercelProjects } from '../local/services.mjs';
 import { isValidEmail } from '../local/email.mjs';
 
 const CMS_KIT_INTEGRATION = 'sanity';
