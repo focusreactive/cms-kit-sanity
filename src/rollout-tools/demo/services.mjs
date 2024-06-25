@@ -21,6 +21,7 @@ export async function createVercelProject({
     {
       key: 'NEXT_PUBLIC_READ_TOKEN',
       value: sanityReadToken,
+      type: 'encrypted',
     },
     {
       key: 'SANITY_STUDIO_URL',
@@ -44,7 +45,7 @@ export async function createVercelProject({
         v.value && {
           ...v,
           target: ['production', 'preview', 'development'],
-          type: 'encrypted',
+          type: v.type || 'string',
         },
     )
     .filter(Boolean);

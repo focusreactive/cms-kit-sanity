@@ -164,7 +164,7 @@ export async function getVercelProjects() {
   const spinner = ora('Fetching Vercel projects...⏳').start();
   try {
     const response = await fetch(
-      `https://api.vercel.com/v9/projects?repoId=${process.env.REPO_ID}&teamId=${process.env.VERCEL_FR_TEAM_ID}&search=${process.env.PROJECT_NAME}`,
+      `https://api.vercel.com/v9/projects?repoId=${process.env.REPO_ID}&teamId=${process.env.VERCEL_FR_TEAM_ID}`,
       {
         headers: {
           Authorization: `Bearer ${process.env.VERCEL_PERSONAL_AUTH_TOKEN}`,
