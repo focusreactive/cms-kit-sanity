@@ -162,14 +162,14 @@ async function localRollout({ inputs, secrets }) {
   summary.vercelUrl = `https://vercel.com/${selectedTeamSlug}/${projectData.projectName}`;
   summary.sanityUrl = `https://www.sanity.io/organizations/${selectedOrgID}/project/${sanityProjectId}`;
   summary.datasetName = datasetName;
-  summary.REPO_NAME = secrets.REPO_NAME;
+  summary.REPO_NAME = inputs.REPO_NAME;
 
   console.log('Vercel Project Name: ' + projectData.projectName);
   console.log('Vercel Project ID: ' + projectData.projectId);
   console.log('Deployment URL: ' + projectData.deploymentUrl);
   console.log('Sanity Studio: ' + summary.studioUrl);
   console.log('Sanity Dataset Name: ' + datasetName);
-  console.log('Repo Name: ' + secrets.REPO_NAME);
+  console.log('Repo Name: ' + inputs.REPO_NAME);
 
   console.log('Starting local flow...\n\n');
 

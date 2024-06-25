@@ -42,7 +42,7 @@ async function assignClientToProject({ project, email, authToken, teamId }) {
       body: JSON.stringify({
         key: 'CLIENT_EMAIL',
         value: email,
-        type: 'string',
+        type: 'plain',
         target: ['production', 'preview', 'development'],
       }),
     },
