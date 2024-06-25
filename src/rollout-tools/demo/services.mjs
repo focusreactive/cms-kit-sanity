@@ -45,7 +45,7 @@ export async function createVercelProject({
         v.value && {
           ...v,
           target: ['production', 'preview', 'development'],
-          type: v.type || 'string',
+          type: v.type || 'plain',
         },
     )
     .filter(Boolean);
