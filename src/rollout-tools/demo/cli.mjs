@@ -12,6 +12,8 @@ import {
 import { createVercelProject } from './services.mjs';
 import { isValidEmail } from '../local/email.mjs';
 
+const CMS_KIT_INTEGRATION = 'sanity';
+
 if (process.env.GITHUB_ACTIONS !== 'true') {
   console.warn(
     'Warning: You are running this script locally. This script is intended to be run in a GitHub Actions environment.',
@@ -144,6 +146,7 @@ async function localRollout({ inputs, secrets }) {
     vercelPersonalAuthToken: secrets.VERCEL_PERSONAL_AUTH_TOKEN,
     vercelFrTeamId: inputs.VERCEL_FR_TEAM_ID,
     email,
+    cmsKitIntegration: CMS_KIT_INTEGRATION,
   });
 
   if (!projectData?.projectId) {

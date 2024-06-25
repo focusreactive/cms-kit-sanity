@@ -7,44 +7,51 @@ export async function createVercelProject({
   vercelFrTeamId,
   repoName,
   email,
+  cmsKitIntegration,
 }) {
+  const environmentVariables = [
+    {
+      key: 'NEXT_PUBLIC_SANITY_PROJECT_ID',
+      value: sanityProjectId,
+    },
+    {
+      key: 'NEXT_PUBLIC_SANITY_DATASET',
+      value: sanityDatasetName,
+    },
+    {
+      key: 'NEXT_PUBLIC_READ_TOKEN',
+      value: sanityReadToken,
+    },
+    {
+      key: 'SANITY_STUDIO_URL',
+      value: `https://${projectName}.vercel.app/admin`,
+    },
+    {
+      key: 'NEXT_PUBLIC_PREVIEW_URL',
+      value: `https://${projectName}.vercel.app`,
+    },
+    {
+      key: 'CLIENT_EMAIL',
+      value: email || '',
+    },
+    {
+      key: 'CMS-KIT-INTEGRATION',
+      value: cmsKitIntegration,
+    },
+  ]
+    .map(
+      (v) =>
+        v.value && {
+          ...v,
+          target: ['production', 'preview', 'development'],
+          type: 'encrypted',
+        },
+    )
+    .filter(Boolean);
+
   const body = JSON.stringify({
     name: projectName,
-    environmentVariables: [
-      {
-        key: 'NEXT_PUBLIC_SANITY_PROJECT_ID',
-        value: sanityProjectId,
-      },
-      {
-        key: 'NEXT_PUBLIC_SANITY_DATASET',
-        value: sanityDatasetName,
-      },
-      {
-        key: 'NEXT_PUBLIC_READ_TOKEN',
-        value: sanityReadToken,
-      },
-      {
-        key: 'SANITY_STUDIO_URL',
-        value: `https://${projectName}.vercel.app/admin`,
-      },
-      {
-        key: 'NEXT_PUBLIC_PREVIEW_URL',
-        value: `https://${projectName}.vercel.app`,
-      },
-      {
-        key: 'CLIENT_EMAIL',
-        value: email,
-      },
-    ]
-      .map(
-        (v) =>
-          v.value && {
-            ...v,
-            target: ['production', 'preview', 'development'],
-            type: 'encrypted',
-          },
-      )
-      .filter(Boolean),
+    environmentVariables: environmentVariables,
     framework: 'nextjs',
     gitRepository: {
       repo: repoName,

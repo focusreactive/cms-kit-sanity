@@ -14,9 +14,16 @@ async function fetchExistingProjects() {
 
 function findFreeProject(existingProjects) {
   for (const project of existingProjects) {
-    const clientEmail = project.env?.find((envVar) => envVar.key === 'CLIENT_EMAIL');
-    const cmsIntegration = project.env?.find((envVar) => envVar.key === 'CMS-KIT-INTEGRATION')?.value;
-    if ((!clientEmail || !clientEmail.value) && cmsIntegration === CMS_KIT_INTEGRATION) {
+    const clientEmail = project.env?.find(
+      (envVar) => envVar.key === 'CLIENT_EMAIL',
+    );
+    const cmsIntegration = project.env?.find(
+      (envVar) => envVar.key === 'CMS-KIT-INTEGRATION',
+    )?.value;
+    if (
+      (!clientEmail || !clientEmail.value) &&
+      cmsIntegration === CMS_KIT_INTEGRATION
+    ) {
       return project;
     }
   }
@@ -95,10 +102,14 @@ async function getProject(email) {
       teamId: process.env.VERCEL_FR_TEAM_ID,
     });
 
-    const sanityProjectId = freeProject.env?.find((envVar) => envVar.key === 'SANITY_PROJECT_ID')?.value;
+    const sanityProjectId = freeProject.env?.find(
+      (envVar) => envVar.key === 'NEXT_PUBLIC_SANITY_PROJECT_ID',
+    )?.value;
 
     if (!sanityProjectId) {
-      throw new Error('Sanity project ID not found in Vercel project environment variables.');
+      throw new Error(
+        'Sanity project ID not found in Vercel project environment variables.',
+      );
     }
 
     await addClientToSanityProject({
