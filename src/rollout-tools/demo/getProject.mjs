@@ -13,7 +13,8 @@ async function fetchExistingProjects() {
 }
 
 function findFreeProject(existingProjects) {
-  for (const project of existingProjects) {
+  for (let i = existingProjects.length - 1; i >= 0; i--) {
+    const project = existingProjects[i];
     const clientEmail = project.env?.find(
       (envVar) => envVar.key === 'CLIENT_EMAIL',
     );
@@ -29,6 +30,7 @@ function findFreeProject(existingProjects) {
   }
   return null;
 }
+
 
 async function assignClientToProject({ project, email, authToken, teamId }) {
   const response = await fetch(
