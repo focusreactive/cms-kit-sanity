@@ -37,7 +37,7 @@ Meet our first implementation of the CMS-KIT: CMS-KIT-SANITY - the powerful mix 
 - Initial content example.
 - Typescript
 
-## Get started
+## Get started:
 
 1. [Create](https://github.com/new?template_name=cms-kit-sanity&template_owner=focusreactive) an own repo from this template
 2. Wait 30 seconds while the initial action is processed and the update is committed to your repo. As a result you will have a `.env.initial` file with your personal settings
