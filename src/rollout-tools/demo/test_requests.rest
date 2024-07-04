@@ -1,0 +1,67 @@
+GET https://api.github.com/repos/focusreactive/cms-kit-sanity/actions/workflows
+Authorization: token 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
+
+
+###
+
+POST https://api.github.com/repos/focusreactive/cms-kit-sanity/actions/workflows/104112178/dispatches
+Authorization: token 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
+Accept: application/vnd.github.v3+json
+
+{
+  "ref": "main",
+  "inputs": {
+    "email": "oleg@gitnation.org"
+  }
+}
+
+### Create a new free project
+
+POST https://api.github.com/repos/focusreactive/cms-kit-sanity/actions/workflows/104112178/dispatches
+Authorization: token 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
+Accept: application/vnd.github.v3+json
+
+{
+  "ref": "main"
+}
+
+
+###
+
+# POST http://localhost:3000/api/roll-out/assignProject
+POST https://cms-kit-sanity.vercel.app/api/roll-out/assignProject
+Content-Type: application/json
+
+{
+  "email": "oleg@gitnation.org"
+}
+
+###
+
+POST https://api.vercel.com/v13/deployments?teamId=team_6Dx99gBPPRamICO40TPWCQgO
+Authorization: Bearer fOdFVQp2mHamaq8uXf37Ghm6
+Content-Type: application/json
+
+{
+  "name": "fr-oleg304-cms-kit-demo",
+  "project": "prj_3gZWYN4sk4VlvlSa4NiGPXi4A5Yy",
+  "target": "production",
+  "gitSource": {
+    "repoId": "765097646",
+    "ref": "main",
+    "type": "github"
+  }
+}
+
+
+###
+
+GET https://api.vercel.com/v2/teams
+Content-Type: application/json
+Authorization: Bearer fOdFVQp2mHamaq8uXf37Ghm6
+
+###
+
+GET https://api.vercel.com/v9/projects?teamId=team_6Dx99gBPPRamICO40TPWCQgO
+Content-Type: application/json
+Authorization: Bearer fOdFVQp2mHamaq8uXf37Ghm6

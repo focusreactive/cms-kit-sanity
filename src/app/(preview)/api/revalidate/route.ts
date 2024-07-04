@@ -13,7 +13,7 @@
  * 7. Projection: {_type, "slug": slug.current}
  * 8. Status: Enable webhook
  * 9. HTTP method: POST
- * 10. HTTP NavHeader: Leave empty
+ * 10. HTTP Headers: Leave empty
  * 11. API version: v2021-03-25
  * 12. Include drafts: No
  * 13. Secret: Set to the same value as SANITY_REVALIDATE_SECRET (create a random secret if you haven't yet, for example by running `Math.random().toString(36).slice(2)` in your console)
@@ -22,39 +22,39 @@
  * 16. Redeploy with `npx vercel --prod` to apply the new environment variable
  */
 
-import { revalidateTag } from 'next/cache';
-import { type NextRequest, NextResponse } from 'next/server';
-import { parseBody } from 'next-sanity/webhook';
+import { revalidateTag } from 'next/cache'
+import { type NextRequest, NextResponse } from 'next/server'
+import { parseBody } from 'next-sanity/webhook'
 
-import { revalidateSecret } from '@/sanity/lib/api';
+import { revalidateSecret } from '@/sanity/lib/api'
 
 export async function POST(req: NextRequest) {
   try {
     const { body, isValidSignature } = await parseBody<{
-      _type: string;
-      slug?: string | undefined;
-    }>(req, revalidateSecret);
+      _type: string
+      slug?: string | undefined
+    }>(req, revalidateSecret)
     if (!isValidSignature) {
-      const message = 'Invalid signature';
-      return new Response(message, { status: 401 });
+      const message = 'Invalid signature'
+      return new Response(message, { status: 401 })
     }
 
     if (!body?._type) {
-      return new Response('Bad Request', { status: 400 });
+      return new Response('Bad Request', { status: 400 })
     }
 
-    revalidateTag(body._type);
+    revalidateTag(body._type)
     if (body.slug) {
-      revalidateTag(`${body._type}:${body.slug}`);
+      revalidateTag(`${body._type}:${body.slug}`)
     }
     return NextResponse.json({
       status: 200,
       revalidated: true,
       now: Date.now(),
       body,
-    });
+    })
   } catch (err: any) {
-    console.error(err);
-    return new Response(err.message, { status: 500 });
+    console.error(err)
+    return new Response(err.message, { status: 500 })
   }
 }
