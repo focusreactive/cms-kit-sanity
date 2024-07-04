@@ -9,8 +9,8 @@ import { resolveHref } from '@/sanity/lib/utils'
 
 export const mainDocuments = defineDocuments([
   {
-    route: '/projects/:slug',
-    filter: `_type == "project" && slug.current == $slug`,
+    route: '/blog/:slug',
+    filter: `_type == "post" && slug.current == $slug`,
   },
   {
     route: '/:slug',
@@ -28,13 +28,13 @@ export const locations = {
     tone: 'positive',
     locations: [{ title: 'Home', href: resolveHref('home')! }],
   }),
-  project: defineLocations({
+  blog: defineLocations({
     select: { title: 'title', slug: 'slug.current' },
     resolve: (doc) => ({
       locations: [
         {
           title: doc?.title || 'Untitled',
-          href: resolveHref('project', doc?.slug)!,
+          href: resolveHref('blog', doc?.slug)!,
         },
       ],
     }),
