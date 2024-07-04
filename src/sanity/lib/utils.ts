@@ -1,8 +1,7 @@
 import createImageUrlBuilder from '@sanity/image-url'
 import type { Image } from 'sanity'
-import { dataset, projectId } from './env'
 
-// import { dataset, projectId } from '@/sanity/lib/api'
+import { dataset, projectId } from '@/sanity/lib/api'
 
 const imageBuilder = createImageUrlBuilder({
   projectId: projectId || '',
@@ -27,8 +26,12 @@ export function resolveHref(
   slug?: string,
 ): string | undefined {
   switch (documentType) {
-    case 'landing':
+    case 'home':
+      return '/'
+    case 'page':
       return slug ? `/${slug}` : undefined
+    case 'post':
+      return slug ? `/blog/${slug}` : undefined
     default:
       console.warn('Invalid document type:', documentType)
       return undefined

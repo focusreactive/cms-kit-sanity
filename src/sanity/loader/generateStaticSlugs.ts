@@ -1,9 +1,9 @@
-import 'server-only';
+import 'server-only'
 
-import { groq } from 'next-sanity';
+import { groq } from 'next-sanity'
 
-import { client } from '@/sanity/lib/client';
-import { token } from '@/sanity/lib/token';
+import { client } from '@/sanity/lib/client'
+import { token } from '@/sanity/lib/token'
 
 // Used in `generateStaticParams`
 export function generateStaticSlugs(type: string) {
@@ -15,8 +15,13 @@ export function generateStaticSlugs(type: string) {
       useCdn: false,
       stega: false,
     })
-    .fetch<{ slug: string }[]>(
-      groq`*[_type == $type && defined(slug.current)] { "slug": slug.current }`,
+    .fetch<string[]>(
+      groq`*[_type == $type && defined(slug.current)]{"slug": slug.current}`,
       { type },
-    );
+      {
+        next: {
+          tags: [type],
+        },
+      },
+    )
 }

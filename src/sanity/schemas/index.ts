@@ -1,5 +1,22 @@
-import landing from '../../sets/tw-base/pages/landing/sa/landing';
-import author from './author';
-import seo from '../../sets/tw-base/pages/landing/sa/seo';
+import landing from '@/components/pages/landing/sa/schemas'
+import author from './author'
 
-export const schemaTypes = [...landing, ...author, ...seo];
+import page from './documents/page'
+import post from './documents/post'
+import duration from './objects/duration'
+import milestone from './objects/milestone'
+import timeline from './objects/timeline'
+import home from './singletons/home'
+import settings from './singletons/settings'
+
+export const schemaTypes = [
+  ...landing,
+  ...author,
+  page,
+  post,
+  duration,
+  milestone,
+  timeline,
+  home,
+  settings,
+]
