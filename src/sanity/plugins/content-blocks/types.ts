@@ -7,6 +7,7 @@ export type Preset = {
   meta: {
     area: string;
     category: string;
+    title: string;
   };
 };
 

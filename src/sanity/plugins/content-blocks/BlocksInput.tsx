@@ -1,31 +1,10 @@
 import React, { ComponentType } from 'react';
 import styled from 'styled-components';
-import {
-  Box,
-  Button,
-  Card,
-  Grid,
-  Heading,
-  Popover,
-  Stack,
-  Text,
-} from '@sanity/ui';
+import { Button, Card, Grid, Popover, Stack, Text } from '@sanity/ui';
 import { AddIcon } from '@sanity/icons';
-import {
-  ArrayFieldProps,
-  ArrayOfObjectsInputProps,
-  ArraySchemaType,
-} from 'sanity';
+import { ArrayFieldProps } from 'sanity';
 import BlocksBrowser from './BlocksBrowser';
-
-const InputContainer = styled.div`
-  fieldset {
-    div[data-ui='Stack']
-      > div[data-ui='Grid']:has(button[data-ui='MenuButton']) {
-      display: none;
-    }
-  }
-`;
+import { Preset } from './types';
 
 const ButtonsContainer = styled.div`
   position: relative;
@@ -38,7 +17,18 @@ const ButtonsContainer = styled.div`
   }
 `;
 
-const ArrayFunctions = ({ renderBlocksSelector, onPaste }) => {
+type RenderBlocksSelectorProps = {
+  onClose: () => void;
+};
+type ArrayFunctionsProps = {
+  onPaste: () => void;
+  renderBlocksSelector: (props: RenderBlocksSelectorProps) => React.ReactNode;
+};
+
+const ArrayFunctions = ({
+  renderBlocksSelector,
+  onPaste,
+}: ArrayFunctionsProps) => {
   const [isAddOpen, setIsAddOpen] = React.useState(false);
   const handleClose = () => {
     setIsAddOpen(!isAddOpen);
@@ -51,7 +41,8 @@ const ArrayFunctions = ({ renderBlocksSelector, onPaste }) => {
         padding={4}
         placement="top"
         portal
-        open={isAddOpen}
+        // open={isAddOpen}
+        open={true}
       >
         <ButtonsContainer>
           <Button
@@ -76,7 +67,7 @@ const ArrayFunctions = ({ renderBlocksSelector, onPaste }) => {
 };
 
 type BlocksInputCustomProps = {
-  presets: object[];
+  presets: Preset[];
 };
 
 export const BlocksInput: ComponentType<ArrayFieldProps> = (
