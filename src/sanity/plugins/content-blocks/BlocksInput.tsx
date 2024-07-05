@@ -41,8 +41,7 @@ const ArrayFunctions = ({
         padding={4}
         placement="top"
         portal
-        // open={isAddOpen}
-        open={true}
+        open={isAddOpen}
       >
         <ButtonsContainer>
           <Button
