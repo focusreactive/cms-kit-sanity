@@ -15,13 +15,18 @@ export const blockTypes = [
   ...contentComponentsSchemas,
 ];
 
-export const presets = [...contentBlockTemplates, ...subBlockTemplates];
+export const templates = [...contentBlockTemplates, ...subBlockTemplates];
+export const presets = templates.map((t) => ({
+  name: t.name,
+  value: t.template,
+  meta: { ...t, template: undefined },
+}));
 
 export const twBase: Kit = {
   name: namespace.name,
   [namespace.name]: {
     types: blockTypes,
     blocksMap: { ...contentBlocksMap, ...subBlocksMap },
-    templates: presets,
+    templates: templates,
   },
 };

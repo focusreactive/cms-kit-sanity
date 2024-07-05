@@ -38,15 +38,6 @@ const ButtonsContainer = styled.div`
   }
 `;
 
-type BlocksInputProps = {
-  renderDefault: (props: unknown) => React.ReactElement;
-  inputId: string;
-  schemaType: {
-    name: string;
-    of: { name: string }[];
-  };
-};
-
 const ArrayFunctions = ({ renderBlocksSelector, onPaste }) => {
   const [isAddOpen, setIsAddOpen] = React.useState(false);
   const handleClose = () => {
@@ -84,59 +75,38 @@ const ArrayFunctions = ({ renderBlocksSelector, onPaste }) => {
   );
 };
 
+type BlocksInputCustomProps = {
+  presets: object[];
+};
+
 export const BlocksInput: ComponentType<ArrayFieldProps> = (
-  props: ArrayFieldProps,
+  props: ArrayFieldProps & BlocksInputCustomProps,
 ) => {
-  // const { renderDefault, inputProps, inputId, schemaType } = props;
-
-  const handleClick = () => {
-    const demoV = {
-      _key: '8cbedaf717ea',
-      _type: 'tw-base.badges',
-      primaryLink: {
-        _type: 'glob.SmartLink',
-        type: 'internal',
-      },
-      secondary: 'has-secondary-link',
-      secondaryLink: {
-        _type: 'glob.SmartLink',
-        type: 'internal',
-      },
-    };
-    demoV._key = 'sdfsdf';
-    props.inputProps.onItemAppend(demoV);
-    console.log(props.inputProps);
-  };
-
   const inputProps: ArrayFieldProps['inputProps'] = {
     ...props.inputProps,
     arrayFunctions: () => (
       <ArrayFunctions
         renderBlocksSelector={({ onClose }) => {
-          return <BlocksBrowser onClose={onClose} />;
+          return (
+            <BlocksBrowser
+              onClose={onClose}
+              onItemAppend={props.inputProps.onItemAppend}
+              presets={props.presets}
+            />
+          );
         }}
         onPaste={() => console.log('migrating')}
       />
     ),
   };
 
-  // inputProps.renderInput = () => inputProps.renderInput(inputProps);
-
-  const fieldProps: ArrayFieldProps = {
-    ...props,
-    inputProps,
-  };
-
   return (
     <Stack space={[3, 3, 4, 5]}>
       <Card>
         <Text>{props.title}</Text>
+        <Text>{props.description}</Text>
       </Card>
       {props.inputProps.renderInput(inputProps)}
     </Stack>
   );
-};
-
-export const BlocksPreview: React.FC = (props) => {
-  return <div>Test</div>;
 };

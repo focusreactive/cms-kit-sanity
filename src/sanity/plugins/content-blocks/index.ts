@@ -7,6 +7,7 @@ import {
 import { BlocksInput, BlocksPreview } from './BlocksInput';
 import { functionalTypes } from './functional-types/types';
 import { componentsWithBlocksInput } from './componentsPreviewUtil';
+import { createTemplateView } from './functional-types/contentBlockActions/schema';
 
 type contentBlocksProps = {
   blockTypes: SchemaTypeDefinition[];
@@ -19,7 +20,6 @@ const contentBlocks = ({
   name,
   params = {},
 }: contentBlocksProps) => {
-  console.log('🚀 ~ contentBlocks ~ blockTypes:', blockTypes);
   const ofTypes = (blockTypes || [])
     .filter((t) => t.name)
     .filter(
@@ -27,7 +27,6 @@ const contentBlocks = ({
         t.kitOptions?.group === 'BLOCK' || t.kitOptions?.group === 'COMPONENT',
     )
     .map((t) => defineArrayMember({ type: t.name }));
-  console.log('🚀 ~ contentBlocks ~ ofTypes:', ofTypes);
 
   return defineType({
     name,
@@ -57,7 +56,8 @@ export const CMSKitContentBlocks = definePlugin<ContentBlocksArg>(
           ...blockTypes,
           ...functionalTypes,
           contentBlocks({ blockTypes, name: 'content-blocks', params }),
-          contentBlocks({ blockTypes, name: 'glob.templateView', params }),
+          createTemplateView(params),
+          // contentBlocks({ blockTypes, name: 'glob.templateView', params }),
         ],
       },
     };
