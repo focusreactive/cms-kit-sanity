@@ -4,7 +4,7 @@ import { Button, Card, Grid, Popover, Stack, Text } from '@sanity/ui';
 import { AddIcon } from '@sanity/icons';
 import { ArrayFieldProps } from 'sanity';
 import BlocksBrowser from './BlocksBrowser';
-import { Preset } from './types';
+import { BlocksInputCustomProps, Preset } from './types';
 
 const ButtonsContainer = styled.div`
   position: relative;
@@ -65,9 +65,7 @@ const ArrayFunctions = ({
   );
 };
 
-type BlocksInputCustomProps = {
-  presets: Preset[];
-};
+
 
 export const BlocksInput: ComponentType<ArrayFieldProps> = (
   props: ArrayFieldProps & BlocksInputCustomProps,
@@ -82,6 +80,9 @@ export const BlocksInput: ComponentType<ArrayFieldProps> = (
               onClose={onClose}
               onItemAppend={props.inputProps.onItemAppend}
               presets={props.presets}
+              renderItemView={props.renderItemView}
+              renderItem={props.renderItem}
+              renderView={props.renderView}
             />
           );
         }}

@@ -21,6 +21,7 @@ import home from './schemas/singletons/home';
 import settings from './schemas/singletons/settings';
 import { CMSKitContentBlocks } from './plugins/content-blocks';
 import { blockTypes, presets } from '@/components/sa-set';
+import { renderItemView } from './plugins/blocks-preview/render-item-view';
 
 const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'CMS-KIT Sanity';
 const previewUrl =
@@ -49,7 +50,11 @@ export default defineConfig({
     //   dataset,
     //   // previewUrl,
     // }),
-    CMSKitContentBlocks({ blockTypes, presets }),
+    CMSKitContentBlocks({
+      blockTypes,
+      presets,
+      renderItemView,
+    }),
     presentationTool({
       resolve,
       previewUrl: {

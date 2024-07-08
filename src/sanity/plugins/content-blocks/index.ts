@@ -1,19 +1,10 @@
-import {
-  SchemaTypeDefinition,
-  defineArrayMember,
-  definePlugin,
-  defineType,
-} from 'sanity';
-import { BlocksInput, BlocksPreview } from './BlocksInput';
+import { defineArrayMember, definePlugin, defineType } from 'sanity';
 import { functionalTypes } from './functional-types/types';
 import { componentsWithBlocksInput } from './componentsPreviewUtil';
 import { createTemplateView } from './functional-types/contentBlockActions/schema';
+import { ContentBlocksArg, contentBlocksProps } from './types';
 
-type contentBlocksProps = {
-  blockTypes: SchemaTypeDefinition[];
-  name: string;
-  params: object;
-};
+export * from './types';
 
 const contentBlocks = ({
   blockTypes,
@@ -36,16 +27,19 @@ const contentBlocks = ({
   });
 };
 
-type ContentBlocksArg = {
-  sets?: Array<object>;
-  presets?: Array<object>;
-  blockTypes?: SchemaTypeDefinition[];
-};
-
 export const CMSKitContentBlocks = definePlugin<ContentBlocksArg>(
-  ({ blockTypes = [], presets = [] }) => {
+  ({
+    blockTypes = [],
+    presets = [],
+    renderItem,
+    renderItemView,
+    renderView,
+  }) => {
     const params = {
       presets,
+      renderItem,
+      renderItemView,
+      renderView,
     };
     return {
       name: 'content-blocks',
@@ -55,7 +49,11 @@ export const CMSKitContentBlocks = definePlugin<ContentBlocksArg>(
         types: [
           ...blockTypes,
           ...functionalTypes,
-          contentBlocks({ blockTypes, name: 'content-blocks', params }),
+          contentBlocks({
+            blockTypes,
+            name: 'content-blocks',
+            params,
+          }),
           createTemplateView(params),
           // contentBlocks({ blockTypes, name: 'glob.templateView', params }),
         ],

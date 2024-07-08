@@ -4,10 +4,22 @@ import {
   OnItemAppend,
   Preset,
   RenderItemProps,
+  RenderItemViewProps,
   RenderViewProps,
 } from './types';
 import styled from 'styled-components';
 import { CloseCircleIcon, SearchIcon } from '@sanity/icons';
+
+const DefaultRenderItemView = ({ preset }: RenderItemViewProps) => {
+  const height = 100 + Math.round(Math.random() * 300);
+
+  return (
+    <div style={{ height }}>
+      <h4>{preset.meta?.title}</h4>
+      <p>{preset.name}</p>
+    </div>
+  );
+};
 
 const ItemContainer = styled.div`
   font-size: 10px;
@@ -58,6 +70,7 @@ const DefaultRenderItem = ({
   preset,
   onItemAppend,
   selectSinglePreset,
+  renderItemView,
 }: RenderItemProps) => {
   const handleClick = () => {
     onItemAppend(preset.value);
@@ -67,12 +80,9 @@ const DefaultRenderItem = ({
     selectSinglePreset(preset);
   };
 
-  const height = 100 + Math.round(Math.random() * 300);
   return (
     <ItemContainer>
-      <div style={{ height }}>
-        <p>blalala</p>
-      </div>
+      <div>{renderItemView({ preset })}</div>
       <ItemActions>
         <div className="title">
           <button onClick={handleSelectSingle} style={{ textWrap: 'wrap' }}>
@@ -122,6 +132,7 @@ const RenderColumn = ({
   position,
   columns,
   renderItem,
+  renderItemView,
   onItemAppend,
   selectSinglePreset,
 }: RenderViewProps & { position: number; columns: number }) => {
@@ -130,7 +141,12 @@ const RenderColumn = ({
     <ViewColumnContainer>
       {presetsColumns.map((preset) => (
         <div key={preset.value._key}>
-          {renderItem({ preset, onItemAppend, selectSinglePreset })}
+          {renderItem({
+            preset,
+            onItemAppend,
+            selectSinglePreset,
+            renderItemView,
+          })}
         </div>
       ))}
     </ViewColumnContainer>
@@ -140,6 +156,7 @@ const RenderColumn = ({
 const DefaultRenderView = ({
   presets,
   renderItem,
+  renderItemView,
   onItemAppend,
   selectSinglePreset,
 }: RenderViewProps) => {
@@ -155,6 +172,7 @@ const DefaultRenderView = ({
               key={c}
               presets={presets}
               renderItem={renderItem}
+              renderItemView={renderItemView}
               onItemAppend={onItemAppend}
               position={c}
               columns={columns}
@@ -188,14 +206,16 @@ type Props = {
   presets: Preset[];
   renderView?: (props: RenderViewProps) => React.ReactNode;
   renderItem?: (props: RenderItemProps) => React.ReactNode;
+  renderItemView?: (props: RenderItemProps) => React.ReactNode;
 };
 
 const BlocksBrowser = ({
   onClose,
   onItemAppend,
   presets,
-  renderView = DefaultRenderView,
-  renderItem = DefaultRenderItem,
+  renderView = (props) => <DefaultRenderView {...props} />,
+  renderItem = (props) => <DefaultRenderItem {...props} />,
+  renderItemView = (props) => <DefaultRenderItemView {...props} />,
 }: Props) => {
   const [singleViewName, setSingleViewName] = React.useState<string>('');
   const [filterTitle, setFilterTitle] = React.useState<string>('');
@@ -319,6 +339,7 @@ const BlocksBrowser = ({
               onItemAppend,
               preset: preset!,
               selectSinglePreset: resetSinglePreset,
+              renderItemView,
             })}
           </Box>
         ) : (
@@ -327,6 +348,7 @@ const BlocksBrowser = ({
               presets: filteredPresets,
               onItemAppend,
               renderItem,
+              renderItemView,
               selectSinglePreset,
             })}
           </Box>
