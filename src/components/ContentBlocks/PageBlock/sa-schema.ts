@@ -21,7 +21,7 @@ export const pageBlock = defineBlockType(({ df }) => ({
   fields: [
     df({
       name: 'components',
-      type: 'array',
+      type: 'content-blocks',
       of: [
         { type: grid.name },
         { type: styledImage.name },
@@ -33,9 +33,9 @@ export const pageBlock = defineBlockType(({ df }) => ({
         { type: badges.name },
       ],
 
-      components: {
-        field: TemplateSelector,
-      },
+      // components: {
+      //   field: TemplateSelector,
+      // },
     }),
     df({
       name: 'customTitle',
