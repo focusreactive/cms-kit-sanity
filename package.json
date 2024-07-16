@@ -17,8 +17,9 @@
     "test:content-upload": "sanity dataset create testing; sanity dataset import initial-data.tar.gz testing && sanity dataset delete testing --force"
   },
   "prettier": {
-    "semi": false,
-    "singleQuote": true
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all"
   },
   "dependencies": {
     "@focus-reactive/cms-kit-sanity": "0.1.21",

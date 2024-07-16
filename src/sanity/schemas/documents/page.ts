@@ -1,5 +1,15 @@
-import { DocumentIcon, ImageIcon } from '@sanity/icons'
-import { defineArrayMember, defineField, defineType } from 'sanity'
+import { DocumentIcon, ImageIcon } from '@sanity/icons';
+import { defineArrayMember, defineField, defineType } from 'sanity';
+
+import { defineBlocksField } from '@/sanity/plugins/content-blocks/define-blocks-field';
+import { blockTypes } from '@/components/sa-set';
+import { PageBlockPresets } from '@/components/ContentBlocks/PageBlock/sa-templates';
+
+const ofTypes = blockTypes
+  .filter((t) => t.type !== 'array')
+  .map((t) => ({ type: t.name }));
+
+
 
 export default defineType({
   type: 'document',
@@ -22,9 +32,12 @@ export default defineType({
       },
       validation: (rule) => rule.required(),
     }),
-    defineField({
+    defineBlocksField({
       name: 'content',
-      type: 'content-blocks',
+      of: ofTypes,
+      options: {
+        presets: PageBlockPresets,
+      },
     }),
     defineField({
       name: 'overview',
@@ -128,7 +141,7 @@ export default defineType({
       return {
         subtitle: 'Page',
         title,
-      }
+      };
     },
   },
-})
+});

@@ -6,11 +6,11 @@ import { styledRichText } from './sa-schema';
 import json from './templates/sa-mock.json';
 
 const styledRichTextPreview: SanityTemplate = {
-  name: 'Styled rich text',
+  name: 'styledRichText',
   type: styledRichText.name,
   namespace: namespace.name,
-  title: 'Styled rich text',
-  description: 'Styled rich text',
+  title: 'Styled Rich Text',
+  description: 'Styled Rich Text',
   category: TemplateCategory.categoryPreview,
   area: TemplateArea.eCommerce,
   template: json,

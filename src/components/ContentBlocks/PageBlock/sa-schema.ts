@@ -1,7 +1,4 @@
-import {
-  TemplateSelector,
-  BlockPreview,
-} from '@focus-reactive/cms-kit-sanity/sanity';
+import { BlockPreview } from '@focus-reactive/cms-kit-sanity/sanity';
 
 import { blogSection } from '../../SubBlocks/BlogSection/sa-schema';
 import { logoCloudGrid } from '../../SubBlocks/LogoCloud/sa-schema';
@@ -13,15 +10,16 @@ import { buttons } from '../../SubBlocks/Buttons/sa-schema';
 import { badges } from '../../SubBlocks/Badges/sa-schema';
 import { defineBlockType } from '../../sa-config';
 import { blockOptions } from '../../ContentComponents/Section';
+import { defineBlocksField } from '@/sanity/plugins/content-blocks/define-blocks-field';
+import { subBlockPresets } from '@/components/SubBlocks/sa-templates';
 
 export const pageBlock = defineBlockType(({ df }) => ({
   name: 'pageBlock',
   type: 'object',
   title: 'Page Block',
   fields: [
-    df({
+    defineBlocksField({
       name: 'components',
-      type: 'array',
       of: [
         { type: grid.name },
         { type: styledImage.name },
@@ -32,9 +30,8 @@ export const pageBlock = defineBlockType(({ df }) => ({
         { type: buttons.name },
         { type: badges.name },
       ],
-
-      components: {
-        field: TemplateSelector,
+      options: {
+        presets: subBlockPresets,
       },
     }),
     df({

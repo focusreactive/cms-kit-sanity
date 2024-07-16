@@ -6,10 +6,10 @@ import json from './templates/sa-mock-feature-points.json';
 import { namespace } from '../../namespace.config';
 
 const featurePointsPreview: SanityTemplate = {
-  name: 'Feature points',
+  name: 'featurePoints',
   type: featurePoints.name,
   namespace: namespace.name,
-  title: 'feature points',
+  title: 'Feature Points',
   description: 'feature points',
   category: TemplateCategory.categoryPreview,
   area: TemplateArea.eCommerce,

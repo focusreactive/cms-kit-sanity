@@ -1,7 +1,6 @@
 import { TemplateArea, TemplateCategory } from '@focus-reactive/cms-kit-sanity';
 import type { SanityTemplate } from '@focus-reactive/cms-kit-sanity/sanity';
 
-import { pageBlock } from './sa-schema';
 import categoryPreviewJSON from './templates/sa-mock-category-preview.json';
 import featureGrid2x2 from './templates/sa-mock-feature-grid-2x2.json';
 import featureWithImageLeft from './templates/sa-mock-feature-with-image-left.json';
@@ -15,10 +14,10 @@ import featureWithOffsetList from './templates/sa-mock-feature-with-offset-list.
 import logoCloud from './templates/sa-mock-logo-cloud.json';
 import featureSimple from './templates/sa-mock-feature-simple.json';
 import { namespace } from '../../namespace.config';
+import { Preset } from '@/sanity/plugins/content-blocks';
 
 const templateCategoryPreview: SanityTemplate = {
   name: 'pageBlock',
-  type: pageBlock.name,
   namespace: namespace.name,
   title: 'Category Preview',
   description: 'Page Block with Category Preview',
@@ -30,7 +29,6 @@ const templateCategoryPreview: SanityTemplate = {
 
 const templateFeatureGrid2x2: SanityTemplate = {
   name: 'featureGrid2x2',
-  type: pageBlock.name,
   namespace: namespace.name,
   title: 'Feature Grid',
   description: 'Page Block with Feature 2x2 gird',
@@ -44,7 +42,6 @@ const templateFeatureGrid2x2: SanityTemplate = {
 
 const templateFeatureWithImageLeft: SanityTemplate = {
   name: 'featureWithImageLeft',
-  type: pageBlock.name,
   namespace: namespace.name,
   title: 'Feature With Image on the left',
   description: 'Page Block with Feature Left Image',
@@ -58,7 +55,6 @@ const templateFeatureWithImageLeft: SanityTemplate = {
 
 const templateFeatureWithImageRight: SanityTemplate = {
   name: 'featureWithImageRight',
-  type: pageBlock.name,
   namespace: namespace.name,
   title: 'Feature With Image on the right',
   description: 'Page Block with Feature Right Image',
@@ -72,7 +68,6 @@ const templateFeatureWithImageRight: SanityTemplate = {
 
 const templateFeatureWithLargeScreenshotLight: SanityTemplate = {
   name: 'featureWithLargeImageLight',
-  type: pageBlock.name,
   namespace: namespace.name,
   title: 'Feature With Large Image light',
   description: 'Page Block with Feature Large Image light',
@@ -86,7 +81,6 @@ const templateFeatureWithLargeScreenshotLight: SanityTemplate = {
 
 const templateFeatureWithLargeScreenshotDark: SanityTemplate = {
   name: 'featureWithLargeImageDark',
-  type: pageBlock.name,
   namespace: namespace.name,
   title: 'Feature With Large Image dark',
   description: 'Page Block with Feature Large Image dark',
@@ -101,7 +95,6 @@ const templateFeatureWithLargeScreenshotDark: SanityTemplate = {
 const templateFeatureWithSimpleThreeColumnWithSmallIconsLight: SanityTemplate =
   {
     name: 'featureWithSimpleThreeColumnWithSmallIconsLight',
-    type: pageBlock.name,
     namespace: namespace.name,
     title: 'Feature Simple three column with small icons light',
     description: 'Page Block Simple three column with small icons light',
@@ -115,7 +108,6 @@ const templateFeatureWithSimpleThreeColumnWithSmallIconsLight: SanityTemplate =
 
 const templateFeatureWithSimpleThreeColumnWithLargeIcons: SanityTemplate = {
   name: 'featureWithSimpleThreeColumnWithLArgeIcons',
-  type: pageBlock.name,
   namespace: namespace.name,
   title: 'Feature Simple three column with large icons',
   description: 'Page Block Simple three column with large icons',
@@ -129,7 +121,6 @@ const templateFeatureWithSimpleThreeColumnWithLargeIcons: SanityTemplate = {
 
 const templateFeatureOffsetWithList: SanityTemplate = {
   name: 'featureWithOffsetList',
-  type: pageBlock.name,
   namespace: namespace.name,
   title: 'Offset with feature list',
   description: 'Page Block with Offset with feature list',
@@ -143,7 +134,6 @@ const templateFeatureOffsetWithList: SanityTemplate = {
 
 const templateFeatureSimple: SanityTemplate = {
   name: 'featureSimple',
-  type: pageBlock.name,
   namespace: namespace.name,
   title: 'Simple',
   description: 'Page Block with simple feature',
@@ -157,7 +147,6 @@ const templateFeatureSimple: SanityTemplate = {
 
 const templateFeatureWithSimpleThreeColumnWithSmallIconsDark: SanityTemplate = {
   name: 'featureWithSimpleThreeColumnWithSmallIconsDark',
-  type: pageBlock.name,
   namespace: namespace.name,
   title: 'Feature Simple three column with small icons dark',
   description: 'Page Block Simple three column with small icons dark',
@@ -171,7 +160,6 @@ const templateFeatureWithSimpleThreeColumnWithSmallIconsDark: SanityTemplate = {
 
 const templateLogoCloud: SanityTemplate = {
   name: 'templateLogoCloud',
-  type: pageBlock.name,
   namespace: namespace.name,
   title: 'Simple logo cloud',
   description: 'Simple logo cloud',
@@ -182,6 +170,25 @@ const templateLogoCloud: SanityTemplate = {
     'https://cdn.sanity.io/images/euty36ag/production/40e814d97169052b4c114dcc43d369f400a9f71e-3392x1446.png',
   height: 381 + 4, // 4 is iframe border
 };
+
+export const PageBlockPresets = [
+  templateCategoryPreview,
+  templateFeatureGrid2x2,
+  templateFeatureWithImageLeft,
+  templateFeatureWithImageRight,
+  templateFeatureWithLargeScreenshotLight,
+  templateFeatureWithLargeScreenshotDark,
+  templateFeatureWithSimpleThreeColumnWithSmallIconsLight,
+  templateFeatureWithSimpleThreeColumnWithLargeIcons,
+  templateFeatureOffsetWithList,
+  templateFeatureSimple,
+  templateFeatureWithSimpleThreeColumnWithSmallIconsDark,
+  templateLogoCloud,
+].map((t) => ({
+  name: t.name,
+  value: t.template,
+  meta: { ...t, template: undefined },
+})) as Preset[];
 
 export default [
   templateCategoryPreview,

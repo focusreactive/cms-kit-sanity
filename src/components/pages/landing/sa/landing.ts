@@ -2,6 +2,13 @@ import { defineField, defineType } from 'sanity'
 import { author } from '@/sanity/schemas/author'
 import { seo } from './seo'
 import { heroFields } from '../../../ContentComponents/SimpleHero/sa-schemas'
+import { defineBlocksField } from '@/sanity/plugins/content-blocks/define-blocks-field'
+import { blockTypes } from '@/components/sa-set'
+import { PageBlockPresets } from '@/components/ContentBlocks/PageBlock/sa-templates'
+
+const ofTypes = blockTypes
+  .filter((t) => t.type !== 'array')
+  .map((t) => ({ type: t.name }));
 
 export const landing = defineType({
   name: 'landing',
@@ -45,10 +52,12 @@ export const landing = defineType({
         hotspot: true,
       },
     }),
-    defineField({
+    defineBlocksField({
       name: 'content',
-      type: 'content-blocks',
-      group: 'contentGroup',
+      of: ofTypes,
+      options: {
+        presets: PageBlockPresets,
+      },
     }),
     defineField({
       name: 'author',
