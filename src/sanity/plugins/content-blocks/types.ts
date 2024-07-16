@@ -47,9 +47,6 @@ export type ContentBlocksArg = {
   sets?: Array<object>;
   presets?: Array<object>;
   blockTypes?: SchemaTypeDefinition[];
-  renderItem?: (props: RenderItemProps) => React.ReactNode;
-  renderItemView?: (props: RenderItemViewProps) => React.ReactNode;
-  renderView?: (props: RenderViewProps) => React.ReactNode;
 };
 
 export type BlocksInputCustomProps = {

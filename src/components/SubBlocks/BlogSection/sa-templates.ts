@@ -3,12 +3,10 @@ import type { SanityTemplate } from '@focus-reactive/cms-kit-sanity/sanity';
 
 import blogJSON from './templates/sa-mock-blog-section.json';
 import threeColumnWithImages from './templates/three-column-with-images.json';
-import { pageBlock } from '../../ContentBlocks/PageBlock/sa-schema';
 import { namespace } from '../../namespace.config';
 
 const templateBlogSection: SanityTemplate = {
   name: 'blogSection',
-  type: pageBlock.name,
   namespace: namespace.name,
   title: 'Blog section',
   description: 'Blog section',
@@ -20,7 +18,6 @@ const templateBlogSection: SanityTemplate = {
 
 const templateBlogSectionThree: SanityTemplate = {
   name: 'blogSectionWithImages',
-  type: pageBlock.name,
   namespace: namespace.name,
   title: 'Blog section with images',
   description: 'Blog section',

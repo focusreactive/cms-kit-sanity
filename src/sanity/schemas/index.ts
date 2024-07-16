@@ -8,6 +8,7 @@ import milestone from './objects/milestone'
 import timeline from './objects/timeline'
 import home from './singletons/home'
 import settings from './singletons/settings'
+import { blockTypes } from '@/components/sa-set'
 
 export const schemaTypes = [
   ...landing,
@@ -19,4 +20,5 @@ export const schemaTypes = [
   timeline,
   home,
   settings,
+  ...blockTypes
 ]
