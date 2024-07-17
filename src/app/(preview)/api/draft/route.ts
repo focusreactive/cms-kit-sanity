@@ -2,10 +2,10 @@ import { validatePreviewUrl } from '@sanity/preview-url-secret'
 import { draftMode } from 'next/headers'
 import { redirect } from 'next/navigation'
 
+import { client } from '@/sanity/lib/client'
 import { token } from '@/sanity/lib/token'
-import { sanityClient } from '@/sanity/client'
 
-const clientWithToken = sanityClient.withConfig({ token })
+const clientWithToken = client.withConfig({ token })
 
 export async function GET(request: Request) {
   const { isValid, redirectTo = '/' } = await validatePreviewUrl(

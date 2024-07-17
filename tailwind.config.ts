@@ -1,13 +1,20 @@
-import type { Config } from "tailwindcss";
+const { theme } = require('@sanity/demo/tailwind')
 
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/sets/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx}',
+    './src/components/**/*.{js,ts,jsx,tsx}',
     '../node_modules/@focus-reactive/cms-kit-sanity/dist/namespaces/base/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    ...theme,
+    // Overriding fontFamily to use @next/font loaded families
+    fontFamily: {
+      mono: 'var(--font-mono)',
+      sans: 'var(--font-sans)',
+      serif: 'var(--font-serif)',
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -16,6 +23,5 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
-};
-export default config;
+  plugins: [require('@tailwindcss/typography')],
+}
