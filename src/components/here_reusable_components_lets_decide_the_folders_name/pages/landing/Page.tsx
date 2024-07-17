@@ -5,7 +5,7 @@ import type { PagePayload } from './types';
 import { renderSanityComponent } from '@focus-reactive/cms-kit-sanity/sanity-next';
 import { sets } from '../../config';
 import { SimpleHero } from '../../ContentComponents/SimpleHero';
-import SimpleFooter from '../../global/SimpleFooter';
+import SimpleFooter from '@/components/global/SimpleFooter';
 
 export interface PageProps {
   data: PagePayload | null;

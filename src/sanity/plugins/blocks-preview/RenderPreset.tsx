@@ -2,9 +2,9 @@
 
 import React, { Suspense } from 'react';
 import { renderSanityComponent } from '@focus-reactive/cms-kit-sanity/sanity-next';
-import { sets } from '@/components/config';
+import { sets } from '@/components/here_reusable_components_lets_decide_the_folders_name/config';
 import { ContentBlockData } from '@focus-reactive/cms-kit-sanity/sanity';
-import { presets, twBase } from '@/components/sa-set';
+import { presets, twBase } from '@/components/here_reusable_components_lets_decide_the_folders_name/sa-set';
 
 type Props = {
   name: string;

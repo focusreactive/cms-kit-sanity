@@ -1,6 +1,6 @@
 'use client';
 
-import { sets } from '@/components/config';
+import { sets } from '@/components/here_reusable_components_lets_decide_the_folders_name/config';
 import { renderSanityComponent } from '@focus-reactive/cms-kit-sanity/sanity-next';
 
 export default function SingleTemplatePage({

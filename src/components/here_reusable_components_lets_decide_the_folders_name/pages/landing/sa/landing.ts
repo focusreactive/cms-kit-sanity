@@ -3,8 +3,8 @@ import { author } from '@/sanity/schemas/author'
 import { seo } from './seo'
 import { heroFields } from '../../../ContentComponents/SimpleHero/sa-schemas'
 import { defineBlocksField } from '@/sanity/plugins/content-blocks/define-blocks-field'
-import { blockTypes } from '@/components/sa-set'
-import { PageBlockPresets } from '@/components/ContentBlocks/PageBlock/sa-templates'
+import { blockTypes } from '@/components/here_reusable_components_lets_decide_the_folders_name/sa-set'
+import { PageBlockPresets } from '@/components/here_reusable_components_lets_decide_the_folders_name/ContentBlocks/PageBlock/sa-templates'
 
 const ofTypes = blockTypes
   .filter((t) => t.type !== 'array')

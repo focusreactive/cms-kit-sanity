@@ -5,20 +5,18 @@ import { draftMode } from 'next/headers'
 
 import { client } from '@/sanity/lib/client'
 import {
-  homePageQuery,
   pagesBySlugQuery,
   postBySlugQuery,
   settingsQuery,
 } from '@/sanity/lib/queries'
 import { token } from '@/sanity/lib/token'
 import {
-  HomePagePayload,
   PagePayload,
   BlogPostPayload,
   SettingsPayload,
   LandingPayload,
 } from '@/types'
-import { landingPageQuery } from '@/components/pages/landing/sa/landingPageQuery'
+import { landingPageQuery } from '@/components/here_reusable_components_lets_decide_the_folders_name/pages/landing/sa/landingPageQuery'
 
 const serverClient = client.withConfig({
   token,

@@ -18,7 +18,7 @@ import { schemaTypes } from './schemas';
 import home from './schemas/singletons/home';
 import settings from './schemas/singletons/settings';
 import { CMSKitContentBlocks } from './plugins/content-blocks';
-import { blockTypes, presets } from '@/components/sa-set';
+import { blockTypes, presets } from '@/components/here_reusable_components_lets_decide_the_folders_name/sa-set';
 
 const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'CMS-KIT Sanity';
 

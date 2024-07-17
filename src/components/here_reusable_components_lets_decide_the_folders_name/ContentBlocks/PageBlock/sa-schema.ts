@@ -11,7 +11,7 @@ import { badges } from '../../SubBlocks/Badges/sa-schema';
 import { defineBlockType } from '../../sa-config';
 import { blockOptions } from '../../ContentComponents/Section';
 import { defineBlocksField } from '@/sanity/plugins/content-blocks/define-blocks-field';
-import { subBlockPresets } from '@/components/SubBlocks/sa-templates';
+import { subBlockPresets } from '../../SubBlocks/sa-templates';
 
 export const pageBlock = defineBlockType(({ df }) => ({
   name: 'pageBlock',
