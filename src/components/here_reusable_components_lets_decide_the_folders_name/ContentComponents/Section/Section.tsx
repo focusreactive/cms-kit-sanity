@@ -210,7 +210,7 @@ export const Section = ({
   layoutOptions,
 }: SectionProps) => {
   return (
-    <section className="relative">
+    <section className={`relative ${backgroundOptions?.colorSelector}`}>
       <BackgroundSelector backgroundOptions={backgroundOptions} />
       <MainContainerSelector layoutOptions={layoutOptions}>
         {children}
