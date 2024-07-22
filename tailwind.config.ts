@@ -1,5 +1,3 @@
-const { theme } = require('@sanity/demo/tailwind')
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -8,7 +6,6 @@ module.exports = {
     '../node_modules/@focus-reactive/cms-kit-sanity/dist/namespaces/base/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    ...theme,
     // Overriding fontFamily to use @next/font loaded families
     fontFamily: {
       mono: 'var(--font-mono)',
