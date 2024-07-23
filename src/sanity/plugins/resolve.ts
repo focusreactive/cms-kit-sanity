@@ -14,7 +14,7 @@ export const mainDocuments = defineDocuments([
   },
   {
     route: '/:slug',
-    filter: `_type == "page" && slug.current == $slug`,
+    filter: `_type == "landing" && slug.current == $slug`,
   },
 ])
 
@@ -39,13 +39,13 @@ export const locations = {
       ],
     }),
   }),
-  page: defineLocations({
+  landing: defineLocations({
     select: { title: 'title', slug: 'slug.current' },
     resolve: (doc) => ({
       locations: [
         {
           title: doc?.title || 'Untitled',
-          href: resolveHref('page', doc?.slug)!,
+          href: resolveHref('landing', doc?.slug)!,
         },
       ],
     }),
