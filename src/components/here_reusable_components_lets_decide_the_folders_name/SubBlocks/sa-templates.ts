@@ -1,5 +1,5 @@
-import templateBlogSection from './BlogSection/sa-templates';
-import gridSaTemplates from './Grid/sa-templates';
+import templateBlogSection from '../ContentBlocks/BlogSection/sa-templates';
+import gridSaTemplates from '../ContentBlocks/Grid/sa-templates';
 import logoCloudSaTemplates from './LogoCloud/sa-templates';
 import featurePointsTemplates from './FeaturePoints/sa-templates';
 import styledRichTextTemplates from './StyledRichText/sa-templates';

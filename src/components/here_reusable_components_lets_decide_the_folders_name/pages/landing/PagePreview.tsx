@@ -2,10 +2,11 @@
 
 import { type QueryResponseInitial } from '@sanity/react-loader/rsc'
 
-import { pagesBySlugQuery } from '@/sanity/lib/queries'
 import { useQuery } from '@/sanity/loader/useQuery'
 import { PagePayload } from './types'
 import Page from './Page'
+import { landingPageQuery } from './sa/landingPageQuery'
+import { LandingPayload } from '@/types'
 
 type Props = {
   params: { slug: string }
@@ -14,7 +15,7 @@ type Props = {
 
 export default function PagePreview(props: Props) {
   const { params, initial } = props
-  const { data } = useQuery<PagePayload | null>(pagesBySlugQuery, params, {
+  const { data } = useQuery<LandingPayload | null>(landingPageQuery, params, {
     initial,
   })
 

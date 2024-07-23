@@ -1,10 +1,10 @@
 import { findComponentRoot } from '@focus-reactive/cms-kit-sanity/sanity';
 import type { BlocksMap } from '@focus-reactive/cms-kit-sanity/sanity';
 
-import blogSection from './BlogSection/sa-schema';
-import { BlogSection } from './BlogSection';
-import grid from './Grid/sa-schema';
-import { Grid } from './Grid';
+import blogSection from '../ContentBlocks/BlogSection/sa-schema';
+import { BlogSection } from '../ContentBlocks/BlogSection';
+import grid from '../ContentBlocks/Grid/sa-schema';
+import { Grid } from '../ContentBlocks/Grid';
 import { StyledImage } from './StyledImage';
 import styledImage from './StyledImage/sa-schema';
 import { StyledRichText } from './StyledRichText';

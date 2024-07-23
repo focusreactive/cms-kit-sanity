@@ -9,8 +9,8 @@ import {
 } from '@focus-reactive/cms-kit-sanity/sanity';
 
 import { SmartImage } from '../SmartImage';
-import type { grid } from '../../SubBlocks/Grid/sa-schema';
-import type { GridElement } from '../../SubBlocks/Grid/Component';
+import type { grid } from '../../ContentBlocks/Grid/sa-schema';
+import type { GridElement } from '../../ContentBlocks/Grid/Component';
 import { StyledRichText } from '../../SubBlocks/StyledRichText';
 
 const colors = backgroundColors.map((color) => color.value);

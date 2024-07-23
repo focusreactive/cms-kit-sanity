@@ -1,12 +1,12 @@
-import { defineField, defineType } from 'sanity'
-import { author } from '@/sanity/schemas/author'
-import { seo } from './seo'
-import { heroFields } from '../../../ContentComponents/SimpleHero/sa-schemas'
-import { defineBlocksField } from '@/sanity/plugins/content-blocks/define-blocks-field'
-import { blockTypes } from '@/components/here_reusable_components_lets_decide_the_folders_name/sa-set'
-import { PageBlockPresets } from '@/components/here_reusable_components_lets_decide_the_folders_name/ContentBlocks/PageBlock/sa-templates'
+import { defineField, defineType } from 'sanity';
+import { author } from '@/sanity/schemas/author';
+import { seo } from './seo';
+import { heroFields } from '../../../ContentComponents/SimpleHero/sa-schemas';
+import { defineBlocksField } from '@/sanity/plugins/content-blocks/define-blocks-field';
+import { PageBlockPresets } from '../../../ContentBlocks/PageBlock/sa-templates';
+import { contentBlocksSchemas } from '../../../ContentBlocks/sa-schemas';
 
-const ofTypes = blockTypes
+const ofTypes = contentBlocksSchemas
   .filter((t) => t.type !== 'array')
   .map((t) => ({ type: t.name }));
 
@@ -74,10 +74,10 @@ export const landing = defineType({
       media: 'mainImage',
     },
     prepare(selection) {
-      const { author } = selection
-      return { ...selection, subtitle: author && `by ${author}` }
+      const { author } = selection;
+      return { ...selection, subtitle: author && `by ${author}` };
     },
   },
-})
+});
 
-export default [landing]
+export default [landing];

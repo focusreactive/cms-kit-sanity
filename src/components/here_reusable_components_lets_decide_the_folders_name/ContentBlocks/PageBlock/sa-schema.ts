@@ -1,8 +1,8 @@
 import { BlockPreview } from '@focus-reactive/cms-kit-sanity/sanity';
 
-import { blogSection } from '../../SubBlocks/BlogSection/sa-schema';
+import { blogSection } from '../BlogSection/sa-schema';
 import { logoCloudGrid } from '../../SubBlocks/LogoCloud/sa-schema';
-import { grid } from '../../SubBlocks/Grid/sa-schema';
+import { grid } from '../Grid/sa-schema';
 import { styledImage } from '../../SubBlocks/StyledImage/sa-schema';
 import { featurePoints } from '../../SubBlocks/FeaturePoints/sa-schema';
 import { styledRichText } from '../../SubBlocks/StyledRichText/sa-schema';
