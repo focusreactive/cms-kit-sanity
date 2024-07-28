@@ -1,17 +1,22 @@
 import React from 'react';
 
 import { RenderItemViewProps } from '../content-blocks';
+import imagePreview from './image-preview.png';
+import styled from 'styled-components';
+
+const ItemViewContainer = styled.div`
+  padding: 0;
+`;
 
 const RenderItemView = ({ preset }: RenderItemViewProps) => {
-  const height = 100 + Math.round(Math.random() * 300);
-
   return (
-    <div style={{ height }}>
-      <h3>Name:</h3>
-      <p>{preset.name}</p>
-      <h3>Title:</h3>
-      <h4>{preset.meta?.title}</h4>
-    </div>
+    <ItemViewContainer>
+      {preset.meta.screenshot ? (
+        <img src={preset.meta.screenshot} alt="preview" />
+      ) : (
+        <div>{preset.name}</div>
+      )}
+    </ItemViewContainer>
   );
 };
 

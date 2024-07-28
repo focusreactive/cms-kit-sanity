@@ -3,18 +3,29 @@ import type { SanityTemplate } from '@focus-reactive/cms-kit-sanity/sanity';
 
 import categoryPreviewJSON from './templates/sa-mock-category-preview.json';
 import featureGrid2x2 from './templates/sa-mock-feature-grid-2x2.json';
+import featureGrid2x2Screenshot from './templates/sa-mock-feature-grid-2x2.png';
 import featureWithImageLeft from './templates/sa-mock-feature-with-image-left.json';
+import featureWithScreenshot  from './templates/sa-mock-feature-with-image-left.png';
 import featureWithImageRight from './templates/sa-mock-feature-with-image-right.json';
 import featureWithLargeImageLight from './templates/sa-mock-feature-with-large-image-light.json';
+import featureWithLargeImageLightScreenshot from './templates/sa-mock-feature-with-large-image-light.png';
 import featureWithLargeImageDark from './templates/sa-mock-feature-with-large-image-dark.json';
+import featureWithLargeImageDarkScreenshot from './templates/sa-mock-feature-with-large-image-dark.png';
 import featureWithSimpleThreeColumnWithSmallIconsLight from './templates/sa-mock-feature-with-simple-three-column-with-small-icons-light.json';
+import featureWithSimpleThreeColumnWithSmallIconsLightScreenshot from './templates/sa-mock-feature-with-simple-three-column-with-small-icons-light.png';
 import featureWithSimpleThreeColumnWithSmallIconsDark from './templates/sa-mock-feature-with-simple-three-column-with-small-icons-dark.json';
+import featureWithSimpleThreeColumnWithSmallIconsDarkScreenshot from './templates/sa-mock-feature-with-simple-three-column-with-small-icons-dark.png';
 import featureWithSimpleThreeColumnWithLargeIcons from './templates/sa-mock-feature-with-simple-three-column-with-large-icons.json';
+import featureWithSimpleThreeColumnWithLargeIconsScreenshot from './templates/sa-mock-feature-with-simple-three-column-with-large-icons.png';
 import featureWithOffsetList from './templates/sa-mock-feature-with-offset-list.json';
+import featureWithOffsetListScreenshot from './templates/sa-mock-feature-with-offset-list.png';
 import logoCloud from './templates/sa-mock-logo-cloud.json';
+import logoCloudScreenshot from './templates/sa-mock-logo-cloud.png';
 import featureSimple from './templates/sa-mock-feature-simple.json';
+import featureSimpleScreenshot from './templates/sa-mock-feature-simple.png';
 import { namespace } from '../../namespace.config';
-import { Preset } from '@/sanity/plugins/content-blocks';
+import templateCategoryScreenshot from './templates/sa-mock-category-preview.png';
+import templateFeatureWithImageScreenshot from './templates/sa-mock-feature-with-image-right.png';
 
 const templateCategoryPreview: SanityTemplate = {
   name: 'pageBlock',
@@ -24,7 +35,7 @@ const templateCategoryPreview: SanityTemplate = {
   category: TemplateCategory.pageBlock,
   area: TemplateArea.eCommerce,
   template: categoryPreviewJSON,
-  height: 568 + 4, // 4 is iframe border
+  screenshot: templateCategoryScreenshot.src,
 };
 
 const templateFeatureGrid2x2: SanityTemplate = {
@@ -35,9 +46,7 @@ const templateFeatureGrid2x2: SanityTemplate = {
   category: TemplateCategory.feature,
   area: TemplateArea.marketing,
   template: featureGrid2x2,
-  screenshot:
-    'https://cdn.sanity.io/images/euty36ag/production/5475468e66dbeb73d8b56ccb5256620418b4c5f2-3390x1606.png',
-  height: 848 + 4, // 4 is iframe border
+  screenshot: featureGrid2x2Screenshot.src,
 };
 
 const templateFeatureWithImageLeft: SanityTemplate = {
@@ -48,9 +57,7 @@ const templateFeatureWithImageLeft: SanityTemplate = {
   category: TemplateCategory.feature,
   area: TemplateArea.marketing,
   template: featureWithImageLeft,
-  screenshot:
-    'https://cdn.sanity.io/images/euty36ag/production/ec29eb7ea88c3e2ea9e0102eb204708880e764d4-3390x1606.png',
-  height: 936 + 4, // 4 is iframe border
+  screenshot: featureWithScreenshot.src,
 };
 
 const templateFeatureWithImageRight: SanityTemplate = {
@@ -61,9 +68,7 @@ const templateFeatureWithImageRight: SanityTemplate = {
   category: TemplateCategory.feature,
   area: TemplateArea.marketing,
   template: featureWithImageRight,
-  screenshot:
-    'https://cdn.sanity.io/images/euty36ag/production/0559c32e571a37898faf9c96a15cf0ad1a3b6e7c-3382x1412.png',
-  height: 936 + 4, // 4 is iframe border
+  screenshot: templateFeatureWithImageScreenshot.src,
 };
 
 const templateFeatureWithLargeScreenshotLight: SanityTemplate = {
@@ -74,9 +79,7 @@ const templateFeatureWithLargeScreenshotLight: SanityTemplate = {
   category: TemplateCategory.feature,
   area: TemplateArea.marketing,
   template: featureWithLargeImageLight,
-  screenshot:
-    'https://cdn.sanity.io/images/euty36ag/production/1c5862b7cd8b308e7c7a06f5d12f225c57b901c4-2432x1694.png',
-  height: 1345 + 4, // 4 is iframe border
+  screenshot: featureWithLargeImageLightScreenshot.src,
 };
 
 const templateFeatureWithLargeScreenshotDark: SanityTemplate = {
@@ -87,9 +90,7 @@ const templateFeatureWithLargeScreenshotDark: SanityTemplate = {
   category: TemplateCategory.feature,
   area: TemplateArea.marketing,
   template: featureWithLargeImageDark,
-  screenshot:
-    'https://cdn.sanity.io/images/euty36ag/production/09088793adc2e8b57fce3a099eb3fcf8ad8cb744-2432x1722.png',
-  height: 1345 + 4, // 4 is iframe border
+  screenshot: featureWithLargeImageDarkScreenshot.src,
 };
 
 const templateFeatureWithSimpleThreeColumnWithSmallIconsLight: SanityTemplate =
@@ -101,9 +102,7 @@ const templateFeatureWithSimpleThreeColumnWithSmallIconsLight: SanityTemplate =
     category: TemplateCategory.feature,
     area: TemplateArea.marketing,
     template: featureWithSimpleThreeColumnWithSmallIconsLight,
-    screenshot:
-      'https://cdn.sanity.io/images/euty36ag/production/8421ec0f12bde66b30940fa2385e327addff001b-3392x1446.png',
-    height: 724 + 4, // 4 is iframe border
+    screenshot: featureWithSimpleThreeColumnWithSmallIconsLightScreenshot.src,
   };
 
 const templateFeatureWithSimpleThreeColumnWithLargeIcons: SanityTemplate = {
@@ -114,9 +113,7 @@ const templateFeatureWithSimpleThreeColumnWithLargeIcons: SanityTemplate = {
   category: TemplateCategory.feature,
   area: TemplateArea.marketing,
   template: featureWithSimpleThreeColumnWithLargeIcons,
-  screenshot:
-    'https://cdn.sanity.io/images/euty36ag/production/0e1ec692afdc9e643a65e2db11d8fde5e2caaf65-3392x1446.png',
-  height: 760 + 4, // 4 is iframe border
+  screenshot: featureWithSimpleThreeColumnWithLargeIconsScreenshot.src,
 };
 
 const templateFeatureOffsetWithList: SanityTemplate = {
@@ -127,9 +124,7 @@ const templateFeatureOffsetWithList: SanityTemplate = {
   category: TemplateCategory.feature,
   area: TemplateArea.marketing,
   template: featureWithOffsetList,
-  screenshot:
-    'https://cdn.sanity.io/images/euty36ag/production/aa173f6b8b80df4dbb473068e52e5c28d0c0d819-3392x1602.png',
-  height: 1152 + 4, // 4 is iframe border
+  screenshot: featureWithOffsetListScreenshot.src,
 };
 
 const templateFeatureSimple: SanityTemplate = {
@@ -140,9 +135,7 @@ const templateFeatureSimple: SanityTemplate = {
   category: TemplateCategory.feature,
   area: TemplateArea.marketing,
   template: featureSimple,
-  screenshot:
-    'https://cdn.sanity.io/images/euty36ag/production/aab75586e6aa1f3f558b9424b4ad9242067a7a97-3392x1688.png',
-  height: 896 + 4, // 4 is iframe border
+  screenshot: featureSimpleScreenshot.src,
 };
 
 const templateFeatureWithSimpleThreeColumnWithSmallIconsDark: SanityTemplate = {
@@ -153,9 +146,7 @@ const templateFeatureWithSimpleThreeColumnWithSmallIconsDark: SanityTemplate = {
   category: TemplateCategory.feature,
   area: TemplateArea.marketing,
   template: featureWithSimpleThreeColumnWithSmallIconsDark,
-  screenshot:
-    'https://cdn.sanity.io/images/euty36ag/production/40e814d97169052b4c114dcc43d369f400a9f71e-3392x1446.png',
-  height: 724 + 4, // 4 is iframe border
+  screenshot: featureWithSimpleThreeColumnWithSmallIconsDarkScreenshot.src,
 };
 
 const templateLogoCloud: SanityTemplate = {
@@ -166,9 +157,7 @@ const templateLogoCloud: SanityTemplate = {
   category: TemplateCategory.logoCloudGrid,
   area: TemplateArea.marketing,
   template: logoCloud,
-  screenshot:
-    'https://cdn.sanity.io/images/euty36ag/production/40e814d97169052b4c114dcc43d369f400a9f71e-3392x1446.png',
-  height: 381 + 4, // 4 is iframe border
+  screenshot:logoCloudScreenshot.src,
 };
 
 export const PageBlockPresets = [
@@ -184,11 +173,7 @@ export const PageBlockPresets = [
   templateFeatureSimple,
   templateFeatureWithSimpleThreeColumnWithSmallIconsDark,
   templateLogoCloud,
-].map((t) => ({
-  name: t.name,
-  value: t.template,
-  meta: { ...t, template: undefined },
-})) as Preset[];
+];
 
 export default [
   templateCategoryPreview,

@@ -24,19 +24,24 @@ const DefaultRenderItemView = ({ preset }: RenderItemViewProps) => {
 const ItemContainer = styled.div`
   font-size: 10px;
   overflow: hidden;
-  background-color: #242424b5;
+  background-color: #24242459;
   border-radius: 5px;
-  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  opacity: 0.9;
+
+  &:hover {
+    cursor: zoom-in;
+    opacity: 1;
+    background-color: #2424248c;
+  }
 `;
 
 const ItemActions = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #00000026;
   padding-top: 6px;
 
   button.primary {
@@ -44,6 +49,7 @@ const ItemActions = styled.div`
     min-width: 50px;
     padding: 4px 12px;
     background-color: #1a345a;
+    color: white;
     align-self: flex-end;
     border-radius: 5px;
     &:hover {
@@ -52,16 +58,13 @@ const ItemActions = styled.div`
   }
 
   .title {
-    padding: 2px;
+    padding: 6px;
+    color: white;
     cursor: zoom-in;
     button {
       border: none;
       background: none;
       text-align: left;
-    }
-    &:hover {
-      background-color: #ffffff1c;
-      cursor: zoom-in;
     }
   }
 `;
@@ -82,12 +85,12 @@ const DefaultRenderItem = ({
 
   return (
     <ItemContainer>
-      <div>{renderItemView({ preset })}</div>
+      <div className="preview" onClick={handleSelectSingle}>
+        {renderItemView({ preset })}
+      </div>
       <ItemActions>
         <div className="title">
-          <button onClick={handleSelectSingle} style={{ textWrap: 'wrap' }}>
-            {preset.meta.title}
-          </button>
+          <div style={{ textWrap: 'wrap' }}>{preset.meta.title}</div>
         </div>
         <button className="primary" onClick={handleClick}>
           Add
@@ -102,6 +105,9 @@ const ViewContainer = styled.div`
   flex-direction: row;
   justify-content: stretch;
   gap: 16px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #9f9f9f4a;
 `;
 
 const PopupInnerContainer = styled.div`

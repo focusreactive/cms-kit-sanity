@@ -3,8 +3,9 @@ import { author } from '@/sanity/schemas/author';
 import { seo } from './seo';
 import { heroFields } from '../../../ContentComponents/SimpleHero/sa-schemas';
 import { defineBlocksField } from '@/sanity/plugins/content-blocks/define-blocks-field';
-import { PageBlockPresets } from '../../../ContentBlocks/PageBlock/sa-templates';
 import { contentBlocksSchemas } from '../../../ContentBlocks/sa-schemas';
+import { renderItemView } from '@/sanity/plugins/blocks-preview/render-item-view';
+import { contentBlockPresets } from '@/components/here_reusable_components_lets_decide_the_folders_name/ContentBlocks/sa-templates';
 
 const ofTypes = contentBlocksSchemas
   .filter((t) => t.type !== 'array')
@@ -28,7 +29,6 @@ export const landing = defineType({
     },
   ],
   fields: [
-    ...heroFields,
     defineField({
       name: 'slug',
       title: 'Slug',
@@ -38,6 +38,16 @@ export const landing = defineType({
         maxLength: 96,
       },
     }),
+    defineBlocksField({
+      name: 'content',
+      of: ofTypes,
+      group: 'contentGroup',
+      options: {
+        presets: contentBlockPresets,
+        renderItemView: renderItemView,
+      },
+    }),
+    ...heroFields,
     defineField({
       name: 'seo',
       title: 'SEO & Metatags',
@@ -50,13 +60,6 @@ export const landing = defineType({
       type: 'image',
       options: {
         hotspot: true,
-      },
-    }),
-    defineBlocksField({
-      name: 'content',
-      of: ofTypes,
-      options: {
-        presets: PageBlockPresets,
       },
     }),
     defineField({

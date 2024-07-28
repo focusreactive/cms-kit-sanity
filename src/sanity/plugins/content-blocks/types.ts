@@ -10,6 +10,7 @@ export type Preset = {
     area: string;
     category: string;
     title: string;
+    screenshot: string;
   };
 };
 
