@@ -12,6 +12,7 @@ import { defineBlockType } from '../../sa-config';
 import { blockOptions } from '../../ContentComponents/Section';
 import { defineBlocksField } from '@/sanity/plugins/content-blocks/define-blocks-field';
 import { subBlockPresets } from '../../SubBlocks/sa-templates';
+import { renderItemView } from '@/sanity/plugins/blocks-preview/render-item-view';
 
 export const pageBlock = defineBlockType(({ df }) => ({
   name: 'pageBlock',
@@ -21,17 +22,16 @@ export const pageBlock = defineBlockType(({ df }) => ({
     defineBlocksField({
       name: 'components',
       of: [
-        { type: grid.name },
+        { type: badges.name },
+        { type: buttons.name },
+        { type: styledRichText.name },
         { type: styledImage.name },
         { type: featurePoints.name },
-        { type: styledRichText.name },
         { type: logoCloudGrid.name },
-        { type: blogSection.name },
-        { type: buttons.name },
-        { type: badges.name },
       ],
       options: {
         presets: subBlockPresets,
+        renderItemView: renderItemView,
       },
     }),
     df({

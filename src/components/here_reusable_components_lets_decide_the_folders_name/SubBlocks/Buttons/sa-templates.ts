@@ -4,6 +4,7 @@ import type { SanityTemplate } from '@focus-reactive/cms-kit-sanity/sanity';
 import { buttons } from './sa-schema';
 import twoButtons from './templates/sa-mock-two-buttons.json';
 import { namespace } from '../../namespace.config';
+import preview from './templates/preview.png';
 
 export const templateTwoButtons: SanityTemplate = {
   name: 'twoButtons',
@@ -15,6 +16,7 @@ export const templateTwoButtons: SanityTemplate = {
   area: TemplateArea.marketing,
   template: twoButtons,
   height: 80 + 4, // 4 is iframe border
+  screenshot: preview.src,
 };
 
 export default [templateTwoButtons];

@@ -4,6 +4,7 @@ import type { SanityTemplate } from '@focus-reactive/cms-kit-sanity/sanity';
 import { namespace } from '../../namespace.config';
 import { logoCloudGrid } from './sa-schema';
 import logoCloudGridJSON from './templates/sa-mock-logo-cloud.json';
+import preview from './templates/preview.png';
 
 const templateLogoCloud: SanityTemplate = {
   name: 'logoCloudGrid',
@@ -15,6 +16,7 @@ const templateLogoCloud: SanityTemplate = {
   area: TemplateArea.eCommerce,
   template: logoCloudGridJSON,
   height: 88 + 4, // 4 is iframe border
+  screenshot: preview.src,
 };
 
 export default [templateLogoCloud];
