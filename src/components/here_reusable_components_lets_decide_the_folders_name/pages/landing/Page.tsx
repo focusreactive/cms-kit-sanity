@@ -3,8 +3,8 @@
 import type { PagePayload } from './types';
 
 import { renderSanityComponent } from '@focus-reactive/cms-kit-sanity/sanity-next';
-import { sets } from '../../../config';
-import { SimpleHero } from '../../ContentComponents/SimpleHero';
+import { sets } from '../../config';
+import { SimpleHero } from '../../ui/SimpleHero';
 import SimpleFooter from '@/components/global/SimpleFooter';
 
 export interface PageProps {

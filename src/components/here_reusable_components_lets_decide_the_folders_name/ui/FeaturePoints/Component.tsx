@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { featurePointStyles } from '../../ContentComponents/Section/common-schemas';
 import { getCmsKey } from '@focus-reactive/cms-kit-sanity';
 import type { SmartLinkProps } from '@focus-reactive/cms-kit-sanity/sanity';
 import { classnames } from '@focus-reactive/cms-kit-sanity/common';
-import { SmartImage } from '../../ContentComponents/SmartImage';
+import { featurePointStyles } from '../../cms/ContentComponents/Section/common-schemas';
+import { SmartImage } from '../SmartImage';
 
 const iconStyle = featurePointStyles.map((style) => style.value);
 

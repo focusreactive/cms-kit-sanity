@@ -9,7 +9,7 @@ import { styledRichText } from '../../SubBlocks/StyledRichText/sa-schema';
 import { buttons } from '../../SubBlocks/Buttons/sa-schema';
 import { badges } from '../../SubBlocks/Badges/sa-schema';
 import { defineBlockType } from '../../../sa-config';
-import { blockOptions } from '../../ContentComponents/Section';
+import { blockOptions } from '../../../ui/Section';
 import { defineBlocksField } from '@/sanity/plugins/content-blocks/define-blocks-field';
 import { subBlockPresets } from '../../SubBlocks/sa-templates';
 import { renderItemView } from '@/sanity/plugins/blocks-preview/render-item-view';

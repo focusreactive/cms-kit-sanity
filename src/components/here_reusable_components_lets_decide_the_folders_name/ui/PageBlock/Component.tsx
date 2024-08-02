@@ -1,13 +1,7 @@
 import React from 'react';
 
 import { ContentBlockGeneric } from '@focus-reactive/cms-kit-sanity/sanity';
-
-import {
-  GenericComponent,
-  Section,
-  SectionProps,
-  isDarkColor,
-} from '../../ContentComponents/Section';
+import { GenericComponent, isDarkColor, Section, SectionProps } from '../Section';
 
 type Props = ContentBlockGeneric & {
   components: GenericComponent[];

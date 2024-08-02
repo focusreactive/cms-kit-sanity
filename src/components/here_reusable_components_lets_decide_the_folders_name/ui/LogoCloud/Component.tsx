@@ -1,15 +1,13 @@
 'use client';
 import React from 'react';
 
-import { SmartImage } from '../../ContentComponents/SmartImage';
-
 import { getCmsKey } from '@focus-reactive/cms-kit-sanity';
 import {
   SmartLink,
   SmartLinkProps,
 } from '@focus-reactive/cms-kit-sanity/sanity';
-
-import type { logoItem } from './sa-schema';
+import { SmartImage } from '../SmartImage';
+import { logoItem } from '../../cms/SubBlocks/LogoCloud/sa-schema';
 
 type LogoItem = {
   _key: string;

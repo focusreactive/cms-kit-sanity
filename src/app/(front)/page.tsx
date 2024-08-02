@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import { studioUrl } from '@/sanity/lib/api'
 import { loadHomePage } from '@/sanity/loader/loadQuery'
-import Page from '@/components/here_reusable_components_lets_decide_the_folders_name/cms/pages/landing/Page'
+import Page from '@/components/here_reusable_components_lets_decide_the_folders_name/pages/landing/Page'
 const PagePreview = dynamic(
   () => import('@/components/here_reusable_components_lets_decide_the_folders_name/cms/pages/landing/PagePreview'),
 )

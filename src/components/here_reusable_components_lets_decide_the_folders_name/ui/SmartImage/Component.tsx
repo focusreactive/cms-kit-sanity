@@ -2,8 +2,8 @@ import React from 'react';
 
 import { withCMS } from '@focus-reactive/cms-kit-sanity';
 import Image from 'next/image';
-import { sa } from './sa-adapter';
-import { SmartImageProps } from './types';
+import { sa } from '../../cms/ContentComponents/SmartImage/sa-adapter';
+import { SmartImageProps } from '../../cms/ContentComponents/SmartImage/types';
 
 function SmartImage({
   imageWithMetadata,

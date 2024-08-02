@@ -3,8 +3,8 @@
 import { type QueryResponseInitial } from '@sanity/react-loader/rsc'
 
 import { useQuery } from '@/sanity/loader/useQuery'
-import { PagePayload } from './types'
-import Page from './Page'
+import { PagePayload } from '../../../pages/landing/types'
+import Page from '../../../pages/landing/Page'
 import { landingPageQuery } from './sa/landingPageQuery'
 import { LandingPayload } from '@/types'
 

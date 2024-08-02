@@ -4,9 +4,9 @@ import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 import { toPlainText } from 'next-sanity'
 
-import Page from '@/components/here_reusable_components_lets_decide_the_folders_name/cms/pages/landing/Page'
 import { generateStaticSlugs } from '@/sanity/loader/generateStaticSlugs'
 import { loadLanding, loadPage } from '@/sanity/loader/loadQuery'
+import Page from '@/components/here_reusable_components_lets_decide_the_folders_name/pages/landing/Page'
 const PagePreview = dynamic(
   () => import('@/components/here_reusable_components_lets_decide_the_folders_name/cms/pages/landing/PagePreview'),
 )

@@ -10,9 +10,9 @@ import {
 import { vercelStegaSplit } from '@vercel/stega';
 
 import { SmartImage } from '../SmartImage';
-import type { grid } from '../../ContentBlocks/Grid/sa-schema';
-import type { GridElement } from '../../ContentBlocks/Grid/Component';
-import { StyledRichText } from '../../SubBlocks/StyledRichText';
+import type { grid } from '../../cms/ContentBlocks/Grid/sa-schema';
+import type { GridElement } from '../Grid/Component';
+import { StyledRichText } from '../StyledRichText';
 
 const colors = backgroundColors.map((color) => color.value);
 const secondary = layoutSecondaryOptions.map((option) => option.value);

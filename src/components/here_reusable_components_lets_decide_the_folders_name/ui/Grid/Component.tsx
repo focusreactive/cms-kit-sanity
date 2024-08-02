@@ -1,10 +1,10 @@
 import React from 'react';
-import { SmartImage } from '../../ContentComponents/SmartImage';
+import { SmartImage } from '../SmartImage';
 
 import { getCmsKey } from '@focus-reactive/cms-kit-sanity';
 import { GenericRichText } from '@focus-reactive/cms-kit-sanity/common';
 
-import type { gridCard } from './sa-schema';
+import type { gridCard } from '../../cms/ContentBlocks/Grid/sa-schema';
 
 type GridCard = {
   customRichText: [];
