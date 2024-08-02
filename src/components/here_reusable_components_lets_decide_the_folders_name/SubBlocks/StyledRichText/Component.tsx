@@ -4,9 +4,6 @@ import type { componentAlignment } from '../../ContentComponents/Section/common-
 
 import { classnames } from '@focus-reactive/cms-kit-sanity/common';
 
-import { AdapterFn, getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
-import { SmartLink, SmartLinkProps, ContentBlockGeneric, ContentTypeName } from '@focus-reactive/cms-kit-sanity/sanity';
-
 import { GenericRichText } from '@focus-reactive/cms-kit-sanity/common';
 
 type Props = {
@@ -101,18 +98,4 @@ function StyledRichText({
   );
 }
 
-const sa: AdapterFn = cmsProps => {
-  return {
-    key: getCmsKey(cmsProps),
-    ...cmsProps,
-  };
-};
-
-const sb: AdapterFn = cmsProps => {
-  return {
-    key: getCmsKey(cmsProps),
-    ...cmsProps,
-  };
-};
-
-export default withCMS({ sa, sb })(StyledRichText);
+export default StyledRichText;

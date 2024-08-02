@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { AdapterFn, getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
 import { classnames } from '@focus-reactive/cms-kit-sanity/common';
 import { SmartImage } from '../../ContentComponents/SmartImage';
 
@@ -11,7 +10,7 @@ type Props = {
   };
 };
 
-function StyledImage({ imageWithMetadata, isDarkTheme }: Props) {
+function LogoGrid({ imageWithMetadata, isDarkTheme }: Props) {
   return (
     <div className="relative overflow-hidden px-6 pt-16 lg:px-8 ">
       <SmartImage
@@ -32,18 +31,4 @@ function StyledImage({ imageWithMetadata, isDarkTheme }: Props) {
   );
 }
 
-const sa: AdapterFn = (cmsProps) => {
-  return {
-    key: getCmsKey(cmsProps),
-    ...cmsProps,
-  };
-};
-
-const sb: AdapterFn = (cmsProps) => {
-  return {
-    key: getCmsKey(cmsProps),
-    ...cmsProps,
-  };
-};
-
-export default withCMS({ sa, sb })(StyledImage);
+export default LogoGrid;

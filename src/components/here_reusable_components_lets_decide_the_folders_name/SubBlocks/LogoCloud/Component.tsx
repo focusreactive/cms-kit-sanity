@@ -3,8 +3,11 @@ import React from 'react';
 
 import { SmartImage } from '../../ContentComponents/SmartImage';
 
-import { AdapterFn, getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
-import { SmartLink, SmartLinkProps, ContentBlockGeneric, ContentTypeName } from '@focus-reactive/cms-kit-sanity/sanity';
+import { getCmsKey } from '@focus-reactive/cms-kit-sanity';
+import {
+  SmartLink,
+  SmartLinkProps,
+} from '@focus-reactive/cms-kit-sanity/sanity';
 
 import type { logoItem } from './sa-schema';
 
@@ -49,7 +52,7 @@ function LogoGrid(props: Props) {
     <div className="bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-          {items.map(item => {
+          {items.map((item) => {
             return <LogoItem {...item} key={getCmsKey(item)} />;
           })}
         </div>
@@ -58,18 +61,4 @@ function LogoGrid(props: Props) {
   );
 }
 
-const sa: AdapterFn = cmsProps => {
-  return {
-    key: getCmsKey(cmsProps),
-    ...cmsProps,
-  };
-};
-
-const sb: AdapterFn = cmsProps => {
-  return {
-    key: getCmsKey(cmsProps),
-    ...cmsProps,
-  };
-};
-
-export default withCMS({ sa, sb })(LogoGrid);
+export default LogoGrid;

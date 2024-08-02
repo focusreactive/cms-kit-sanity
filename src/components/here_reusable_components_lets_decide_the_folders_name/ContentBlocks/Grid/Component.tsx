@@ -1,7 +1,7 @@
 import React from 'react';
 import { SmartImage } from '../../ContentComponents/SmartImage';
 
-import { AdapterFn, getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
+import { getCmsKey } from '@focus-reactive/cms-kit-sanity';
 import { GenericRichText } from '@focus-reactive/cms-kit-sanity/common';
 
 import type { gridCard } from './sa-schema';
@@ -82,18 +82,4 @@ function Grid(props: Props) {
   );
 }
 
-const sa: AdapterFn = (cmsProps) => {
-  return {
-    key: getCmsKey(cmsProps),
-    ...cmsProps,
-  };
-};
-
-const sb: AdapterFn = (cmsProps) => {
-  return {
-    key: getCmsKey(cmsProps),
-    ...cmsProps,
-  };
-};
-
-export default withCMS({ sa, sb })(Grid);
+export default Grid

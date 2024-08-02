@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 import type { ReactNode } from 'react';
 import { classnames } from '@focus-reactive/cms-kit-sanity/common';
 import {
@@ -7,6 +7,7 @@ import {
   layoutSecondaryOptions,
   backgroundColors,
 } from '@focus-reactive/cms-kit-sanity/sanity';
+import { vercelStegaSplit } from '@vercel/stega';
 
 import { SmartImage } from '../SmartImage';
 import type { grid } from '../../ContentBlocks/Grid/sa-schema';
@@ -20,6 +21,22 @@ export const isDarkColor = (selectedColor: string) => {
   const index = backgroundColors.findIndex((color) => color.title === 'dark');
 
   return selectedColor === backgroundColors[index].value;
+};
+
+const cleanObject = (obj?: object): object | undefined => {
+  if (!obj) {
+    return obj;
+  }
+  const entries = Object.entries(obj);
+  const cleanObj: { [key: string]: string } = {};
+  entries.forEach(([key, val]) => {
+    if (typeof val !== 'string') {
+      cleanObj[key] = val;
+      return;
+    }
+    cleanObj[key] = val ? vercelStegaSplit(val).cleaned : val;
+  });
+  return cleanObj;
 };
 
 export type BackgroundOptions = {
@@ -209,10 +226,14 @@ export const Section = ({
   backgroundOptions,
   layoutOptions,
 }: SectionProps) => {
+  const cleaned = {
+    backgroundOptions: cleanObject(backgroundOptions) as BackgroundOptions,
+    layoutOptions: cleanObject(layoutOptions) as LayoutOptions,
+  };
   return (
-    <section className={`relative ${backgroundOptions?.colorSelector}`}>
-      <BackgroundSelector backgroundOptions={backgroundOptions} />
-      <MainContainerSelector layoutOptions={layoutOptions}>
+    <section className={`relative ${cleaned.backgroundOptions?.colorSelector}`}>
+      <BackgroundSelector backgroundOptions={cleaned.backgroundOptions} />
+      <MainContainerSelector layoutOptions={cleaned.layoutOptions}>
         {children}
       </MainContainerSelector>
     </section>

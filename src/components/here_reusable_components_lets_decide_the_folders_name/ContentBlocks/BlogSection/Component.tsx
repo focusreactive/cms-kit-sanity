@@ -2,7 +2,7 @@
 import React from 'react';
 import { SmartImage } from '../../ContentComponents/SmartImage';
 
-import { AdapterFn, getCmsKey, withCMS } from '@focus-reactive/cms-kit-sanity';
+import { getCmsKey } from '@focus-reactive/cms-kit-sanity';
 import {
   SmartLink,
   SmartLinkProps,
@@ -173,18 +173,4 @@ function BlogSection(props: Props) {
   );
 }
 
-const sa: AdapterFn = (cmsProps) => {
-  return {
-    key: getCmsKey(cmsProps),
-    ...cmsProps,
-  };
-};
-
-const sb: AdapterFn = (cmsProps) => {
-  return {
-    key: getCmsKey(cmsProps),
-    ...cmsProps,
-  };
-};
-
-export default withCMS({ sa, sb })(BlogSection);
+export default BlogSection;

@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { withCMS } from '@focus-reactive/cms-kit-sanity';
 import { ContentBlockGeneric } from '@focus-reactive/cms-kit-sanity/sanity';
 
 import {
@@ -9,8 +8,6 @@ import {
   SectionProps,
   isDarkColor,
 } from '../../ContentComponents/Section';
-import { sa } from './sa-adapters';
-import { sb } from './sb-adapters';
 
 type Props = ContentBlockGeneric & {
   components: GenericComponent[];
@@ -37,5 +34,4 @@ function PageBlock({ components, blockOptions, renderSanityComponent }: Props) {
   );
 }
 
-// @ts-ignore
-export default withCMS({ sa, sb })(PageBlock);
+export default PageBlock

@@ -1,18 +1,16 @@
 import React from 'react';
 
-import { getCmsKey, withCMS, AdapterFn } from '@focus-reactive/cms-kit-sanity';
 import type { SmartLinkProps } from '@focus-reactive/cms-kit-sanity/sanity';
 import { classnames } from '@focus-reactive/cms-kit-sanity/common';
 
 type Props = {
   primaryText: string;
   primaryLink: SmartLinkProps;
-  secondaryLink?: SmartLinkProps;
   isDarkTheme: boolean;
 };
 
 function Badges(props: Props) {
-  const { primaryLink, secondaryLink, primaryText, isDarkTheme } = props;
+  const { primaryLink, primaryText, isDarkTheme } = props;
 
   return (
     <div className="hidden sm:mb-8 sm:flex sm:justify-center">
@@ -37,18 +35,4 @@ function Badges(props: Props) {
   );
 }
 
-const sa: AdapterFn = (cmsProps) => {
-  return {
-    key: getCmsKey(cmsProps),
-    ...cmsProps,
-  };
-};
-
-const sb: AdapterFn = (cmsProps) => {
-  return {
-    key: getCmsKey(cmsProps),
-    ...cmsProps,
-  };
-};
-
-export default withCMS({ sa, sb })(Badges);
+export default Badges;
