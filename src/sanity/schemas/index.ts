@@ -1,4 +1,4 @@
-import landing from '@/components/here_reusable_components_lets_decide_the_folders_name/pages/landing/sa/schemas'
+import landing from '@/components/here_reusable_components_lets_decide_the_folders_name/cms/pages/landing/sa/schemas'
 import author from './author'
 
 import page from './documents/page'

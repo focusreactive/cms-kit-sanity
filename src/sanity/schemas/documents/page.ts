@@ -3,7 +3,7 @@ import { defineArrayMember, defineField, defineType } from 'sanity';
 
 import { defineBlocksField } from '@/sanity/plugins/content-blocks/define-blocks-field';
 import { blockTypes } from '@/components/here_reusable_components_lets_decide_the_folders_name/sa-set';
-import { PageBlockPresets } from '@/components/here_reusable_components_lets_decide_the_folders_name/ContentBlocks/PageBlock/sa-templates';
+import { PageBlockPresets } from '@/components/here_reusable_components_lets_decide_the_folders_name/cms/ContentBlocks/PageBlock/sa-templates';
 
 const ofTypes = blockTypes
   .filter((t) => t.type !== 'array')

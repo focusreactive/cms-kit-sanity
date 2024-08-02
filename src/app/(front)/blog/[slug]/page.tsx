@@ -4,12 +4,12 @@ import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 import { toPlainText } from 'next-sanity'
 
-import { BlogPost } from '@/components/here_reusable_components_lets_decide_the_folders_name/pages/blog/BlogPost'
+import { BlogPost } from '@/components/here_reusable_components_lets_decide_the_folders_name/cms/pages/blog/BlogPost'
 import { urlForOpenGraphImage } from '@/sanity/lib/utils'
 import { generateStaticSlugs } from '@/sanity/loader/generateStaticSlugs'
 import { loadBlogPost } from '@/sanity/loader/loadQuery'
 const BlogPostPreview = dynamic(
-  () => import('@/components/here_reusable_components_lets_decide_the_folders_name/pages/blog/BlogPostPreview'),
+  () => import('@/components/here_reusable_components_lets_decide_the_folders_name/cms/pages/blog/BlogPostPreview'),
 )
 
 type Props = {
