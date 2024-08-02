@@ -7,9 +7,9 @@ import { toPlainText } from 'next-sanity'
 import { urlForOpenGraphImage } from '@/sanity/lib/utils'
 import { generateStaticSlugs } from '@/sanity/loader/generateStaticSlugs'
 import { loadBlogPost } from '@/sanity/loader/loadQuery'
-import BlogPost from '@/components/here_reusable_components_lets_decide_the_folders_name/pages/blog/BlogPost'
+import BlogPost from '@/components/cms-kit-components-set/pages/blog/BlogPost'
 const BlogPostPreview = dynamic(
-  () => import('@/components/here_reusable_components_lets_decide_the_folders_name/cms/pages/blog/BlogPostPreview'),
+  () => import('@/components/cms-kit-components-set/content-blocks/sanity/pages/blog/BlogPostPreview'),
 )
 
 type Props = {

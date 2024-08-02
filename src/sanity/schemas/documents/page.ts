@@ -2,8 +2,8 @@ import { DocumentIcon, ImageIcon } from '@sanity/icons';
 import { defineArrayMember, defineField, defineType } from 'sanity';
 
 import { defineBlocksField } from '@/sanity/plugins/content-blocks/define-blocks-field';
-import { blockTypes } from '@/components/here_reusable_components_lets_decide_the_folders_name/sa-set';
-import { PageBlockPresets } from '@/components/here_reusable_components_lets_decide_the_folders_name/cms/ContentBlocks/PageBlock/sa-templates';
+import { blockTypes } from '@/components/cms-kit-components-set/sa-set';
+import { PageBlockPresets } from '@/components/cms-kit-components-set/content-blocks/sanity/root-blocks/PageBlock/sa-templates';
 
 const ofTypes = blockTypes
   .filter((t) => t.type !== 'array')

@@ -16,7 +16,7 @@ import {
   SettingsPayload,
   LandingPayload,
 } from '@/types'
-import { landingPageQuery } from '@/components/here_reusable_components_lets_decide_the_folders_name/cms/pages/landing/sa/landingPageQuery'
+import { landingPageQuery } from '@/components/cms-kit-components-set/content-blocks/sanity/pages/landing/sa/landingPageQuery'
 
 const serverClient = client.withConfig({
   token,

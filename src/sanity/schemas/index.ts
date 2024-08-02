@@ -1,4 +1,4 @@
-import landing from '@/components/here_reusable_components_lets_decide_the_folders_name/cms/pages/landing/sa/schemas'
+import landing from '@/components/cms-kit-components-set/content-blocks/sanity/pages/landing/sa/schemas'
 import author from './author'
 
 import page from './documents/page'
@@ -8,7 +8,7 @@ import milestone from './objects/milestone'
 import timeline from './objects/timeline'
 import home from './singletons/home'
 import settings from './singletons/settings'
-import { blockTypes } from '@/components/here_reusable_components_lets_decide_the_folders_name/sa-set'
+import { blockTypes } from '@/components/cms-kit-components-set/sa-set'
 
 export const schemaTypes = [
   ...landing,
