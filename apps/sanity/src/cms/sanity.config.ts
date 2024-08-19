@@ -3,7 +3,6 @@
  * This config is used to set up Sanity Studio that's mounted on the `app/admin/[[...index]]/studio.tsx` route
  */
 
-// import { cmsKitPlugin, deskTool } from '@focus-reactive/cms-kit-sanity/sanity';
 import { visionTool } from '@sanity/vision';
 import { defineConfig } from 'sanity';
 import { presentationTool } from 'sanity/presentation';
