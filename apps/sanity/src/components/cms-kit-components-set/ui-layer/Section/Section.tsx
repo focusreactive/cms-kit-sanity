@@ -18,9 +18,10 @@ const colors = backgroundColors.map((color) => color.value);
 const secondary = layoutSecondaryOptions.map((option) => option.value);
 
 export const isDarkColor = (selectedColor: string) => {
-  const index = backgroundColors.findIndex((color) => color.title === 'dark');
-
-  return selectedColor === backgroundColors[index].value;
+  const colorProps = backgroundColors.find((c) =>
+    selectedColor.includes(c.value),
+  );
+  return !!colorProps?.title.includes('dark');
 };
 
 const cleanObject = (obj?: object): object | undefined => {
