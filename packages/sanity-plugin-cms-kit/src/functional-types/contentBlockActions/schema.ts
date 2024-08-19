@@ -5,5 +5,5 @@ export const createTemplateView = (params) =>
   defineGlobalType(() => ({
     name: 'templateView',
     type: 'string',
-    components: components(params),
+    // components: components(params),
   }));

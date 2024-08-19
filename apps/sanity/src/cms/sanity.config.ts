@@ -18,7 +18,6 @@ import { schemaTypes } from './schemas';
 import home from './schemas/singletons/home';
 import settings from './schemas/singletons/settings';
 import { CMSKitContentBlocks } from '@focus-reactive/sanity-plugin-cms-kit';
-import { blockTypes, presets } from '@/components/cms-kit-components-set/content-blocks/sanity';
 
 const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'CMS-KIT Sanity';
 
@@ -34,10 +33,7 @@ export default defineConfig({
     structureTool({
       structure: pageStructure([home, settings]),
     }),
-    CMSKitContentBlocks({
-      blockTypes,
-      presets,
-    }),
+    CMSKitContentBlocks({}),
     presentationTool({
       resolve,
       previewUrl: {
