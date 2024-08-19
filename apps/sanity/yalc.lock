@@ -1,0 +1,8 @@
+{
+  "version": "v1",
+  "packages": {
+    "@focus-reactive/sanity-plugin-cms-kit": {
+      "signature": "65ed96aac2c2bd7025f69ec1e52c6c39"
+    }
+  }
+}
