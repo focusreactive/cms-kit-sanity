@@ -14,7 +14,8 @@
     "rollout:action": "./src/rollout-tools/demo/cli.mjs",
     "rollout:demo": "node --env-file=.env ./src/rollout-tools/demo/cli.mjs",
     "export-dataset": "sanity dataset export production initial-data.tar.gz",
-    "test:content-upload": "sanity dataset create testing; sanity dataset import initial-data.tar.gz testing && sanity dataset delete testing --force"
+    "test:content-upload": "sanity dataset create testing; sanity dataset import initial-data.tar.gz testing && sanity dataset delete testing --force",
+    "update": "yalc update"
   },
   "prettier": {
     "semi": true,
@@ -23,6 +24,7 @@
   },
   "dependencies": {
     "@focus-reactive/cms-kit-sanity": "0.1.21",
+    "@focus-reactive/sanity-plugin-cms-kit": "file:.yalc/@focus-reactive/sanity-plugin-cms-kit",
     "@next/env": "14.2.4",
     "@sanity/demo": "2.0.0",
     "@sanity/icons": "3.2.0",
@@ -65,6 +67,7 @@
     "prettier-plugin-tailwindcss": "0.6.5",
     "tailwindcss": "3.4.4",
     "typescript": "5.4.5",
-    "typescript-eslint": "^7.15.0"
+    "typescript-eslint": "^7.15.0",
+    "yalc": "1.0.0-pre.53"
   }
 }

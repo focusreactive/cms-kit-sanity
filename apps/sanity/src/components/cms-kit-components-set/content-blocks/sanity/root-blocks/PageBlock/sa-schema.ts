@@ -10,7 +10,7 @@ import { buttons } from '../../sub-blocks/Buttons/sa-schema';
 import { badges } from '../../sub-blocks/Badges/sa-schema';
 import { defineBlockType } from '../../type-utils';
 import { blockOptions } from '../../../../ui-layer/Section';
-import { defineBlocksField } from '@/sanity/plugins/content-blocks/define-blocks-field';
+import { defineBlocksField } from '@focus-reactive/sanity-plugin-cms-kit';
 import { subBlockPresets } from '../../sub-blocks/sa-templates';
 import { renderItemView } from '@/sanity/plugins/blocks-preview/render-item-view';
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import { BlockActions } from './BlockActions';
 
 export const components = (params) => ({

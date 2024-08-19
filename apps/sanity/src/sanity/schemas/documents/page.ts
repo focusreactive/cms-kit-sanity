@@ -1,7 +1,7 @@
 import { DocumentIcon, ImageIcon } from '@sanity/icons';
 import { defineArrayMember, defineField, defineType } from 'sanity';
 
-import { defineBlocksField } from '@/sanity/plugins/content-blocks/define-blocks-field';
+import { defineBlocksField } from '@focus-reactive/sanity-plugin-cms-kit';
 import { blockTypes } from '@/components/cms-kit-components-set/content-blocks/sanity';
 import { PageBlockPresets } from '@/components/cms-kit-components-set/content-blocks/sanity/root-blocks/PageBlock/sa-templates';
 
