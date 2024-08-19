@@ -12,11 +12,13 @@
   },
   "peerDependencies": {
     "react": "*",
-    "sanity": "^3.0.0"
+    "sanity": "^3.0.0",
+    "@sanity/ui": "*",
+    "@sanity/icons": "*"
   },
   "scripts": {
     "build": "tsc",
     "build:swc": "swc src -d dist -D",
-    "update": "yalc publish"
+    "update": "pnpm run build && yalc publish"
   }
 }
