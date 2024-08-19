@@ -5,7 +5,7 @@ import blogJSON from './templates/sa-mock-blog-section.json';
 import screenshot from './templates/sa-mock-blog-section.png';
 import threeColumnWithImages from './templates/three-column-with-images.json';
 import threeColumnWithImagesScreenshot from './templates/three-column-with-images.png';
-import { namespace } from '../../../../namespace.config';
+import { namespace } from '../../namespace.config';
 
 const templateBlogSection: SanityTemplate = {
   name: 'blogSection',

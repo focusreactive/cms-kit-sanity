@@ -1,4 +1,4 @@
-import { defineComponentType } from '../../../../sa-config';
+import { defineComponentType } from '../../sa-config';
 
 import { badgesSecondaryOptions } from '../../functional-blocks/Section/common-schemas';
 import {

@@ -1,13 +1,13 @@
 import type { Kit } from '@focus-reactive/cms-kit-sanity/sanity';
 
 import { namespace } from './namespace.config';
-import { contentBlocksSchemas } from './content-blocks/sanity/root-blocks/sa-schemas';
-import { subBlocksSchemas } from './content-blocks/sanity/sub-blocks/sa-schemas';
-import { contentComponentsSchemas } from './content-blocks/sanity/functional-blocks/sa-schemas';
-import { contentBlocksMap } from './content-blocks/sanity/root-blocks/sa-components';
-import { contentBlockPresets } from './content-blocks/sanity/root-blocks/sa-templates';
-import { subBlocksMap } from './content-blocks/sanity/sub-blocks/sa-components';
-import { subBlockTemplates } from './content-blocks/sanity/sub-blocks/sa-templates';
+import { contentBlocksSchemas } from './root-blocks/sa-schemas';
+import { subBlocksSchemas } from './sub-blocks/sa-schemas';
+import { contentComponentsSchemas } from './functional-blocks/sa-schemas';
+import { contentBlocksMap } from './root-blocks/sa-components';
+import { contentBlockPresets } from './root-blocks/sa-templates';
+import { subBlocksMap } from './sub-blocks/sa-components';
+import { subBlockTemplates } from './sub-blocks/sa-templates';
 import { Preset } from '@/sanity/plugins/content-blocks';
 
 export const blockTypes = [

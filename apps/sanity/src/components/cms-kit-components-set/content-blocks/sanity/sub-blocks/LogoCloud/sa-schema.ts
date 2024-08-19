@@ -1,4 +1,4 @@
-import { defineComponentType, defineUtilityType } from '../../../../sa-config';
+import { defineComponentType, defineUtilityType } from '../../sa-config';
 
 import {
   imageWithMetadata,

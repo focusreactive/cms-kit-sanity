@@ -3,7 +3,7 @@ import type { SanityTemplate } from '@focus-reactive/cms-kit-sanity/sanity';
 
 import { buttons } from './sa-schema';
 import twoButtons from './templates/sa-mock-two-buttons.json';
-import { namespace } from '../../../../namespace.config';
+import { namespace } from '../../namespace.config';
 import preview from './templates/preview.png';
 
 export const templateTwoButtons: SanityTemplate = {

@@ -8,7 +8,7 @@ import { featurePoints } from '../../sub-blocks/FeaturePoints/sa-schema';
 import { styledRichText } from '../../sub-blocks/StyledRichText/sa-schema';
 import { buttons } from '../../sub-blocks/Buttons/sa-schema';
 import { badges } from '../../sub-blocks/Badges/sa-schema';
-import { defineBlockType } from '../../../../sa-config';
+import { defineBlockType } from '../../sa-config';
 import { blockOptions } from '../../../../ui-layer/Section';
 import { defineBlocksField } from '@/sanity/plugins/content-blocks/define-blocks-field';
 import { subBlockPresets } from '../../sub-blocks/sa-templates';

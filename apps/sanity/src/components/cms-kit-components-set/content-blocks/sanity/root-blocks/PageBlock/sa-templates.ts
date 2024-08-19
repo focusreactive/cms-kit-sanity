@@ -23,7 +23,7 @@ import logoCloud from './templates/sa-mock-logo-cloud.json';
 import logoCloudScreenshot from './templates/sa-mock-logo-cloud.png';
 import featureSimple from './templates/sa-mock-feature-simple.json';
 import featureSimpleScreenshot from './templates/sa-mock-feature-simple.png';
-import { namespace } from '../../../../namespace.config';
+import { namespace } from '../../namespace.config';
 import templateCategoryScreenshot from './templates/sa-mock-category-preview.png';
 import templateFeatureWithImageScreenshot from './templates/sa-mock-feature-with-image-right.png';
 
