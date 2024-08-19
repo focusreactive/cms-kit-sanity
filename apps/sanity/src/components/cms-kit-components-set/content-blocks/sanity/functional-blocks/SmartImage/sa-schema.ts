@@ -1,4 +1,4 @@
-import { defineComponentType } from '../../sa-config';
+import { defineComponentType } from '../../type-utils';
 
 export const smartImage = defineComponentType(() => ({
   name: 'smartImage',

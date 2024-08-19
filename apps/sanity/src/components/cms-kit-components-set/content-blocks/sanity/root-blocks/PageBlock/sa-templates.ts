@@ -23,13 +23,11 @@ import logoCloud from './templates/sa-mock-logo-cloud.json';
 import logoCloudScreenshot from './templates/sa-mock-logo-cloud.png';
 import featureSimple from './templates/sa-mock-feature-simple.json';
 import featureSimpleScreenshot from './templates/sa-mock-feature-simple.png';
-import { namespace } from '../../namespace.config';
 import templateCategoryScreenshot from './templates/sa-mock-category-preview.png';
 import templateFeatureWithImageScreenshot from './templates/sa-mock-feature-with-image-right.png';
 
 const templateCategoryPreview: SanityTemplate = {
   name: 'pageBlock',
-  namespace: namespace.name,
   title: 'Category Preview',
   description: 'Page Block with Category Preview',
   category: TemplateCategory.pageBlock,
@@ -40,7 +38,6 @@ const templateCategoryPreview: SanityTemplate = {
 
 const templateFeatureGrid2x2: SanityTemplate = {
   name: 'featureGrid2x2',
-  namespace: namespace.name,
   title: 'Feature Grid',
   description: 'Page Block with Feature 2x2 gird',
   category: TemplateCategory.feature,
@@ -51,7 +48,6 @@ const templateFeatureGrid2x2: SanityTemplate = {
 
 const templateFeatureWithImageLeft: SanityTemplate = {
   name: 'featureWithImageLeft',
-  namespace: namespace.name,
   title: 'Feature With Image on the left',
   description: 'Page Block with Feature Left Image',
   category: TemplateCategory.feature,
@@ -62,7 +58,6 @@ const templateFeatureWithImageLeft: SanityTemplate = {
 
 const templateFeatureWithImageRight: SanityTemplate = {
   name: 'featureWithImageRight',
-  namespace: namespace.name,
   title: 'Feature With Image on the right',
   description: 'Page Block with Feature Right Image',
   category: TemplateCategory.feature,
@@ -73,7 +68,6 @@ const templateFeatureWithImageRight: SanityTemplate = {
 
 const templateFeatureWithLargeScreenshotLight: SanityTemplate = {
   name: 'featureWithLargeImageLight',
-  namespace: namespace.name,
   title: 'Feature With Large Image light',
   description: 'Page Block with Feature Large Image light',
   category: TemplateCategory.feature,
@@ -84,7 +78,6 @@ const templateFeatureWithLargeScreenshotLight: SanityTemplate = {
 
 const templateFeatureWithLargeScreenshotDark: SanityTemplate = {
   name: 'featureWithLargeImageDark',
-  namespace: namespace.name,
   title: 'Feature With Large Image dark',
   description: 'Page Block with Feature Large Image dark',
   category: TemplateCategory.feature,
@@ -96,7 +89,6 @@ const templateFeatureWithLargeScreenshotDark: SanityTemplate = {
 const templateFeatureWithSimpleThreeColumnWithSmallIconsLight: SanityTemplate =
   {
     name: 'featureWithSimpleThreeColumnWithSmallIconsLight',
-    namespace: namespace.name,
     title: 'Feature Simple three column with small icons light',
     description: 'Page Block Simple three column with small icons light',
     category: TemplateCategory.feature,
@@ -107,7 +99,6 @@ const templateFeatureWithSimpleThreeColumnWithSmallIconsLight: SanityTemplate =
 
 const templateFeatureWithSimpleThreeColumnWithLargeIcons: SanityTemplate = {
   name: 'featureWithSimpleThreeColumnWithLArgeIcons',
-  namespace: namespace.name,
   title: 'Feature Simple three column with large icons',
   description: 'Page Block Simple three column with large icons',
   category: TemplateCategory.feature,
@@ -118,7 +109,6 @@ const templateFeatureWithSimpleThreeColumnWithLargeIcons: SanityTemplate = {
 
 const templateFeatureOffsetWithList: SanityTemplate = {
   name: 'featureWithOffsetList',
-  namespace: namespace.name,
   title: 'Offset with feature list',
   description: 'Page Block with Offset with feature list',
   category: TemplateCategory.feature,
@@ -129,7 +119,6 @@ const templateFeatureOffsetWithList: SanityTemplate = {
 
 const templateFeatureSimple: SanityTemplate = {
   name: 'featureSimple',
-  namespace: namespace.name,
   title: 'Simple',
   description: 'Page Block with simple feature',
   category: TemplateCategory.feature,
@@ -140,7 +129,6 @@ const templateFeatureSimple: SanityTemplate = {
 
 const templateFeatureWithSimpleThreeColumnWithSmallIconsDark: SanityTemplate = {
   name: 'featureWithSimpleThreeColumnWithSmallIconsDark',
-  namespace: namespace.name,
   title: 'Feature Simple three column with small icons dark',
   description: 'Page Block Simple three column with small icons dark',
   category: TemplateCategory.feature,
@@ -151,7 +139,6 @@ const templateFeatureWithSimpleThreeColumnWithSmallIconsDark: SanityTemplate = {
 
 const templateLogoCloud: SanityTemplate = {
   name: 'templateLogoCloud',
-  namespace: namespace.name,
   title: 'Simple logo cloud',
   description: 'Simple logo cloud',
   category: TemplateCategory.logoCloudGrid,

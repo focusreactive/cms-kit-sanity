@@ -1,6 +1,6 @@
 'use client';
 
-import { sets } from '@/components/cms-kit-components-set/content-blocks/sanity/config';
+import twBase from '@/components/cms-kit-components-set/content-blocks/sanity';
 import { renderSanityComponent } from '@focus-reactive/cms-kit-sanity/sanity-next';
 
 export default function SingleTemplatePage({
@@ -14,7 +14,7 @@ export default function SingleTemplatePage({
 
   return (
     <div style={{ borderRadius: 4, border: '2px solid black' }}>
-      {renderSanityComponent({ sets })(template)}
+      {renderSanityComponent({ sets: [twBase] })(template)}
     </div>
   );
 }

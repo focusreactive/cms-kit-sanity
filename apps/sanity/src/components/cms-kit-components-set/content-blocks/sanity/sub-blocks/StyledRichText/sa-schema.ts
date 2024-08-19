@@ -1,4 +1,4 @@
-import { defineComponentType } from '../../sa-config';
+import { defineComponentType } from '../../type-utils';
 
 import { customRichText, ComponentPreview } from '@focus-reactive/cms-kit-sanity/sanity';
 

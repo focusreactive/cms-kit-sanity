@@ -1,7 +1,7 @@
 import {
   defineComponentType,
   defineUtilityType,
-} from '../../sa-config';
+} from '../../type-utils';
 
 import {
   customRichText,

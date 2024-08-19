@@ -1,6 +1,6 @@
 import type { Kit } from '@focus-reactive/cms-kit-sanity/sanity';
 
-import { namespace } from './namespace.config';
+import { setName } from '../set.config';
 import { contentBlocksSchemas } from './root-blocks/sa-schemas';
 import { subBlocksSchemas } from './sub-blocks/sa-schemas';
 import { contentComponentsSchemas } from './functional-blocks/sa-schemas';
@@ -24,10 +24,12 @@ export const presets: Preset[] = templates.map((t) => ({
 })) as Preset[];
 
 export const twBase: Kit = {
-  name: namespace.name,
-  [namespace.name]: {
+  name: setName.name,
+  [setName.name]: {
     types: blockTypes,
     blocksMap: { ...contentBlocksMap, ...subBlocksMap },
     templates: templates,
   },
 };
+
+export default twBase;

@@ -1,5 +1,5 @@
 import { imageWithMetadata } from '@focus-reactive/cms-kit-sanity/sanity';
-import { defineUtilityType } from '../../sa-config';
+import { defineUtilityType } from '../../type-utils';
 import {
   backgroundColors,
   backgroundPatterns,

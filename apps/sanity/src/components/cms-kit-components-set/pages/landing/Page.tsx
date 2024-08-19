@@ -3,9 +3,9 @@
 import type { PagePayload } from './types';
 
 import { renderSanityComponent } from '@focus-reactive/cms-kit-sanity/sanity-next';
-import { sets } from '../../content-blocks/sanity/config';
 import { SimpleHero } from '../../ui-layer/SimpleHero';
 import SimpleFooter from '@/components/global/SimpleFooter';
+import twBase from '../../content-blocks/sanity';
 
 export interface PageProps {
   data: PagePayload | null;
@@ -24,7 +24,7 @@ export function Page({ data }: PageProps) {
       />
       {content?.map(
         renderSanityComponent({
-          customNamespaces: sets,
+          sets: [twBase],
         }),
       )}
       <SimpleFooter />

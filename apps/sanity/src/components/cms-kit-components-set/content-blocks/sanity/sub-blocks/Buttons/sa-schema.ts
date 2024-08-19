@@ -1,4 +1,4 @@
-import { defineComponentType } from '../../sa-config';
+import { defineComponentType } from '../../type-utils';
 import { buttonsSecondaryOptions } from '../../functional-blocks/Section/common-schemas';
 import {
   ComponentPreview,

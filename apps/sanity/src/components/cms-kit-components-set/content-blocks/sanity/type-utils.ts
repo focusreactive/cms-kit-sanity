@@ -1,8 +1,8 @@
 import { createTypeGenerators } from '@focus-reactive/cms-kit-sanity/sanity-schema-type-utils';
 
-import { namespace } from './namespace.config';
+import { setName } from '../set.config';
 
 export const { defineBlockType, defineUtilityType, defineComponentType } =
   createTypeGenerators({
-    namespace,
+    namespace: setName,
   });

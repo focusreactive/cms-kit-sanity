@@ -8,7 +8,7 @@ import milestone from './objects/milestone'
 import timeline from './objects/timeline'
 import home from './singletons/home'
 import settings from './singletons/settings'
-import { blockTypes } from '@/components/cms-kit-components-set/content-blocks/sanity/sa-set'
+import { blockTypes } from '@/components/cms-kit-components-set/content-blocks/sanity'
 
 export const schemaTypes = [
   ...landing,

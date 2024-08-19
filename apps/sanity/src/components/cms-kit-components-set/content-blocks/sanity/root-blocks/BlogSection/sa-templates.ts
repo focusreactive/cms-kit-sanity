@@ -5,11 +5,9 @@ import blogJSON from './templates/sa-mock-blog-section.json';
 import screenshot from './templates/sa-mock-blog-section.png';
 import threeColumnWithImages from './templates/three-column-with-images.json';
 import threeColumnWithImagesScreenshot from './templates/three-column-with-images.png';
-import { namespace } from '../../namespace.config';
 
 const templateBlogSection: SanityTemplate = {
   name: 'blogSection',
-  namespace: namespace.name,
   title: 'Blog section',
   description: 'Blog section',
   category: TemplateCategory.blogSection,
@@ -20,7 +18,6 @@ const templateBlogSection: SanityTemplate = {
 
 const templateBlogSectionThree: SanityTemplate = {
   name: 'blogSectionWithImages',
-  namespace: namespace.name,
   title: 'Blog section with images',
   description: 'Blog section',
   category: TemplateCategory.blogSection,
