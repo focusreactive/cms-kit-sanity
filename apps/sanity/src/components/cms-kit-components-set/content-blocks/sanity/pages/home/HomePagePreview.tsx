@@ -2,8 +2,8 @@
 
 import { type QueryResponseInitial } from '@sanity/react-loader'
 
-import { homePageQuery } from '@/sanity/lib/queries'
-import { useQuery } from '@/sanity/loader/useQuery'
+import { homePageQuery } from '@/cms/lib/queries'
+import { useQuery } from '@/cms/loader/useQuery'
 import { HomePagePayload } from '@/types'
 
 import HomePage from './HomePage'

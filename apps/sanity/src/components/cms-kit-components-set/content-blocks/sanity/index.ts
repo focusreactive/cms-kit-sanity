@@ -8,7 +8,7 @@ import { contentBlocksMap } from './root-blocks/sa-components';
 import { contentBlockPresets } from './root-blocks/sa-templates';
 import { subBlocksMap } from './sub-blocks/sa-components';
 import { subBlockTemplates } from './sub-blocks/sa-templates';
-import { Preset } from '@/sanity/plugins/content-blocks';
+import { Preset } from '@/cms/plugins/content-blocks';
 
 export const blockTypes = [
   ...contentBlocksSchemas,

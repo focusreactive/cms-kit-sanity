@@ -12,7 +12,7 @@ import { defineBlockType } from '../../type-utils';
 import { blockOptions } from '../../../../ui-layer/Section';
 import { defineBlocksField } from '@focus-reactive/sanity-plugin-cms-kit';
 import { subBlockPresets } from '../../sub-blocks/sa-templates';
-import { renderItemView } from '@/sanity/plugins/blocks-preview/render-item-view';
+import { renderItemView } from '@/cms/plugins/blocks-preview/render-item-view';
 
 export const pageBlock = defineBlockType(({ df }) => ({
   name: 'pageBlock',

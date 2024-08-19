@@ -1,6 +1,6 @@
 'use client'
 
-import { useSettings } from '@/sanity/loader/useQuery'
+import { useSettings } from '@/cms/loader/useQuery'
 
 import FooterLayout from './FooterLayout'
 

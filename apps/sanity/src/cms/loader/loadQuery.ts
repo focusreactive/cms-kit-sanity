@@ -3,13 +3,13 @@ import 'server-only'
 import * as queryStore from '@sanity/react-loader'
 import { draftMode } from 'next/headers'
 
-import { client } from '@/sanity/lib/client'
+import { client } from '@/cms/lib/client'
 import {
   pagesBySlugQuery,
   postBySlugQuery,
   settingsQuery,
-} from '@/sanity/lib/queries'
-import { token } from '@/sanity/lib/token'
+} from '@/cms/lib/queries'
+import { token } from '@/cms/lib/token'
 import {
   PagePayload,
   BlogPostPayload,

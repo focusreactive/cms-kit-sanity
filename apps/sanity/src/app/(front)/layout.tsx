@@ -7,11 +7,11 @@ import { draftMode } from 'next/headers';
 // import { toPlainText } from 'next-sanity'
 import { Suspense } from 'react';
 
-import { urlForOpenGraphImage } from '@/sanity/lib/utils';
-import { loadHomePage, loadSettings } from '@/sanity/loader/loadQuery';
+import { urlForOpenGraphImage } from '@/cms/lib/utils';
+import { loadHomePage, loadSettings } from '@/cms/loader/loadQuery';
 
 const LiveVisualEditing = dynamic(
-  () => import('@/sanity/loader/LiveVisualEditing'),
+  () => import('@/cms/loader/LiveVisualEditing'),
 );
 
 export async function generateMetadata(): Promise<Metadata> {

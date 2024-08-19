@@ -5,7 +5,7 @@
 
 import { defineDocuments, defineLocations } from 'sanity/presentation'
 
-import { resolveHref } from '@/sanity/lib/utils'
+import { resolveHref } from '@/cms/lib/utils'
 
 export const mainDocuments = defineDocuments([
   {

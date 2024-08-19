@@ -1,10 +1,10 @@
 import { defineField, defineType } from 'sanity';
-import { author } from '@/sanity/schemas/author';
+import { author } from '@/cms/schemas/author';
 import { seo } from './seo';
 import { heroFields } from '../../../functional-blocks/SimpleHero/sa-schemas';
 import { defineBlocksField } from '@focus-reactive/sanity-plugin-cms-kit';
 import { contentBlocksSchemas } from '../../../root-blocks/sa-schemas';
-import { renderItemView } from '@/sanity/plugins/blocks-preview/render-item-view';
+import { renderItemView } from '@/cms/plugins/blocks-preview/render-item-view';
 import { contentBlockPresets } from '@/components/cms-kit-components-set/content-blocks/sanity/root-blocks/sa-templates';
 
 const ofTypes = contentBlocksSchemas

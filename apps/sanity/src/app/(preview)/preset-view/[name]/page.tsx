@@ -1,5 +1,5 @@
 import { presets } from '@/components/sa-set';
-import RenderPreset from '@/sanity/plugins/blocks-preview/RenderPreset';
+import RenderPreset from '@/cms/plugins/blocks-preview/RenderPreset';
 
 type Props = {
   params: { name: string };

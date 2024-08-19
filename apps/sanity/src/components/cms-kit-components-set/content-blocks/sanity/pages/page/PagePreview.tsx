@@ -2,8 +2,8 @@
 
 import { type QueryResponseInitial } from '@sanity/react-loader'
 
-import { pagesBySlugQuery } from '@/sanity/lib/queries'
-import { useQuery } from '@/sanity/loader/useQuery'
+import { pagesBySlugQuery } from '@/cms/lib/queries'
+import { useQuery } from '@/cms/loader/useQuery'
 import { PagePayload } from '@/types'
 
 import Page from './Page'

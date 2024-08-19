@@ -5,7 +5,7 @@ import featurePointsTemplates from './FeaturePoints/sa-templates';
 import styledRichTextTemplates from './StyledRichText/sa-templates';
 import SimpleBadge from './Badges/sa-templates';
 import TwoButtons from './Buttons/sa-templates';
-import { Preset } from '@/sanity/plugins/content-blocks';
+import { Preset } from '@/cms/plugins/content-blocks';
 
 
 export const subBlockTemplates = [

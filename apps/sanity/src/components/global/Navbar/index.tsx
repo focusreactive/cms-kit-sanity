@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic'
 import { draftMode } from 'next/headers'
 
-import { loadSettings } from '@/sanity/loader/loadQuery'
+import { loadSettings } from '@/cms/loader/loadQuery'
 
 import NavbarLayout from './NavbarLayout'
 const NavbarPreview = dynamic(() => import('./NavbarPreview'))

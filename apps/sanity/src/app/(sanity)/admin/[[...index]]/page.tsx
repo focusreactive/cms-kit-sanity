@@ -9,7 +9,7 @@
 
 import { NextStudio } from 'next-sanity/studio'
 
-import config from '@/sanity/sanity.config'
+import config from '@/cms/sanity.config'
 
 export const dynamic = 'force-static'
 

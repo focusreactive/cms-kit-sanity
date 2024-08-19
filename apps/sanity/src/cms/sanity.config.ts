@@ -10,9 +10,9 @@ import { presentationTool } from 'sanity/presentation';
 import { structureTool } from 'sanity/structure';
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash';
 
-import { apiVersion, dataset, projectId, studioUrl } from '@/sanity/lib/api';
-import * as resolve from '@/sanity/plugins/resolve';
-import { pageStructure, singletonPlugin } from '@/sanity/plugins/settings';
+import { apiVersion, dataset, projectId, studioUrl } from '@/cms/lib/api';
+import * as resolve from '@/cms/plugins/resolve';
+import { pageStructure, singletonPlugin } from '@/cms/plugins/settings';
 
 import { schemaTypes } from './schemas';
 import home from './schemas/singletons/home';

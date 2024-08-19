@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { resolveHref } from '@/sanity/lib/utils'
+import { resolveHref } from '@/cms/lib/utils'
 import type { MenuItem, SettingsPayload } from '@/types'
 
 interface NavbarProps {

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { PostListItem } from '@/components/pages/home/PostListItem'
 import { Header } from '@/components/shared/Header'
-import { resolveHref } from '@/sanity/lib/utils'
+import { resolveHref } from '@/cms/lib/utils'
 import type { HomePagePayload } from '@/types'
 
 export interface HomePageProps {

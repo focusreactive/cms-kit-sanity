@@ -2,8 +2,8 @@ import dynamic from 'next/dynamic'
 import { draftMode } from 'next/headers'
 import Link from 'next/link'
 
-import { studioUrl } from '@/sanity/lib/api'
-import { loadHomePage } from '@/sanity/loader/loadQuery'
+import { studioUrl } from '@/cms/lib/api'
+import { loadHomePage } from '@/cms/loader/loadQuery'
 import Page from '@/components/cms-kit-components-set/pages/landing/Page'
 const PagePreview = dynamic(
   () => import('@/components/cms-kit-components-set/content-blocks/sanity/pages/landing/PagePreview'),

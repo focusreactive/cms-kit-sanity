@@ -2,7 +2,7 @@
 
 import { type QueryResponseInitial } from '@sanity/react-loader/rsc'
 
-import { useQuery } from '@/sanity/loader/useQuery'
+import { useQuery } from '@/cms/loader/useQuery'
 import { PagePayload } from '../../../../pages/landing/types'
 import Page from '../../../../pages/landing/Page'
 import { landingPageQuery } from './sa/landingPageQuery'

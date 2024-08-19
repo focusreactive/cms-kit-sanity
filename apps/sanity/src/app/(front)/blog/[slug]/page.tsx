@@ -4,9 +4,9 @@ import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 import { toPlainText } from 'next-sanity'
 
-import { urlForOpenGraphImage } from '@/sanity/lib/utils'
-import { generateStaticSlugs } from '@/sanity/loader/generateStaticSlugs'
-import { loadBlogPost } from '@/sanity/loader/loadQuery'
+import { urlForOpenGraphImage } from '@/cms/lib/utils'
+import { generateStaticSlugs } from '@/cms/loader/generateStaticSlugs'
+import { loadBlogPost } from '@/cms/loader/loadQuery'
 import BlogPost from '@/components/cms-kit-components-set/pages/blog/BlogPost'
 const BlogPostPreview = dynamic(
   () => import('@/components/cms-kit-components-set/content-blocks/sanity/pages/blog/BlogPostPreview'),

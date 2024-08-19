@@ -4,8 +4,8 @@ import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 import { toPlainText } from 'next-sanity'
 
-import { generateStaticSlugs } from '@/sanity/loader/generateStaticSlugs'
-import { loadLanding, loadPage } from '@/sanity/loader/loadQuery'
+import { generateStaticSlugs } from '@/cms/loader/generateStaticSlugs'
+import { loadLanding, loadPage } from '@/cms/loader/loadQuery'
 import Page from '@/components/cms-kit-components-set/pages/landing/Page'
 const PagePreview = dynamic(
   () => import('@/components/cms-kit-components-set/content-blocks/sanity/pages/landing/PagePreview'),

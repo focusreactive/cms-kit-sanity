@@ -6,7 +6,7 @@ import {
   projectId,
   revalidateSecret,
   studioUrl,
-} from '@/sanity/lib/api'
+} from '@/cms/lib/api'
 
 export const client = createClient({
   projectId,
