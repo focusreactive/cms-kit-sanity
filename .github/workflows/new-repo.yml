@@ -1,7 +1,6 @@
 name: Save Repository Info to .env.initial
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - main
