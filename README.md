@@ -1,5 +1,3 @@
-![image](https://github.com/focusreactive/cms-kit-sanity/assets/14885189/906e606d-b8f3-4d90-b562-4a2bf014bc26)
-
 # CMS-KIT-SANITY
 
 An endeavor accumulating the experience and best practices collected at Focus Reactive. The project serves the idea of making Headless CMS-based development accessible, comfortable, and fast.
