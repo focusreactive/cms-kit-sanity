@@ -3,7 +3,7 @@ name: Save Repository Info to .env.initial
 on:
   push:
     branches:
-      - releases/*
+      - main
 
 permissions:
   contents: write
