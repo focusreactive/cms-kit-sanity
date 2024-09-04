@@ -2,6 +2,7 @@
 
 # CMS-KIT-SANITY
 
+
 An endeavor accumulating the experience and best practices collected at Focus Reactive. The project serves the idea of making Headless CMS-based development accessible, comfortable, and fast.
 
 ## What is CMS-KIT?
