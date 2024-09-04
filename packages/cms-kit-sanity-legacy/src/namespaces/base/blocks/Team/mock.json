@@ -1,0 +1,57 @@
+{
+  "_id": "100502",
+  "_type": "ft_team",
+  "_rev": "1-1a2b3c3c",
+  "title": "Meet our leadership",
+  "description": "Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum enim vitae ullamcorper suspendisse.",
+  "people": [
+    {
+      "name": "Leslie Alexander",
+      "title": "Co-Founder / CEO",
+      "avatar": {
+        "src": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        "alt": "Leslie Alexander"
+      }
+    },
+    {
+      "name": "Michael Foster",
+      "title": "Co-Founder / CTO",
+      "avatar": {
+        "src": "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        "alt": "Michael Foster"
+      }
+    },
+    {
+      "name": "Dries Vincent",
+      "title": "Business Relations",
+      "avatar": {
+        "src": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        "alt": "Dries Vincent"
+      }
+    },
+    {
+      "name": "Lindsay Walton",
+      "title": "Front-end Developer",
+      "avatar": {
+        "src": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        "alt": "Lindsay Walton"
+      }
+    },
+    {
+      "name": "Courtney Henry",
+      "title": "Designer",
+      "avatar": {
+        "src": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        "alt": "Courtney Henry"
+      }
+    },
+    {
+      "name": "Tom Cook",
+      "title": "Director of Product",
+      "avatar": {
+        "src": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        "alt": "Tom Cook"
+      }
+    }
+  ]
+}

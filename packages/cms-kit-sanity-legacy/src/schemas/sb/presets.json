@@ -1,0 +1,76 @@
+{
+  "presets": [
+    {
+      "id": 1920606,
+      "name": "default",
+      "preset": {
+        "_uid": "30065afe-3983-4fca-bd81-5de078e16155",
+        "title": "Simple no-tricks pricing",
+        "component": "pricing",
+        "description": "Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et             quasi iusto modi velit ut non voluptas in. Explicabo id ut laborum."
+      },
+      "component_id": 4677262,
+      "space_id": 255337,
+      "created_at": "2023-10-05T15:51:10.035Z",
+      "updated_at": "2023-10-05T15:51:10.035Z",
+      "image": "//a.storyblok.com/f/255337/x/059d0d2455/screenshot-2023-10-05-173124.png",
+      "color": null,
+      "icon": null,
+      "description": null
+    },
+    {
+      "id": 1920605,
+      "name": "default",
+      "preset": {
+        "_uid": "05893110-f8d7-4e07-aa06-7b252faf3ad7",
+        "title": "Data to enrich your online busines!",
+        "component": "hero",
+        "description": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua."
+      },
+      "component_id": 4677259,
+      "space_id": 255337,
+      "created_at": "2023-10-05T15:51:09.643Z",
+      "updated_at": "2023-10-05T15:51:09.643Z",
+      "image": "//a.storyblok.com/f/255337/x/fda820b978/screenshot-2023-10-05-173107.png",
+      "color": null,
+      "icon": null,
+      "description": null
+    },
+    {
+      "id": 1920594,
+      "name": "default",
+      "preset": {
+        "_uid": "30065afe-3983-4fca-bd81-5de078e16155",
+        "title": "Simple no-tricks pricing",
+        "component": "pricing",
+        "description": "Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et             quasi iusto modi velit ut non voluptas in. Explicabo id ut laborum."
+      },
+      "component_id": 4677011,
+      "space_id": 255337,
+      "created_at": "2023-10-05T15:33:06.611Z",
+      "updated_at": "2023-10-05T15:33:06.611Z",
+      "image": "//a.storyblok.com/f/255337/x/059d0d2455/screenshot-2023-10-05-173124.png",
+      "color": "",
+      "icon": "",
+      "description": ""
+    },
+    {
+      "id": 1920593,
+      "name": "default",
+      "preset": {
+        "_uid": "05893110-f8d7-4e07-aa06-7b252faf3ad7",
+        "title": "Data to enrich your online busines!",
+        "component": "hero",
+        "description": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua."
+      },
+      "component_id": 4670203,
+      "space_id": 255337,
+      "created_at": "2023-10-05T15:32:28.300Z",
+      "updated_at": "2023-10-05T15:32:28.300Z",
+      "image": "//a.storyblok.com/f/255337/x/fda820b978/screenshot-2023-10-05-173107.png",
+      "color": "",
+      "icon": "",
+      "description": ""
+    }
+  ]
+}

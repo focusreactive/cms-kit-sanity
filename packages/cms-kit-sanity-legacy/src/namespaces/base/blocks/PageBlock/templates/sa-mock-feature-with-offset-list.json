@@ -1,0 +1,271 @@
+{
+    "_type": "base.pageBlock",
+    "blockOptions": {
+        "_type": "base.blockOptions",
+        "backgroundOptions": {
+            "_type": "base.backgroundOptions",
+            "colorSelector": "bg-white",
+            "type": "color"
+        },
+        "layoutOptions": {
+            "_type": "base.layoutOptions",
+            "secondary": "has-secondary-on-the-left",
+            "secondaryComponent": [
+                {
+                    "_type": "secondaryRichText",
+                    "componentAlignment": "left",
+                    "customRichText": [
+                        {
+                            "_type": "block",
+                            "children": [
+                                {
+                                    "_type": "span",
+                                    "marks": [
+                                        "strong"
+                                    ],
+                                    "text": "Everything you need",
+                                    "_key": "qYdn4QjknlssWRGxP0t5Xm"
+                                }
+                            ],
+                            "markDefs": [],
+                            "style": "normal",
+                            "_key": "qYdn4QjknlssWRGxP0t5UY"
+                        },
+                        {
+                            "_type": "block",
+                            "children": [
+                                {
+                                    "_type": "span",
+                                    "marks": [],
+                                    "text": "All-in-one platform",
+                                    "_key": "qYdn4QjknlssWRGxP0t5eE"
+                                }
+                            ],
+                            "markDefs": [],
+                            "style": "h2",
+                            "_key": "qYdn4QjknlssWRGxP0t5b0"
+                        },
+                        {
+                            "_type": "block",
+                            "children": [
+                                {
+                                    "_type": "span",
+                                    "marks": [],
+                                    "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+                                    "_key": "qYdn4QjknlssWRGxP0t5kg"
+                                }
+                            ],
+                            "markDefs": [],
+                            "style": "normal",
+                            "_key": "qYdn4QjknlssWRGxP0t5hS"
+                        }
+                    ],
+                    "_key": "qYdn4QjknlssWRGxP0t5RK"
+                }
+            ]
+        }
+    },
+    "components": [
+        {
+            "_type": "base.featurePoints",
+            "columns": 2,
+            "features": [
+                {
+                    "_type": "base.keyPoint",
+                    "description": "Quos inventore harum enim nesciunt. Aut repellat rerum omnis adipisci.",
+                    "icon": {
+                        "_type": "base.featureIcon",
+                        "icon": {
+                            "_type": "glob.imageWithMetadata",
+                            "alt": "cloud arrow",
+                            "asset": {
+                                "_ref": "image-e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24-svg",
+                                "_type": "reference"
+                            },
+                            "height": 24,
+                            "src": "https://cdn.sanity.io/images/k0c6krxi/production/e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24.svg",
+                            "width": 24
+                        }
+                    },
+                    "link": {
+                        "_type": "glob.SmartLink",
+                        "type": "internal"
+                    },
+                    "title": "Notifications",
+                    "_key": "qYdn4QjknlssWRGxP0t51W"
+                },
+                {
+                    "_type": "base.keyPoint",
+                    "description": "Quos inventore harum enim nesciunt. Aut repellat rerum omnis adipisci.",
+                    "icon": {
+                        "_type": "base.featureIcon",
+                        "icon": {
+                            "_type": "glob.imageWithMetadata",
+                            "alt": "cloud arrow",
+                            "asset": {
+                                "_ref": "image-e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24-svg",
+                                "_type": "reference"
+                            },
+                            "height": 24,
+                            "src": "https://cdn.sanity.io/images/k0c6krxi/production/e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24.svg",
+                            "width": 24
+                        }
+                    },
+                    "link": {
+                        "_type": "glob.SmartLink",
+                        "type": "internal"
+                    },
+                    "title": "Notifications",
+                    "_key": "qYdn4QjknlssWRGxP0t54k"
+                },
+                {
+                    "_type": "base.keyPoint",
+                    "description": "Quos inventore harum enim nesciunt. Aut repellat rerum omnis adipisci.",
+                    "icon": {
+                        "_type": "base.featureIcon",
+                        "icon": {
+                            "_type": "glob.imageWithMetadata",
+                            "alt": "cloud arrow",
+                            "asset": {
+                                "_ref": "image-e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24-svg",
+                                "_type": "reference"
+                            },
+                            "height": 24,
+                            "src": "https://cdn.sanity.io/images/k0c6krxi/production/e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24.svg",
+                            "width": 24
+                        }
+                    },
+                    "link": {
+                        "_type": "glob.SmartLink",
+                        "type": "internal"
+                    },
+                    "title": "Notifications",
+                    "_key": "qYdn4QjknlssWRGxP0t57y"
+                },
+                {
+                    "_type": "base.keyPoint",
+                    "description": "Quos inventore harum enim nesciunt. Aut repellat rerum omnis adipisci.",
+                    "icon": {
+                        "_type": "base.featureIcon",
+                        "icon": {
+                            "_type": "glob.imageWithMetadata",
+                            "alt": "cloud arrow",
+                            "asset": {
+                                "_ref": "image-e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24-svg",
+                                "_type": "reference"
+                            },
+                            "height": 24,
+                            "src": "https://cdn.sanity.io/images/k0c6krxi/production/e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24.svg",
+                            "width": 24
+                        }
+                    },
+                    "link": {
+                        "_type": "glob.SmartLink",
+                        "type": "internal"
+                    },
+                    "title": "Notifications",
+                    "_key": "qYdn4QjknlssWRGxP0t5BC"
+                },
+                {
+                    "_type": "base.keyPoint",
+                    "description": "Quos inventore harum enim nesciunt. Aut repellat rerum omnis adipisci.",
+                    "icon": {
+                        "_type": "base.featureIcon",
+                        "icon": {
+                            "_type": "glob.imageWithMetadata",
+                            "alt": "cloud arrow",
+                            "asset": {
+                                "_ref": "image-e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24-svg",
+                                "_type": "reference"
+                            },
+                            "height": 24,
+                            "src": "https://cdn.sanity.io/images/k0c6krxi/production/e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24.svg",
+                            "width": 24
+                        }
+                    },
+                    "link": {
+                        "_type": "glob.SmartLink",
+                        "type": "internal"
+                    },
+                    "title": "Notifications",
+                    "_key": "qYdn4QjknlssWRGxP0t5EQ"
+                },
+                {
+                    "_type": "base.keyPoint",
+                    "description": "Quos inventore harum enim nesciunt. Aut repellat rerum omnis adipisci.",
+                    "icon": {
+                        "_type": "base.featureIcon",
+                        "icon": {
+                            "_type": "glob.imageWithMetadata",
+                            "alt": "cloud arrow",
+                            "asset": {
+                                "_ref": "image-e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24-svg",
+                                "_type": "reference"
+                            },
+                            "height": 24,
+                            "src": "https://cdn.sanity.io/images/k0c6krxi/production/e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24.svg",
+                            "width": 24
+                        }
+                    },
+                    "link": {
+                        "_type": "glob.SmartLink",
+                        "type": "internal"
+                    },
+                    "title": "Notifications",
+                    "_key": "qYdn4QjknlssWRGxP0t5He"
+                },
+                {
+                    "_type": "base.keyPoint",
+                    "description": "Quos inventore harum enim nesciunt. Aut repellat rerum omnis adipisci.",
+                    "icon": {
+                        "_type": "base.featureIcon",
+                        "icon": {
+                            "_type": "glob.imageWithMetadata",
+                            "alt": "cloud arrow",
+                            "asset": {
+                                "_ref": "image-e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24-svg",
+                                "_type": "reference"
+                            },
+                            "height": 24,
+                            "src": "https://cdn.sanity.io/images/k0c6krxi/production/e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24.svg",
+                            "width": 24
+                        }
+                    },
+                    "link": {
+                        "_type": "glob.SmartLink",
+                        "type": "internal"
+                    },
+                    "title": "Notifications",
+                    "_key": "qYdn4QjknlssWRGxP0t5Ks"
+                },
+                {
+                    "_type": "base.keyPoint",
+                    "description": "Quos inventore harum enim nesciunt. Aut repellat rerum omnis adipisci.",
+                    "icon": {
+                        "_type": "base.featureIcon",
+                        "icon": {
+                            "_type": "glob.imageWithMetadata",
+                            "alt": "cloud arrow",
+                            "asset": {
+                                "_ref": "image-e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24-svg",
+                                "_type": "reference"
+                            },
+                            "height": 24,
+                            "src": "https://cdn.sanity.io/images/k0c6krxi/production/e63c0967fd6adf3c480224e00f876b1f10d90dd7-24x24.svg",
+                            "width": 24
+                        }
+                    },
+                    "link": {
+                        "_type": "glob.SmartLink",
+                        "type": "internal"
+                    },
+                    "title": "Notifications",
+                    "_key": "qYdn4QjknlssWRGxP0t5O6"
+                }
+            ],
+            "style": "icon-left-separate-title",
+            "_key": "qYdn4QjknlssWRGxP0t4yI"
+        }
+    ],
+    "_key": "qYdn4QjknlssWRGxP0t4v4"
+}

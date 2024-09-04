@@ -1,0 +1,79 @@
+{
+  "_type": "base.featurePoints",
+  "columns": 3,
+  "features": [
+    {
+      "_type": "base.keyPoint",
+      "description": "Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.",
+      "icon": {
+        "_type": "base.featureIcon",
+        "icon": {
+          "_type": "glob.imageWithMetadata",
+          "asset": {
+            "_ref": "image-711344906d1db194bb26ce279da97373955b1177-24x24-svg",
+            "_type": "reference"
+          },
+          "src": "https://cdn.sanity.io/images/k0c6krxi/production/a4ce442d7780df6a6625450584c0078716afabd6-24x24.svg",
+          "width": 24,
+          "height": 24,
+          "alt": "cloud arrow"
+        }
+      },
+      "link": {
+        "_type": "glob.SmartLink",
+        "text": "Learn more",
+        "type": "url"
+      },
+      "title": "Unlimited inboxes"
+    },
+    {
+      "_type": "base.keyPoint",
+      "description": "Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.",
+      "icon": {
+        "_type": "base.featureIcon",
+        "icon": {
+          "_type": "glob.imageWithMetadata",
+          "asset": {
+            "_ref": "image-711344906d1db194bb26ce279da97373955b1177-24x24-svg",
+            "_type": "reference"
+          },
+          "src": "https://cdn.sanity.io/images/k0c6krxi/production/a4ce442d7780df6a6625450584c0078716afabd6-24x24.svg",
+          "width": 24,
+          "height": 24,
+          "alt": "cloud arrow"
+        }
+      },
+      "link": {
+        "_type": "glob.SmartLink",
+        "text": "Learn more",
+        "type": "url"
+      },
+      "title": "Unlimited inboxes"
+    },
+    {
+      "_type": "base.keyPoint",
+      "description": "Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.",
+      "icon": {
+        "_type": "base.featureIcon",
+        "icon": {
+          "_type": "glob.imageWithMetadata",
+          "asset": {
+            "_ref": "image-711344906d1db194bb26ce279da97373955b1177-24x24-svg",
+            "_type": "reference"
+          },
+          "src": "https://cdn.sanity.io/images/k0c6krxi/production/a4ce442d7780df6a6625450584c0078716afabd6-24x24.svg",
+          "width": 24,
+          "height": 24,
+          "alt": "cloud arrow"
+        }
+      },
+      "link": {
+        "_type": "glob.SmartLink",
+        "text": "Learn more",
+        "type": "url"
+      },
+      "title": "Unlimited inboxes"
+    }
+  ],
+  "style": "icon-top"
+}

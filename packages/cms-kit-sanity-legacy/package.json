@@ -1,0 +1,81 @@
+{
+  "name": "@focus-reactive/cms-kit-sanity",
+  "version": "0.1.21",
+  "description": "Sanity Integration for CMS-KIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./base": "./dist/namespaces/base/index.js",
+    "./landing": "./dist/namespaces/landing/index.js",
+    "./common": "./dist/namespaces/common/index.js",
+    "./sanity": "./dist/sanity/index.js",
+    "./sanity-next": "./dist/sanity/next-integration.js",
+    "./sanity-schema-type-utils": "./dist/sanity/schema-type-utils.js"
+  },
+  "typesVersions": {
+    "*": {
+      "./base/*": [
+        "./dist/namespaces/base/*"
+      ],
+      "./landing/*": [
+        "./dist/namespaces/landing/*"
+      ],
+      "./common/*": [
+        "./dist/namespaces/common/*"
+      ],
+      "./sanity/*": [
+        "./dist/sanity/*"
+      ],
+      "./sanity-next": [
+        "./dist/sanity/next-integration.d.ts"
+      ],
+      "./sanity-schema-type-utils": [
+        "./dist/sanity/schema-type-utils.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint src --ext .ts,.tsx",
+    "prebuild": "rm -rf dist",
+    "build:swc": "swc src -d dist -D",
+    "build": "tsc",
+    "precompile": "rm -rf dist && tsc",
+    "dev": "swc src -d dist -w -D",
+    "madge": "madge . --ts-config tsconfig.json -b src -c",
+    "push": "yarn build; yarn build:swc && yalc push",
+    "deploy": "yarn build; yarn build:swc && npm publish"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@storyblok/react": "^2.4.7",
+    "next": ">=13",
+    "react": ">=18",
+    "react-dom": ">=18",
+    "styled-components": "*"
+  },
+  "optionalDependencies": {
+    "@storyblok/react": "^2.4.7",
+    "sanity": "*"
+  },
+  "devDependencies": {
+    "@storyblok/react": "^2.4.7",
+    "@swc/cli": "^0.1.62",
+    "@swc/core": "^1.3.91",
+    "chokidar": "^3.5.3",
+    "next": "13.5.4",
+    "sanity": "^3.29.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
+    "@portabletext/react": "^3.0.11",
+    "@sanity/image-url": "^1.0.2",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.6",
+    "clsx": "^2.0.0",
+    "nanoid": "^5.0.7",
+    "tailwind-merge": "^2.0.0"
+  }
+}

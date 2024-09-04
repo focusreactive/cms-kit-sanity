@@ -1,0 +1,105 @@
+{
+  "components": [
+    {
+      "name": "hero",
+      "display_name": null,
+      "created_at": "2023-10-05T15:51:09.564Z",
+      "updated_at": "2023-10-05T15:53:01.610Z",
+      "id": 4677259,
+      "schema": {
+        "title": {
+          "type": "text"
+        },
+        "description": {
+          "type": "text"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [
+        {
+          "id": 1920605,
+          "name": "default",
+          "component_id": 4677259,
+          "image": "//a.storyblok.com/f/255337/x/fda820b978/screenshot-2023-10-05-173107.png",
+          "color": null,
+          "icon": null,
+          "description": null
+        }
+      ],
+      "preset_id": null,
+      "real_name": "hero",
+      "component_group_uuid": "905f2dca-6354-4a47-abdd-7c57ae432b38",
+      "color": null,
+      "icon": null,
+      "component_group_name": "bloks"
+    },
+    {
+      "name": "page",
+      "display_name": null,
+      "created_at": "2023-10-05T15:51:09.853Z",
+      "updated_at": "2023-10-05T15:52:52.917Z",
+      "id": 4677261,
+      "schema": {
+        "bloks": {
+          "type": "bloks",
+          "restrict_type": "groups",
+          "restrict_components": true,
+          "component_whitelist": [],
+          "component_group_whitelist": ["905f2dca-6354-4a47-abdd-7c57ae432b38"]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "page",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null
+    },
+    {
+      "name": "pricing",
+      "display_name": null,
+      "created_at": "2023-10-05T15:51:09.954Z",
+      "updated_at": "2023-10-05T15:53:13.178Z",
+      "id": 4677262,
+      "schema": {
+        "title": {
+          "type": "text"
+        },
+        "description": {
+          "type": "text"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [
+        {
+          "id": 1920606,
+          "name": "default",
+          "component_id": 4677262,
+          "image": "//a.storyblok.com/f/255337/x/059d0d2455/screenshot-2023-10-05-173124.png",
+          "color": null,
+          "icon": null,
+          "description": null
+        }
+      ],
+      "preset_id": null,
+      "real_name": "pricing",
+      "component_group_uuid": "905f2dca-6354-4a47-abdd-7c57ae432b38",
+      "color": null,
+      "icon": null,
+      "component_group_name": "bloks"
+    }
+  ]
+}

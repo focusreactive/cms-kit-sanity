@@ -1,0 +1,21 @@
+{
+  "_type": "land.stats",
+  "stats": [
+    {
+      "_type": "land.stats.points",
+      "title": "Transactions every 24 hours",
+      "value": "44 million"
+    },
+    {
+      "_type": "land.stats.points",
+      "title": "Assets under holding",
+      "value": "$119 trillion"
+    },
+    {
+      "_type": "land.stats.points",
+      "title": "New users annually",
+      "value": "46,000"
+    }
+  ],
+  "title": "Stats block"
+}

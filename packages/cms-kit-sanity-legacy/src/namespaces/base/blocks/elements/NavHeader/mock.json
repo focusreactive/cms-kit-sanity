@@ -1,0 +1,72 @@
+{
+  "menuItems": [
+    {
+      "label": "Product",
+      "icon": "",
+      "submenu": {
+        "items": [
+          {
+            "title": "Analytics",
+            "text": "Get a better understanding of your traffic",
+            "href": "",
+            "icon": ""
+          },
+          {
+            "title": "Engagement",
+            "text": "Speak directly to your customers",
+            "href": "",
+            "icon": ""
+          },
+          {
+            "title": "Security",
+            "text": "Your customers&#039; data will be safe and secure",
+            "href": "",
+            "icon": ""
+          },
+          {
+            "title": " Integrations",
+            "text": "Connect with third-party tools",
+            "href": "",
+            "icon": ""
+          },
+          {
+            "title": " Automations",
+            "text": " Build strategic funnels that will convert",
+            "href": "",
+            "icon": ""
+          }
+        ],
+        "footerItems": [{
+          "title": "Watch demo",
+          "href": "",
+          "icon": ""
+        },
+          {
+            "title": "Contact sales",
+            "href": "",
+            "icon": ""
+          }]
+      }
+    },
+    {
+      "label": "Features",
+      "icon": "",
+      "submenu": null
+    },
+    {
+      "label": "Marketplace",
+      "icon": "",
+      "submenu": null
+    },
+    {
+      "label": "Company",
+      "icon": "",
+      "submenu": null
+    },
+    {
+      "label": "Log in",
+      "icon": "",
+      "submenu": null
+    }
+  ]
+}

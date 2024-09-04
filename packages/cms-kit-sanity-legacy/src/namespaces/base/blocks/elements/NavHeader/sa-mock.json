@@ -1,0 +1,26 @@
+{
+  "_key": "45494bbbbdfb",
+  "_type": "base.navHeader",
+  "menuItems": [
+    {
+      "_key": "4958aedda036",
+      "_type": "base.menuItem",
+      "label": " Product"
+    },
+    {
+      "_type": "base.menuItem",
+      "_key": "99124f993751",
+      "label": "Features"
+    },
+    {
+      "_type": "base.menuItem",
+      "_key": "0f487eed1192",
+      "label": "Marketplace"
+    },
+    {
+      "_type": "base.menuItem",
+      "_key": "23d35aa751d9",
+      "label": "Company"
+    }
+  ]
+}

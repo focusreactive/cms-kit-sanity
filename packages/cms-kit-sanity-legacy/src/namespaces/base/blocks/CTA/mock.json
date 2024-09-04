@@ -1,0 +1,22 @@
+{
+  "_id": "100502",
+  "_type": "ft_cta",
+  "_rev": "1-1a2b3c3c",
+  "title": "Boost your productivity.",
+  "subtitle": "Start using our app today.",
+  "description": "Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla.",
+  "image": {
+    "src": "https://tailwindui.com/img/component-images/dark-project-app-screenshot.png",
+    "alt": "App screenshot",
+    "width": 1824,
+    "height": 1080
+  },
+  "cta1": {
+    "label": "Get Started",
+    "url": ""
+  },
+  "cta2": {
+    "label": "Learn more",
+    "url": ""
+  }
+}

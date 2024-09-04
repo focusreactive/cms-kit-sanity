@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "@dword-design/import-alias/prefer-alias": [
+      "error",
+      {
+        "alias": {
+          "@ns": "./src/namespaces/wip/"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "header": "Work with us",
+  "text": "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.",
+  "stats": [
+    {
+      "title": "Offices worldwide",
+      "value": "12"
+    },
+    {
+      "title": "Full-time colleagues",
+      "value": "300"
+    },
+    {
+      "title": "Hours per week",
+      "value": "40"
+    },
+    {
+      "title": "Paid time off",
+      "value": "Unlimited"
+    }
+  ],
+  "links": [
+    {
+      "title": "Open roles",
+      "href": "#"
+    },
+    {
+      "title": "Internship program",
+      "href": "#"
+    },
+    {
+      "title": "Our values",
+      "href": "#"
+    },
+    {
+      "title": "Meet our leadership ",
+      "href": "#"
+    }
+  ],
+  "title": "Header block"
+}

@@ -1,0 +1,126 @@
+{
+    "_type": "base.pageBlock",
+    "blockOptions": {
+        "_type": "base.blockOptions",
+        "backgroundOptions": {
+            "_type": "base.backgroundOptions",
+            "colorSelector": "bg-white",
+            "type": "color"
+        },
+        "layoutOptions": {
+            "_type": "base.layoutOptions",
+            "secondary": "without-secondary"
+        }
+    },
+    "components": [
+        {
+            "_type": "base.styledRichText",
+            "componentAlignment": "left",
+            "customRichText": [
+                {
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Stay on top of customer support"
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "h2"
+                },
+                {
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                }
+            ]
+        },
+        {
+            "_type": "base.featurePoints",
+            "columns": 3,
+            "features": [
+                {
+                    "_type": "base.keyPoint",
+                    "description": "Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.",
+                    "icon": {
+                        "_type": "base.featureIcon",
+                        "icon": {
+                            "_type": "glob.imageWithMetadata",
+                            "asset": {
+                                "_ref": "image-711344906d1db194bb26ce279da97373955b1177-24x24-svg",
+                                "_type": "reference"
+                            },
+                            "src": "https://cdn.sanity.io/images/k0c6krxi/production/711344906d1db194bb26ce279da97373955b1177-24x24.svg",
+                            "width": 24,
+                            "height": 24,
+                            "alt": "cloud arrow"
+                        }
+                    },
+                    "link": {
+                        "_type": "glob.SmartLink",
+                        "text": "Learn more",
+                        "type": "url"
+                    },
+                    "title": "Unlimited inboxes"
+                },
+                {
+                    "_type": "base.keyPoint",
+                    "description": "Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.",
+                    "icon": {
+                        "_type": "base.featureIcon",
+                        "icon": {
+                            "_type": "glob.imageWithMetadata",
+                            "asset": {
+                                "_ref": "image-711344906d1db194bb26ce279da97373955b1177-24x24-svg",
+                                "_type": "reference"
+                            },
+                            "src": "https://cdn.sanity.io/images/k0c6krxi/production/711344906d1db194bb26ce279da97373955b1177-24x24.svg",
+                            "width": 24,
+                            "height": 24,
+                            "alt": "cloud arrow"
+                        }
+                    },
+                    "link": {
+                        "_type": "glob.SmartLink",
+                        "text": "Learn more",
+                        "type": "url"
+                    },
+                    "title": "Unlimited inboxes"
+                },
+                {
+                    "_type": "base.keyPoint",
+                    "description": "Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.",
+                    "icon": {
+                        "_type": "base.featureIcon",
+                        "icon": {
+                            "_type": "glob.imageWithMetadata",
+                            "asset": {
+                                "_ref": "image-711344906d1db194bb26ce279da97373955b1177-24x24-svg",
+                                "_type": "reference"
+                            },
+                            "src": "https://cdn.sanity.io/images/k0c6krxi/production/711344906d1db194bb26ce279da97373955b1177-24x24.svg",
+                            "width": 24,
+                            "height": 24,
+                            "alt": "cloud arrow"
+                        }
+                    },
+                    "link": {
+                        "_type": "glob.SmartLink",
+                        "text": "Learn more",
+                        "type": "url"
+                    },
+                    "title": "Unlimited inboxes"
+                }
+            ],
+            "style": "icon-top"
+        }
+    ]
+}

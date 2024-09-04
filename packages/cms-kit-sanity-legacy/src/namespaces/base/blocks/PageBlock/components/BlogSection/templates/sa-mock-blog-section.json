@@ -1,0 +1,319 @@
+{
+    "_key": "QSuZW0QffIX9aJgqqlOpAe",
+    "_type": "base.pageBlock",
+    "blockOptions": {
+        "_type": "base.blockOptions",
+        "backgroundOptions": {
+            "_type": "base.backgroundOptions",
+            "colorSelector": "bg-white",
+            "type": "color"
+        }
+    },
+    "components": [
+        {
+            "_key": "QSuZW0QffIX9aJgqqlOpDH",
+            "_type": "base.blogSection",
+            "posts": [
+                {
+                    "_key": "QSuZW0QffIX9aJgqqlOpFu",
+                    "_type": "base.blogSection.post",
+                    "authors": [
+                        {
+                            "_key": "QSuZW0QffIX9aJgqqlOpT3",
+                            "_type": "base.blogSection.post.author",
+                            "avatar": {
+                                "_type": "glob.imageWithMetadata",
+                                "asset": {
+                                    "_ref": "image-b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256-jpg",
+                                    "_type": "reference"
+                                },
+                                "image": {
+                                    "alt": null,
+                                    "height": 256,
+                                    "src": "https://cdn.sanity.io/images/k0c6krxi/production/b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256.jpg",
+                                    "width": 256
+                                }
+                            },
+                            "link": {
+                                "_type": "glob.SmartLink",
+                                "href": "https://focusreactive.com/",
+                                "target": "_blank",
+                                "type": "url"
+                            },
+                            "name": "Michael Foster",
+                            "role": "Co-founder"
+                        }
+                    ],
+                    "date": "2023-12-13",
+                    "link": {
+                        "_type": "glob.SmartLink",
+                        "href": "https://focusreactive.com/",
+                        "slug": {
+                            "_ref": "a3db4251-c1de-4521-8b81-71e209940856",
+                            "_type": "reference"
+                        },
+                        "target": "_blank",
+                        "type": "url"
+                    },
+                    "tags": [
+                        {
+                            "_key": "QSuZW0QffIX9aJgqqlOpVg",
+                            "_type": "base.blogSection.post.tag",
+                            "href": {
+                                "_type": "glob.SmartLink",
+                                "href": "https://focusreactive.com/",
+                                "slug": {
+                                    "_ref": "a3db4251-c1de-4521-8b81-71e209940856",
+                                    "_type": "reference"
+                                },
+                                "target": "_blank",
+                                "text": "Marketing",
+                                "type": "url"
+                            }
+                        }
+                    ],
+                    "text": [
+                        {
+                            "_key": "QSuZW0QffIX9aJgqqlOpIX",
+                            "_type": "block",
+                            "children": [
+                                {
+                                    "_key": "QSuZW0QffIX9aJgqqlOpLA",
+                                    "_type": "span",
+                                    "marks": [],
+                                    "text": "Boost your conversion rate"
+                                }
+                            ],
+                            "markDefs": [],
+                            "style": "h3"
+                        },
+                        {
+                            "_key": "QSuZW0QffIX9aJgqqlOpNn",
+                            "_type": "block",
+                            "children": [
+                                {
+                                    "_key": "QSuZW0QffIX9aJgqqlOpQQ",
+                                    "_type": "span",
+                                    "marks": [],
+                                    "text": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta."
+                                }
+                            ],
+                            "markDefs": [],
+                            "style": "normal"
+                        }
+                    ]
+                },
+                {
+                    "_key": "2a1940e3d9ad0308e6b8ad6c1005a6ca",
+                    "_type": "base.blogSection.post",
+                    "authors": [
+                        {
+                            "_key": "QSuZW0QffIX9aJgqqlOpT3",
+                            "_type": "base.blogSection.post.author",
+                            "avatar": {
+                                "_type": "glob.imageWithMetadata",
+                                "asset": {
+                                    "_ref": "image-b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256-jpg",
+                                    "_type": "reference"
+                                },
+                                "image": {
+                                    "alt": null,
+                                    "height": 256,
+                                    "src": "https://cdn.sanity.io/images/k0c6krxi/production/b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256.jpg",
+                                    "width": 256
+                                }
+                            },
+                            "link": {
+                                "_type": "glob.SmartLink",
+                                "href": "https://focusreactive.com/",
+                                "target": "_blank",
+                                "type": "url"
+                            },
+                            "name": "Michael Foster",
+                            "role": "Co-founder"
+                        }
+                    ],
+                    "date": "2023-12-13",
+                    "link": {
+                        "_type": "glob.SmartLink",
+                        "href": "https://focusreactive.com/",
+                        "slug": {
+                            "_ref": "a3db4251-c1de-4521-8b81-71e209940856",
+                            "_type": "reference"
+                        },
+                        "target": "_blank",
+                        "type": "url"
+                    },
+                    "tags": [
+                        {
+                            "_key": "QSuZW0QffIX9aJgqqlOpVg",
+                            "_type": "base.blogSection.post.tag",
+                            "href": {
+                                "_type": "glob.SmartLink",
+                                "href": "https://focusreactive.com/",
+                                "slug": {
+                                    "_ref": "a3db4251-c1de-4521-8b81-71e209940856",
+                                    "_type": "reference"
+                                },
+                                "target": "_blank",
+                                "text": "Marketing",
+                                "type": "url"
+                            }
+                        }
+                    ],
+                    "text": [
+                        {
+                            "_key": "QSuZW0QffIX9aJgqqlOpIX",
+                            "_type": "block",
+                            "children": [
+                                {
+                                    "_key": "QSuZW0QffIX9aJgqqlOpLA",
+                                    "_type": "span",
+                                    "marks": [],
+                                    "text": "Boost your conversion rate"
+                                }
+                            ],
+                            "markDefs": [],
+                            "style": "h3"
+                        },
+                        {
+                            "_key": "QSuZW0QffIX9aJgqqlOpNn",
+                            "_type": "block",
+                            "children": [
+                                {
+                                    "_key": "QSuZW0QffIX9aJgqqlOpQQ",
+                                    "_type": "span",
+                                    "marks": [],
+                                    "text": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta."
+                                }
+                            ],
+                            "markDefs": [],
+                            "style": "normal"
+                        }
+                    ]
+                },
+                {
+                    "_key": "534f041b8fa7d1e5057bf0c8ff26f0bd",
+                    "_type": "base.blogSection.post",
+                    "authors": [
+                        {
+                            "_key": "QSuZW0QffIX9aJgqqlOpT3",
+                            "_type": "base.blogSection.post.author",
+                            "avatar": {
+                                "_type": "glob.imageWithMetadata",
+                                "asset": {
+                                    "_ref": "image-b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256-jpg",
+                                    "_type": "reference"
+                                },
+                                "image": {
+                                    "alt": null,
+                                    "height": 256,
+                                    "src": "https://cdn.sanity.io/images/k0c6krxi/production/b7c2a023e03bff6955e682f025f576ccc35ef90b-256x256.jpg",
+                                    "width": 256
+                                }
+                            },
+                            "link": {
+                                "_type": "glob.SmartLink",
+                                "href": "https://focusreactive.com/",
+                                "target": "_blank",
+                                "type": "url"
+                            },
+                            "name": "Michael Foster",
+                            "role": "Co-founder"
+                        }
+                    ],
+                    "date": "2023-12-13",
+                    "link": {
+                        "_type": "glob.SmartLink",
+                        "href": "https://focusreactive.com/",
+                        "slug": {
+                            "_ref": "a3db4251-c1de-4521-8b81-71e209940856",
+                            "_type": "reference"
+                        },
+                        "target": "_blank",
+                        "type": "url"
+                    },
+                    "tags": [
+                        {
+                            "_key": "QSuZW0QffIX9aJgqqlOpVg",
+                            "_type": "base.blogSection.post.tag",
+                            "href": {
+                                "_type": "glob.SmartLink",
+                                "href": "https://focusreactive.com/",
+                                "slug": {
+                                    "_ref": "a3db4251-c1de-4521-8b81-71e209940856",
+                                    "_type": "reference"
+                                },
+                                "target": "_blank",
+                                "text": "Marketing",
+                                "type": "url"
+                            }
+                        }
+                    ],
+                    "text": [
+                        {
+                            "_key": "QSuZW0QffIX9aJgqqlOpIX",
+                            "_type": "block",
+                            "children": [
+                                {
+                                    "_key": "QSuZW0QffIX9aJgqqlOpLA",
+                                    "_type": "span",
+                                    "marks": [],
+                                    "text": "Boost your conversion rate"
+                                }
+                            ],
+                            "markDefs": [],
+                            "style": "h3"
+                        },
+                        {
+                            "_key": "QSuZW0QffIX9aJgqqlOpNn",
+                            "_type": "block",
+                            "children": [
+                                {
+                                    "_key": "QSuZW0QffIX9aJgqqlOpQQ",
+                                    "_type": "span",
+                                    "marks": [],
+                                    "text": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta."
+                                }
+                            ],
+                            "markDefs": [],
+                            "style": "normal"
+                        }
+                    ]
+                }
+            ],
+            "style": "three-column",
+            "text": [
+                {
+                    "_key": "QSuZW0QffIX9aJgqqlOq97",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "QSuZW0QffIX9aJgqqlOqBk",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "From the blog"
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "h2"
+                },
+                {
+                    "_key": "QSuZW0QffIX9aJgqqlOqEN",
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_key": "QSuZW0QffIX9aJgqqlOqH0",
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Learn how to grow your business with our expert advice."
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                }
+            ]
+        }
+    ],
+    "customTitle": "Blog section"
+}

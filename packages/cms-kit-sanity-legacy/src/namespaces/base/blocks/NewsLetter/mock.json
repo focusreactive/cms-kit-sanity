@@ -1,0 +1,15 @@
+{
+  "title": "Monthly Newsletter",
+  "points": [
+    {
+      "icon": "icon1.png",
+      "title": "Point 1",
+      "text": "Description for point 1"
+    },
+    {
+      "icon": "icon2.png",
+      "title": "Point 2",
+      "text": "Description for point 2"
+    }
+  ]
+}
