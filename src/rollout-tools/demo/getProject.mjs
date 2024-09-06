@@ -13,6 +13,8 @@ async function fetchExistingProjects() {
 }
 
 function findFreeProject(existingProjects) {
+  return existingProjects[0];
+
   for (let i = existingProjects.length - 1; i >= 0; i--) {
     const project = existingProjects[i];
     const clientEmail = project.env?.find(

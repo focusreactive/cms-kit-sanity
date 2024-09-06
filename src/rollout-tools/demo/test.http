@@ -1,0 +1,7 @@
+
+POST http://localhost:3000/api/roll-out/assignProject
+Content-Type: application/json
+
+{
+    "email": "spam@usul.su"
+}
