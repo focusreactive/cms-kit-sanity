@@ -85,7 +85,7 @@ async function addClientToSanityProject({ email, sanityProjectId, authToken }) {
       },
       body: JSON.stringify({
         email: email,
-        role: 'viewer',
+        role: 'administrator',
       }),
     },
   );
@@ -96,7 +96,7 @@ async function addClientToSanityProject({ email, sanityProjectId, authToken }) {
       token: `Bearer ${authToken}`,
       body: JSON.stringify({
         email: email,
-        role: 'viewer',
+        role: 'administrator',
       })
     }
     console.error("🚀 ~ addClientToSanityProject ~ debug:", debug)
