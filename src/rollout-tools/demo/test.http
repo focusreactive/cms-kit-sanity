@@ -5,3 +5,13 @@ Content-Type: application/json
 {
     "email": "spam@usul.su"
 }
+
+###
+
+POST https://cms-kit-sanity-git-project-assing-focusreactive.vercel.app/api/roll-out/assignProject
+Content-Type: application/json
+
+{
+    "email": "spam@usul.su"
+}
+
