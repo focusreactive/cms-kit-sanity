@@ -53,6 +53,23 @@ async function assignClientToProject({ project, email, authToken, teamId }) {
   );
 
   if (!response.ok) {
+    const debug = {
+      url: `https://api.vercel.com/v10/projects/${project.id}/env?teamId=${teamId}`,
+      params: {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          key: 'CLIENT_EMAIL',
+          value: email,
+          type: 'plain',
+          target: ['production', 'preview', 'development'],
+        }),
+      },
+    }
+    console.log("🚀 ~ assignClientToProject ~ debug:", debug)
     throw new Error('Failed to assign client email to Vercel project.');
   }
 }
@@ -74,6 +91,15 @@ async function addClientToSanityProject({ email, sanityProjectId, authToken }) {
   );
 
   if (!response.ok) {
+    const debug = {
+      url: `https://api.sanity.io/v2021-06-07/invitations/project/${sanityProjectId}`,
+      token: `Bearer ${authToken}`,
+      body: JSON.stringify({
+        email: email,
+        role: 'editor',
+      })
+    }
+    console.error("🚀 ~ addClientToSanityProject ~ debug:", debug)
     throw new Error('Failed to invite user to Sanity project.');
   }
 }
@@ -90,6 +116,7 @@ async function getProject(email) {
   try {
     const existingProjects = await fetchExistingProjects();
     const freeProject = findFreeProject(existingProjects);
+    console.log("🚀 freeProject:", freeProject)
 
     if (!freeProject) {
       return {
@@ -99,12 +126,12 @@ async function getProject(email) {
       };
     }
 
-    await assignClientToProject({
-      project: freeProject,
-      email: email,
-      authToken: process.env.VERCEL_PERSONAL_AUTH_TOKEN,
-      teamId: process.env.VERCEL_FR_TEAM_ID,
-    });
+    // await assignClientToProject({
+    //   project: freeProject,
+    //   email: email,
+    //   authToken: process.env.VERCEL_PERSONAL_AUTH_TOKEN,
+    //   teamId: process.env.VERCEL_FR_TEAM_ID,
+    // });
 
     const sanityProjectId = freeProject.env?.find(
       (envVar) => envVar.key === 'NEXT_PUBLIC_SANITY_PROJECT_ID',

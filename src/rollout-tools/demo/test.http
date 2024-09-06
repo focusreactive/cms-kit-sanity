@@ -15,3 +15,10 @@ Content-Type: application/json
     "email": "spam@usul.su"
 }
 
+### Test Sanity
+
+POST https://api.sanity.io/v2021-06-07/invitations/project/8r5qwaza
+Authorization: Bearer sk10Co3CEUKl6PhCVeZ3qOfP7Y9q172XIrvkTrcy0P6vx1iKanWWjtZ5mADg6jrFwHXpR2WqlqG9GkxVM
+Content-Type: application/json
+
+{"email":"spam@usul.su","role":"editor"}
