@@ -1,0 +1,132 @@
+{
+  "_type": "tw-base.pageBlock",
+  "blockOptions": {
+    "_type": "tw-base.blockOptions",
+    "backgroundOptions": {
+      "_type": "tw-base.backgroundOptions",
+      "colorSelector": "bg-white",
+      "type": "color"
+    },
+    "layoutOptions": {
+      "_type": "tw-base.layoutOptions",
+      "secondary": "without-secondary"
+    }
+  },
+  "components": [
+    {
+      "_type": "tw-base.styledRichText",
+      "componentAlignment": "left",
+      "customRichText": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "marks": [],
+              "text": "Stay on top of customer support"
+            }
+          ],
+          "markDefs": [],
+          "style": "h2"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "marks": [],
+              "text": "Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "_type": "tw-base.featurePoints",
+      "columns": 3,
+      "features": [
+        {
+          "_type": "tw-base.keyPoint",
+          "description": "Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.",
+          "icon": {
+            "_type": "tw-base.featureIcon",
+            "imageAsset": {
+              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+              "width": 24,
+              "height": 24,
+              "alt": null
+            },
+            "icon": {
+              "_type": "glob.imageWithMetadata",
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
+              }
+            }
+          },
+          "link": {
+            "_type": "glob.SmartLink",
+            "text": "Learn more",
+            "type": "url"
+          },
+          "title": "Unlimited inboxes"
+        },
+        {
+          "_type": "tw-base.keyPoint",
+          "description": "Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.",
+          "icon": {
+            "_type": "tw-base.featureIcon",
+            "imageAsset": {
+              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+              "width": 24,
+              "height": 24,
+              "alt": null
+            },
+            "icon": {
+              "_type": "glob.imageWithMetadata",
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
+              }
+            }
+          },
+          "link": {
+            "_type": "glob.SmartLink",
+            "text": "Learn more",
+            "type": "url"
+          },
+          "title": "Unlimited inboxes"
+        },
+        {
+          "_type": "tw-base.keyPoint",
+          "description": "Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.",
+          "icon": {
+            "_type": "tw-base.featureIcon",
+            "imageAsset": {
+              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+              "width": 24,
+              "height": 24,
+              "alt": null
+            },
+            "icon": {
+              "_type": "glob.imageWithMetadata",
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
+              }
+            }
+          },
+          "link": {
+            "_type": "glob.SmartLink",
+            "text": "Learn more",
+            "type": "url"
+          },
+          "title": "Unlimited inboxes"
+        }
+      ],
+      "style": "icon-top"
+    }
+  ]
+}

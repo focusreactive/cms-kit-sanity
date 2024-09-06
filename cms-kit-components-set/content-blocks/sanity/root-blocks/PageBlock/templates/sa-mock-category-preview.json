@@ -1,0 +1,358 @@
+{
+  "_key": "THaDfaZDLN12rR1d-3PDh",
+  "_type": "tw-base.pageBlock",
+  "blockOptions": {
+    "_type": "tw-base.blockOptions",
+    "backgroundOptions": {
+      "_type": "tw-base.backgroundOptions",
+      "colorSelector": "bg-gray-100",
+      "type": "color"
+    }
+  },
+  "components": [
+    {
+      "_key": "comp1",
+      "_type": "tw-base.grid",
+      "items": [
+        {
+          "_key": "comp1",
+          "_type": "gridCard",
+          "customRichText": [
+            {
+              "_key": "83438a472d71",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "467afb91e46a0",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Outstanding and Quick Results"
+                }
+              ],
+              "markDefs": [],
+              "style": "h3"
+            },
+            {
+              "_key": "1b9bab559470",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "01454a3e0d1d0",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Achieve "
+                },
+                {
+                  "_key": "01454a3e0d1d1",
+                  "_type": "span",
+                  "marks": [
+                    "strong"
+                  ],
+                  "text": "outstanding and quick results"
+                },
+                {
+                  "_key": "01454a3e0d1d2",
+                  "_type": "span",
+                  "marks": [],
+                  "text": " with CMS-KIT-Sanity. Our platform is designed to deliver high performance and efficiency, ensuring that your projects are completed in record time. Whether you're a developer or a content creator, you'll appreciate the seamless workflow that allows you to produce exceptional outcomes swiftly."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            },
+            {
+              "_key": "375420027873",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "9a8301477f1f0",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Enjoy "
+                },
+                {
+                  "_key": "9a8301477f1f1",
+                  "_type": "span",
+                  "marks": [
+                    "strong"
+                  ],
+                  "text": "great design out of the box"
+                },
+                {
+                  "_key": "9a8301477f1f2",
+                  "_type": "span",
+                  "marks": [],
+                  "text": " with our pre-configured templates and themes. CMS-KIT-Sanity provides a professional and polished appearance for your projects without the need for extensive customization. This means you can launch stunning, user-friendly sites with minimal effort, giving you more time to focus on creating amazing content and functionalities."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            }
+          ],
+          "imageWithMetadata": {
+            "_type": "glob.imageWithMetadata",
+            "asset": {
+              "_ref": "image-d3747736ec8c64e158241ff730185e2046dec776-1616x1115-png",
+              "_type": "reference"
+            },
+            "imageAsset": {
+              "alt": "Laptop with browser",
+              "height": 1616,
+              "src": "https://cdn.sanity.io/images/euty36ag/production/d3747736ec8c64e158241ff730185e2046dec776-1616x1115.png",
+              "width": 1115
+            }
+          },
+          "smartLink": "https://focusreactive.com/cms-kit-focusreactive/"
+        },
+        {
+          "_key": "comp2",
+          "_type": "gridCard",
+          "customRichText": [
+            {
+              "_key": "4854bb8d2a56",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "ef935def53210",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Intuitive Development and Scalable Structure"
+                }
+              ],
+              "markDefs": [],
+              "style": "h3"
+            },
+            {
+              "_key": "e1bd8a6d7afa",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "22c13ac5c5f80",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Embrace "
+                },
+                {
+                  "_key": "22c13ac5c5f81",
+                  "_type": "span",
+                  "marks": [
+                    "strong"
+                  ],
+                  "text": "intuitive development"
+                },
+                {
+                  "_key": "22c13ac5c5f82",
+                  "_type": "span",
+                  "marks": [],
+                  "text": " with our streamlined interface, designed to make your coding experience as smooth as possible. The clean and organized layout allows you to navigate through your project effortlessly, ensuring that you can focus on what truly matters—writing great code. Our tools simplify the process, reducing the learning curve and increasing your productivity."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            },
+            {
+              "_key": "77331c409354",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "b9926fe507f40",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Enjoy the benefits of "
+                },
+                {
+                  "_key": "b9926fe507f41",
+                  "_type": "span",
+                  "marks": [
+                    "strong"
+                  ],
+                  "text": "quick generation of new blocks"
+                },
+                {
+                  "_key": "b9926fe507f42",
+                  "_type": "span",
+                  "marks": [],
+                  "text": " with our scalable structure of components. Easily add and customize new sections to your project without worrying about breaking existing functionalities. This modular approach not only saves time but also ensures that your application can grow seamlessly as your needs evolve. Whether you're working on a small project or a large-scale application, our system adapts to support your development goals."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            }
+          ],
+          "imageWithMetadata": {
+            "_type": "glob.imageWithMetadata",
+            "asset": {
+              "_ref": "image-c9af323699262b81afc12e678862f6bed83df1be-1527x999-png",
+              "_type": "reference"
+            },
+            "imageAsset": {
+              "alt": "Laptop with browser",
+              "height": 1527,
+              "src": "https://cdn.sanity.io/images/euty36ag/production/c9af323699262b81afc12e678862f6bed83df1be-1527x999.png",
+              "width": 999
+            }
+          },
+          "sanityRichText": [
+            {
+              "_key": "GkG3cCeg0Ygk3UAeuaXFO5",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "GkG3cCeg0Ygk3UAeuaXFS8",
+                  "_type": "span",
+                  "marks": [
+                    "a105c74f2230"
+                  ],
+                  "text": "Self-Improvement"
+                }
+              ],
+              "markDefs": [
+                {
+                  "_key": "GkG3cCeg0Ygk3UAeuaXFWB",
+                  "_type": "link",
+                  "href": "https://tailwindui.com/components/ecommerce/components/category-previews#"
+                }
+              ],
+              "style": "h3"
+            },
+            {
+              "_key": "GkG3cCeg0Ygk3UAeuaXFaE",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "GkG3cCeg0Ygk3UAeuaXFeH",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Journals and note-taking"
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            }
+          ],
+          "smartLink": "https://focusreactive.com/cms-kit-focusreactive/"
+        },
+        {
+          "_key": "comp3",
+          "_type": "gridCard",
+          "customRichText": [
+            {
+              "_key": "58fdd798d4de",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "f010fb1c29030",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Visual Editing and Live Preview"
+                }
+              ],
+              "markDefs": [],
+              "style": "h3"
+            },
+            {
+              "_key": "617c054e8de3",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "14ae7f0c0e490",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Experience the power of "
+                },
+                {
+                  "_key": "14ae7f0c0e491",
+                  "_type": "span",
+                  "marks": [
+                    "strong"
+                  ],
+                  "text": "Visual Editing"
+                },
+                {
+                  "_key": "14ae7f0c0e492",
+                  "_type": "span",
+                  "marks": [],
+                  "text": " with our intuitive interface. The Sanity Studio allows you to make real-time changes and see them instantly reflected on your site. No more guessing how your content will look—"
+                },
+                {
+                  "_key": "14ae7f0c0e493",
+                  "_type": "span",
+                  "marks": [
+                    "em"
+                  ],
+                  "text": "what you see is what you get"
+                },
+                {
+                  "_key": "14ae7f0c0e494",
+                  "_type": "span",
+                  "marks": [],
+                  "text": ". This seamless integration ensures that your editing process is both efficient and enjoyable."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            },
+            {
+              "_key": "cfbb58d10538",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "9c3d9ef8eb060",
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Take advantage of the "
+                },
+                {
+                  "_key": "9c3d9ef8eb061",
+                  "_type": "span",
+                  "marks": [
+                    "strong"
+                  ],
+                  "text": "Live Preview"
+                },
+                {
+                  "_key": "9c3d9ef8eb062",
+                  "_type": "span",
+                  "marks": [],
+                  "text": " feature to enhance your workflow. As you edit in the Sanity Studio, watch your updates come to life immediately. This not only saves time but also ensures that your final product is exactly what you envisioned. With these tools, you can focus on creating high-quality content without the hassle of constant back-and-forth adjustments."
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            },
+            {
+              "_key": "397f1cba2799",
+              "_type": "block",
+              "children": [
+                {
+                  "_key": "8c08e0086ef1",
+                  "_type": "span",
+                  "marks": [],
+                  "text": ""
+                }
+              ],
+              "markDefs": [],
+              "style": "normal"
+            }
+          ],
+          "imageWithMetadata": {
+            "_type": "glob.imageWithMetadata",
+            "asset": {
+              "_ref": "image-19a805c020185f42b2c3b866143d2992a898e4af-1556x1022-png",
+              "_type": "reference"
+            },
+            "imageAsset": {
+              "alt": "Laptop with browser",
+              "height": 1556,
+              "src": "https://cdn.sanity.io/images/euty36ag/production/19a805c020185f42b2c3b866143d2992a898e4af-1556x1022.png",
+              "width": 1022
+            }
+          },
+          "smartLink": "https://focusreactive.com/cms-kit-focusreactive/"
+        }
+      ],
+      "title": "Category Preview"
+    }
+  ],
+  "customTitle": "Category Preview"
+}

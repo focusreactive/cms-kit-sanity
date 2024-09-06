@@ -1,0 +1,233 @@
+{
+  "_type": "tw-base.pageBlock",
+  "blockOptions": {
+    "_type": "tw-base.blockOptions",
+    "backgroundOptions": {
+      "_type": "tw-base.backgroundOptions",
+      "colorSelector": "bg-white",
+      "type": "color"
+    },
+    "layoutOptions": {
+      "_type": "tw-base.layoutOptions",
+      "secondary": "has-secondary-on-the-left",
+      "secondaryComponent": [
+        {
+          "_type": "secondaryRichText",
+          "componentAlignment": "left",
+          "customRichText": [
+            {
+              "_type": "block",
+              "children": [
+                {
+                  "_type": "span",
+                  "marks": ["strong"],
+                  "text": "Everything you need",
+                  "_key": "qYdn4QjknlssWRGxP0t5Xm"
+                }
+              ],
+              "markDefs": [],
+              "style": "normal",
+              "_key": "qYdn4QjknlssWRGxP0t5UY"
+            },
+            {
+              "_type": "block",
+              "children": [
+                {
+                  "_type": "span",
+                  "marks": [],
+                  "text": "All-in-one platform",
+                  "_key": "qYdn4QjknlssWRGxP0t5eE"
+                }
+              ],
+              "markDefs": [],
+              "style": "h2",
+              "_key": "qYdn4QjknlssWRGxP0t5b0"
+            },
+            {
+              "_type": "block",
+              "children": [
+                {
+                  "_type": "span",
+                  "marks": [],
+                  "text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+                  "_key": "qYdn4QjknlssWRGxP0t5kg"
+                }
+              ],
+              "markDefs": [],
+              "style": "normal",
+              "_key": "qYdn4QjknlssWRGxP0t5hS"
+            }
+          ],
+          "_key": "qYdn4QjknlssWRGxP0t5RK"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "_type": "tw-base.featurePoints",
+      "columns": 2,
+      "features": [
+        {
+          "_type": "tw-base.keyPoint",
+          "_key": "745c1cc8f53c1",
+          "link": {
+            "type": "internal",
+            "_type": "glob.SmartLink"
+          },
+          "title": "Feature example",
+          "description": "Given the task of adding specific import statements to existing files, both Plop and Hygen can handle this requirement effectively. Let's look at how each solution can address this need.",
+          "icon": {
+            "_type": "tw-base.featureIcon",
+            "imageAsset": {
+              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+              "width": 24,
+              "height": 24,
+              "alt": null
+            },
+            "icon": {
+              "_type": "glob.imageWithMetadata",
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
+              }
+            }
+          }
+        },
+        {
+          "_type": "tw-base.keyPoint",
+          "_key": "745c1cc8f53c2",
+          "link": {
+            "type": "internal",
+            "_type": "glob.SmartLink"
+          },
+          "title": "Feature example",
+          "description": "Given the task of adding specific import statements to existing files, both Plop and Hygen can handle this requirement effectively. Let's look at how each solution can address this need.",
+          "icon": {
+            "_type": "tw-base.featureIcon",
+            "imageAsset": {
+              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+              "width": 24,
+              "height": 24,
+              "alt": null
+            },
+            "icon": {
+              "_type": "glob.imageWithMetadata",
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
+              }
+            }
+          }
+        },
+        {
+          "_type": "tw-base.keyPoint",
+          "_key": "745c1cc8f533c",
+          "link": {
+            "type": "internal",
+            "_type": "glob.SmartLink"
+          },
+          "title": "Feature example",
+          "description": "Given the task of adding specific import statements to existing files, both Plop and Hygen can handle this requirement effectively. Let's look at how each solution can address this need.",
+          "icon": {
+            "_type": "tw-base.featureIcon",
+            "imageAsset": {
+              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+              "width": 24,
+              "height": 24,
+              "alt": null
+            },
+            "icon": {
+              "_type": "glob.imageWithMetadata",
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
+              }
+            }
+          }
+        },
+        {
+          "_type": "tw-base.keyPoint",
+          "_key": "745c1cc8f53c1",
+          "link": {
+            "type": "internal",
+            "_type": "glob.SmartLink"
+          },
+          "title": "Feature example",
+          "description": "Given the task of adding specific import statements to existing files, both Plop and Hygen can handle this requirement effectively. Let's look at how each solution can address this need.",
+          "icon": {
+            "_type": "tw-base.featureIcon",
+            "imageAsset": {
+              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+              "width": 24,
+              "height": 24,
+              "alt": null
+            },
+            "icon": {
+              "_type": "glob.imageWithMetadata",
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
+              }
+            }
+          }
+        },
+        {
+          "_type": "tw-base.keyPoint",
+          "_key": "745c1cc8f53c2",
+          "link": {
+            "type": "internal",
+            "_type": "glob.SmartLink"
+          },
+          "title": "Feature example",
+          "description": "Given the task of adding specific import statements to existing files, both Plop and Hygen can handle this requirement effectively. Let's look at how each solution can address this need.",
+          "icon": {
+            "_type": "tw-base.featureIcon",
+            "imageAsset": {
+              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+              "width": 24,
+              "height": 24,
+              "alt": null
+            },
+            "icon": {
+              "_type": "glob.imageWithMetadata",
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
+              }
+            }
+          }
+        },
+        {
+          "_type": "tw-base.keyPoint",
+          "_key": "745c1cc8f533c",
+          "link": {
+            "type": "internal",
+            "_type": "glob.SmartLink"
+          },
+          "title": "Feature example",
+          "description": "Given the task of adding specific import statements to existing files, both Plop and Hygen can handle this requirement effectively. Let's look at how each solution can address this need.",
+          "icon": {
+            "_type": "tw-base.featureIcon",
+            "imageAsset": {
+              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+              "width": 24,
+              "height": 24,
+              "alt": null
+            },
+            "icon": {
+              "_type": "glob.imageWithMetadata",
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
+              }
+            }
+          }
+        }
+      ],
+      "style": "icon-left-separate-title",
+      "_key": "qYdn4QjknlssWRGxP0t4yI"
+    }
+  ],
+  "_key": "qYdn4QjknlssWRGxP0t4v4"
+}

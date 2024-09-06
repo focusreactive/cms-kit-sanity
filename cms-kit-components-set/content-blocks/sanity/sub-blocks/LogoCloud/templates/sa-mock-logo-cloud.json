@@ -1,0 +1,134 @@
+{
+  "_key": "5242e1e6b03b",
+  "_type": "tw-base.logoCloudGrid",
+  "items": [
+    {
+      "_key": "aa5733ccfa21",
+      "_type": "logoItem",
+      "imageWithMetadata": {
+        "_type": "glob.imageWithMetadata",
+        "asset": {
+          "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png",
+          "_type": "reference"
+        },
+        "image": {
+          "src": "https://cdn.sanity.io/images/euty36ag/production/06f237a943bb46d21f3f2d7ce04c19b1baa8ba3b-158x48.svg",
+          "width": 158,
+          "height": 48,
+          "alt": null
+        }
+      },
+      "link": {
+        "_type": "glob.SmartLink",
+        "href": "https://portal.gitnation.org/",
+        "type": "url"
+      }
+    },
+    {
+      "_key": "77e2956820da",
+      "_type": "logoItem",
+      "imageWithMetadata": {
+        "_type": "glob.imageWithMetadata",
+        "asset": {
+          "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png",
+          "_type": "reference"
+        },
+        "image": {
+          "src": "https://cdn.sanity.io/images/euty36ag/production/726026788a74314e3ac84dd2944b4fd343d24ee4-158x48.svg",
+          "width": 158,
+          "height": 48,
+          "alt": null
+        }
+      },
+      "link": {
+        "_type": "glob.SmartLink",
+        "href": "https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg",
+        "target": "_blank",
+        "type": "url"
+      }
+    },
+    {
+      "_key": "71f3f505f04d",
+      "_type": "logoItem",
+      "imageWithMetadata": {
+        "_type": "glob.imageWithMetadata",
+        "asset": {
+          "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png",
+          "_type": "reference"
+        },
+          "image": {
+            "src": "https://cdn.sanity.io/images/euty36ag/production/82fce8c5411e02a2e6a4506d130113ce5ae59c95-158x48.svg",
+            "width": 158,
+            "height": 48,
+            "alt": null
+          }
+      },
+      "link": {
+        "_type": "glob.SmartLink",
+        "href": "https://portal.gitnation.org/",
+        "type": "url"
+      }
+    },
+    {
+      "_key": "23234f2b6311",
+      "_type": "logoItem",
+      "imageWithMetadata": {
+        "_type": "glob.imageWithMetadata",
+        "asset": {
+          "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png",
+          "_type": "reference"
+        },
+        "image": {
+          "src": "https://cdn.sanity.io/images/euty36ag/production/900cb43012fe99e1b5fc1210d2265998a5abbcfb-158x48.svg",
+          "width": 158,
+          "height": 48,
+          "alt": null
+        }
+      },
+      "link": {
+        "_type": "glob.SmartLink",
+        "href": "https://portal.gitnation.org/",
+        "target": "_blank",
+        "type": "url"
+      }
+    },
+    {
+      "_key": "1baed7b0aa71",
+      "_type": "logoItem",
+      "imageWithMetadata": {
+        "_type": "glob.imageWithMetadata",
+        "asset": {
+          "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png",
+          "_type": "reference"
+        },
+        "image": {
+          "src": "https://cdn.sanity.io/images/euty36ag/production/970cbc0293a46e37a914f3f109660582f4a72fc2-158x48.svg",
+          "width": 158,
+          "height": 48,
+          "alt": null
+        }
+      },
+      "link": {
+        "_type": "glob.SmartLink",
+        "href": "https://portal.gitnation.org/",
+        "type": "url"
+      }
+    }
+  ],
+  "title": [
+    {
+      "_key": "7bd39dda785d",
+      "_type": "block",
+      "children": [
+        {
+          "_key": "76fc655c84140",
+          "_type": "span",
+          "marks": [],
+          "text": "Trusted by the world’s most innovative teams"
+        }
+      ],
+      "markDefs": [],
+      "style": "h2"
+    }
+  ]
+}

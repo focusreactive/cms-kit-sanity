@@ -1,0 +1,146 @@
+{
+    "_type": "tw-base.pageBlock",
+    "blockOptions": {
+        "_type": "tw-base.blockOptions",
+        "backgroundOptions": {
+            "_type": "tw-base.backgroundOptions",
+            "colorSelector": "bg-gray-100",
+            "type": "color"
+        },
+        "layoutOptions": {
+            "_type": "tw-base.layoutOptions",
+            "secondary": "without-secondary"
+        }
+    },
+    "components": [
+        {
+            "_type": "tw-base.styledRichText",
+            "customRichText": [
+                {
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_type": "span",
+                            "marks": [
+                                "strong"
+                            ],
+                            "text": "Deploy faster"
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                },
+                {
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Everything you need to deploy your app"
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "h2"
+                },
+                {
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc."
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                }
+            ],
+            "size": "small"
+        },
+        {
+            "_type": "tw-base.featurePoints",
+            "columns": 3,
+            "features": [
+                {
+                    "_type": "tw-base.keyPoint",
+                    "_key": "745c1cc8f53c1",
+                    "link": {
+                      "type": "internal",
+                      "_type": "glob.SmartLink"
+                    },
+                    "title": "Feature example",
+                    "description": "Given the task of adding specific import statements to existing files, both Plop and Hygen can handle this requirement effectively. Let's look at how each solution can address this need.",
+                    "icon": {
+                      "_type": "tw-base.featureIcon",
+                      "imageAsset": {
+                        "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+                        "width": 24,
+                        "height": 24,
+                        "alt": null
+                      },
+                      "icon": {
+                        "_type": "glob.imageWithMetadata",
+                        "asset": {
+                          "_type": "reference",
+                          "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "_type": "tw-base.keyPoint",
+                    "_key": "745c1cc8f53c2",
+                    "link": {
+                      "type": "internal",
+                      "_type": "glob.SmartLink"
+                    },
+                    "title": "Feature example",
+                    "description": "Given the task of adding specific import statements to existing files, both Plop and Hygen can handle this requirement effectively. Let's look at how each solution can address this need.",
+                    "icon": {
+                      "_type": "tw-base.featureIcon",
+                      "imageAsset": {
+                        "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+                        "width": 24,
+                        "height": 24,
+                        "alt": null
+                      },
+                      "icon": {
+                        "_type": "glob.imageWithMetadata",
+                        "asset": {
+                          "_type": "reference",
+                          "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "_type": "tw-base.keyPoint",
+                    "_key": "745c1cc8f533c",
+                    "link": {
+                      "type": "internal",
+                      "_type": "glob.SmartLink"
+                    },
+                    "title": "Feature example",
+                    "description": "Given the task of adding specific import statements to existing files, both Plop and Hygen can handle this requirement effectively. Let's look at how each solution can address this need.",
+                    "icon": {
+                      "_type": "tw-base.featureIcon",
+                      "imageAsset": {
+                        "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+                        "width": 24,
+                        "height": 24,
+                        "alt": null
+                      },
+                      "icon": {
+                        "_type": "glob.imageWithMetadata",
+                        "asset": {
+                          "_type": "reference",
+                          "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
+                        }
+                      }
+                    }
+                  }
+            ],
+            "style": "icon-title-inline"
+        }
+    ]
+}

@@ -1,0 +1,185 @@
+{
+  "_type": "tw-base.pageBlock",
+  "blockOptions": {
+    "_type": "tw-base.blockOptions",
+    "backgroundOptions": {
+      "_type": "tw-base.backgroundOptions",
+      "colorSelector": "bg-white",
+      "type": "color"
+    }
+  },
+  "components": [
+    {
+      "_key": "qYdn4QjknlssWRGxP0u6uo",
+      "_type": "tw-base.styledRichText",
+      "componentAlignment": "center",
+      "customRichText": [
+        {
+          "_key": "qYdn4QjknlssWRGxP0u6y2",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "qYdn4QjknlssWRGxP0u71G",
+              "_type": "span",
+              "marks": [],
+              "text": "Stay on top of customer support"
+            }
+          ],
+          "markDefs": [],
+          "style": "h3"
+        }
+      ]
+    },
+    {
+      "_key": "5242e1e6b03b",
+      "_type": "tw-base.logoCloudGrid",
+      "items": [
+        {
+          "_key": "aa5733ccfa21",
+          "_type": "logoItem",
+          "imageWithMetadata": {
+            "_type": "glob.imageWithMetadata",
+            "asset": {
+              "_ref": "image-20b2517bcc5ae8bde32ef7e8fcb4f61b576768e8-2000x555-png",
+              "_type": "reference"
+            },
+            "imageAsset": {
+              "alt": null,
+              "height": 48,
+              "src": "https://cdn.sanity.io/images/euty36ag/production/20b2517bcc5ae8bde32ef7e8fcb4f61b576768e8-2000x555.png",
+              "width": 158
+            }
+          },
+          "link": {
+            "_type": "glob.SmartLink",
+            "href": "https://portal.gitnation.org/",
+            "type": "url"
+          }
+        },
+        {
+          "_key": "77e2956820da",
+          "_type": "logoItem",
+          "imageWithMetadata": {
+            "_type": "glob.imageWithMetadata",
+            "asset": {
+              "_ref": "image-2a15c0f6206819f778fb9cf7de0ba86408313c50-1024x264-png",
+              "_type": "reference"
+            },
+            "imageAsset": {
+              "alt": null,
+              "height": 48,
+              "src": "https://cdn.sanity.io/images/euty36ag/production/2a15c0f6206819f778fb9cf7de0ba86408313c50-1024x264.png",
+              "width": 158
+            }
+          },
+          "link": {
+            "_type": "glob.SmartLink",
+            "href": "https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg",
+            "target": "_blank",
+            "type": "url"
+          }
+        },
+        {
+          "_key": "71f3f505f04d",
+          "_type": "logoItem",
+          "imageWithMetadata": {
+            "_type": "glob.imageWithMetadata",
+            "asset": {
+              "_ref": "image-2d1af84264ce3d98c1f0d25a10f0272bcc0543d6-800x294-png",
+              "_type": "reference"
+            },
+            "imageAsset": {
+              "alt": null,
+              "height": 48,
+              "src": "https://cdn.sanity.io/images/euty36ag/production/2d1af84264ce3d98c1f0d25a10f0272bcc0543d6-800x294.png",
+              "width": 158
+            }
+          },
+          "link": {
+            "_type": "glob.SmartLink",
+            "href": "https://portal.gitnation.org/",
+            "type": "url"
+          }
+        },
+        {
+          "_key": "23234f2b6311",
+          "_type": "logoItem",
+          "imageWithMetadata": {
+            "_type": "glob.imageWithMetadata",
+            "asset": {
+              "_ref": "image-e671303f9c517bab95a1ba954bc63956f5e6fe6b-2500x538-png",
+              "_type": "reference"
+            },
+            "imageAsset": {
+              "alt": null,
+              "height": 48,
+              "src": "https://cdn.sanity.io/images/euty36ag/production/e671303f9c517bab95a1ba954bc63956f5e6fe6b-2500x538.png",
+              "width": 158
+            }
+          },
+          "link": {
+            "_type": "glob.SmartLink",
+            "href": "https://portal.gitnation.org/",
+            "target": "_blank",
+            "type": "url"
+          }
+        },
+        {
+          "_key": "1baed7b0aa71",
+          "_type": "logoItem",
+          "imageWithMetadata": {
+            "_type": "glob.imageWithMetadata",
+            "asset": {
+              "_ref": "image-1072eb8db87800fff7b723b11c483b8ce4b38d5c-716x200-png",
+              "_type": "reference"
+            },
+            "imageAsset": {
+              "alt": null,
+              "height": 48,
+              "src": "https://cdn.sanity.io/images/euty36ag/production/1072eb8db87800fff7b723b11c483b8ce4b38d5c-716x200.png",
+              "width": 158
+            }
+          },
+          "link": {
+            "_type": "glob.SmartLink",
+            "href": "https://portal.gitnation.org/",
+            "type": "url"
+          }
+        }
+      ],
+      "title": [
+        {
+          "_key": "7bd39dda785d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "76fc655c84140",
+              "_type": "span",
+              "marks": [],
+              "text": "Trusted by the world’s most innovative teams"
+            }
+          ],
+          "markDefs": [],
+          "style": "h2"
+        }
+      ],
+      "title": [
+        {
+          "_key": "7bd39dda785d",
+          "_type": "block",
+          "children": [
+            {
+              "_key": "76fc655c84140",
+              "_type": "span",
+              "marks": [],
+              "text": "Trusted by the world’s most innovative teams"
+            }
+          ],
+          "markDefs": [],
+          "style": "h2"
+        }
+      ]
+    }
+  ],
+  "customTitle": "Logo cloud"
+}

@@ -1,0 +1,159 @@
+{
+  "_type": "tw-base.pageBlock",
+  "blockOptions": {
+    "_type": "tw-base.blockOptions",
+    "backgroundOptions": {
+      "_type": "tw-base.backgroundOptions",
+      "colorSelector": "bg-[#111827]",
+      "type": "color"
+    },
+    "layoutOptions": {
+      "_type": "tw-base.layoutOptions",
+      "secondary": "without-secondary"
+    }
+  },
+  "components": [
+    {
+      "_type": "tw-base.styledRichText",
+      "customRichText": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "marks": ["strong"],
+              "text": "Deploy faster"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "marks": [],
+              "text": "Everything you need to deploy your app"
+            }
+          ],
+          "markDefs": [],
+          "style": "h2"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "marks": [],
+              "text": "Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "size": "small"
+    },
+    {
+      "_type": "tw-base.featurePoints",
+      "columns": 3,
+      "features": [
+        {
+          "_type": "tw-base.keyPoint",
+          "description": "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
+          "icon": {
+            "_type": "tw-base.featureIcon",
+            "imageAsset": {
+              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+              "width": 24,
+              "height": 24,
+              "alt": null
+            },
+            "icon": {
+              "_type": "glob.imageWithMetadata",
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
+              },
+              "alt": "cloud arrow",
+              "height": 24,
+              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+              "width": 24
+            }
+          },
+          "link": {
+            "_type": "glob.SmartLink",
+            "href": "https://focusreactive.com/",
+            "text": "Learn more",
+            "type": "url"
+          },
+          "title": "Push to deploy"
+        },
+        {
+          "_type": "tw-base.keyPoint",
+          "description": "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
+          "icon": {
+            "_type": "tw-base.featureIcon",
+            "imageAsset": {
+              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+              "width": 24,
+              "height": 24,
+              "alt": null
+            },
+            "icon": {
+              "_type": "glob.imageWithMetadata",
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
+              },
+              "alt": "cloud arrow",
+              "height": 24,
+              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+              "width": 24
+            }
+          },
+          "link": {
+            "_type": "glob.SmartLink",
+            "href": "https://focusreactive.com/",
+            "text": "Learn more",
+            "type": "url"
+          },
+          "title": "Push to deploy"
+        },
+        {
+          "_type": "tw-base.keyPoint",
+          "description": "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
+          "icon": {
+            "_type": "tw-base.featureIcon",
+            "imageAsset": {
+              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+              "width": 24,
+              "height": 24,
+              "alt": null
+            },
+            "icon": {
+              "_type": "glob.imageWithMetadata",
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24-png"
+              },
+              "alt": "cloud arrow",
+              "height": 24,
+              "src": "https://cdn.sanity.io/images/euty36ag/production/4e952bda5462f0e57c8ac77ce53bf7f9b99649ec-24x24.png",
+              "width": 24
+            }
+          },
+          "link": {
+            "_type": "glob.SmartLink",
+            "href": "https://focusreactive.com/",
+            "text": "Learn more",
+            "type": "url"
+          },
+          "title": "Push to deploy"
+        }
+      ],
+      "style": "icon-title-inline"
+    }
+  ]
+}

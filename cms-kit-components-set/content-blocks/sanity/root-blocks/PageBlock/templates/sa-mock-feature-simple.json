@@ -1,0 +1,116 @@
+{
+    "_type": "tw-base.pageBlock",
+    "blockOptions": {
+        "_type": "tw-base.blockOptions",
+        "backgroundOptions": {
+            "_type": "tw-base.backgroundOptions",
+            "colorSelector": "bg-gray-100",
+            "type": "color"
+        },
+        "layoutOptions": {
+            "_type": "tw-base.layoutOptions",
+            "secondary": "without-secondary"
+        }
+    },
+    "components": [
+        {
+            "_type": "tw-base.styledRichText",
+            "_key": "comp1",
+            "componentAlignment": "left",
+            "customRichText": [
+                {
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_type": "span",
+                            "marks": [],
+                            "text": "All-in-one platform"
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "h2"
+                },
+                {
+                    "_type": "block",
+                    "children": [
+                        {
+                            "_type": "span",
+                            "marks": [],
+                            "text": "Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam."
+                        }
+                    ],
+                    "markDefs": [],
+                    "style": "normal"
+                }
+            ]
+        },
+        {
+            "_type": "tw-base.featurePoints",
+            "_key": "comp2",
+            "columns": 3,
+            "features": [
+                {
+                    "_type": "tw-base.keyPoint",
+                    "_key": "comp1",
+                    "description": "Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.",
+                    "link": {
+                        "_type": "glob.SmartLink",
+                        "type": "internal"
+                    },
+                    "title": "Powerful API."
+                },
+                {
+                    "_type": "tw-base.keyPoint",
+                    "_key": "comp2",
+                    "description": "Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.",
+                    "link": {
+                        "_type": "glob.SmartLink",
+                        "type": "internal"
+                    },
+                    "title": "Powerful API."
+                },
+                {
+                    "_type": "tw-base.keyPoint",
+                    "_key": "comp3",
+                    "description": "Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.",
+                    "link": {
+                        "_type": "glob.SmartLink",
+                        "type": "internal"
+                    },
+                    "title": "Powerful API."
+                },
+                {
+                    "_type": "tw-base.keyPoint",
+                    "_key": "comp4",
+                    "description": "Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.",
+                    "link": {
+                        "_type": "glob.SmartLink",
+                        "type": "internal"
+                    },
+                    "title": "Powerful API."
+                },
+                {
+                    "_type": "tw-base.keyPoint",
+                    "_key": "comp5",
+                    "description": "Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.",
+                    "link": {
+                        "_type": "glob.SmartLink",
+                        "type": "internal"
+                    },
+                    "title": "Powerful API."
+                },
+                {
+                    "_type": "tw-base.keyPoint",
+                    "_key": "comp6",
+                    "description": "Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.",
+                    "link": {
+                        "_type": "glob.SmartLink",
+                        "type": "internal"
+                    },
+                    "title": "Powerful API."
+                }
+            ],
+            "style": "no-icon"
+        }
+    ]
+}

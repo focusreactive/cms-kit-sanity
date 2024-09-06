@@ -1,0 +1,156 @@
+{
+  "_type": "tw-base.grid",
+  "items": [
+    {
+      "_type": "gridCard",
+      "imageWithMetadata": {
+        "_type": "glob.imageWithMetadata",
+        "imageAsset": {
+          "src": "https://cdn.sanity.io/images/euty36ag/production/b18b8648a16e4ac7295a9182f41e8be52f05e81d-300x208.png",
+          "width": 300,
+          "height": 208,
+          "alt": "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
+        },
+        "asset": {
+          "_ref": "image-b18b8648a16e4ac7295a9182f41e8be52f05e81d-300x208-png",
+          "_type": "reference"
+        }
+      },
+      "smartLink": "https://tailwindui.com/components/ecommerce/components/category-previews",
+      "sanityRichText": [
+        {
+          "children": [
+            {
+              "_type": "span",
+              "marks": [
+                "a85139016a6a"
+              ],
+              "text": "Desk and Office"
+            }
+          ],
+          "markDefs": [
+            {
+              "_type": "link",
+              "href": "https://tailwindui.com/components/ecommerce/components/category-previews#"
+            }
+          ],
+          "_type": "block",
+          "style": "h3"
+        },
+        {
+          "children": [
+            {
+              "_type": "span",
+              "marks": [],
+              "text": "Work from home accessories"
+            }
+          ],
+          "markDefs": [],
+          "_type": "block",
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "_type": "gridCard",
+      "imageWithMetadata": {
+        "_type": "glob.imageWithMetadata",
+        "asset": {
+          "_ref": "image-c9473a23f03727e963f61c38921416effe71c537-1280x1280-jpg",
+          "_type": "reference"
+        },
+        "image": {
+          "src": "https://cdn.sanity.io/images/euty36ag/production/c9473a23f03727e963f61c38921416effe71c537-1280x1280.jpg",
+          "width": 1280,
+          "height": 1280,
+          "alt": "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
+        }
+      },
+      "smartLink": "https://tailwindui.com/components/ecommerce/components/category-previews",
+      "sanityRichText": [
+        {
+          "children": [
+            {
+              "_type": "span",
+              "marks": [
+                "a105c74f2230"
+              ],
+              "text": "Self-Improvement"
+            }
+          ],
+          "markDefs": [
+            {
+              "_type": "link",
+              "href": "https://tailwindui.com/components/ecommerce/components/category-previews#"
+            }
+          ],
+          "_type": "block",
+          "style": "h3"
+        },
+        {
+          "children": [
+            {
+              "_type": "span",
+              "marks": [],
+              "text": "Journals and note-taking"
+            }
+          ],
+          "markDefs": [],
+          "_type": "block",
+          "style": "normal"
+        }
+      ]
+    },
+    {
+      "_type": "gridCard",
+      "imageWithMetadata": {
+        "_type": "glob.imageWithMetadata",
+        "asset": {
+          "_ref": "image-9492f86670bbfd630e184ce496adfaa1eeabbf63-1280x1280-jpg",
+          "_type": "reference"
+        },
+        "image": {
+          "src": "https://cdn.sanity.io/images/euty36ag/production/9492f86670bbfd630e184ce496adfaa1eeabbf63-1280x1280.jpg",
+          "width": 1280,
+          "height": 1280,
+          "alt": "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
+        }
+      },
+      "smartLink": "https://tailwindui.com/components/ecommerce/components/category-previews",
+      "sanityRichText": [
+        {
+          "children": [
+            {
+              "_type": "span",
+              "marks": [
+                "d0fcb0ca1c46"
+              ],
+              "text": "Travel"
+            }
+          ],
+          "markDefs": [
+            {
+              "_type": "link",
+              "href": "https://tailwindui.com/components/ecommerce/components/category-previews#"
+            }
+          ],
+          "_type": "block",
+          "style": "h3"
+        },
+        {
+          "children": [
+            {
+              "_type": "span",
+              "marks": [],
+              "text": "Daily commute essentials"
+            }
+          ],
+          "markDefs": [],
+          "_type": "block",
+          "style": "normal"
+        }
+      ]
+    }
+  ],
+  "title": "Collections"
+}

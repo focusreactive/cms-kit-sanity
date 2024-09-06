@@ -1,0 +1,168 @@
+{
+  "_type": "tw-base.pageBlock",
+  "blockOptions": {
+    "_type": "tw-base.blockOptions",
+    "backgroundOptions": {
+      "_type": "tw-base.backgroundOptions",
+      "colorSelector": "bg-gray-100",
+      "type": "color"
+    },
+    "layoutOptions": {
+      "_type": "tw-base.layoutOptions",
+      "secondary": "without-secondary"
+    }
+  },
+  "components": [
+    {
+      "_type": "tw-base.styledRichText",
+      "_key": "comp1",
+      "customRichText": [
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "marks": ["strong"],
+              "text": "Deploy faster"
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "marks": [],
+              "text": "Everything you need to deploy your app"
+            }
+          ],
+          "markDefs": [],
+          "style": "h2"
+        },
+        {
+          "_type": "block",
+          "children": [
+            {
+              "_type": "span",
+              "marks": [],
+              "text": "Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc."
+            }
+          ],
+          "markDefs": [],
+          "style": "normal"
+        }
+      ],
+      "size": "small"
+    },
+    {
+      "_key": "comp2",
+      "_type": "tw-base.featurePoints",
+      "columns": 2,
+      "features": [
+        {
+          "_key": "comp1",
+          "_type": "tw-base.keyPoint",
+          "description": "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
+          "icon": {
+            "_type": "tw-base.featureIcon",
+            "imageAsset": {
+              "src": "https://cdn.sanity.io/images/euty36ag/production/3fcc6a4bb1da41f643781c2fd6eed0200d545b69-256x256.png",
+              "width": 256,
+              "height": 256,
+              "alt": null
+            },
+            "icon": {
+              "_type": "glob.imageWithMetadata",
+              "alt": "cloud arrow",
+              "height": 24,
+              "width": 24,
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-3fcc6a4bb1da41f643781c2fd6eed0200d545b69-256x256-png"
+              }
+            }
+          },
+          "title": "Push to deploy"
+        },
+        {
+          "_key": "e92db7fc42b1a411b542258fae2c223f",
+          "_type": "tw-base.keyPoint",
+          "description": "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
+          "icon": {
+            "_type": "tw-base.featureIcon",
+            "imageAsset": {
+              "src": "https://cdn.sanity.io/images/euty36ag/production/3fcc6a4bb1da41f643781c2fd6eed0200d545b69-256x256.png",
+              "width": 256,
+              "height": 256,
+              "alt": null
+            },
+            "icon": {
+              "_type": "glob.imageWithMetadata",
+              "alt": "cloud arrow",
+              "height": 24,
+              "width": 24,
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-3fcc6a4bb1da41f643781c2fd6eed0200d545b69-256x256-png"
+              }
+            }
+          },
+          "title": "Push to deploy"
+        },
+        {
+          "_key": "b55e6c729f0b9b61181704bfe9ed5417",
+          "_type": "tw-base.keyPoint",
+          "description": "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
+          "icon": {
+            "_type": "tw-base.featureIcon",
+            "imageAsset": {
+              "src": "https://cdn.sanity.io/images/euty36ag/production/3fcc6a4bb1da41f643781c2fd6eed0200d545b69-256x256.png",
+              "width": 256,
+              "height": 256,
+              "alt": null
+            },
+            "icon": {
+              "_type": "glob.imageWithMetadata",
+              "alt": "cloud arrow",
+              "height": 24,
+              "width": 24,
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-3fcc6a4bb1da41f643781c2fd6eed0200d545b69-256x256-png"
+              }
+            }
+          },
+          "title": "Push to deploy"
+        },
+        {
+          "_key": "99a5ba00bda0e6a95ab701258ae440f4",
+          "_type": "tw-base.keyPoint",
+          "description": "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
+          "icon": {
+            "_type": "tw-base.featureIcon",
+            "imageAsset": {
+              "src": "https://cdn.sanity.io/images/euty36ag/production/3fcc6a4bb1da41f643781c2fd6eed0200d545b69-256x256.png",
+              "width": 256,
+              "height": 256,
+              "alt": null
+            },
+            "icon": {
+              "_type": "glob.imageWithMetadata",
+              "alt": "cloud arrow",
+              "height": 24,
+              "width": 24,
+              "asset": {
+                "_type": "reference",
+                "_ref": "image-3fcc6a4bb1da41f643781c2fd6eed0200d545b69-256x256-png"
+              }
+            }
+          },
+          "title": "Push to deploy"
+        }
+      ],
+      "style": "icon-left-with-background"
+    }
+  ]
+}
