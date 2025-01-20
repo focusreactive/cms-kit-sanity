@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc",
     "build:swc": "swc src -d dist -D",
-    "update1": "pnpm run build && yalc publish --push"
+    "publish-package": "pnpm run build && yalc publish --push"
   },
   "devDependencies": {
     "@swc/cli": "^0.1.62",
